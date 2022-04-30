@@ -2,13 +2,19 @@
 <%@ page import="java.util.Map" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setLocale value="${param.lang}"/>
+<fmt:setBundle basename="messages"/>
+<html lang="${param.lang}">
 <%
     UserSignUpDto dto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
 %>
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8"> <!-- WARNING!!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -41,36 +47,36 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#"><fmt:message key="lable.home"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="userList.jsp"><fmt:message key="lable.userList"/></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        <fmt:message key="label.languages" />
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <%--                        <li><a class="dropdown-item" href="#">Action</a></li>--%>
+                        <%--                        <li><a class="dropdown-item" href="#">Another action</a></li>--%>
+                        <li><a href="?lang=en"><fmt:message key="label.lang.en" /></a></li>
+                        <li><a href="?lang=uk"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
+                <%--                <li class="nav-item">--%>
+                <%--                    <a class="nav-link disabled">Disabled</a>--%>
+                <%--                </li>--%>
             </ul>
             <div>
-                <a href="google.com" class="btn btn-primary">Sign up</a>
-                <a href="" class="btn btn-primary">Log in</a>
+                <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
+                <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>
             </div>
         </div>
     </div>
@@ -92,13 +98,13 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </c:if>
-                            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                            <h2 class="text-uppercase text-center mb-5"><fmt:message key="label.createAccount" /></h2>
 
                             <form>
 
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputEmail">Your Email</label>
+                                    <label class="form-label" for="inputEmail"><fmt:message key="label.email" /></label>
                                     <input type="email" name="inputEmail" id="inputEmail" class="form-control form-control-lg"
                                            value="<%=dto!=null?dto.getEmail():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">
@@ -108,7 +114,7 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputPassword">Password</label>
+                                    <label class="form-label" for="inputPassword"><fmt:message key="label.password" /></label>
                                     <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-lg"
                                            value="<%=dto!=null?dto.getPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('password') }">
@@ -118,7 +124,7 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputConfirmPassword">Repeat your password</label>
+                                    <label class="form-label" for="inputConfirmPassword"><fmt:message key="label.repeatPassword" /></label>
                                     <input type="password" name="inputConfirmPassword" id="inputConfirmPassword" class="form-control form-control-lg"
                                            value="<%=dto!=null?dto.getConfirmPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('confirmPassword') }">
@@ -135,15 +141,15 @@
                                             id="form2Example3cg"
                                     />
                                     <label class="form-check-label"> <!--for="form2Example3g"-->
-                                        I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                        <fmt:message key="label.agree" /> <a href="#!" class="text-body"><u><fmt:message key="label.service" /></u></a>
                                     </label>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Sign up!</button>
+                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><fmt:message key="label.signUp" /></button>
                                 </div>
 
-                                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="logIn.jsp" class="fw-bold text-body"><u>Login here</u></a></p>
+                                <p class="text-center text-muted mt-5 mb-0"><fmt:message key="label.haveAlreadyAnAccount" /> <a href="logIn.jsp" class="fw-bold text-body"><u><fmt:message key="label.loginHere" /></u></a></p>
 
                             </form>
 
