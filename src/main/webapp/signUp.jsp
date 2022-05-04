@@ -6,9 +6,10 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setLocale value="${param.lang}"/>
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
-<html lang="${param.lang}">
+<html lang="${sessionScope.lang}">
 <%
     UserSignUpDto dto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
 %>
@@ -93,7 +94,9 @@
                             <c:if test="${sessionScope.get('errorMessages') !=null}">
 
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    <strong>Wrong user input data
+                                    <strong>
+<%--                                        Wrong user input data--%>
+                                        <fmt:message key="label.wrongUserInputData" />
                                     </strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
@@ -109,7 +112,9 @@
                                            value="<%=dto!=null?dto.getEmail():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">
                                         <span class="text-danger">
-                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%></span>
+<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
+                                            <fmt:message key="label.wrongEmail" />
+                                        </span>
                                     </c:if>
                                 </div>
 
@@ -119,7 +124,9 @@
                                            value="<%=dto!=null?dto.getPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('password') }">
                                         <span class="text-danger">
-                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("password")%></span>
+<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("password")%>--%>
+                                            <fmt:message key="label.wrongPassword" />
+                                        </span>
                                     </c:if>
                                 </div>
 
@@ -129,7 +136,9 @@
                                            value="<%=dto!=null?dto.getConfirmPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('confirmPassword') }">
                                         <span class="text-danger">
-                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("confirmPassword")%></span>
+<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("confirmPassword")%>--%>
+                                            <fmt:message key="label.wrongConfirmPassword" />
+                                        </span>
                                     </c:if>
                                 </div>
 

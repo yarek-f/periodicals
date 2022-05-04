@@ -42,7 +42,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     }
 
     @Override
-    public int update(Publisher items) {
+    public int update(Publisher items, int id) {
         return 0;
     }
 
@@ -78,5 +78,10 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             logger.debug("Problem with getting users: " + ex.getMessage());
         }
         return publisherList;
+    }
+
+    @Override
+    public void clearTable() {
+
     }
 }

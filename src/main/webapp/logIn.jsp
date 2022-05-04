@@ -6,9 +6,10 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:setLocale value="${param.lang}"/>
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
-<html lang="${param.lang}">
+<html lang="${sessionScope.lang}">
 <%
     UserSignUpDto dto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
 %>

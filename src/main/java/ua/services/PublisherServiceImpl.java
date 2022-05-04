@@ -26,7 +26,6 @@ public class PublisherServiceImpl implements PublisherService {
 
     @Override
     public List<Publisher> getAll() {
-        publisherMySqlDao.getAll();
-        return null;
+        return publisherMySqlDao.getAll();
     }
 }

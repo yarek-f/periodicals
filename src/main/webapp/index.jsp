@@ -4,9 +4,12 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
-<fmt:setLocale value="${param.lang}"/>
+
+
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
-<html lang="${param.lang}">
+<html lang="${sessionScope.lang}">
 <head>
     <!-- Required meta tags -->
 <%--    <meta charset="utf-8">--%>

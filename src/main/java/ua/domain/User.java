@@ -19,6 +19,13 @@ public class User {
         this.password = password;
     }
 
+    public User(Role role, String email, String password, boolean isActive) {
+        this.role = role;
+        this.email = email;
+        this.password = password;
+        this.isActive = isActive;
+    }
+
     public User(Role role, String email, String password) {
         this.role = role;
         this.email = email;

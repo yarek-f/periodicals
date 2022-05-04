@@ -16,6 +16,8 @@ public class UserMySqlDao implements Dao<User> {
     private static final String GET_QUERY = "select * from users where email = ?";
     private static final String DELETE_QUERY = "delete from users where id = ?";
     private static final String GET_ALL_QUERY = "SELECT * from users";
+    private static final String TRANCATE_QUERY = "TRUNCATE users";
+    /*5 >?*/private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
 
     private static Logger logger = LogManager.getLogger(UserMySqlDao.class);
 
@@ -37,7 +39,7 @@ public class UserMySqlDao implements Dao<User> {
 
         logger.debug("User created");
 
-        return item.getId();
+        return get(item.getEmail()).getId();
     }
 
     @Override
@@ -72,9 +74,28 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     @Override
-    public int update(User items) { //todo ????
+    public int update(User items, int id) { //todo ????
+        logger.debug("Start user creating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( UPDATE_QUERY )) {
 
-        return 0;
+            stmt.setString(1, items.getRole().name()); //todo
+            stmt.setString(2, items.getEmail());
+            stmt.setString(3, items.getPassword());
+            stmt.setBoolean(4, items.isActive());
+            stmt.setInt(5, id);
+//private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
+            int status = stmt.executeUpdate();
+            if(status!=1) throw new UserException("Created more than one record!!!");
+
+        } catch (Exception ex) {
+//            logger.debug("Problem with creating user: " + ex.getMessage());
+            System.out.println(ex.getMessage());
+        }
+
+        logger.debug("User created");
+
+        return get(items.getEmail()).getId();
     }
 
     @Override
@@ -130,5 +151,16 @@ public class UserMySqlDao implements Dao<User> {
 
         logger.debug("Got all users");
         return userList;
+    }
+
+    @Override
+    public void clearTable(){
+        try (Connection con = DataSource.getConnection();
+             Statement stmt = con.createStatement()){
+            stmt.executeUpdate(TRANCATE_QUERY);
+        }catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+//            logger.debug("Problem with getting users: " + ex.getMessage());
+        }
     }
 }
