@@ -30,16 +30,13 @@ public class UserServiceImpl implements UserService {
 
     public Map<String, String> validate(UserSignUpDto userSignUpDto){
         Map<String, String> checkResult = new TreeMap<>();
-        boolean validEmail = validEmail(userSignUpDto.getEmail());
-        boolean validPassword= validPassword(userSignUpDto.getPassword());
-        boolean validConfPassword= validConfirmPassword(userSignUpDto.getPassword(), userSignUpDto.getConfirmPassword());
 
-        if (!validEmail){
-            checkResult.put("email", String.valueOf(validEmail));
-        } if(!validPassword){
-            checkResult.put("password", String.valueOf(validPassword));
-        } if(!validConfPassword){
-            checkResult.put("confirmPassword", String.valueOf(validConfPassword));
+        if (!validEmail(userSignUpDto.getEmail())){
+            checkResult.put("email", "false");
+        } if(!validPassword(userSignUpDto.getPassword())){
+            checkResult.put("password", "false");
+        } if(!validConfirmPassword(userSignUpDto.getPassword(), userSignUpDto.getConfirmPassword())){
+            checkResult.put("confirmPassword", "false");
         }
         return checkResult;
     }
