@@ -14,7 +14,8 @@ public class DataSource {
         config.setDriverClassName( "com.mysql.cj.jdbc.Driver" );
         config.setJdbcUrl( "jdbc:mysql://localhost:3306/periodicals" );
         config.setUsername( "root" );
-        config.setPassword( "root" );
+//        config.setPassword( "root" ); //fixme todo
+        config.setPassword( "123456" );
         config.addDataSourceProperty( "cachePrepStmts" , "true" );
         config.addDataSourceProperty( "prepStmtCacheSize" , "250" );
         config.addDataSourceProperty( "prepStmtCacheSqlLimit" , "2048" );
