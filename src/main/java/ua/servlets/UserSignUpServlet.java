@@ -1,6 +1,7 @@
 package ua.servlets;
 
 import ua.domain.User;
+import ua.dto.CustomerSignUpDto;
 import ua.dto.UserSignUpDto;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
@@ -29,6 +30,12 @@ public class UserSignUpServlet extends HttpServlet {
         // Set response content type
         resp.setContentType("text/html");
 
+        String fullName = req.getParameter("inputFullName");
+        System.out.println(fullName);
+        String dob = req.getParameter("inputDob");
+        System.out.println(dob);
+        String phoneNumber = req.getParameter("inputPhoneNumber");
+        System.out.println(phoneNumber);
         String email = req.getParameter("inputEmail");
         System.out.println(email);
         String password = req.getParameter("inputPassword");
@@ -38,16 +45,28 @@ public class UserSignUpServlet extends HttpServlet {
 
 
         UserSignUpDto userSignUpDto = new UserSignUpDto(email, password, confirmPassword);
-        Map<String, String> response = userService.signUp(userSignUpDto);
+        CustomerSignUpDto customerSignUpDto = new CustomerSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
+        Map<String, String> userResponse = userService.signUp(userSignUpDto);
+        Map<String, String> customerResponse = userService.signUp(customerSignUpDto);
 
-        if(!response.isEmpty()){
-            session.setAttribute("errorMessages", response);
+        if (!userResponse.isEmpty() || !customerResponse.isEmpty()) {
+//            userService.delete(customerSignUpDto);
+            session.setAttribute("errorMessages", userResponse);
             session.setAttribute("userSignUpDto", userSignUpDto);
+            session.setAttribute("customerErrorMessages", customerResponse);
+            session.setAttribute("customerSignUpDto", customerSignUpDto);
             resp.sendRedirect(req.getContextPath() + "/signUp.jsp");
-        } else {
+//
+        }
+//        if (!customerResponse.isEmpty()) {
+//            userService.delete(userSignUpDto);
+//            session.setAttribute("customerErrorMessages", customerResponse);
+//            session.setAttribute("customerSignUpDto", customerSignUpDto);
+//            resp.sendRedirect(req.getContextPath() + "/signUp.jsp");
+//        }
+        else {
             session.setAttribute("registrationMessage", "user with " + userSignUpDto.getEmail() + " successful registered");
             resp.sendRedirect(req.getContextPath() + "/index.jsp");
         }
-
     }
 }

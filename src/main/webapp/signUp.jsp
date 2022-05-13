@@ -1,5 +1,6 @@
 <%@ page import="ua.dto.UserSignUpDto" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="ua.dto.CustomerSignUpDto" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -11,7 +12,8 @@
 <fmt:setBundle basename="messages"/>
 <html lang="${sessionScope.lang}">
 <%
-    UserSignUpDto dto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
+    UserSignUpDto userDto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
+    CustomerSignUpDto customerDto = ((CustomerSignUpDto) session.getAttribute("customerSignUpDto"));
 %>
 <head>
     <!-- Required meta tags -->
@@ -104,12 +106,58 @@
                             <h2 class="text-uppercase text-center mb-5"><fmt:message key="label.createAccount" /></h2>
 
                             <form>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="inputFullName">
+                                            Please enter your name and surname
+<%--                                        <fmt:message key="label.email" />--%>
+                                    </label>
+                                    <input type="text" name="inputFullName" id="inputFullName" class="form-control form-control-lg"
+<%--                                           value="<%=userDto!=null?userDto.getEmail():""%>"--%>
+                                    />
+<%--                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">--%>
+<%--                                        <span class="text-danger">--%>
+<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
+<%--                                            <fmt:message key="label.wrongEmail" />--%>
+<%--                                        </span>--%>
+<%--                                    </c:if>--%>
+                                </div>
 
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="inputDob">
+<%--                                        <fmt:message key="label.email" />--%>
+                                        input your birth day
+                                    </label>
+                                    <input type="date" name="inputDob" id="inputDob" class="form-control form-control-lg"
+<%--                                           value="<%=userDto!=null?userDto.getEmail():""%>"--%>
+                                    />
+<%--                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">--%>
+<%--                                        <span class="text-danger">--%>
+<%--&lt;%&ndash;                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>&ndash;%&gt;--%>
+<%--                                            <fmt:message key="label.wrongEmail" />--%>
+<%--                                        </span>--%>
+<%--                                    </c:if>--%>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="inputPhoneNumber">
+<%--                                        <fmt:message key="label.email" />--%>
+                                        input phone number
+                                    </label>
+                                    <input type="tel" name="inputPhoneNumber" id="inputPhoneNumber" class="form-control form-control-lg"
+                                           value="<%=customerDto!=null?customerDto.getPhoneNumber():""%>"/>
+                                    <c:if test="${sessionScope.get('customerErrorMessages') != null && sessionScope.get('customerErrorMessages').containsKey('phoneNumber')}">
+                                        <span class="text-danger">
+<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
+<%--                                            <fmt:message key="label.wrongEmail" />--%>
+                                            wrong type of phone number
+                                        </span>
+                                    </c:if>
+                                </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputEmail"><fmt:message key="label.email" /></label>
                                     <input type="email" name="inputEmail" id="inputEmail" class="form-control form-control-lg"
-                                           value="<%=dto!=null?dto.getEmail():""%>"/>
+                                           value="<%=userDto!=null?userDto.getEmail():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">
                                         <span class="text-danger">
 <%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
@@ -121,7 +169,7 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputPassword"><fmt:message key="label.password" /></label>
                                     <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-lg"
-                                           value="<%=dto!=null?dto.getPassword():""%>"/>
+                                           value="<%=userDto!=null?userDto.getPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('password') }">
                                         <span class="text-danger">
 <%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("password")%>--%>
@@ -133,7 +181,7 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputConfirmPassword"><fmt:message key="label.repeatPassword" /></label>
                                     <input type="password" name="inputConfirmPassword" id="inputConfirmPassword" class="form-control form-control-lg"
-                                           value="<%=dto!=null?dto.getConfirmPassword():""%>"/>
+                                           value="<%=userDto!=null?userDto.getConfirmPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('confirmPassword') }">
                                         <span class="text-danger">
 <%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("confirmPassword")%>--%>

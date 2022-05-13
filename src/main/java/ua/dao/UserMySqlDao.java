@@ -14,18 +14,25 @@ import java.util.List;
 public class UserMySqlDao implements Dao<User> {
     private static final String CREATE_QUERY = "insert into users(email, user_password) values (?,?)";
     private static final String GET_QUERY = "select * from users where email = ?";
-    private static final String DELETE_QUERY = "delete from users where id = ?";
+    private static final String DELETE_QUERY = "delete from users where email = ?";
     private static final String GET_ALL_QUERY = "SELECT * from users";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
-    /*5 >?*/private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
+    private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
 
     private static Logger logger = LogManager.getLogger(UserMySqlDao.class);
+    private Connection con;
+
+    public UserMySqlDao() throws SQLException {
+    }
+
+    public UserMySqlDao(Connection con) throws SQLException {
+        this.con = con;
+    }
 
     @Override
     public int signUp(User item) {
         logger.debug("Start user creating");
-        try (Connection con = DataSource.getConnection();
-             PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
+        try (PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
 
             stmt.setString(1, item.getEmail());
             stmt.setString(2, item.getPassword());
@@ -99,14 +106,15 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String email) {
         logger.debug("Start deleting user");
         boolean result = false;
 
-        try (Connection con = DataSource.getConnection();
+        try (
+//                Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
 
-            stmt.setInt(1, id);
+            stmt.setString(1, email);
 
             if (stmt.executeUpdate() == 1) {
                 result = true;

@@ -47,7 +47,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String email) {
         return false;
     }
 
