@@ -13,10 +13,12 @@ public class Customer implements Subscribers {
     private String password;
     private LocalDateTime created;
     private LocalDateTime update;
+    private boolean isActive;
+
     private List<Publishers> publishersList;
     private Wallet wallet;
     private Subscription subscription;
-    private boolean isActive;
+
 
     public Customer(String fullName, LocalDate dob, String phoneNumber, String email, String password) {
         this.fullName = fullName;

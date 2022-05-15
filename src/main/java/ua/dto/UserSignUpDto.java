@@ -9,6 +9,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserSignUpDto {
+    private String fullName;
+    private String dob;
+    private String phoneNumber;
     private String email;
     private String password;
     private String confirmPassword;
@@ -16,10 +19,43 @@ public class UserSignUpDto {
     public UserSignUpDto() {
     }
 
-    public UserSignUpDto(String email, String password, String confirmPassword) {
+    public UserSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword) {
+        this.fullName = fullName;
+        this.dob = dob;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
+    }
+
+//    public UserSignUpDto(String email, String password, String confirmPassword) {
+//        this.email = email;
+//        this.password = password;
+//        this.confirmPassword = confirmPassword;
+//    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {

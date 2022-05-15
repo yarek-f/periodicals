@@ -13,8 +13,8 @@ public class Mapper {
         return new User(userSignUpDto.getEmail(), userSignUpDto.getPassword());
     }
 
-    public static Customer convertToCustomer(CustomerSignUpDto customerSignUpDto) {
-        return new Customer(customerSignUpDto.getFullName(), LocalDate.parse(customerSignUpDto.getDob()),
-                customerSignUpDto.getPhoneNumber(), customerSignUpDto.getEmail(), customerSignUpDto.getPassword());
+    public static Customer convertToCustomer(UserSignUpDto userSignUpDto) {
+        return new Customer(userSignUpDto.getFullName(), LocalDate.parse(userSignUpDto.getDob()),
+                userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
     }
 }

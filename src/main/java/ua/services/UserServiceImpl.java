@@ -13,6 +13,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -21,8 +22,8 @@ import java.util.regex.Pattern;
 
 public class UserServiceImpl implements UserService {
     private UserMySqlDao userMySqlDao;
-    private Connection connection;
     private CustomerMySqlDao customerMySqlDao;
+    private Connection connection;
 
     {
         try {
@@ -35,32 +36,55 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Map<String, String> signUp(UserSignUpDto userSignUpDto) {
-        Map<String, String> validation = validateUser(userSignUpDto);
+    public List<String> signUp(UserSignUpDto userSignUpDto) {
+        List<String> validation = validateUser(userSignUpDto);
 
         if (validation.isEmpty()) {
             User user = Mapper.convertToUser(userSignUpDto);
+            Customer customer = Mapper.convertToCustomer(userSignUpDto);
 
-            System.out.println("USER INSIDE SERVICE -> " + user.toString());
+            System.out.println("USER AND CUSTOMER INSIDE SERVICE -> " + user.toString());
             userMySqlDao.signUp(user);
-        }
-
-        return validation;
-    }
-
-    @Override
-    public Map<String, String> signUp(CustomerSignUpDto customerSignUpDto) {
-        Map<String, String> validation = validateCustomer(customerSignUpDto);
-
-        if (validation.isEmpty()) {
-            Customer customer = Mapper.convertToCustomer(customerSignUpDto);
-
-            System.out.println("CUSTOMER INSIDE SERVICE -> " + customer.toString());
             customerMySqlDao.signUp(customer);
         }
 
         return validation;
     }
+
+    public List<String> validateUser(UserSignUpDto userSignUpDto) {
+        List<String> checkResult = new ArrayList<>();
+
+        if (!validPhoneNumber(userSignUpDto.getPhoneNumber())){
+            checkResult.add("phoneNumber");
+        }
+//        if (!validDob(userSignUpDto.getDob())){ fixme
+//            checkResult.add("dob");
+//        }
+        if (!validEmail(userSignUpDto.getEmail())) {
+            checkResult.add("email");
+        }
+        if (!validPassword(userSignUpDto.getPassword())) {
+            checkResult.add("password");
+        }
+        if (!validConfirmPassword(userSignUpDto.getPassword(), userSignUpDto.getConfirmPassword())) {
+            checkResult.add("confirmPassword");
+        }
+        return checkResult;
+    }
+
+//    @Override
+//    public Map<String, String> signUp(CustomerSignUpDto customerSignUpDto) {
+//        Map<String, String> validation = validateCustomer(customerSignUpDto);
+//
+//        if (validation.isEmpty()) {
+//            Customer customer = Mapper.convertToCustomer(customerSignUpDto);
+//
+//            System.out.println("CUSTOMER INSIDE SERVICE -> " + customer.toString());
+//            customerMySqlDao.signUp(customer);
+//        }
+//
+//        return validation;
+//    }
 
     @Override
     public boolean delete(UserSignUpDto userDto) {
@@ -72,38 +96,25 @@ public class UserServiceImpl implements UserService {
         return customerMySqlDao.delete(customerDto.getEmail());
     }
 
-    private Map<String, String> validateCustomer(CustomerSignUpDto customerSignUpDto) {
-        Map<String, String> checkResult = new TreeMap<>();
+//    private Map<String, String> validateCustomer(CustomerSignUpDto customerSignUpDto) {
+//        Map<String, String> checkResult = new TreeMap<>();
+//
+//        if (!validEmail(customerSignUpDto.getEmail())) {
+//            checkResult.put("email", "false");
+//        }
+//        if (!validPassword(customerSignUpDto.getPassword())) {
+//            checkResult.put("password", "false");
+//        }
+//        if (!validPhoneNumber(customerSignUpDto.getPhoneNumber())) {
+//            checkResult.put("number", "false");
+//        }
+//        if (!validConfirmPassword(customerSignUpDto.getPassword(), customerSignUpDto.getConfirmPassword())) {
+//            checkResult.put("confirmPassword", "false");
+//        }
+//        return checkResult;
+//    }
 
-        if (!validEmail(customerSignUpDto.getEmail())) {
-            checkResult.put("email", "false");
-        }
-        if (!validPassword(customerSignUpDto.getPassword())) {
-            checkResult.put("password", "false");
-        }
-        if (!validPhoneNumber(customerSignUpDto.getPhoneNumber())) {
-            checkResult.put("number", "false");
-        }
-        if (!validConfirmPassword(customerSignUpDto.getPassword(), customerSignUpDto.getConfirmPassword())) {
-            checkResult.put("confirmPassword", "false");
-        }
-        return checkResult;
-    }
 
-    public Map<String, String> validateUser(UserSignUpDto userSignUpDto) {
-        Map<String, String> checkResult = new TreeMap<>();
-
-        if (!validEmail(userSignUpDto.getEmail())) {
-            checkResult.put("email", "false");
-        }
-        if (!validPassword(userSignUpDto.getPassword())) {
-            checkResult.put("password", "false");
-        }
-        if (!validConfirmPassword(userSignUpDto.getPassword(), userSignUpDto.getConfirmPassword())) {
-            checkResult.put("confirmPassword", "false");
-        }
-        return checkResult;
-    }
 
 
     private boolean validEmail(String email) { //fixme
@@ -139,7 +150,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAll() {
-
         return userMySqlDao.getAll();
     }
 
