@@ -9,7 +9,6 @@ import java.util.Map;
 
 public interface UserService {
     List<String> signUp(UserSignUpDto userDto);
-//    Map<String, String> signUp(CustomerSignUpDto customerDto);
     boolean delete(UserSignUpDto userDto);
     boolean delete(CustomerSignUpDto customerDto);
     User get(String email);

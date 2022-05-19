@@ -1,13 +1,5 @@
 package ua.dto;
 
-import ua.domain.User;
-import ua.excaptions.UserInvalidDataExcaption;
-
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class UserSignUpDto {
     private String fullName;
     private String dob;
@@ -27,12 +19,6 @@ public class UserSignUpDto {
         this.password = password;
         this.confirmPassword = confirmPassword;
     }
-
-//    public UserSignUpDto(String email, String password, String confirmPassword) {
-//        this.email = email;
-//        this.password = password;
-//        this.confirmPassword = confirmPassword;
-//    }
 
     public String getFullName() {
         return fullName;

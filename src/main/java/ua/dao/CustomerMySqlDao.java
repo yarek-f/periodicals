@@ -59,9 +59,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
         logger.debug("Start deleting user");
         boolean result = false;
 
-        try (
-//                Connection con = DataSource.getConnection();
-                PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
+        try (PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
 
             stmt.setString(1, email);
 

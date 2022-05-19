@@ -12,37 +12,28 @@
 <fmt:setBundle basename="messages"/>
 <html lang="${sessionScope.lang}">
 <%
-    UserSignUpDto userDto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
-//    CustomerSignUpDto customerDto = ((CustomerSignUpDto) session.getAttribute("customerSignUpDto"));
+    UserSignUpDto userDto = ((UserSignUpDto) session.getAttribute("signUpDTO"));
 %>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8"> <!-- WARNING!!! -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Main page</title>
     <style>
         .gradient-custom-3 {
-            /* fallback for old browsers */
             background: #84fab0;
 
-            /* Chrome 10-25, Safari 5.1-6 */
             background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
 
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
         }
         .gradient-custom-4 {
-            /* fallback for old browsers */
             background: #84fab0;
 
-            /* Chrome 10-25, Safari 5.1-6 */
             background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
 
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
         }
     </style>
@@ -50,7 +41,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><fmt:message key="label.navbar"/></a>
+        <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,15 +58,10 @@
                         <fmt:message key="label.languages" />
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%--                        <li><a class="dropdown-item" href="#">Action</a></li>--%>
-                        <%--                        <li><a class="dropdown-item" href="#">Another action</a></li>--%>
                         <li><a href="?lang=en"><fmt:message key="label.lang.en" /></a></li>
                         <li><a href="?lang=uk"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
-                <%--                <li class="nav-item">--%>
-                <%--                    <a class="nav-link disabled">Disabled</a>--%>
-                <%--                </li>--%>
             </ul>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
@@ -97,7 +83,6 @@
 
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong>
-<%--                                        Wrong user input data--%>
                                         <fmt:message key="label.wrongUserInputData" />
                                     </strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -112,12 +97,6 @@
                                     <input type="text" name="inputFullName" id="inputFullName" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getFullName():""%>"
                                     />
-<%--                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">--%>
-<%--                                        <span class="text-danger">--%>
-<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
-<%--                                            <fmt:message key="label.wrongEmail" />--%>
-<%--                                        </span>--%>
-<%--                                    </c:if>--%>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -127,12 +106,6 @@
                                     <input type="date" name="inputDob" id="inputDob" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getDob():""%>"
                                     />
-<%--                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">--%>
-<%--                                        <span class="text-danger">--%>
-<%--&lt;%&ndash;                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>&ndash;%&gt;--%>
-<%--                                            <fmt:message key="label.wrongEmail" />--%>
-<%--                                        </span>--%>
-<%--                                    </c:if>--%>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -143,7 +116,6 @@
                                            value="<%=userDto!=null?userDto.getPhoneNumber():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('phoneNumber')}">
                                         <span class="text-danger">
-<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
                                             <fmt:message key="label.wrongPhoneNumber" />
                                         </span>
                                     </c:if>
@@ -155,7 +127,6 @@
                                            value="<%=userDto!=null?userDto.getEmail():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('email') }">
                                         <span class="text-danger">
-<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%>--%>
                                             <fmt:message key="label.wrongEmail" />
                                         </span>
                                     </c:if>
@@ -167,7 +138,6 @@
                                            value="<%=userDto!=null?userDto.getPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('password') }">
                                         <span class="text-danger">
-<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("password")%>--%>
                                             <fmt:message key="label.wrongPassword" />
                                         </span>
                                     </c:if>
@@ -179,7 +149,6 @@
                                            value="<%=userDto!=null?userDto.getConfirmPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('confirmPassword') }">
                                         <span class="text-danger">
-<%--                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("confirmPassword")%>--%>
                                             <fmt:message key="label.wrongConfirmPassword" />
                                         </span>
                                     </c:if>
@@ -192,7 +161,7 @@
                                             value=""
                                             id="form2Example3cg"
                                     />
-                                    <label class="form-check-label"> <!--for="form2Example3g"-->
+                                    <label class="form-check-label">
                                         <fmt:message key="label.agree" /> <a href="#!" class="text-body"><u><fmt:message key="label.service" /></u></a>
                                     </label>
                                 </div>

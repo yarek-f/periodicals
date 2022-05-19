@@ -72,19 +72,6 @@ public class UserServiceImpl implements UserService {
         return checkResult;
     }
 
-//    @Override
-//    public Map<String, String> signUp(CustomerSignUpDto customerSignUpDto) {
-//        Map<String, String> validation = validateCustomer(customerSignUpDto);
-//
-//        if (validation.isEmpty()) {
-//            Customer customer = Mapper.convertToCustomer(customerSignUpDto);
-//
-//            System.out.println("CUSTOMER INSIDE SERVICE -> " + customer.toString());
-//            customerMySqlDao.signUp(customer);
-//        }
-//
-//        return validation;
-//    }
 
     @Override
     public boolean delete(UserSignUpDto userDto) {
@@ -95,27 +82,6 @@ public class UserServiceImpl implements UserService {
     public boolean delete(CustomerSignUpDto customerDto) {
         return customerMySqlDao.delete(customerDto.getEmail());
     }
-
-//    private Map<String, String> validateCustomer(CustomerSignUpDto customerSignUpDto) {
-//        Map<String, String> checkResult = new TreeMap<>();
-//
-//        if (!validEmail(customerSignUpDto.getEmail())) {
-//            checkResult.put("email", "false");
-//        }
-//        if (!validPassword(customerSignUpDto.getPassword())) {
-//            checkResult.put("password", "false");
-//        }
-//        if (!validPhoneNumber(customerSignUpDto.getPhoneNumber())) {
-//            checkResult.put("number", "false");
-//        }
-//        if (!validConfirmPassword(customerSignUpDto.getPassword(), customerSignUpDto.getConfirmPassword())) {
-//            checkResult.put("confirmPassword", "false");
-//        }
-//        return checkResult;
-//    }
-
-
-
 
     private boolean validEmail(String email) { //fixme
         Pattern pattern = Pattern.compile("^.+@.+\\..+$");

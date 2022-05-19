@@ -1,7 +1,5 @@
 package ua.servlets;
 
-import ua.domain.User;
-import ua.dto.CustomerSignUpDto;
 import ua.dto.UserSignUpDto;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
@@ -13,9 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
-import java.util.Map;
 
 @WebServlet(name = "signup", urlPatterns = {"/signUp"})
 public class UserSignUpServlet extends HttpServlet {
@@ -25,11 +21,8 @@ public class UserSignUpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
-        //UserService userService = new UserServiceImpl();
-        PrintWriter out = resp.getWriter();
-
-        // Set response content type
         resp.setContentType("text/html");
+
 
         String fullName = req.getParameter("inputFullName");
         System.out.println(fullName);
@@ -44,23 +37,13 @@ public class UserSignUpServlet extends HttpServlet {
         String confirmPassword = req.getParameter("inputConfirmPassword");
         System.out.println(confirmPassword);
 
-
         UserSignUpDto userSignUpDto = new UserSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
-//        CustomerSignUpDto customerSignUpDto = new CustomerSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
+
+        session.setAttribute("signUpDTO", userSignUpDto);
 
         List<String> userResponse = userService.signUp(userSignUpDto);
 
-//        Map<String, String> customerResponse = userService.signUp(customerSignUpDto);
-
-        if (!userResponse.isEmpty()) {
-            session.setAttribute("errorMessages", userResponse);
-            session.setAttribute("userSignUpDto", userSignUpDto);
-            resp.sendRedirect(req.getContextPath() + "/signUp.jsp");
-//
-        }
-        else {
-            session.setAttribute("registrationMessage", "user with " + userSignUpDto.getEmail() + " successful registered");
-            resp.sendRedirect(req.getContextPath() + "/index.jsp");
-        }
+        session.setAttribute("errorMessages", userResponse);
+        resp.sendRedirect("/rrs");
     }
 }

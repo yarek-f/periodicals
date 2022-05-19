@@ -6,12 +6,10 @@
 <jsp:useBean id="publisherService" class="ua.services.PublisherServiceImpl"/>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User list</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
@@ -69,8 +67,6 @@
                             <td>${p.getCreate()}</td>
                             <td>${p.getUpdated()}</td>
                             <td>${p.isActive()}</td>
-    <%--                        <td><a href="updateForm.jsp?id=${u.getId()}">Edit</a></td>--%>
-    <%--                        <td><a href="DeleteUser.jsp?id=${u.getId()}">Delete</a></td>--%>
                             <td><a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -85,10 +81,6 @@
                             </a></td>
                         </tr>
                     </c:forEach>
-<%--                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--%>
-<%--                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>--%>
-<%--                </td>--%>
-<%--            </tr>--%>
 
             </tbody>
         </table>
@@ -140,8 +132,7 @@
                     <div class="form-group">
 
                         <label>Sex</label>
-                        <!--						<input type="text" class="form-control" required>
-                    -->                        <div>
+                     <div>
                         <ul class="list-group list-group-horizontal">
                             <li class="list-group-item">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
@@ -199,8 +190,7 @@
                     <div class="form-group">
 
                         <label>Sex</label>
-                        <!--						<input type="text" class="form-control" required>
-                    -->                        <div>
+                    <div>
                         <ul class="list-group list-group-horizontal">
                             <li class="list-group-item">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
@@ -246,10 +236,8 @@
     </div>
 </div>
 <script>$(document).ready(function(){
-    // Activate tooltip
     $('[data-toggle="tooltip"]').tooltip();
 
-    // Select/Deselect checkboxes
     var checkbox = $('table tbody input[type="checkbox"]');
     $("#selectAll").click(function(){
         if(this.checked){
