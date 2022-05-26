@@ -4,4 +4,21 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
    http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
 
+    <context-param>
+        <param-name>DBUSER</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBPWD</param-name>
+        <param-value>123456</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/periodicals</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBDRIVER</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
 </web-app>
+
