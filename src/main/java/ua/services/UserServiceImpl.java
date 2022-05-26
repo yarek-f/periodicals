@@ -69,6 +69,9 @@ public class UserServiceImpl implements UserService {
         if (!validConfirmPassword(userSignUpDto.getPassword(), userSignUpDto.getConfirmPassword())) {
             checkResult.add("confirmPassword");
         }
+        if (!validCheckBox(userSignUpDto.getCheckBox())){
+            checkResult.add("check");
+        }
         return checkResult;
     }
 
@@ -81,6 +84,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean delete(CustomerSignUpDto customerDto) {
         return customerMySqlDao.delete(customerDto.getEmail());
+    }
+
+    private boolean validCheckBox(String checkBox) {
+        return checkBox != null;
     }
 
     private boolean validEmail(String email) { //fixme

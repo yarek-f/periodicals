@@ -27,8 +27,8 @@ public class MainTestClass {
 
 
         UserServiceImpl userService = new UserServiceImpl();
-        UserSignUpDto userSignUpDto = new UserSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
-        userService.signUp(userSignUpDto); //todo
+//        UserSignUpDto userSignUpDto = new UserSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
+//        userService.signUp(userSignUpDto); //todo
 
         UserMySqlDao userMySqlDao = null;
         CustomerMySqlDao customerMySqlDao = null;
@@ -39,6 +39,6 @@ public class MainTestClass {
             e.printStackTrace();
         }
 
-        customerMySqlDao.signUp(Mapper.convertToCustomer(userSignUpDto));
+//        customerMySqlDao.signUp(Mapper.convertToCustomer(userSignUpDto));
     }
 }

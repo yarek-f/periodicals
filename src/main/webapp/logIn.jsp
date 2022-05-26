@@ -21,6 +21,15 @@
 
     <title>Main page</title>
     <style>
+        body {
+            background:
+                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
         .gradient-custom-3 {
             background: #84fab0;
 
@@ -38,7 +47,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +59,15 @@
                     <a class="nav-link active" aria-current="page" href="publisherList.jsp"><fmt:message key="lable.publishers"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="userList.jsp"><fmt:message key="lable.userList"/></a>
+                    <a class="nav-link active" href="userList.jsp"><fmt:message key="lable.userList"/></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="?lang=en"><fmt:message key="label.lang.en" /></a></li>
-                        <li><a href="?lang=uk"><fmt:message key="label.lang.uk" /></a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a href="?lang=en" class="link-light"><fmt:message key="label.lang.en" /></a></li>
+                        <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
             </ul>
@@ -69,9 +78,9 @@
         </div>
     </div>
 </nav>
-
-<form action="/signUp" method="post" class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+<%--  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');"--%>
+<form action="/signUp" method="post" class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">

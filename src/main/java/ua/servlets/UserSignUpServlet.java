@@ -36,14 +36,16 @@ public class UserSignUpServlet extends HttpServlet {
         System.out.println(password);
         String confirmPassword = req.getParameter("inputConfirmPassword");
         System.out.println(confirmPassword);
+        String checkBox = req.getParameter("check");
+        System.out.println(checkBox);
 
-        UserSignUpDto userSignUpDto = new UserSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword);
+        UserSignUpDto userSignUpDto = new UserSignUpDto(fullName, dob, phoneNumber, email, password, confirmPassword, checkBox);
+            session.setAttribute("signUpDTO", userSignUpDto);
 
-        session.setAttribute("signUpDTO", userSignUpDto);
+            List<String> userResponse = userService.signUp(userSignUpDto);
 
-        List<String> userResponse = userService.signUp(userSignUpDto);
+            session.setAttribute("errorMessages", userResponse);
 
-        session.setAttribute("errorMessages", userResponse);
         resp.sendRedirect("/rrs");
     }
 }

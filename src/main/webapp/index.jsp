@@ -17,10 +17,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Main page</title>
+    <style>
+        body {
+            background:
+                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+    </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,18 +41,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="publisherList.jsp"><fmt:message key="lable.publishers"/></a>
+                    <a class="nav-link active" href="publisherList.jsp"><fmt:message key="lable.publishers"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="userList.jsp"><fmt:message key="lable.userList"/></a>
+                    <a class="nav-link active" href="userList.jsp"><fmt:message key="lable.userList"/></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="?lang=en"><fmt:message key="label.lang.en" /></a></li>
-                            <li><a href="?lang=uk"><fmt:message key="label.lang.uk" /></a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a href="?lang=en" class="link-light"><fmt:message key="label.lang.en" /></a></li>
+                            <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
             </ul>

@@ -7,17 +7,19 @@ public class UserSignUpDto {
     private String email;
     private String password;
     private String confirmPassword;
+    private String checkBox;
 
     public UserSignUpDto() {
     }
 
-    public UserSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword) {
+    public UserSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword, String checkBox) {
         this.fullName = fullName;
         this.dob = dob;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
+        this.checkBox = checkBox;
     }
 
     public String getFullName() {
@@ -68,7 +70,11 @@ public class UserSignUpDto {
         this.confirmPassword = confirmPassword;
     }
 
+    public String getCheckBox() {
+        return checkBox;
+    }
 
-
-
+    public void setCheckBox(String checkBox) {
+        this.checkBox = checkBox;
+    }
 }
