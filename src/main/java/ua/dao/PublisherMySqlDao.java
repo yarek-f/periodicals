@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PublisherMySqlDao implements Dao<Publisher> {
-    private static final String CREATE_QUERY = "insert into publisher(publisher_name, topic) values (?,?)";
-    private static final String GET_ALL_QUERY = "SELECT * from publisher";
+    private static final String CREATE_QUERY = "insert into publishers(publisher_name, topic) values (?,?)";
+    private static final String GET_ALL_QUERY = "SELECT * from publishers";
+
+    private int noOfRecords;
 
     private static Logger logger = LogManager.getLogger(PublisherMySqlDao.class);
     @Override
@@ -51,6 +53,41 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         return false;
     }
 
+    public List<Publisher> getAll(int offset, int noOfRecords) {
+        String query = "select SQL_CALC_FOUND_ROWS * from publishers limit "
+                + offset + ", " + noOfRecords;
+        List<Publisher> publisherList = new ArrayList<>();
+        Publisher publisher = null;
+        try {Connection con = DataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(query);
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String publisherName = rs.getString("publisher_name");
+                String publisherTopic = rs.getString("topic");
+                Topics topic = Topics.valueOf(publisherTopic);
+                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
+                boolean isActive = rs.getBoolean("is_active");
+
+                publisher = new Publisher(id, publisherName, topic, created, updated, isActive);
+
+                publisherList.add(publisher);
+            }
+            rs = stmt.executeQuery("SELECT FOUND_ROWS()");
+            if(rs.next()){
+                this.noOfRecords = rs.getInt(1);
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return publisherList;
+    }
+
+    public int getNoOfRecords() {
+        return noOfRecords;
+    }
     @Override
     public List<Publisher> getAll() {
         logger.debug("Start getting all users");
