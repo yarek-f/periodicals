@@ -35,10 +35,10 @@ public class PublishersServlet extends HttpServlet {
                 recordsPerPage);
         int noOfRecords = dao.getNoOfRecords();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
-        session.setAttribute("publisherList", list);
-        session.setAttribute("publisherList", list);
-        session.setAttribute("noOfPages", noOfPages);
-        session.setAttribute("currentPage", page);
+        request.setAttribute("publisherList", list);
+        request.setAttribute("publisherList", list);
+        request.setAttribute("noOfPages", noOfPages);
+        request.setAttribute("currentPage", page);
         RequestDispatcher view = request.getRequestDispatcher("publisherList.jsp");
         view.forward(request, response);
     }

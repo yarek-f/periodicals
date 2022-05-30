@@ -6,6 +6,7 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:useBean id="publisherService" class="ua.services.PublisherServiceImpl"/>
+
 <jsp:useBean id="publisherDao" class="ua.dao.PublisherMySqlDao"/>
 <html lang="en">
 <head>
@@ -29,30 +30,30 @@
         <th>Is active</th>
     </tr>
 
-    <c:forEach var="p" items="${sessionScope.get('publisherList')}">
+    <c:forEach var="p" items="${publisherList}">
         <tr>
-            <td>${p.getId()}</td>
-            <td>${p.getName()}</td>
-            <td>${p.getTopic()}</td>
-            <td>${p.getCreate()}</td>
-            <td>${p.getUpdated()}</td>
-            <td>${p.isActive()}</td>
+            <td>${p.id}</td>
+            <td>${p.name}</td>
+            <td>${p.topic}</td>
+            <td>${p.create}</td>
+            <td>${p.updated}</td>
+<%--            <td>${p.isActive}</td>--%>
         </tr>
     </c:forEach>
 </table>
 
 <%--For displaying Previous link except for the 1st page --%>
-<c:if test="${sessionScope.get('currentPage') != 1}">
-    <td><a href="employee.do?page=${sessionScope.get("currentPage") - 1}">Previous</a></td>
+<c:if test="${currentPage != 1}">
+    <td><a href="employee.do?page=${currentPage - 1}">Previous</a></td>
 </c:if>
 
 <%--For displaying Page numbers.
 The when condition does not display a link for the current page--%>
 <table border="1" cellpadding="5" cellspacing="5">
     <tr>
-        <c:forEach begin="1" end="${sessionScope.get('noOfPages')}" var="i">
+        <c:forEach begin="1" end="${noOfPages}" var="i">
             <c:choose>
-                <c:when test="${sessionScope.get('currentPage') eq i}">
+                <c:when test="${currentPage eq i}">
                     <td>${i}</td>
                 </c:when>
                 <c:otherwise>
@@ -64,8 +65,8 @@ The when condition does not display a link for the current page--%>
 </table>
 
 <%--For displaying Next link --%>
-<c:if test="${sessionScope.get('currentPage') lt sessionScope.get('noOfPages')}">
-    <td><a href="employee.do?page=${sessionScope.get('currentPage')+ 1}">Next</a></td>
+<c:if test="${currentPage lt noOfPages}">
+    <td><a href="employee.do?page=${currentPage+ 1}">Next</a></td>
 </c:if>
 
 </body>

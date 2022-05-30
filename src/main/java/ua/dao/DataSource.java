@@ -28,7 +28,7 @@ public class DataSource {
     }
 
     public static Connection getConnection() throws SQLException {
-        inntConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/periodicals", "root", "123456");
+//        inntConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/periodicals", "root", "root");
         return ds.getConnection();
     }
 }
