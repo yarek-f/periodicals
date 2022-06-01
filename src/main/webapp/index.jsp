@@ -41,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="publisherList.jsp"><fmt:message key="lable.publishers"/></a>
+                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="userList.jsp"><fmt:message key="lable.userList"/></a>

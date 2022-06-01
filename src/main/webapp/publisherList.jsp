@@ -37,14 +37,14 @@
             <td>${p.topic}</td>
             <td>${p.create}</td>
             <td>${p.updated}</td>
-<%--            <td>${p.isActive}</td>--%>
+            <td>${p.isActive}</td>
         </tr>
     </c:forEach>
 </table>
 
 <%--For displaying Previous link except for the 1st page --%>
 <c:if test="${currentPage != 1}">
-    <td><a href="employee.do?page=${currentPage - 1}">Previous</a></td>
+    <td><a href="publishers?page=${currentPage - 1}">Previous</a></td>
 </c:if>
 
 <%--For displaying Page numbers.
@@ -57,7 +57,7 @@ The when condition does not display a link for the current page--%>
                     <td>${i}</td>
                 </c:when>
                 <c:otherwise>
-                    <td><a href="employee.do?page=${i}">${i}</a></td>
+                    <td><a href="publishers?page=${i}">${i}</a></td>
                 </c:otherwise>
             </c:choose>
         </c:forEach>
@@ -66,7 +66,7 @@ The when condition does not display a link for the current page--%>
 
 <%--For displaying Next link --%>
 <c:if test="${currentPage lt noOfPages}">
-    <td><a href="employee.do?page=${currentPage+ 1}">Next</a></td>
+    <td><a href="publishers?page=${currentPage+ 1}">Next</a></td>
 </c:if>
 
 </body>

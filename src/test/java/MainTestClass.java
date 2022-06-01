@@ -6,6 +6,7 @@ import ua.domain.Publisher;
 import ua.domain.Role;
 import ua.domain.Topics;
 import ua.domain.User;
+import ua.dto.PublisherGetDto;
 import ua.dto.UserSignUpDto;
 import ua.mapper.Mapper;
 import ua.services.PublisherServiceImpl;
@@ -53,13 +54,18 @@ public class MainTestClass {
 //            e.printStackTrace();
 //        }
 
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-        List<Publisher> publishers = publisherMySqlDao.getAll(0, 5);
-        PublisherMySqlDao dao = new PublisherMySqlDao();
-        List<Publisher> list = dao.getAll((1-1)*5,
-                5);
-        for(Publisher p : list){
-            System.out.println(p);
+//        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+//        List<PublisherGetDto> publishers = publisherMySqlDao.getAll(0, 5);
+//        PublisherMySqlDao dao = new PublisherMySqlDao();
+//        List<PublisherGetDto> list = dao.getAll(0,
+//                5);
+//        for(PublisherGetDto p : list){
+//            System.out.println(p);
+//        }
+        
+        UserServiceImpl userService = new UserServiceImpl();
+        for (User user : userService.getAll()) {
+            System.out.println(user);
         }
 //        try {
 //           // UserServiceImpl userService = new UserServiceImpl();

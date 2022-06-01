@@ -3,10 +3,10 @@ package ua.dao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.domain.Publisher;
-import ua.domain.Role;
 import ua.domain.Topics;
-import ua.domain.User;
+import ua.dto.PublisherGetDto;
 import ua.excaptions.UserException;
+import ua.mapper.Mapper;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -16,12 +16,14 @@ import java.util.List;
 public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String CREATE_QUERY = "insert into publishers(publisher_name, topic) values (?,?)";
     private static final String GET_ALL_QUERY = "SELECT * from publishers";
+    private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from publishers limit ?, ?";
 
     private int noOfRecords;
 
     private static Logger logger = LogManager.getLogger(PublisherMySqlDao.class);
     @Override
     public int signUp(Publisher item) {
+
         logger.debug("Start user creating");
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
@@ -53,34 +55,56 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         return false;
     }
 
-    public List<Publisher> getAll(int offset, int noOfRecords) {
-        String query = "select SQL_CALC_FOUND_ROWS * from publishers limit "
-                + offset + ", " + noOfRecords;
-        List<Publisher> publisherList = new ArrayList<>();
-        Publisher publisher = null;
-        try {Connection con = DataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery(query);
+    public List<PublisherGetDto> getAll(int offset, int noOfRecords) {
+        Connection connection = null;
+        Statement statement;
+        PreparedStatement pstmt;
+        ResultSet resultSet;
 
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String publisherName = rs.getString("publisher_name");
-                String publisherTopic = rs.getString("topic");
+        try {
+            connection = DataSource.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        List<PublisherGetDto> publisherList = new ArrayList<>();
+        Publisher publisher = null;
+        try {
+            pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
+            statement = connection.createStatement();
+            pstmt.setInt(1, offset);
+            pstmt.setInt(2, noOfRecords);
+            resultSet = pstmt.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String publisherName = resultSet.getString("publisher_name");
+                String publisherTopic = resultSet.getString("topic");
                 Topics topic = Topics.valueOf(publisherTopic);
-                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
-                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
-                boolean isActive = rs.getBoolean("is_active");
+                LocalDateTime created = resultSet.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = resultSet.getTimestamp("updated").toLocalDateTime();
+                boolean isActive = resultSet.getBoolean("is_active");
 
                 publisher = new Publisher(id, publisherName, topic, created, updated, isActive);
 
-                publisherList.add(publisher);
+                publisherList.add(Mapper.convertToPublisherDto(publisher));
             }
-            rs = stmt.executeQuery("SELECT FOUND_ROWS()");
-            if(rs.next()){
-                this.noOfRecords = rs.getInt(1);
+            resultSet = statement.executeQuery("SELECT FOUND_ROWS()");
+            if(resultSet.next()){
+                this.noOfRecords = resultSet.getInt(1);
             }
+
         } catch (SQLException e){
             e.printStackTrace();
+        }
+        finally {
+            try {
+                if(connection != null)
+                    connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return publisherList;
     }
