@@ -4,7 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.domain.Role;
 import ua.domain.User;
+import ua.dto.UserGetDto;
 import ua.excaptions.UserException;
+import ua.mapper.Mapper;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -18,14 +20,17 @@ public class UserMySqlDao implements Dao<User> {
     private static final String GET_ALL_QUERY = "SELECT * from users";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
     private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
+    private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
+
+    private int noOfRecords;
 
     private static Logger logger = LogManager.getLogger(UserMySqlDao.class);
     private Connection con;
 
-    public UserMySqlDao() throws SQLException {
+    public UserMySqlDao() {
     }
 
-    public UserMySqlDao(Connection con) throws SQLException {
+    public UserMySqlDao(Connection con){
         this.con = con;
     }
 
@@ -159,6 +164,56 @@ public class UserMySqlDao implements Dao<User> {
 
         logger.debug("Got all users");
         return userList;
+    }
+
+    public List<UserGetDto> getAll(int offset, int noOfRecords) {
+        Connection connection = null;
+        Statement statement;
+        PreparedStatement pstmt;
+        ResultSet resultSet;
+
+        try {
+            connection = DataSource.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        List<UserGetDto> userList = new ArrayList<>();
+        User user = null;
+        try {
+            pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
+            statement = connection.createStatement();
+            pstmt.setInt(1, offset);
+            pstmt.setInt(2, noOfRecords);
+            resultSet = pstmt.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String userRole = resultSet.getString("role");
+                Role role = Role.valueOf(userRole);
+                String email = resultSet.getString("email");
+                String password = resultSet.getString("user_password");
+                boolean isActive = resultSet.getBoolean("isActive");
+                LocalDateTime created = resultSet.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = resultSet.getTimestamp("updated").toLocalDateTime();
+
+                user = new User(id, role, email, password, isActive, created, updated);
+
+                userList.add(Mapper.convertToUserDto(user));
+            }
+            resultSet = statement.executeQuery("SELECT FOUND_ROWS()");
+            if(resultSet.next()){
+                this.noOfRecords = resultSet.getInt(1);
+            }
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return userList;
+    }
+
+    public int getNoOfRecords() {
+        return noOfRecords;
     }
 
     @Override

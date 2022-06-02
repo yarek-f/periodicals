@@ -10,15 +10,15 @@ import java.sql.SQLException;
 import java.util.List;
 
 class UserMySqlDaoTest {
-    private Dao<User> userDao;
+    private Dao<User> userDao = new UserMySqlDao();
 
-    {
-        try {
-            userDao = new UserMySqlDao();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//    {
+//        try {
+//            userDao = new UserMySqlDao();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @BeforeEach
     public void init(){

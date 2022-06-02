@@ -98,20 +98,13 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         } catch (SQLException e){
             e.printStackTrace();
         }
-        finally {
-            try {
-                if(connection != null)
-                    connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
         return publisherList;
     }
 
     public int getNoOfRecords() {
         return noOfRecords;
     }
+
     @Override
     public List<Publisher> getAll() {
         logger.debug("Start getting all users");

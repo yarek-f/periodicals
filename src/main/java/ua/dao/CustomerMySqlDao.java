@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerMySqlDao implements Dao<Customer> {
-    private static final String CREATE_QUERY = "insert into customers (fullname, dob, phone_number, email, password) values (?, ?, ?, ?, ?)";
+    private static final String CREATE_QUERY = "insert into customers (fullname, dob, phone_number, email, user_password) values (?, ?, ?, ?, ?)";
     private static final String DELETE_QUERY = "delete from customers where email = ?";
 
     private Connection con;

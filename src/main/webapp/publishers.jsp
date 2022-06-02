@@ -289,26 +289,19 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Employees</b></h2>
+                    <h2>Manage <b>Publishers</b></h2>
                 </div>
                 <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
-                        <span>Add New Employee</span></a>
+                        <span>Add New Publisher</span></a>
                     <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
                         <span>Delete</span></a>
                 </div>
             </div>
-        </div>
-        <table class="table table-striped table-hover">
+    </div>
+    <table class="table table-striped table-hover">
             <thead>
             <tr>
-<%--                <th>--%>
-<%--                   <span class="custom-checkbox">--%>
-<%--                    <input type="checkbox" id="selectAll">--%>
-<%--                    <label for="selectAll"></label>--%>
-<%--                   </span>--%>
-<%--                </th>--%>
-
                 <th>Id</th>
                 <th>Name</th>
                 <th>Topic</th>
@@ -319,97 +312,36 @@
             </tr>
             </thead>
             <tbody>
-<%--            <tr>--%>
-<%--                <td>--%>
-<%--                   <span class="custom-checkbox">--%>
-<%--                    <input type="checkbox" id="checkbox1" name="options[]" value="1">--%>
-<%--                    <label for="checkbox1"></label>--%>
-<%--                   </span>--%>
-<%--                </td>--%>
-<%--                <td>Dany Lo</td>--%>
-<%--                <td>soengsouy@mail.com</td>--%>
-<%--                <td>89 Chiaroscuro Rd, Portland, Phnom Penh</td>--%>
-<%--                <td>0966686371</td>--%>
-<%--                <td>--%>
-<%--                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"--%>
-<%--                                                                                     data-toggle="tooltip" title="Edit">&#xE254;</i></a>--%>
-<%--                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"--%>
-<%--                                                                                         data-toggle="tooltip"--%>
-<%--                                                                                         title="Delete">&#xE872;</i></a>--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-        <c:forEach var="p" items="${publisherList}">
-            <tr>
-<%--                <td>--%>
-<%--                   <span class="custom-checkbox">--%>
-<%--                    <input type="checkbox" id="checkbox2" name="options[]" value="1">--%>
-<%--                    <label for="checkbox2"></label>--%>
-<%--                   </span>--%>
-<%--                </td>--%>
-                <td>${p.id}</td>
-                <td>${p.name}</td>
-                <td>${p.topic}</td>
-                <td>${p.create}</td>
-                <td>${p.updated}</td>
-                <td>${p.isActive}</td>
-                <td>
-                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                                                                     data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                                                                         data-toggle="tooltip"
-                                                                                         title="Delete">&#xE872;</i></a>
-                </td>
-            </tr>
-        </c:forEach>
+            <c:forEach var="p" items="${publisherList}">
+                <tr>
+                    <td>${p.id}</td>
+                    <td>${p.name}</td>
+                    <td>${p.topic}</td>
+                    <td>${p.create}</td>
+                    <td>${p.updated}</td>
+                    <td>${p.isActive}</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+            </c:forEach>
 
         </tbody>
-        </table>
+    </table>
 
-        <!--test-->
-<%--        <div class="clearfix">--%>
-<%--            <ul class="pagination">--%>
-<%--&lt;%&ndash;                <c:if test="${currentPage != 1}">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    <li class="page-item disabled">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="page-link" tabindex="-1" aria-disabled="true" href="publishers?page=${currentPage - 1}">Previous</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                </c:if>&ndash;%&gt;--%>
-
-<%--                <c:forEach begin="1" end="${noOfPages}" var="i">--%>
-<%--                    <c:choose>--%>
-<%--                        <c:when test="${currentPage eq i}">--%>
-<%--                            <li class="page-item">${i}</li>--%>
-<%--                        </c:when>--%>
-<%--                        <c:otherwise>--%>
-<%--                            <li class="page-item"><a class="page-link" href="publishers?page=${i}">${i}</a></li>--%>
-<%--                        </c:otherwise>--%>
-<%--                    </c:choose>--%>
-<%--                </c:forEach>--%>
-
-
-<%--                <c:if test="${currentPage lt noOfPages}">--%>
-<%--                    <li class="page-item"><a class="page-link" href="publishers?page=${currentPage+ 1}">Next</a></li>--%>
-<%--                </c:if>--%>
-<%--            </ul>--%>
-<%--        </div>--%>
 
     </div>
 
     <nav aria-label="...">
         <ul class="pagination">
-<%--            <li class="page-item disabled">--%>
-<%--                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>--%>
-<%--            </li>--%>
             <c:if test="${currentPage != 1}">
                 <li class="page-item">
                     <a class="page-link" tabindex="-1" aria-disabled="true" href="publishers?page=${currentPage - 1}">Previous</a>
                 </li>
             </c:if>
-
-<%--            <li class="page-item"><a class="page-link" href="#">1</a></li>--%>
-<%--            <li class="page-item active" aria-current="page">--%>
-<%--                <a class="page-link" href="#">2</a>--%>
-<%--            </li>--%>
-<%--            <li class="page-item"><a class="page-link" href="#">3</a></li>--%>
 
             <c:forEach begin="1" end="${noOfPages}" var="i">
                 <c:choose>
