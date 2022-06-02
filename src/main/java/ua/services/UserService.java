@@ -14,5 +14,6 @@ public interface UserService {
     User get(String email);
     boolean updateRole(int id);
     List<User> getAll();
+    boolean valid(String email, String password);
 
 }

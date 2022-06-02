@@ -51,6 +51,17 @@ public class UserServiceImpl implements UserService {
         return validation;
     }
 
+    @Override
+    public boolean valid(String email, String password){
+        User user = get(email);
+        if (user != null){
+            if(user.getPassword().equals(password)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<String> validateUser(UserSignUpDto userSignUpDto) {
         List<String> checkResult = new ArrayList<>();
 
@@ -127,7 +138,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User get(String email) {
+    public User get(String email) {//fixme
         return userMySqlDao.get(email);
     }
 
