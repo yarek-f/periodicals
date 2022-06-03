@@ -11,12 +11,11 @@ import ua.mapper.Mapper;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -57,9 +56,18 @@ public class UserServiceImpl implements UserService {
         if (!validPhoneNumber(userSignUpDto.getPhoneNumber())){
             checkResult.add("phoneNumber");
         }
-//        if (!validDob(userSignUpDto.getDob())){ fixme
-//            checkResult.add("dob");
-//        }
+        if (validPhoneNumberIfExist(userSignUpDto.getPhoneNumber())){
+            checkResult.add("existPhoneNumber");
+        }
+        if (!validDob(userSignUpDto.getDob())){
+            checkResult.add("dob");
+        }
+        if (validEmailIfExist(userSignUpDto.getEmail())) {
+            checkResult.add("emailExist");
+        }
+        if (!validName(userSignUpDto.getFullName())) {
+            checkResult.add("fullName");
+        }
         if (!validEmail(userSignUpDto.getEmail())) {
             checkResult.add("email");
         }
@@ -90,23 +98,52 @@ public class UserServiceImpl implements UserService {
         return checkBox != null;
     }
 
-    private boolean validEmail(String email) { //fixme
+    private boolean validEmail(String email) {
         Pattern pattern = Pattern.compile("^.+@.+\\..+$");
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
 
-    private boolean validDob(String dob) { //fixme
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime now = LocalDateTime.now();
-        if(dob.equals(dtf.format(now))){
-           return true;
+    private boolean validName(String name){
+        if (name != null && !name.equals("")){
+            return name.length() < 50;
+        }else{
+         return false;
         }
-        return false;
+    }
+
+    private boolean validEmailIfExist(String email) {
+        return userMySqlDao.get(email).getEmail() != null;
+    }
+
+    private boolean validPhoneNumberIfExist(String phoneNumber) {
+        return customerMySqlDao.getByPhoneNumber(phoneNumber).getPhoneNumber() != null;
+    }
+
+    private boolean validDob(String dob) {
+        if (dob != null && !dob.equals("")){
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDateTime today = LocalDateTime.now();
+            String formatDateTime = today.format(formatter);
+
+            Date now = null;
+            Date dateOfBirth= null;
+            try {
+                now = new SimpleDateFormat("yyyy-MM-dd").parse(formatDateTime);
+                dateOfBirth = new SimpleDateFormat("yyyy-MM-dd").parse(dob);
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return dateOfBirth.before(now);
+        } else {
+            return true;
+        }
+
     }
 
     private boolean validPassword(String password) {
-        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$"); //todo
+        Pattern pattern = Pattern.compile("(^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=\"])(?=\\S+$).{8,}$)|(^(?=.*[0-9])(?=.*[а-я])(?=.*[А-Я])(?=.*[@#$%^&+=\"])(?=\\S+$).{8,}$)"); //todo
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }

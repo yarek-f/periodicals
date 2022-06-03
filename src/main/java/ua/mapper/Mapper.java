@@ -17,8 +17,14 @@ public class Mapper {
     }
 
     public static Customer convertToCustomer(UserSignUpDto userSignUpDto) {
-        return new Customer(userSignUpDto.getFullName(), LocalDate.parse(userSignUpDto.getDob()),
-                userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
+        if (!userSignUpDto.getDob().equals("")&&userSignUpDto.getDob() != null){
+            return new Customer(userSignUpDto.getFullName(), LocalDate.parse(userSignUpDto.getDob()),
+                    userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
+        }else{
+            return new Customer(userSignUpDto.getFullName(),
+                    userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
+        }
+
     }
 
     public static PublisherGetDto convertToPublisherDto(Publisher publisher){

@@ -44,7 +44,7 @@
                     <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="userList.jsp"><fmt:message key="lable.userList"/></a>
+                    <a class="nav-link active" href="/users"><fmt:message key="lable.userList"/></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

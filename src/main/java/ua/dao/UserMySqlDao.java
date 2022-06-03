@@ -167,25 +167,26 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     public List<UserGetDto> getAll(int offset, int noOfRecords) {
-        Connection connection = null;
-        Statement statement;
-        PreparedStatement pstmt;
-        ResultSet resultSet;
+//        Connection connection = null;
+//        Statement statement;
+//        PreparedStatement pstmt;
+//        ResultSet resultSet;
 
-        try {
-            connection = DataSource.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            connection = DataSource.getConnection();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 
         List<UserGetDto> userList = new ArrayList<>();
         User user = null;
-        try {
-            pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
-            statement = connection.createStatement();
+        try (Connection connection = DataSource.getConnection();
+            PreparedStatement pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
+            Statement statement = connection.createStatement()){
+
             pstmt.setInt(1, offset);
             pstmt.setInt(2, noOfRecords);
-            resultSet = pstmt.executeQuery();
+            ResultSet resultSet = pstmt.executeQuery();
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");

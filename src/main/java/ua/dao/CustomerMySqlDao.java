@@ -5,15 +5,15 @@ import org.apache.logging.log4j.Logger;
 import ua.domain.Customer;
 import ua.excaptions.UserException;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class CustomerMySqlDao implements Dao<Customer> {
     private static final String CREATE_QUERY = "insert into customers (fullname, dob, phone_number, email, user_password) values (?, ?, ?, ?, ?)";
     private static final String DELETE_QUERY = "delete from customers where email = ?";
+    private static final String GET_PHONE_NUMBER_QUERY = "select * from customers where phone_number = ?";
 
     private Connection con;
 
@@ -30,7 +30,11 @@ public class CustomerMySqlDao implements Dao<Customer> {
         try (PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
 
             stmt.setString(1, item.getFullName());
-            stmt.setDate(2, Date.valueOf(item.getDob()));
+            if (item.getDob() != null){
+                stmt.setDate(2, Date.valueOf(item.getDob()));
+            }else{
+                stmt.setDate(2, null);
+            }
             stmt.setString(3, item.getPhoneNumber());
             stmt.setString(4, item.getEmail());
             stmt.setString(5, item.getPassword());
@@ -47,6 +51,34 @@ public class CustomerMySqlDao implements Dao<Customer> {
     @Override
     public Customer get(String email) {
         return null;
+    }
+
+
+    public Customer getByPhoneNumber(String phoneNumber){
+        logger.debug("Start getting user");
+        Customer customer = new Customer();
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement(GET_PHONE_NUMBER_QUERY)){
+
+            stmt.setString(1, phoneNumber);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                String fullName = rs.getString("fullname");
+                LocalDate dob = rs.getDate("dob").toLocalDate();
+                phoneNumber = rs.getString("phone_number");
+                String email = rs.getString("email");
+                String password = rs.getString("user_password");
+
+                customer = new Customer(fullName, dob, phoneNumber, email, password);
+            }
+        } catch (SQLException e) {
+            logger.debug("Problem with pulling user data from database: " + e.getMessage());
+        } catch (Exception ex) {
+            logger.debug("Problem with getting user: " + ex.getMessage());
+        }
+        return customer;
     }
 
     @Override
