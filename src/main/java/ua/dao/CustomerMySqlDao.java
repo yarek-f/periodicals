@@ -55,7 +55,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
 
 
     public Customer getByPhoneNumber(String phoneNumber){
-        logger.debug("Start getting user");
+        logger.debug("Start getting customer by phone number");
         Customer customer = new Customer();
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement(GET_PHONE_NUMBER_QUERY)){
@@ -88,7 +88,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
 
     @Override
     public boolean delete(String email) {
-        logger.debug("Start deleting user");
+        logger.debug("Start deleting customer");
         boolean result = false;
 
         try (PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){

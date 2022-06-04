@@ -56,7 +56,7 @@ public class UserMySqlDao implements Dao<User> {
 
     @Override
     public User get(String email) { //todo
-        logger.debug("Start getting user");
+//        logger.debug("Start getting user");
         User requiredUser = new User();
         try (Connection con = DataSource.getConnection();
             PreparedStatement stmt = con.prepareStatement(GET_QUERY)){
@@ -177,7 +177,7 @@ public class UserMySqlDao implements Dao<User> {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-
+        logger.debug("Start getting all users");
         List<UserGetDto> userList = new ArrayList<>();
         User user = null;
         try (Connection connection = DataSource.getConnection();
@@ -210,6 +210,7 @@ public class UserMySqlDao implements Dao<User> {
         } catch (SQLException e){
             e.printStackTrace();
         }
+        logger.debug("Got all users");
         return userList;
     }
 
