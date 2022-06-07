@@ -1,3 +1,7 @@
+<%@ page import="ua.domain.Publisher" %>
+<%@ page import="java.util.List" %>
+<%@ page import="ua.services.PublisherServiceImpl" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -9,6 +13,8 @@
 <%@ page session="true" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
+<%--<jsp:useBean id="publisherService" class="ua.services.PublisherServiceImpl"/>--%>
+
 <html lang="${sessionScope.lang}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -55,6 +61,15 @@
                             <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown" id="sorting">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sorting
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a href="" class="link-light">By name</a></li>
+                            <li><a href="" class="link-light">By price</a></li>
+                    </ul>
+                </li>
             </ul>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
@@ -63,8 +78,31 @@
         </div>
     </div>
 </nav>
+<%
+//    PublisherServiceImpl publisherService1 = new PublisherServiceImpl();
+//    List<Publisher> publisherList = publisherService1.getAll();
+    List<Publisher> publisherList = (List<Publisher>) session.getAttribute("publishers");
+    request.setAttribute("list", publisherList);
+%>
+
+<div class="container col-8" style="justify-content: center">
+    <c:forEach items="${sessionScope.get('publishers')}" var="p">
+    <div class="row m-4"  style="background-color: aliceblue; border-radius: 5px;">
+        <div class="col" style="position: relative">
+            <div  style="float:left"><img src="images/eren_2.jpg" class="p-4" alt="" style="border-radius: 26px;"></div>
+            <h3 style="text-align: center">${p.name}</h3><br><br>
+            <p style="text-align: center">Description</p>
+            <div style="text-align: center; position: absolute; bottom: 0; left: 530px" class="ps-5"><p style="text-align: center" >${p.price} грн.</p></div>
+        </div>
+    </div>
+    </c:forEach>
+</div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>
+<%
+    System.out.println(application.getRealPath(""));
+%>

@@ -9,6 +9,7 @@ public class Publisher implements Publishers{
     private int id;
     private String name;
     private Topics topic;
+    private double price;
     private LocalDateTime create;
     private LocalDateTime updated;
     private boolean isActive;
@@ -30,6 +31,16 @@ public class Publisher implements Publishers{
     public void setInPublic(boolean inPublic) {
         this.inPublic = inPublic;
         notifySubscriber();
+    }
+
+    public Publisher(int id, String name, Topics topic, double price, LocalDateTime create, LocalDateTime updated, boolean isActive) {
+        this.id = id;
+        this.name = name;
+        this.topic = topic;
+        this.price = price;
+        this.create = create;
+        this.updated = updated;
+        this.isActive = isActive;
     }
 
     public Publisher(int id, String name, Topics topic, LocalDateTime create, LocalDateTime updated, boolean isActive) {
@@ -77,6 +88,14 @@ public class Publisher implements Publishers{
 
     public void setTopic(Topics topic) {
         this.topic = topic;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public LocalDateTime getCreate() {
