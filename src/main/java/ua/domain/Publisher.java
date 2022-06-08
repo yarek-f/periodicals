@@ -10,6 +10,7 @@ public class Publisher implements Publishers{
     private String name;
     private Topics topic;
     private double price;
+    private String image;
     private LocalDateTime create;
     private LocalDateTime updated;
     private boolean isActive;
@@ -33,11 +34,12 @@ public class Publisher implements Publishers{
         notifySubscriber();
     }
 
-    public Publisher(int id, String name, Topics topic, double price, LocalDateTime create, LocalDateTime updated, boolean isActive) {
+    public Publisher(int id, String name, Topics topic, double price, String image, LocalDateTime create, LocalDateTime updated, boolean isActive) {
         this.id = id;
         this.name = name;
         this.topic = topic;
         this.price = price;
+        this.image = image;
         this.create = create;
         this.updated = updated;
         this.isActive = isActive;
@@ -96,6 +98,14 @@ public class Publisher implements Publishers{
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public LocalDateTime getCreate() {

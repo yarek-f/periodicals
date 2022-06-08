@@ -120,11 +120,12 @@ public class PublisherMySqlDao implements Dao<Publisher> {
                 String publisherTopic = rs.getString("topic");
                 Topics topic = Topics.valueOf(publisherTopic);
                 double price = rs.getDouble("price");
+                String image = rs.getString("image");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
                 boolean isActive = rs.getBoolean("is_active");
 
-                Publisher publisher = new Publisher(id, publisherName, topic, price, created, updated, isActive);
+                Publisher publisher = new Publisher(id, publisherName, topic, price, image, created, updated, isActive);
 
                 publisherList.add(publisher);
             }

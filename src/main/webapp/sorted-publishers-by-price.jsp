@@ -57,8 +57,8 @@
                         <fmt:message key="label.languages" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a href="?lang=en" class="link-light"><fmt:message key="label.lang.en" /></a></li>
-                            <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
+                        <li><a href="?lang=en" class="link-light"><fmt:message key="label.lang.en" /></a></li>
+                        <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" id="sorting">
@@ -66,8 +66,8 @@
                         Sorting
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a href="sorted-publishers-by-name.jsp" class="link-light">By name</a></li>
-                            <li><a href="sorted-publishers-by-price.jsp" class="link-light">By price</a></li>
+                        <li><a href="sorted-publishers-by-name.jsp" class="link-light">By name</a></li>
+                        <li><a href="#" class="link-light">By price</a></li>
                     </ul>
                 </li>
             </ul>
@@ -80,15 +80,15 @@
 </nav>
 
 <div class="container col-8" style="justify-content: center">
-    <c:forEach items="${sessionScope.get('publishers')}" var="p">
-    <div class="row m-4"  style="background-color: aliceblue; border-radius: 5px;">
-        <div class="col" style="position: relative">
-            <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-            <h3 style="text-align: center">${p.name}</h3><br><br>
-            <p style="text-align: center">Description</p>
-            <div style="text-align: center; position: absolute; bottom: 0; left: 530px" class="ps-5"><p style="text-align: center" >${p.price} грн.</p></div>
+    <c:forEach items="${sessionScope.get('publishersByPrice')}" var="p">
+        <div class="row m-4"  style="background-color: aliceblue; border-radius: 5px;">
+            <div class="col" style="position: relative">
+                <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
+                <h3 style="text-align: center">${p.name}</h3><br><br>
+                <p style="text-align: center">Description</p>
+                <div style="text-align: center; position: absolute; bottom: 0; left: 530px" class="ps-5"><p style="text-align: center" >${p.price} грн.</p></div>
+            </div>
         </div>
-    </div>
     </c:forEach>
 </div>
 </div>

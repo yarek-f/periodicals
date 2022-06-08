@@ -46,7 +46,9 @@ public class MainPage extends HttpServlet {
                 .sorted(Comparator.comparing(Publisher::getPrice))
                 .collect(Collectors.toList());
 
-        session.setAttribute("publishers", sortedPublishersByName);
+        session.setAttribute("publishers", publishersList);
+        session.setAttribute("publishersByName", sortedPublishersByName);
+        session.setAttribute("publishersByPrice", sortedPublishersByPrice);
 
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);
