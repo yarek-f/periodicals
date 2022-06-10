@@ -86,12 +86,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean delete(UserSignUpDto userDto) {
-        return userMySqlDao.delete(userDto.getEmail());
+        return false;
+//        return userMySqlDao.delete(userDto.getEmail());
     }
 
     @Override
-    public boolean delete(CustomerSignUpDto customerDto) {
-        return customerMySqlDao.delete(customerDto.getEmail());
+    public boolean delete(CustomerSignUpDto customerDto) { //fixme
+        return false;
+//        return customerMySqlDao.delete(Integer.valueOf(customerDto.getId()));
     }
 
     private boolean validCheckBox(String checkBox) {

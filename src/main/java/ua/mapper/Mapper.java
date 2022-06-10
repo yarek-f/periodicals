@@ -3,8 +3,7 @@ package ua.mapper;
 import ua.domain.Customer;
 import ua.domain.Publisher;
 import ua.domain.User;
-import ua.dto.CustomerSignUpDto;
-import ua.dto.PublisherGetDto;
+import ua.dto.PublisherDto;
 import ua.dto.UserGetDto;
 import ua.dto.UserSignUpDto;
 
@@ -27,9 +26,9 @@ public class Mapper {
 
     }
 
-    public static PublisherGetDto convertToPublisherDto(Publisher publisher){
-        return new PublisherGetDto(String.valueOf(publisher.getId()), publisher.getName(), publisher.getTopic().toString(),
-                publisher.getCreate().toString(), publisher.getUpdated().toString(), String.valueOf(publisher.isActive()));
+    public static PublisherDto convertToPublisherDto(Publisher publisher){
+        return new PublisherDto(String.valueOf(publisher.getId()), publisher.getImage(), publisher.getName(), String.valueOf(publisher.getVersion()), publisher.getTopic().toString(),
+                String.valueOf(publisher.getPrice()), publisher.getDescription(), publisher.getCreate().toString(), publisher.getUpdated().toString(), String.valueOf(publisher.isActive()));
     }
 
     public static UserGetDto convertToUserDto(User user) {

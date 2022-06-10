@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.domain.Publisher;
 import ua.domain.Topics;
-import ua.dto.PublisherGetDto;
+import ua.dto.PublisherDto;
 import ua.excaptions.UserException;
 import ua.mapper.Mapper;
 
@@ -14,9 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PublisherMySqlDao implements Dao<Publisher> {
-    private static final String CREATE_QUERY = "insert into publishers(publisher_name, topic) values (?,?)";
-    private static final String GET_ALL_QUERY = "SELECT * from publishers";
+    private static final String CREATE_QUERY = "insert into publishers (image, publisher_name, topic, price, publisher_description) values (?, ?, ?, ?, ?)";
+    private static final String GET_ALL_QUERY = "SELECT * from publishers where is_active = true";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from publishers limit ?, ?";
+    private static final String DELETE_QUERY = "update publishers set is_active = false where id = ?";
 
     private int noOfRecords;
 
@@ -24,19 +25,23 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     @Override
     public int signUp(Publisher item) {
 
-        logger.debug("Start user creating");
+        logger.debug("Start Publisher creating");
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
 
-            stmt.setString(1, item.getName());
-            stmt.setString(2, item.getTopic().name());
+            stmt.setString(1, item.getImage());
+            stmt.setString(2, item.getName());
+            stmt.setString(3, item.getTopic().toString());
+            stmt.setDouble(4, item.getPrice());
+            stmt.setString(5, item.getDescription());
 
             int status = stmt.executeUpdate();
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         }catch (Exception ex) {
-            logger.debug("Problem with creating user: " + ex.getMessage());
+            logger.debug("Problem with creating Publisher: " + ex.getMessage());
         }
+        logger.debug("Publisher creating successfully");
         return item.getId();
     }
 
@@ -51,11 +56,21 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     }
 
     @Override
-    public boolean delete(String email) {
+    public boolean delete(int id) {
+        logger.debug("Start Publisher deleting");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( DELETE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with deleting Publisher: " + ex.getMessage());
+        }
+        logger.debug("Publisher deleting successfully");
         return false;
     }
 
-    public List<PublisherGetDto> getAll(int offset, int noOfRecords) {
+    public List<PublisherDto> getAll(int offset, int noOfRecords) {
         Connection connection = null;
         Statement statement;
         PreparedStatement pstmt;
@@ -68,7 +83,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         }
 
 
-        List<PublisherGetDto> publisherList = new ArrayList<>();
+        List<PublisherDto> publisherList = new ArrayList<>();
         Publisher publisher = null;
         try {
             pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
@@ -79,14 +94,18 @@ public class PublisherMySqlDao implements Dao<Publisher> {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
+                String image = resultSet.getString("image");
                 String publisherName = resultSet.getString("publisher_name");
+                int version = resultSet.getInt("version");
                 String publisherTopic = resultSet.getString("topic");
                 Topics topic = Topics.valueOf(publisherTopic);
+                double price = resultSet.getDouble("price");
+                String description = resultSet.getString("publisher_description");
                 LocalDateTime created = resultSet.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = resultSet.getTimestamp("updated").toLocalDateTime();
                 boolean isActive = resultSet.getBoolean("is_active");
 
-                publisher = new Publisher(id, publisherName, topic, created, updated, isActive);
+                publisher = new Publisher(id, image, publisherName, version, topic, price, description, created, updated, isActive);
 
                 publisherList.add(Mapper.convertToPublisherDto(publisher));
             }

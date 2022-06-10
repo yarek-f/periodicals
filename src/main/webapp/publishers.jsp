@@ -281,6 +281,13 @@
         .modal form label {
             font-weight: normal;
         }
+        .layer {
+            overflow: auto; 
+            width: 140px;
+            height: 75px;
+            padding: 5px;
+            border: solid 1px black;
+        }
     </style>
 </head>
 <body>
@@ -303,8 +310,12 @@
             <thead>
             <tr>
                 <th>Id</th>
+                <th>Image</th>
                 <th>Name</th>
+                <th>Version</th>
                 <th>Topic</th>
+                <th>Price</th>
+                <th>Description</th>
                 <th>Created</th>
                 <th>Updated</th>
                 <th>Is active</th>
@@ -315,15 +326,20 @@
             <c:forEach var="p" items="${publisherList}">
                 <tr>
                     <td>${p.id}</td>
+                    <td><img src="images/${p.image}" width="50" height="75"></td>
                     <td>${p.name}</td>
+                    <td>${p.version}</td>
                     <td>${p.topic}</td>
+                    <td>${p.price}</td>
+                    <td><div class="layer"><p>${p.description}</p></div></td>
                     <td>${p.create}</td>
                     <td>${p.updated}</td>
                     <td>${p.isActive}</td>
                     <td>
                         <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                            </a>
+                        <a href="?page=${currentPage}&id=${p.id}" class="delete" data-toggle="modal">
                             <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                     </td>
                 </tr>
@@ -364,31 +380,35 @@
 </div>
 
 
-<!-- Edit Modal HTML -->
+<!-- Add Modal HTML -->
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="post" action="/create-publisher" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Employee</h4>
+                    <h4 class="modal-title">Add Publisher</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" name="inputPublisherName" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" required>
+                        <label>Topic</label>
+                        <input type="text" name="inputTopic" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Address</label>
-                        <textarea class="form-control" required></textarea>
+                        <label>Price</label>
+                        <input type="number" name="inputPrice" step=".01" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" required>
+                        <label>Description</label>
+                        <textarea class="form-control" name="inputDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -403,7 +423,7 @@
 <div id="editEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form action="" method="post">
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Employee</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

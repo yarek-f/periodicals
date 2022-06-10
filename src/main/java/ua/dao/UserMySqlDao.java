@@ -111,28 +111,33 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     @Override
-    public boolean delete(String email) {
-        logger.debug("Start deleting user");
-        boolean result = false;
-
-        try (
-//                Connection con = DataSource.getConnection();
-             PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
-
-            stmt.setString(1, email);
-
-            if (stmt.executeUpdate() == 1) {
-                result = true;
-            }
-
-        } catch (SQLException ex) {
-            logger.debug("Problem with deleting user: " + ex.getMessage());
-        }
-
-        logger.debug("User deleted");
-
-        return result;
+    public boolean delete(int id) { //fixme
+        return false;
     }
+
+//    @Override
+//    public boolean delete(String email) {
+//        logger.debug("Start deleting user");
+//        boolean result = false;
+//
+//        try (
+////                Connection con = DataSource.getConnection();
+//             PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
+//
+//            stmt.setString(1, email);
+//
+//            if (stmt.executeUpdate() == 1) {
+//                result = true;
+//            }
+//
+//        } catch (SQLException ex) {
+//            logger.debug("Problem with deleting user: " + ex.getMessage());
+//        }
+//
+//        logger.debug("User deleted");
+//
+//        return result;
+//    }
 
     @Override
     public List<User> getAll() { //todo
