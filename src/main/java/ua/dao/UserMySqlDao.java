@@ -19,8 +19,10 @@ public class UserMySqlDao implements Dao<User> {
     private static final String DELETE_QUERY = "delete from users where email = ?";
     private static final String GET_ALL_QUERY = "SELECT * from users";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
-    private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
+    private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, is_active = ? where id = ?";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
+    private static final String DEACTIVATE_QUERY = "update users set is_active = false where id = ?";
+    private static final String ACTIVATE_QUERY = "update users set is_active = true where id = ?";
 
     private int noOfRecords;
 
@@ -71,7 +73,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 email = rs.getString("email");
                 String password = rs.getString("user_password");
-                boolean isActive = rs.getBoolean("isActive");
+                boolean isActive = rs.getBoolean("is_active");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
@@ -112,6 +114,31 @@ public class UserMySqlDao implements Dao<User> {
 
     @Override
     public boolean delete(int id) { //fixme
+        logger.debug("Start user deleting");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( DEACTIVATE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with deleting user: " + ex.getMessage());
+        }
+        logger.debug("User deleting successfully");
+        return false;
+    }
+
+
+    public boolean activate(int id) { //fixme
+        logger.debug("Start user activating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( ACTIVATE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with activating user: " + ex.getMessage());
+        }
+        logger.debug("User activating successfully");
         return false;
     }
 
@@ -154,7 +181,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 String email = rs.getString("email");
                 String password = rs.getString("user_password");
-                boolean isActive = rs.getBoolean("isActive");
+                boolean isActive = rs.getBoolean("is_active");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
@@ -199,7 +226,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 String email = resultSet.getString("email");
                 String password = resultSet.getString("user_password");
-                boolean isActive = resultSet.getBoolean("isActive");
+                boolean isActive = resultSet.getBoolean("is_active");
                 LocalDateTime created = resultSet.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = resultSet.getTimestamp("updated").toLocalDateTime();
 

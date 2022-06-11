@@ -28,4 +28,10 @@ public class PublisherServiceImpl implements PublisherService {
     public List<Publisher> getAll() {
         return publisherMySqlDao.getAll();
     }
+
+    public List<Publisher> getByTopic(String topic) {
+        return publisherMySqlDao.getByTopic(topic);
+    }
+
+
 }

@@ -66,8 +66,18 @@
                         Sorting
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a href="sorted-publishers-by-name.jsp" class="link-light">By name</a></li>
-                            <li><a href="sorted-publishers-by-price.jsp" class="link-light">By price</a></li>
+                            <li><a href="?sort=byName" class="link-light">By name</a></li>
+                            <li><a href="?sort=byPrice" class="link-light">By price</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" id="byTopic">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select by topic
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <c:forEach items="${sessionScope.get('publishersByTopic')}" var="p">
+                            <li><a href="?topic=${p}" class="link-light">${p}</a></li>
+                        </c:forEach>
                     </ul>
                 </li>
             </ul>

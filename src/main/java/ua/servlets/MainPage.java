@@ -2,6 +2,7 @@ package ua.servlets;
 
 import ua.domain.Publisher;
 import ua.domain.Publishers;
+import ua.domain.Topics;
 import ua.services.PublisherServiceImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
@@ -35,6 +37,7 @@ public class MainPage extends HttpServlet {
 //        request.setAttribute("userList", list);
 //        request.setAttribute("noOfPages", noOfPages);
 //        request.setAttribute("currentPage", page);
+
         PublisherServiceImpl publisherService = new PublisherServiceImpl();
 
         List<Publisher> publishersList = publisherService.getAll();
@@ -46,9 +49,32 @@ public class MainPage extends HttpServlet {
                 .sorted(Comparator.comparing(Publisher::getPrice))
                 .collect(Collectors.toList());
 
-        session.setAttribute("publishers", publishersList);
+        List<String> publishersByTopic =  publishersList.stream()
+                .map(e -> e.getTopic().toString())
+                .distinct()
+                .collect(Collectors.toList());
+
+
+        String topic = request.getParameter("topic");
+
+        if (topic != null){
+            List<Publisher> publisherByTopioc = publisherService.getByTopic(topic);
+            session.setAttribute("publishers", publisherByTopioc);
+        } else {
+            session.setAttribute("publishers", publishersList);
+        }
+        String sort = request.getParameter("sort");
+        if(sort != null && sort.equals("byName")){
+            session.setAttribute("publishers", sortedPublishersByName);
+        } else if(sort != null && sort.equals("byPrice")){
+            session.setAttribute("publishers", sortedPublishersByPrice);
+        }
+
+
+
         session.setAttribute("publishersByName", sortedPublishersByName);
         session.setAttribute("publishersByPrice", sortedPublishersByPrice);
+        session.setAttribute("publishersByTopic", publishersByTopic);
 
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);

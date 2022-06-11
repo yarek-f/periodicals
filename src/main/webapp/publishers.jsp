@@ -301,8 +301,8 @@
                 <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add New Publisher</span></a>
-                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
-                        <span>Delete</span></a>
+                    <a href="#addNewVersionModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                        <span>Add new version</span></a>
                 </div>
             </div>
     </div>
@@ -423,55 +423,82 @@
 <div id="editEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="" method="post">
+            <form method="post" action="/edit-publisher" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Employee</h4>
+                    <h4 class="modal-title">Edit publisher</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" required>
+                        <label>Publisher name</label>
+                        <select id="publisherName" name="publisherName">
+                            <option value="">Chose publisher name</option>
+                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
+                                <option value="${p.name}">${p.name}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" required>
+                        <label>Topic</label>
+                        <select name="inputTopic">
+                            <option value="">Chose topic</option>
+                            <c:forEach var="p" items="${sessionScope.get('publishersByTopic')}">
+                                <option value="${p}">${p}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Address</label>
-                        <textarea class="form-control" required></textarea>
+                        <label>Price</label>
+                        <input type="number" name="inputPrice" step=".01" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" required>
+                        <label>Description</label>
+                        <textarea class="form-control" name="inputDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control" value="">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-info" value="Save">
+                    <input type="submit" class="btn btn-warning" value="Update">
                 </div>
             </form>
         </div>
     </div>
 </div>
-<!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
+<!-- Add new version Modal HTML -->
+<div id="addNewVersionModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="post" action="/new-version" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Employee</h4>
+                    <h4 class="modal-title">Add new issue of journal</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you want to delete these Records?</p>
-                    <p class="text-warning">
-                        <small>This action cannot be undone.</small>
-                    </p>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <select id="inputPublisherName" name="inputPublisherName">
+                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
+                                <option value="${p.name}">${p.name}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Version</label>
+                        <input type="number" name="inputPublisherVersion" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-danger" value="Delete">
+                    <input type="submit" class="btn btn-success" value="Add">
                 </div>
             </form>
         </div>

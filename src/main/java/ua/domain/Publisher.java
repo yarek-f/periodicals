@@ -20,9 +20,18 @@ public class Publisher implements Publishers{
     private List<Subscribers> subscribers = new ArrayList<>(); //??
     private boolean inPublic; //fixme (???) change name
 
+    public Publisher() {
+    }
+
     public Publisher(String name, Topics topic) {
         this.name = name;
         this.topic = topic;
+    }
+
+    public Publisher(String name, String image, int version) {
+        this.name = name;
+        this.image = image;
+        this.version = version;
     }
 
     public Publisher(String image, String name, Topics topic, Double price, String description) {
@@ -40,6 +49,16 @@ public class Publisher implements Publishers{
     public void setInPublic(boolean inPublic) {
         this.inPublic = inPublic;
         notifySubscriber();
+    }
+
+    public Publisher(int id, String image, String name, int version, Topics topic, Double price, String description) {
+        this.id = id;
+        this.image = image;
+        this.name = name;
+        this.version = version;
+        this.topic = topic;
+        this.price = price;
+        this.description = description;
     }
 
     public Publisher(int id, String image, String name, int version, Topics topic, double price, String description, LocalDateTime create, LocalDateTime updated, boolean isActive) {
