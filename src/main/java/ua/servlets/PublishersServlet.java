@@ -1,7 +1,9 @@
 package ua.servlets;
 
 import ua.dao.PublisherMySqlDao;
+import ua.domain.Publisher;
 import ua.dto.PublisherDto;
+import ua.mapper.Mapper;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @WebServlet(name = "publisherList", urlPatterns = {"/publishers"})
 public class PublishersServlet extends HttpServlet {
@@ -36,15 +39,34 @@ public class PublishersServlet extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         }
         PublisherMySqlDao dao = new PublisherMySqlDao();
-        List<PublisherDto> list = dao.getAll((page-1)*recordsPerPage,
+
+//        List<PublisherDto> list = dao.getAll((page-1)*recordsPerPage,
+//                recordsPerPage);
+
+        List<PublisherDto> list = getPagination((page-1)*recordsPerPage,
                 recordsPerPage);
-        int noOfRecords = dao.getNoOfRecords();
+//        int noOfRecords = dao.getNoOfRecords();
+        int noOfRecords = dao.getAll().size();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
         request.setAttribute("publisherList", list);
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
+
         RequestDispatcher view = request.getRequestDispatcher("publishers.jsp");
-//        RequestDispatcher view = request.getRequestDispatcher("publisherList.jsp");
+
         view.forward(request, response);
+    }
+
+    private List<PublisherDto> getPagination(int skip, int limit){
+        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+        List<Publisher> publishers = publisherMySqlDao.getAll();
+
+        List<PublisherDto> resultList = publishers.stream()
+                .skip(skip)
+                .limit(limit)
+                .map(e -> Mapper.convertToPublisherDto(e))
+                .collect(Collectors.toList());
+
+        return resultList;
     }
 }
