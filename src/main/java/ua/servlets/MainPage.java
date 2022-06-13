@@ -25,6 +25,7 @@ import java.util.stream.Stream;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
@@ -79,7 +80,6 @@ public class MainPage extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         }
 
-
         List<PublisherDto> list = getPagination((page-1)*recordsPerPage,
                 recordsPerPage, resultList);
 
@@ -92,6 +92,26 @@ public class MainPage extends HttpServlet {
 
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+        HttpSession session = req.getSession(true);
+
+        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+
+        String wantedPublisher = req.getParameter("search");
+        System.out.println(wantedPublisher);
+
+        List<Publisher> publisherList = publisherMySqlDao.getByName(wantedPublisher);
+        if (publisherList == null || publisherList.isEmpty()){
+            resp.sendRedirect("cant-found.jsp");
+        } else{
+            session.setAttribute("searchingPublisher", publisherList);
+            RequestDispatcher view = req.getRequestDispatcher("wanted-publisher.jsp");
+            view.forward(req, resp);
+        }
     }
 
     private List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList){

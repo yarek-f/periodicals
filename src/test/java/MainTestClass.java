@@ -7,7 +7,10 @@ import java.util.List;
 public class MainTestClass {
     public static void main(String[] args) {
 //        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-//        Publisher curentPublisher = publisherMySqlDao.get("The economist");
-//        System.out.println(curentPublisher);
+//        List<Publisher> publisherList = publisherMySqlDao.getByName("the");
+//
+//        for (Publisher p : publisherList) {
+//            System.out.println(p);
+//        }
     }
 }

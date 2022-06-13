@@ -12,6 +12,7 @@ import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String CREATE_QUERY = "insert into publishers (image, publisher_name, topic, price, publisher_description) values (?, ?, ?, ?, ?)";
@@ -22,6 +23,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String ADD_NEW_VERSION = "update publishers set image = ?, version = ? where publisher_name = ?";
     private static final String EDIT_PUBLISHER = "update publishers set image = ?, topic = ?,price = ?, publisher_description = ?, updated = now() where publisher_name = ?";
     private static final String GET_PUBLISHER_BY_NAME = "select * from publishers where publisher_name = ? and is_active = true";
+    private static final String SEARCH_BY_NAME = "SELECT * FROM publishers WHERE publisher_name LIKE ? and is_active = true";
 
 
     private int noOfRecords;
@@ -249,6 +251,41 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             System.out.println(ex.getMessage());
             logger.debug("Problem with getting users: " + ex.getMessage());
         }
+        return publisherList;
+    }
+
+    public List<Publisher> getByName(String searchPatern){
+        logger.debug("start searching");
+        List<Publisher> publisherList = new ArrayList<>();
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(SEARCH_BY_NAME)) {
+            pstm.setString(1, "%" + searchPatern + "%");
+
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String image = rs.getString("image");
+                String publisherName = rs.getString("publisher_name");
+                int version = rs.getInt("version");
+                String publisherTopic = rs.getString("topic");
+                Topics topic = Topics.valueOf(publisherTopic);
+                double price = rs.getDouble("price");
+                String description = rs.getString("publisher_description");
+                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
+                boolean isActive = rs.getBoolean("is_active");
+
+                Publisher publisher = new Publisher(id, image, publisherName, version, topic, price, description, created, updated, isActive);
+
+                publisherList.add(publisher);
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return publisherList;
     }
 

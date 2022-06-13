@@ -39,7 +39,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: -12px; margin-bottom: -12px;">
         <a class="navbar-brand" href="/periodicals"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                             <li>
                                 <c:if test="${topic == null}">
-                                    <a href="?sort=byName" class="link-light">By name</a>
+                                    <a href="?sort=byName&page=${currentPage}" class="link-light">By name</a>
                                 </c:if>
                                 <c:if test="${topic != null}">
                                     <a href="?topic=${topic}&sort=byName" class="link-light">By name</a>
@@ -76,7 +76,7 @@
                             </li>
                             <li>
                                 <c:if test="${topic == null}">
-                                    <a href="?sort=byPrice" class="link-light">By price</a>
+                                    <a href="?sort=byPrice&page=${currentPage}" class="link-light">By price</a>
                                 </c:if>
                                 <c:if test="${topic != null}">
                                     <a href="?topic=${topic}&sort=byPrice" class="link-light">By price</a>
@@ -95,6 +95,10 @@
                     </ul>
                 </li>
             </ul>
+            <form class="d-flex mt-3" method="post" action="/periodicals">
+                <button class="btn btn-outline-success  me-2" type="submit">Search</button>
+                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+            </form>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
                 <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>
