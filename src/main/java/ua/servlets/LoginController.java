@@ -1,5 +1,6 @@
 package ua.servlets;
 
+import ua.services.JWTService;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
 
@@ -34,13 +35,12 @@ public class LoginController extends HttpServlet {
             Map<String, String> userInfo = createUserInfoMap(email, password);
             String token = jwtService.createToken(userInfo, 1);
 
-            ServletContext context = request.getServletContext();
+            ServletContext context = req.getServletContext();
             context.setAttribute(token, token);
-            log.info("token:" + token);
+           // log.info("token:" + token);
         }
 
 
-        return ReturnMessageUtil.sucess(token);
     }
 
     private Map<String, String> createUserInfoMap(String loginName, String password) {

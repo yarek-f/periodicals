@@ -1,5 +1,6 @@
 package ua.services;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,8 +14,8 @@ public class Payload {
     private String issuer;//发布者
     private String subject;//主题
     private List<String> audience;//签名的观众 也可以理解谁接受签名的
-    private Date issuedAt;//发布时间
-    private Date expiresAt;//过期时间
+    private LocalDateTime issuedAt;//发布时间
+    private LocalDateTime expiresAt;//过期时间
     private Date notBefore;//开始使用时间
     private Map<String,String> claims;
 
@@ -37,16 +38,16 @@ public class Payload {
     public void setAudience(List<String> audience) {
         this.audience = audience;
     }
-    public Date getIssuedAt() {
+    public LocalDateTime getIssuedAt() {
         return issuedAt;
     }
-    public void setIssuedAt(Date issuedAt) {
+    public void setIssuedAt(LocalDateTime issuedAt) {
         this.issuedAt = issuedAt;
     }
-    public Date getExpiresAt() {
+    public LocalDateTime getExpiresAt() {
         return expiresAt;
     }
-    public void setExpiresAt(Date expiresAt) {
+    public void setExpiresAt(LocalDateTime expiresAt) {
         this.expiresAt = expiresAt;
     }
     public Date getNotBefore() {
