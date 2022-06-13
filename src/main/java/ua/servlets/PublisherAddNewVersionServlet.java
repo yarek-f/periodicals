@@ -25,8 +25,9 @@ public class PublisherAddNewVersionServlet extends HttpServlet {
         HttpSession session = req.getSession(true);
         resp.setContentType("text/html");
 
-
+        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
         String name = req.getParameter("inputPublisherName");
+        Publisher curentPublisher = publisherMySqlDao.get(name);
         System.out.println(name);
         String publisherVersion = req.getParameter("inputPublisherVersion");
         System.out.println(publisherVersion);
@@ -34,20 +35,27 @@ public class PublisherAddNewVersionServlet extends HttpServlet {
         Part filePart = req.getPart("file");
         String fileName = Paths.get(
                 filePart.getSubmittedFileName()).getFileName().toString();
-        System.out.println("file name ==> " + fileName);
 
-        String address = getServletContext().getRealPath("images/").concat(fileName);
-        System.out.println("address ==> " + address);
+        if (!fileName.equals("")){
 
-        InputStream fileContent = filePart.getInputStream();//fixme
-        Files.copy(fileContent, Paths.get(address));
+            System.out.println("file name ==> " + fileName);
+
+            String address = getServletContext().getRealPath("images/").concat(fileName);
+            System.out.println("address ==> " + address);
+
+            InputStream fileContent = filePart.getInputStream(); //fixme
+            Files.copy(fileContent, Paths.get(address));
+        } else {
+            fileName = curentPublisher.getImage();
+        }
 
 
         Publisher publisher = new Publisher(name, fileName, Integer.valueOf(publisherVersion));
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
         publisherMySqlDao.addNewVersion(publisher);
 
-        resp.sendRedirect("/periodicals");
+        resp.sendRedirect("/publishers");
+
+
 //        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);
 //            session.setAttribute("createDTO", publisherDto);
 //

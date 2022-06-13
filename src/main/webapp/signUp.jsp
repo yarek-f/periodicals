@@ -22,13 +22,6 @@
 
     <title>Main page</title>
     <style>
-        .gradient-custom-3 {
-            background: #84fab0;
-
-            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-
-            background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-        }
         .gradient-custom-4 {
             background: #84fab0;
 
@@ -38,7 +31,7 @@
         }
         body {
             background:
-                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    url(/images/Screenshot.png)
                     no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;

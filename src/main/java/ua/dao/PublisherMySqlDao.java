@@ -194,16 +194,16 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String publisherName = rs.getString("publisher_name");
-//                String publisherTopic = rs.getString("topic");
-//                Topics topic2 = Topics.valueOf(publisherTopic);
-                double price = rs.getDouble("price");
                 String image = rs.getString("image");
+                String publisherName = rs.getString("publisher_name");
+                int version = rs.getInt("version");
+                double price = rs.getDouble("price");
+                String description = rs.getString("publisher_description");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
                 boolean isActive = rs.getBoolean("is_active");
 
-                Publisher publisher = new Publisher(id, publisherName, Topics.valueOf(topic), price, image, created, updated, isActive);
+                Publisher publisher = new Publisher(id, image, publisherName, version, Topics.valueOf(topic), price, description, created, updated, isActive);
 
                 publisherList.add(publisher);
             }

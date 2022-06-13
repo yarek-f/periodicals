@@ -21,6 +21,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
@@ -41,6 +42,10 @@ public class MainPage extends HttpServlet {
                 .distinct()
                 .collect(Collectors.toList());
 
+        List<String> allTopics = Stream.of(Topics.values())
+                .map(Topics::name)
+                .collect(Collectors.toList());
+
 
         String topic = request.getParameter("topic");
         request.setAttribute("topic", topic);
@@ -55,18 +60,17 @@ public class MainPage extends HttpServlet {
          if(sort != null && sort.equals("byName") && topic != null){
             resultList = sortByName(publisherService.getByTopic(topic));
         } else if(sort != null && sort.equals("byName")){
-//            resultList = sortedPublishersByName;
             resultList = sortByName(publishersList);
         }
 
          if(sort != null && sort.equals("byPrice") && topic != null){
             resultList = sortByPrice(publisherService.getByTopic(topic));
         } else if(sort != null && sort.equals("byPrice")){
-//            resultList = sortedPublishersByPrice;
              resultList = sortByPrice(publishersList);
         }
 
         session.setAttribute("publishersByTopic", publishersByTopic);
+        session.setAttribute("allTopics", allTopics);
 
         //start pagination
         int page = 1;

@@ -56,7 +56,6 @@ public class EditPublisherServlet extends HttpServlet {
             String fileName = "";
             fileName = Paths.get(
                     filePart.getSubmittedFileName()).getFileName().toString();
-//        if (!filePart.toString().matches("^org\\.apache\\.catalina\\.core\\.ApplicationPart.*")){
             if (!fileName.equals("")){
 
                 System.out.println("file name ==> " + fileName);
@@ -76,7 +75,7 @@ public class EditPublisherServlet extends HttpServlet {
 
             publisherMySqlDao.editPublisher(publisher);
 
-            resp.sendRedirect("/periodicals");
+            resp.sendRedirect("/publishers");
         }
 
 //        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);

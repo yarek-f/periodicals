@@ -301,7 +301,7 @@
                 <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add New Publisher</span></a>
-                    <a href="#addNewVersionModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                    <a href="#addNewVersionModal" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add new version</span></a>
                 </div>
             </div>
@@ -391,20 +391,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Name</label>
+                        <b style="color: red">*</b><label>Name</label>
                         <input type="text" name="inputPublisherName" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Topic</label>
-                        <input type="text" name="inputTopic" class="form-control" required>
+                        <b style="color: red">*</b>
+<%--                        <label>Topic</label>--%>
+                        <select name="inputTopic">
+                            <option value="">Chose topic</option>
+                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
+                                <option value="${p}">${p}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Price</label>
+                        <b style="color: red">*</b><label>Price</label>
                         <input type="number" name="inputPrice" step=".01" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" name="inputDescription" required></textarea>
+                        <textarea class="form-control" name="inputDescription"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Picture</label>
@@ -430,7 +436,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Publisher name</label>
+                        <b style="color: red">*</b><label>Publisher name</label>
                         <select id="publisherName" name="publisherName">
                             <option value="">Chose publisher name</option>
                             <c:forEach var="p" items="${sessionScope.get('publishers')}">
@@ -442,7 +448,7 @@
                         <label>Topic</label>
                         <select name="inputTopic">
                             <option value="">Chose topic</option>
-                            <c:forEach var="p" items="${sessionScope.get('publishersByTopic')}">
+                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
                                 <option value="${p}">${p}</option>
                             </c:forEach>
                         </select>
@@ -479,7 +485,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Name</label>
+                        <b style="color: red">*</b><label>Name</label>
                         <select id="inputPublisherName" name="inputPublisherName">
                             <c:forEach var="p" items="${sessionScope.get('publishers')}">
                                 <option value="${p.name}">${p.name}</option>
@@ -487,7 +493,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Version</label>
+                        <b style="color: red">*</b><label>Version</label>
                         <input type="number" name="inputPublisherVersion" class="form-control" required>
                     </div>
 
@@ -498,7 +504,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-success" value="Add">
+                    <input type="submit" class="btn btn-primary" value="Add">
                 </div>
             </form>
         </div>

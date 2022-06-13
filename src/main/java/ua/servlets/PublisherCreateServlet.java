@@ -43,22 +43,26 @@ public class PublisherCreateServlet extends HttpServlet {
         Part filePart = req.getPart("file");
         String fileName = Paths.get(
                 filePart.getSubmittedFileName()).getFileName().toString();
-        System.out.println("file name ==> " + fileName);
+        if (!fileName.equals("")){
 
-        String address = getServletContext().getRealPath("images/").concat(fileName);
-        System.out.println("address ==> " + address);
+            System.out.println("file name ==> " + fileName);
 
-        InputStream fileContent = filePart.getInputStream();//fixme
+            String address = getServletContext().getRealPath("images/").concat(fileName);
+            System.out.println("address ==> " + address);
 
+            InputStream fileContent = filePart.getInputStream();//fixme
+            Files.copy(fileContent, Paths.get(address));
+        } else {
+            fileName = "defaultPicture.png";
+        }
 
-        Files.copy(fileContent, Paths.get(address));
 
 
         Publisher publisher = new Publisher(fileName, publisherName, Topics.valueOf(topic), Double.valueOf(price), description);
         PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
         publisherMySqlDao.signUp(publisher);
 
-        resp.sendRedirect("/periodicals");
+        resp.sendRedirect("/publishers");
 //        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);
 //            session.setAttribute("createDTO", publisherDto);
 //

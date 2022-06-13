@@ -26,7 +26,7 @@
     <style>
         body {
             background:
-                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    url(/images/Screenshot.png)
                     no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -105,7 +105,7 @@
 
     <div class="container col-8" style="justify-content: center">
         <c:forEach items="${publisherList}" var="p">
-        <div class="row m-4"  style="background-color: aliceblue; border-radius: 5px;">
+        <div class="row m-4"  style="background-color: white; border-radius: 5px;">
             <div class="col" style="position: relative">
                 <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
                 <h3 style="text-align: center">${p.name}</h3><br><br>
