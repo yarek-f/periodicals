@@ -20,8 +20,8 @@ public class UserSignUpServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(true);
-        resp.setContentType("text/html");
+        HttpSession session = req.getSession(true); //
+        resp.setContentType("text/html"); //fixme
 
 
         String fullName = req.getParameter("inputFullName");

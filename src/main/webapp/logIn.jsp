@@ -40,7 +40,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
+        <a class="navbar-brand" href="/periodicals"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,7 +96,7 @@
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><fmt:message key="label.logIn" /></button>
                                 </div>
-
+                                <p class="text-center text-muted mt-5 mb-0"><fmt:message key="label.haventAcaunt" /> <a href="signUp.jsp" class="fw-bold text-body"><u><fmt:message key="label.signUpHere" /></u></a></p>
                             </form>
 
                         </div>

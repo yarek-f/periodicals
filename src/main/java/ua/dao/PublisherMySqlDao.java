@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String CREATE_QUERY = "insert into publishers (image, publisher_name, topic, price, publisher_description) values (?, ?, ?, ?, ?)";
-    private static final String GET_ALL_QUERY = "SELECT * from publishers where is_active = true";
+    private static final String GET_ALL_QUERY = "SELECT * from publishers";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from publishers limit ?, ?";
     private static final String DELETE_QUERY = "update publishers set is_active = false where id = ?";
     private static final String GET_ALL_BY_TOPIC = "select * from publishers where topic = ? and is_active = true";
@@ -24,6 +24,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String EDIT_PUBLISHER = "update publishers set image = ?, topic = ?,price = ?, publisher_description = ?, updated = now() where publisher_name = ?";
     private static final String GET_PUBLISHER_BY_NAME = "select * from publishers where publisher_name = ? and is_active = true";
     private static final String SEARCH_BY_NAME = "SELECT * FROM publishers WHERE publisher_name LIKE ? and is_active = true";
+    private static final String GET_ACTIVE_PUBLISHERS = "SELECT * from publishers where is_active = true";
 
 
     private int noOfRecords;
@@ -47,6 +48,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
 
         }catch (Exception ex) {
             logger.debug("Problem with creating Publisher: " + ex.getMessage());
+            //todo exception
         }
         logger.debug("Publisher creating successfully");
         return item.getId();
@@ -250,6 +252,39 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             logger.debug("Problem with getting users: " + ex.getMessage());
+        }
+        return publisherList;
+    }
+
+    public List<Publisher> getActivePublishers() {
+        logger.debug("Start getting active publishers");
+        List<Publisher> publisherList = new ArrayList<>();
+
+        try (Connection con = DataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(GET_ACTIVE_PUBLISHERS)){
+
+            while (rs.next()) {
+
+                int id = rs.getInt("id");
+                String image = rs.getString("image");
+                String publisherName = rs.getString("publisher_name");
+                int version = rs.getInt("version");
+                String publisherTopic = rs.getString("topic");
+                Topics topic = Topics.valueOf(publisherTopic);
+                double price = rs.getDouble("price");
+                String description = rs.getString("publisher_description");
+                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
+                boolean isActive = rs.getBoolean("is_active");
+
+                Publisher publisher = new Publisher(id, image, publisherName, version, topic, price, description, created, updated, isActive);
+
+                publisherList.add(publisher);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            logger.debug("Problem with getting active publishers: " + ex.getMessage());
         }
         return publisherList;
     }

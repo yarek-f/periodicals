@@ -32,13 +32,12 @@ public class PublishersServlet extends HttpServlet {
         if(request.getParameter("page") != null){
             page = Integer.parseInt(request.getParameter("page"));
         }
-        PublisherMySqlDao dao = new PublisherMySqlDao();
 
 
         List<PublisherDto> list = getPagination((page-1)*recordsPerPage,
                 recordsPerPage);
 
-        int noOfRecords = dao.getAll().size();
+        int noOfRecords = publisherMySqlDao.getAll().size();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
         request.setAttribute("publisherList", list);
         request.setAttribute("noOfPages", noOfPages);

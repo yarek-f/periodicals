@@ -64,8 +64,8 @@
 
             </ul>
             <form class="d-flex mt-3" method="post" action="/periodicals">
-                <button class="btn btn-outline-success  me-2" type="submit">Search</button>
-                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search" /></b></button>
+                <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search" />" aria-label="Search">
             </form>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
@@ -82,9 +82,11 @@
                     <h3 style="text-align: center">${p.name}</h3><br><br>
                     <p style="text-align: center">${p.description}</p>
                     <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                        <button type="button" class="btn btn-primary ">Subscribe for
-                            <p style="margin: -3px">${p.price} UAH.</p>
-                        </button>
+                        <a href="logIn.jsp">
+                            <button type="button" class="btn btn-primary "><fmt:message key="label.subscribe" />
+                                <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
+                            </button>
+                        </a>
                     </div>
 
                 </div>

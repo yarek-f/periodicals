@@ -1,0 +1,13 @@
+2022-06-14 21:33:05.231 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-14 21:33:05.851 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-14 21:33:08.305 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-14 21:33:28.344 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-14 21:33:34.383 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-14 21:33:36.657 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-14 21:33:36.664 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-14 21:33:49.126 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-14 21:33:49.136 [http-nio-8080-exec-9] DEBUG - Got all users
+2022-06-14 21:33:54.220 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-14 21:33:54.226 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-14 21:33:57.873 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-14 21:33:57.876 [http-nio-8080-exec-2] DEBUG - Start getting all users

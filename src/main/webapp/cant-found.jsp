@@ -64,8 +64,8 @@
 
             </ul>
             <form class="d-flex mt-3" method="post" action="/periodicals">
-                <button class="btn btn-outline-success  me-2" type="submit">Search</button>
-                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search"/></b></button>
+                <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search"/>" aria-label="Search">
             </form>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
@@ -75,7 +75,7 @@
     </div>
 </nav>
     <div class="container col-8" style="justify-content: center">
-        <p>Can't found publisher. Please try again!</p>
+        <h1><fmt:message key="label.cantFound" /></h1>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

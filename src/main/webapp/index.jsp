@@ -49,55 +49,73 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/users"><fmt:message key="lable.userList"/></a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a href="?lang=en" class="link-light"><fmt:message key="label.lang.en" /></a></li>
-                            <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
+                            <li><a href="?lang=en&page=${currentPage}" class="link-light"><fmt:message key="label.lang.en" /></a></li>
+                            <li><a href="?lang=uk&page=${currentPage}" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" id="sorting">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sorting
+                        <fmt:message key="label.sorting" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                             <li>
                                 <c:if test="${topic == null}">
-                                    <a href="?sort=byName&page=${currentPage}" class="link-light">By name</a>
+                                    <a href="?sort=byName&page=${currentPage}" class="link-light"> <fmt:message key="label.sorting.byName"/></a>
                                 </c:if>
                                 <c:if test="${topic != null}">
-                                    <a href="?topic=${topic}&sort=byName" class="link-light">By name</a>
+                                    <a href="?topic=${topic}&sort=byName" class="link-light"><fmt:message key="label.sorting.byName"/></a>
                                 </c:if>
                             </li>
                             <li>
                                 <c:if test="${topic == null}">
-                                    <a href="?sort=byPrice&page=${currentPage}" class="link-light">By price</a>
+                                    <a href="?sort=byPrice&page=${currentPage}" class="link-light"><fmt:message key="label.sorting.byPrice"/></a>
                                 </c:if>
                                 <c:if test="${topic != null}">
-                                    <a href="?topic=${topic}&sort=byPrice" class="link-light">By price</a>
+                                    <a href="?topic=${topic}&sort=byPrice" class="link-light"><fmt:message key="label.sorting.byPrice"/></a>
                                 </c:if>
                             </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" id="byTopic">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select by topic
+                        <fmt:message key="label.topics" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                         <c:forEach items="${sessionScope.get('publishersByTopic')}" var="p">
-                            <li><a href="?topic=${p}" class="link-light">${p}</a></li>
+                            <c:if test="${p == 'FASHION'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.fashion" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'NEWS'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.news" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'SCIENCE'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.science" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'MUSIC'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.music" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'ECONOMY'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.economy" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'NATURE'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.nature" /></a></li>
+                            </c:if>
+                            <c:if test="${p == 'OTHER'}">
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.other" /></a></li>
+                            </c:if>
+
                         </c:forEach>
                     </ul>
                 </li>
             </ul>
             <form class="d-flex mt-3" method="post" action="/periodicals">
-                <button class="btn btn-outline-success  me-2" type="submit">Search</button>
-                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search"/></b></button>
+                <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search" />" aria-label="Search">
             </form>
             <div>
                 <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
@@ -115,9 +133,11 @@
                 <h3 style="text-align: center">${p.name}</h3><br><br>
                 <p style="text-align: center">${p.description}</p>
                 <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                    <button type="button" class="btn btn-primary ">Subscribe for
-                        <p style="margin: -3px">${p.price} UAH.</p>
-                    </button>
+                    <a href="logIn.jsp">
+                        <button type="button" class="btn btn-primary "><fmt:message key="label.subscribe" />
+                            <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
+                        </button>
+                    </a>
                 </div>
 
             </div>
@@ -128,10 +148,10 @@
                 <c:if test="${currentPage != 1}">
                     <li class="page-item">
                         <a:if test="${sort == null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}">Previous</a>
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
                         </a:if>
                         <a:if test="${sort != null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}">Previous</a>
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
                         </a:if>
                     </li>
                 </c:if>
@@ -154,10 +174,10 @@
 
                 <c:if test="${currentPage lt noOfPages}">
                     <a:if test="${sort == null}">
-                        <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}">Next</a></li>
+                        <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}"><fmt:message key="label.next" /></a></li>
                     </a:if>
                     <a:if test="${sort != null}">
-                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}">Next</a>
+                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
                     </a:if>
                 </c:if>
             </ul>

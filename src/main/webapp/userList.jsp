@@ -290,6 +290,52 @@
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/periodicals">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/publishers"><h5>Publisher list</h5></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><h5>User list</h5></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex justify-content-center">
+<nav aria-label="...">
+    <ul class="pagination">
+        <c:if test="${currentPage != 1}">
+            <li class="page-item">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="users?page=${currentPage - 1}">Previous</a>
+            </li>
+        </c:if>
+
+        <c:forEach begin="1" end="${noOfPages}" var="i">
+            <c:choose>
+                <c:when test="${currentPage eq i}">
+                    <li class="page-item active"><a class="page-link" href="#">${i}</a></li>
+                </c:when>
+                <c:otherwise>
+                    <li class="page-item"><a class="page-link" href="users?page=${i}">${i}</a></li>
+                </c:otherwise>
+            </c:choose>
+        </c:forEach>
+
+        <c:if test="${currentPage lt noOfPages}">
+            <li class="page-item"><a class="page-link" href="users?page=${currentPage+ 1}">Next</a></li>
+        </c:if>
+    </ul>
+</nav>
+</div>
+
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
@@ -339,36 +385,7 @@
 
             </tbody>
         </table>
-
-
     </div>
-
-    <nav aria-label="...">
-        <ul class="pagination">
-            <c:if test="${currentPage != 1}">
-                <li class="page-item">
-                    <a class="page-link" tabindex="-1" aria-disabled="true" href="users?page=${currentPage - 1}">Previous</a>
-                </li>
-            </c:if>
-
-            <c:forEach begin="1" end="${noOfPages}" var="i">
-                <c:choose>
-                    <c:when test="${currentPage eq i}">
-                        <li class="page-item active"><a class="page-link" href="#">${i}</a></li>
-                    </c:when>
-                    <c:otherwise>
-                        <li class="page-item"><a class="page-link" href="users?page=${i}">${i}</a></li>
-                    </c:otherwise>
-                </c:choose>
-            </c:forEach>
-
-            <c:if test="${currentPage lt noOfPages}">
-                <li class="page-item"><a class="page-link" href="users?page=${currentPage+ 1}">Next</a></li>
-            </c:if>
-        </ul>
-    </nav>
-
-
 </div>
 
 

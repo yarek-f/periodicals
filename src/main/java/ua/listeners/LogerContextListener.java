@@ -12,13 +12,10 @@ public class LogerContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext ctx = sce.getServletContext();
         String path = ctx.getRealPath("/WEB-INF/log4j2.log");
-        System.setProperty("logFile", path);
+        System.setProperty("C:\\ITprojects\\Periodicals_web\\logFile.log", path);
 
         final Logger log = LogManager.getLogger(LogerContextListener.class);
         log.debug("path = " + path);
-
-        // try to obtain a connection
-        //Connection con = DBUtils.getInstance().getConnection())
     }
 
 }
