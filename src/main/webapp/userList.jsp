@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%--<%@ page import="ua.domain.User" %>--%>
-<%--<%@ page import="ua.dao.UserMySqlDao" %>--%>
-<%--<%@ page import="java.util.List" %>--%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:useBean id="userService" class="ua.services.UserServiceImpl"/>
@@ -542,7 +539,7 @@
 <%--                    <h2>Manage <b>Users</b></h2>--%>
 <%--                </div>--%>
 <%--                <div class="col-sm-6">--%>
-<%--                    <a href="signUp.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New User</span>--%>
+<%--                    <a href="create.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New User</span>--%>
 <%--                    </a>--%>
 <%--                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span>--%>
 <%--                    </a>--%>

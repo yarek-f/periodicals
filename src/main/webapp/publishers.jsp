@@ -1,6 +1,10 @@
+<%@ page import="ua.dto.PublisherDto" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
+<%
+    PublisherDto publisherDto = ((PublisherDto) session.getAttribute("publisherCreateDto"));
+%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -346,9 +350,9 @@
                     <h2>Manage <b>Publishers</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                    <a href="/add-publisher.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add New Publisher</span></a>
-                    <a href="#addNewVersionModal" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                    <a href="/add-new-version.jsp" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add new version</span></a>
                 </div>
             </div>
@@ -383,7 +387,7 @@
                     <td>${p.updated}</td>
                     <td>${p.isActive}</td>
                     <td>
-                        <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                        <a href="edit-publisher.jsp" class="edit">
                             <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                             </a>
                         <a href="?page=${currentPage}&id=${p.id}" class="delete" data-toggle="modal">
@@ -397,8 +401,6 @@
 
     </div>
 
-
-
 </div>
 
 
@@ -407,6 +409,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" action="/create-publisher" enctype="multipart/form-data">
+                <c:if test="${sessionScope.get('publisherErrorMessages') !=null}">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>
+<%--                            <fmt:message key="label.wrongUserInputData" />--%>
+                                wrongUserInputData
+                        </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </c:if>
                 <div class="modal-header">
                     <h4 class="modal-title">Add Publisher</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -414,11 +425,17 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <b style="color: red">*</b><label>Name</label>
-                        <input type="text" name="inputPublisherName" class="form-control" required>
+                        <input type="text" name="inputPublisherName" class="form-control" required
+                               value="<%=publisherDto!=null?publisherDto.getName():""%>"/>
+                        <c:if test="${sessionScope.get('publisherErrorMessages') != null && sessionScope.get('publisherErrorMessages').contains('publisherName')}">
+                            <span class="text-danger">
+<%--                                <fmt:message key="label.wrongFullNume" />--%>
+                                Publisher name must be less than 40 symbols
+                            </span>
+                        </c:if>
                     </div>
                     <div class="form-group">
                         <b style="color: red">*</b>
-<%--                        <label>Topic</label>--%>
                         <select name="inputTopic">
                             <option value="">Chose topic</option>
                             <c:forEach var="p" items="${sessionScope.get('allTopics')}">

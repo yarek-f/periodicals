@@ -116,7 +116,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         }catch (Exception ex) {
             logger.debug("Problem with adding new version of publisher: " + ex.getMessage());
         }
-        logger.debug("updating version successfully");
+        logger.debug("updating version successfully" + publisher.toString());
         return false;
     }
 

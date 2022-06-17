@@ -18,14 +18,16 @@ public class RegistrationResultServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
         List<String> userResponse = (List<String>) session.getAttribute("errorMessages");
-        UserSignUpDto userSignUpDto = (UserSignUpDto) session.getAttribute("signUpDTO");
+//        UserSignUpDto userSignUpDto = (UserSignUpDto) session.getAttribute("signUpDTO");
 
         if (!userResponse.isEmpty()) {
             resp.sendRedirect(req.getContextPath() + "/signUp.jsp");
         }
         else {
-            session.setAttribute("registrationMessage", "user with " + userSignUpDto.getEmail() + " successful registered");
-            resp.sendRedirect(req.getContextPath() + "/index.jsp");
+//            session.setAttribute("registrationMessage", "user with " + userSignUpDto.getEmail() + " successful registered");
+            resp.sendRedirect(req.getContextPath() + "/periodicals");
+            session.removeAttribute("errorMessages");
+            session.removeAttribute("signUpDTO");
         }
     }
 }

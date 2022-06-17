@@ -3,6 +3,7 @@ package ua.servlets;
 import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.domain.Topics;
+import ua.dto.PublisherDto;
 import ua.services.PublisherService;
 import ua.services.PublisherServiceImpl;
 
@@ -14,6 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.util.List;
 
 @MultipartConfig
 @WebServlet(name = "edit", urlPatterns = {"/edit-publisher"})
@@ -60,28 +63,44 @@ public class EditPublisherServlet extends HttpServlet {
 
                 System.out.println("file name ==> " + fileName);
 
-                String address = getServletContext().getRealPath("images/").concat(fileName);
-                System.out.println("address ==> " + address);
+                String servletAddress = getServletContext().getRealPath("images/").concat(fileName);
+                String projectAddress = "C:\\ITprojects\\Periodicals_web\\src\\main\\webapp\\images\\" + fileName;
+                System.out.println("address ==> " + projectAddress);
 
-                InputStream fileContent = filePart.getInputStream();//fixme
-                Files.copy(fileContent, Paths.get(address));
+                InputStream fileContent = filePart.getInputStream();
+                Files.copy(fileContent, Paths.get(projectAddress), StandardCopyOption.REPLACE_EXISTING);
+                Files.copy(Paths.get(projectAddress), Paths.get(servletAddress), StandardCopyOption.REPLACE_EXISTING);
             } else {
                 fileName = curentPublisher.getImage();
             }
 
+            PublisherDto publisherEditDto = new PublisherDto(fileName, publisherName, topic, price, description);
+            session.setAttribute("publisherEditDto", publisherEditDto);
 
+            List<String> publisherResponse = publisherService.editPublisher(publisherEditDto);
 
-            Publisher publisher = new Publisher(fileName, publisherName, Topics.valueOf(topic), Double.valueOf(price), description);
+            session.setAttribute("publisherErrorMessages", publisherResponse);
 
-            publisherMySqlDao.editPublisher(publisher);
+            if (!publisherResponse.isEmpty()) {
+                resp.sendRedirect(req.getContextPath() + "/edit-publisher.jsp");
+            }
+            else {
+                resp.sendRedirect(req.getContextPath() + "/publishers");
+                session.removeAttribute("publisherErrorMessages");
+                session.removeAttribute("publisherEditDto");
+            }
 
-            resp.sendRedirect("/publishers");
+//            Publisher publisher = new Publisher(fileName, publisherName, Topics.valueOf(topic), Double.valueOf(price), description);
+//
+//            publisherMySqlDao.editPublisher(publisher);
+//
+//            resp.sendRedirect("/publishers");
         }
 
 //        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);
 //            session.setAttribute("createDTO", publisherDto);
 //
-//            List<String> userResponse = publisherService.signUp(publisherDto);
+//            List<String> userResponse = publisherService.create(publisherDto);
 //
 //            session.setAttribute("errorMessages", userResponse);
 //

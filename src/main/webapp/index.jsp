@@ -68,7 +68,7 @@
                                     <a href="?sort=byName&page=${currentPage}" class="link-light"> <fmt:message key="label.sorting.byName"/></a>
                                 </c:if>
                                 <c:if test="${topic != null}">
-                                    <a href="?topic=${topic}&sort=byName" class="link-light"><fmt:message key="label.sorting.byName"/></a>
+                                    <a href="?topic=${topic}&sort=byName&page=${currentPage}" class="link-light"><fmt:message key="label.sorting.byName"/></a>
                                 </c:if>
                             </li>
                             <li>
@@ -76,7 +76,7 @@
                                     <a href="?sort=byPrice&page=${currentPage}" class="link-light"><fmt:message key="label.sorting.byPrice"/></a>
                                 </c:if>
                                 <c:if test="${topic != null}">
-                                    <a href="?topic=${topic}&sort=byPrice" class="link-light"><fmt:message key="label.sorting.byPrice"/></a>
+                                    <a href="?topic=${topic}&sort=byPrice&page=${currentPage}" class="link-light"><fmt:message key="label.sorting.byPrice"/></a>
                                 </c:if>
                             </li>
                     </ul>
@@ -88,25 +88,25 @@
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                         <c:forEach items="${sessionScope.get('publishersByTopic')}" var="p">
                             <c:if test="${p == 'FASHION'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.fashion" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.fashion"/></a></li>
                             </c:if>
                             <c:if test="${p == 'NEWS'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.news" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.news"/></a></li>
                             </c:if>
                             <c:if test="${p == 'SCIENCE'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.science" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.science"/></a></li>
                             </c:if>
                             <c:if test="${p == 'MUSIC'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.music" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.music"/></a></li>
                             </c:if>
                             <c:if test="${p == 'ECONOMY'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.economy" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.economy"/></a></li>
                             </c:if>
                             <c:if test="${p == 'NATURE'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.nature" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.nature"/></a></li>
                             </c:if>
                             <c:if test="${p == 'OTHER'}">
-                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.other" /></a></li>
+                                <li><a href="?topic=${p}" class="link-light"><fmt:message key="label.topic.other"/></a></li>
                             </c:if>
 
                         </c:forEach>
@@ -147,11 +147,17 @@
             <ul class="pagination">
                 <c:if test="${currentPage != 1}">
                     <li class="page-item">
-                        <a:if test="${sort == null}">
+                        <a:if test="${sort == null && topic == null}">
                             <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
                         </a:if>
-                        <a:if test="${sort != null}">
+                        <a:if test="${c != null && topic == null}">
                             <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
+                        </a:if>
+                        <a:if test="${topic != null && sort == null}">
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
+                        </a:if>
+                        <a:if test="${topic != null && sort != null}">
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}&sort=${sort}"><fmt:message key="label.previous" /></a>
                         </a:if>
                     </li>
                 </c:if>
@@ -162,22 +168,34 @@
                             <li class="page-item active"><a class="page-link" href="#">${i}</a></li>
                         </c:when>
                         <c:otherwise>
-                            <a:if test="${sort == null}">
+                            <a:if test="${sort == null && topic == null}">
                                 <li class="page-item"><a class="page-link" href="?page=${i}">${i}</a></li>
                             </a:if>
-                            <a:if test="${sort != null}">
+                            <a:if test="${sort != null && topic == null}">
                                 <li class="page-item"><a class="page-link" href="?sort=${sort}&page=${i}">${i}</a></li>
+                            </a:if>
+                            <a:if test="${topic != null && sort == null}">
+                                <li class="page-item"><a class="page-link" href="?topic=${topic}&page=${i}">${i}</a></li>
+                            </a:if>
+                            <a:if test="${topic != null && sort != null}">
+                                <li class="page-item"><a class="page-link" href="?topic=${topic}&sort=${sort}&page=${i}">${i}</a></li>
                             </a:if>
                         </c:otherwise>
                     </c:choose>
                 </c:forEach>
 
                 <c:if test="${currentPage lt noOfPages}">
-                    <a:if test="${sort == null}">
+                    <a:if test="${sort == null && topic == null}">
                         <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}"><fmt:message key="label.next" /></a></li>
                     </a:if>
-                    <a:if test="${sort != null}">
+                    <a:if test="${sort != null && topic == null}">
                         <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
+                    </a:if>
+                    <a:if test="${topic != null && sort == null}">
+                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
+                    </a:if>
+                    <a:if test="${topic != null && sort != null}">
+                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
                     </a:if>
                 </c:if>
             </ul>

@@ -16,6 +16,15 @@ public class PublisherDto {
     private String updated;
     private String isActive;
 
+    public PublisherDto() {
+    }
+
+    public PublisherDto(String image, String name, String version) {
+        this.image = image;
+        this.name = name;
+        this.version = version;
+    }
+
     public PublisherDto(String id, String name, String topic, String create, String updated, String isActive) {
         this.id = id;
         this.name = name;
