@@ -9,7 +9,7 @@ public interface Dao<T> {
 
     int update(T items, int id);
 
-    boolean delete(String email);
+    boolean delete(int id);
 
     List<T> getAll();
 

@@ -19,10 +19,20 @@ public class Customer implements Subscribers {
     private Wallet wallet;
     private Subscription subscription;
 
+    public Customer() {
+    }
 
     public Customer(String fullName, LocalDate dob, String phoneNumber, String email, String password) {
         this.fullName = fullName;
         this.dob = dob;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+    }
+
+
+    public Customer(String fullName, String phoneNumber, String email, String password) {
+        this.fullName = fullName;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;

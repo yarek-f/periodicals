@@ -1,17 +1,117 @@
 package ua.services;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
-import ua.dto.UserSignUpDto;
+import ua.dto.PublisherDto;
+import ua.mapper.Mapper;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class PublisherServiceImpl implements PublisherService {
     PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+
+    private static Logger logger = LogManager.getLogger(PublisherServiceImpl.class);
     @Override
-    public Map<String, String> signUp(UserSignUpDto userDto) {
-        return null;
+    public List<String> create(PublisherDto publisherDto) {
+        List<String> validation = validateAddPublisher(publisherDto);
+
+        if (validation.isEmpty()) {
+            Publisher publisher = Mapper.convertToPublisher(publisherDto);
+
+            logger.info("publisher inside service -> " + publisher.toString());
+            publisherMySqlDao.signUp(publisher);
+        }
+
+        return validation;
+    }
+
+    @Override
+    public List<String> addNewVersion(PublisherDto publisherDto) {
+        List<String> validation = validateAddNewVersion(publisherDto);
+
+        if (validation.isEmpty()) {
+            Publisher publisher = Mapper.convertToAddNewVersionPublisher(publisherDto);
+
+            logger.info("publisher inside service -> " + publisher.toString());
+            publisherMySqlDao.addNewVersion(publisher);
+        }
+
+        return validation;
+    }
+
+    @Override
+    public List<String> editPublisher(PublisherDto publisherDto) {
+        List<String> validation = validateEditPublisher(publisherDto);
+
+        if (validation.isEmpty()) {
+            Publisher publisher = Mapper.convertToPublisher(publisherDto);
+
+            logger.info("publisher inside service -> " + publisher.toString());
+            publisherMySqlDao.editPublisher(publisher);
+        }
+
+        return validation;
+    }
+
+    private List<String> validateEditPublisher(PublisherDto publisherDto) {
+        List<String> checkResult = new ArrayList<>();
+        if (!validDescriptionLength(publisherDto.getDescription())){
+            checkResult.add("publisherDescription");
+        }
+        return checkResult;
+    }
+
+    private List<String> validateAddPublisher(PublisherDto publisherDto) {
+        List<String> checkResult = new ArrayList<>();
+
+        if (!validNameLength(publisherDto.getName())){
+            checkResult.add("publisherName");
+        }
+        if (!validNameIfExist(publisherDto.getName())){
+            checkResult.add("publisherNameExist");
+        }
+        if (validNotNull(publisherDto.getTopic())){
+            checkResult.add("publisherTopicIsNull");
+        }
+        if (validNotNull(publisherDto.getPrice())){
+            checkResult.add("publisherPriceIsNull");
+        }
+        if (!validDescriptionLength(publisherDto.getDescription())){
+            checkResult.add("publisherDescription");
+        }
+        return checkResult;
+    }
+
+    private List<String> validateAddNewVersion(PublisherDto publisherDto) {
+        List<String> checkResult = new ArrayList<>();
+
+        if (validVersion(publisherDto.getVersion(), publisherDto.getName())){
+            checkResult.add("publisherVersion");
+        }
+        return checkResult;
+    }
+
+    private boolean validVersion(String version, String publisherName) {
+        return publisherMySqlDao.get(publisherName).getVersion() >= Integer.valueOf(version);
+    }
+
+    private boolean validNameLength (String publisherName){
+        if (publisherName.length() > 40) return false;
+        return true;
+    }
+    private boolean validNameIfExist (String publisherName){
+        return publisherMySqlDao.get(publisherName).getName() == null;
+    }
+    private boolean validNotNull (String entity){ //for topic and price
+        return entity == null || entity.equals("");
+    }
+
+    private boolean validDescriptionLength (String description){
+        if (description.length() > 500) return false;
+        return true;
     }
 
     @Override
@@ -20,12 +120,14 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
-    public boolean updateRole(int id) {
-        return false;
+    public List<Publisher> getAll() {
+        return publisherMySqlDao.getActivePublishers();
     }
 
     @Override
-    public List<Publisher> getAll() {
-        return publisherMySqlDao.getAll();
+    public List<Publisher> getByTopic(String topic) {
+        return publisherMySqlDao.getByTopic(topic);
     }
+
+
 }

@@ -13,15 +13,15 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "signup", urlPatterns = {"/signUp"})
-public class UserSignUpServlet extends HttpServlet {
+@WebServlet(name = "signup", urlPatterns = {"/create"})
+public class SignUpUserServlet extends HttpServlet {
     private UserService userService = new UserServiceImpl();
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(true);
-        resp.setContentType("text/html");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session = req.getSession(true); //
+        resp.setContentType("text/html"); //fixme
 
 
         String fullName = req.getParameter("inputFullName");

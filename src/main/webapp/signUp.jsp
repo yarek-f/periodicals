@@ -4,7 +4,7 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<% request.setCharacterEncoding("UTF-8"); %>
+<%--<% request.setCharacterEncoding("UTF-8"); %>--%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@ page session="true" %>
@@ -22,13 +22,6 @@
 
     <title>Main page</title>
     <style>
-        .gradient-custom-3 {
-            background: #84fab0;
-
-            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-
-            background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-        }
         .gradient-custom-4 {
             background: #84fab0;
 
@@ -38,7 +31,7 @@
         }
         body {
             background:
-                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    url(/images/Screenshot.png)
                     no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -50,7 +43,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
+        <a class="navbar-brand" href="/periodicals"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -80,7 +73,7 @@
     </div>
 </nav>
 <%--style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');"--%>
-<form action="/signUp" method="post" class="vh-100 bg-image" >
+<form action="/create" method="post" class="vh-100 bg-image" >
     <div class="mask d-flex align-items-center h-100 <%--gradient-custom-3--%>">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -89,7 +82,6 @@
                         <div class="card-body p-5">
 
                             <c:if test="${sessionScope.get('errorMessages') !=null}">
-
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong>
                                         <fmt:message key="label.wrongUserInputData" />
@@ -101,11 +93,15 @@
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputFullName">
-                                        <fmt:message key="label.fullName" />
+                                        <fmt:message key="label.fullName"/><b style="color: red">*</b>
                                     </label>
                                     <input type="text" name="inputFullName" id="inputFullName" class="form-control form-control-lg"
-                                           value="<%=userDto!=null?userDto.getFullName():""%>"
-                                    />
+                                           value="<%=userDto!=null?userDto.getFullName():""%>"/>
+                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('fullName')}">
+                                        <span class="text-danger">
+                                            <fmt:message key="label.wrongFullNume" />
+                                        </span>
+                                    </c:if>
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -115,11 +111,16 @@
                                     <input type="date" name="inputDob" id="inputDob" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getDob():""%>"
                                     />
+                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('dob')}">
+                                        <span class="text-danger">
+                                            <fmt:message key="label.wrongDob"/>
+                                        </span>
+                                    </c:if>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputPhoneNumber">
-                                        <fmt:message key="label.phoneNumber" />
+                                        <fmt:message key="label.phoneNumber" /><b style="color: red">*</b>
                                     </label>
                                     <input type="tel" name="inputPhoneNumber" id="inputPhoneNumber" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getPhoneNumber():""%>"/>
@@ -128,10 +129,16 @@
                                             <fmt:message key="label.wrongPhoneNumber" />
                                         </span>
                                     </c:if>
+                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('existPhoneNumber')}">
+                                        <span class="text-danger">
+                                            <fmt:message key="label.existedPhoneNumber"/>
+                                        </span>
+                                    </c:if>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputEmail"><fmt:message key="label.email" /></label>
+                                    <label class="form-label" for="inputEmail"><fmt:message key="label.email" /><b style="color: red">*</b>
+                                    </label>
                                     <input type="email" name="inputEmail" id="inputEmail" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getEmail():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('email') }">
@@ -139,10 +146,16 @@
                                             <fmt:message key="label.wrongEmail" />
                                         </span>
                                     </c:if>
+                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('emailExist') }">
+                                        <span class="text-danger">
+                                            <fmt:message key="label.existedEmail"/>: <a href="logIn.jsp" class="fw-bold text-body"><u  style="color: red"><fmt:message key="label.loginHere" /></u></a>
+                                        </span>
+                                    </c:if>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputPassword"><fmt:message key="label.password" /></label>
+                                    <label class="form-label" for="inputPassword"><fmt:message key="label.password" /><b style="color: red">*</b>
+                                    </label>
                                     <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('password') }">
@@ -153,7 +166,8 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="inputConfirmPassword"><fmt:message key="label.repeatPassword" /></label>
+                                    <label class="form-label" for="inputConfirmPassword"><fmt:message key="label.repeatPassword" /><b style="color: red">*</b>
+                                    </label>
                                     <input type="password" name="inputConfirmPassword" id="inputConfirmPassword" class="form-control form-control-lg"
                                            value="<%=userDto!=null?userDto.getConfirmPassword():""%>"/>
                                     <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('confirmPassword') }">
@@ -172,7 +186,7 @@
                                             id="check"
                                     />
                                     <label class="form-check-label">
-                                        <fmt:message key="label.agree" /> <a href="#!" class="text-body"><u><fmt:message key="label.service" /></u></a>
+                                        <fmt:message key="label.agree" /> <a href="#!" class="text-body"><u><fmt:message key="label.service" /></u></a><b style="color: red">*</b>
                                         <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').contains('check') }">
                                             <p class="text-danger">
 

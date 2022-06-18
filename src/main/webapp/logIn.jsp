@@ -10,9 +10,6 @@
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 <html lang="${sessionScope.lang}">
-<%
-    UserSignUpDto dto = ((UserSignUpDto) session.getAttribute("userSignUpDto"));
-%>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,21 +18,15 @@
 
     <title>Main page</title>
     <style>
+        html, body {margin: 0; height: 100%; overflow: hidden}
         body {
             background:
-                    url(https://www.hymnsam.co.uk/media/1080/periodicals.jpg)
+                    url(/images/Screenshot.png)
                     no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-        }
-        .gradient-custom-3 {
-            background: #84fab0;
-
-            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-
-            background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
         }
         .gradient-custom-4 {
             background: #84fab0;
@@ -49,7 +40,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.jsp"><fmt:message key="label.navbar"/></a>
+        <a class="navbar-brand" href="/periodicals"><fmt:message key="label.navbar"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -78,52 +69,34 @@
         </div>
     </div>
 </nav>
-<%--  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');"--%>
 <form action="/signUp" method="post" class="vh-100 bg-image">
     <div class="mask d-flex align-items-center h-100">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container ">
+            <div class="row d-flex justify-content-center align-items-center pb-5 mb-5">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
 
-                            <c:if test="${sessionScope.get('errorMessages') !=null}">
-
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    <strong>Wrong user input data
-                                    </strong>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                            </c:if>
                             <h2 class="text-uppercase text-center mb-5"><fmt:message key="label.logIn" /></h2>
 
                             <form>
 
-
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputEmail"><fmt:message key="label.email" /></label>
-                                    <input type="email" name="inputEmail" id="inputEmail" class="form-control form-control-lg"
-                                           value="<%=dto!=null?dto.getEmail():""%>"/>
-                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('phoneNumber') }">
-                                        <span class="text-danger">
-                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("email")%></span>
-                                    </c:if>
+                                    <input type="email" name="inputEmail" id="inputEmail" class="form-control form-control-lg"/>
+
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="inputPassword"><fmt:message key="label.password" /></label>
-                                    <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-lg"
-                                           value="<%=dto!=null?dto.getPassword():""%>"/>
-                                    <c:if test="${sessionScope.get('errorMessages') != null && sessionScope.get('errorMessages').containsKey('password') }">
-                                        <span class="text-danger">
-                                        <%=((Map<String, String>) session.getAttribute("errorMessages")).get("password")%></span>
-                                    </c:if>
+                                    <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-lg" />
+
                                 </div>
 
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><fmt:message key="label.logIn" /></button>
                                 </div>
-
+                                <p class="text-center text-muted mt-5 mb-0"><fmt:message key="label.haventAcaunt" /> <a href="signUp.jsp" class="fw-bold text-body"><u><fmt:message key="label.signUpHere" /></u></a></p>
                             </form>
 
                         </div>

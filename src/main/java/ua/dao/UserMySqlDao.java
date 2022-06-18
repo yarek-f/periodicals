@@ -19,8 +19,10 @@ public class UserMySqlDao implements Dao<User> {
     private static final String DELETE_QUERY = "delete from users where email = ?";
     private static final String GET_ALL_QUERY = "SELECT * from users";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
-    private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, isActive = ? where id = ?";
+    private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, is_active = ? where id = ?";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
+    private static final String DEACTIVATE_QUERY = "update users set is_active = false where id = ?";
+    private static final String ACTIVATE_QUERY = "update users set is_active = true where id = ?";
 
     private int noOfRecords;
 
@@ -56,7 +58,7 @@ public class UserMySqlDao implements Dao<User> {
 
     @Override
     public User get(String email) { //todo
-        logger.debug("Start getting user");
+//        logger.debug("Start getting user");
         User requiredUser = new User();
         try (Connection con = DataSource.getConnection();
             PreparedStatement stmt = con.prepareStatement(GET_QUERY)){
@@ -71,7 +73,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 email = rs.getString("email");
                 String password = rs.getString("user_password");
-                boolean isActive = rs.getBoolean("isActive");
+                boolean isActive = rs.getBoolean("is_active");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
@@ -111,28 +113,58 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     @Override
-    public boolean delete(String email) {
-        logger.debug("Start deleting user");
-        boolean result = false;
+    public boolean delete(int id) { //fixme
+        logger.debug("Start user deleting");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( DEACTIVATE_QUERY )) {
 
-        try (
-//                Connection con = DataSource.getConnection();
-             PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
-
-            stmt.setString(1, email);
-
-            if (stmt.executeUpdate() == 1) {
-                result = true;
-            }
-
-        } catch (SQLException ex) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
             logger.debug("Problem with deleting user: " + ex.getMessage());
         }
-
-        logger.debug("User deleted");
-
-        return result;
+        logger.debug("User deleting successfully");
+        return false;
     }
+
+
+    public boolean activate(int id) { //fixme
+        logger.debug("Start user activating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( ACTIVATE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with activating user: " + ex.getMessage());
+        }
+        logger.debug("User activating successfully");
+        return false;
+    }
+
+//    @Override
+//    public boolean delete(String email) {
+//        logger.debug("Start deleting user");
+//        boolean result = false;
+//
+//        try (
+////                Connection con = DataSource.getConnection();
+//             PreparedStatement stmt = con.prepareStatement(DELETE_QUERY)){
+//
+//            stmt.setString(1, email);
+//
+//            if (stmt.executeUpdate() == 1) {
+//                result = true;
+//            }
+//
+//        } catch (SQLException ex) {
+//            logger.debug("Problem with deleting user: " + ex.getMessage());
+//        }
+//
+//        logger.debug("User deleted");
+//
+//        return result;
+//    }
 
     @Override
     public List<User> getAll() { //todo
@@ -149,7 +181,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 String email = rs.getString("email");
                 String password = rs.getString("user_password");
-                boolean isActive = rs.getBoolean("isActive");
+                boolean isActive = rs.getBoolean("is_active");
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
@@ -167,25 +199,26 @@ public class UserMySqlDao implements Dao<User> {
     }
 
     public List<UserGetDto> getAll(int offset, int noOfRecords) {
-        Connection connection = null;
-        Statement statement;
-        PreparedStatement pstmt;
-        ResultSet resultSet;
+//        Connection connection = null;
+//        Statement statement;
+//        PreparedStatement pstmt;
+//        ResultSet resultSet;
 
-        try {
-            connection = DataSource.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+//        try {
+//            connection = DataSource.getConnection();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+        logger.debug("Start getting all users");
         List<UserGetDto> userList = new ArrayList<>();
         User user = null;
-        try {
-            pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
-            statement = connection.createStatement();
+        try (Connection connection = DataSource.getConnection();
+            PreparedStatement pstmt = connection.prepareStatement(SQL_CALC_FOUND_ROWS);
+            Statement statement = connection.createStatement()){
+
             pstmt.setInt(1, offset);
             pstmt.setInt(2, noOfRecords);
-            resultSet = pstmt.executeQuery();
+            ResultSet resultSet = pstmt.executeQuery();
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -193,7 +226,7 @@ public class UserMySqlDao implements Dao<User> {
                 Role role = Role.valueOf(userRole);
                 String email = resultSet.getString("email");
                 String password = resultSet.getString("user_password");
-                boolean isActive = resultSet.getBoolean("isActive");
+                boolean isActive = resultSet.getBoolean("is_active");
                 LocalDateTime created = resultSet.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = resultSet.getTimestamp("updated").toLocalDateTime();
 
@@ -209,6 +242,7 @@ public class UserMySqlDao implements Dao<User> {
         } catch (SQLException e){
             e.printStackTrace();
         }
+        logger.debug("Got all users");
         return userList;
     }
 

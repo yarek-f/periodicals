@@ -51,7 +51,7 @@ class UserMySqlDaoTest {
     @Test
     void GET_USER_EMAIL_NEGATIVE_TEST() {
         User user = new User("zelya@ukr.net", "Ukr@vova22");
-        //userDao.signUp(user);
+        //userDao.create(user);
         Assertions.assertNotEquals("zelya@ukr.net", userDao.get(user.getEmail()).getEmail());
     }
 

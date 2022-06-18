@@ -1,0 +1,1768 @@
+2022-06-14 21:33:05.231 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-14 21:33:05.851 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-14 21:33:08.305 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-14 21:33:28.344 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-14 21:33:34.383 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-14 21:33:36.657 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-14 21:33:36.664 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-14 21:33:49.126 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-14 21:33:49.136 [http-nio-8080-exec-9] DEBUG - Got all users
+2022-06-14 21:33:54.220 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-14 21:33:54.226 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-14 21:33:57.873 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-14 21:33:57.876 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-15 19:58:12.843 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-15 19:58:13.546 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-15 19:58:17.957 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-15 19:59:27.856 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-15 19:59:31.199 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-15 19:59:34.777 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-15 19:59:37.047 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-15 19:59:40.023 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-15 19:59:45.704 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-15 19:59:49.036 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-15 19:59:50.458 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-15 19:59:55.683 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-15 19:59:55.687 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-15 20:00:01.465 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-15 20:00:01.468 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-15 20:00:03.974 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-15 20:00:03.978 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-15 20:00:37.317 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-15 20:00:37.332 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-15 20:00:37.337 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-15 20:00:37.339 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-15 20:00:39.861 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-15 20:00:42.797 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-15 20:01:26.628 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-15 20:01:26.647 [http-nio-8080-exec-8] DEBUG - Got all users
+2022-06-15 20:02:28.771 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-15 22:34:05.292 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-15 22:34:05.296 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-15 22:34:29.765 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-15 22:34:44.212 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-15 22:34:44.213 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-15 22:35:34.145 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-15 22:35:34.146 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-15 22:35:47.997 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-15 22:35:48.003 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-15 22:35:48.004 [http-nio-8080-exec-9] DEBUG - Start edit publisher
+2022-06-15 22:35:48.013 [http-nio-8080-exec-9] DEBUG - editing publisher happened successfully
+2022-06-15 22:35:48.018 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-15 22:35:48.020 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-15 22:35:56.508 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-15 22:35:56.509 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-15 22:35:56.510 [http-nio-8080-exec-4] DEBUG - Start edit publisher
+2022-06-15 22:35:56.516 [http-nio-8080-exec-4] DEBUG - editing publisher happened successfully
+2022-06-15 22:35:56.519 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-15 22:35:56.520 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-15 22:35:59.750 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-15 22:36:04.317 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-15 22:36:04.319 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-15 22:36:11.857 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-15 22:36:11.860 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-15 22:36:23.653 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-15 22:36:23.655 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-15 22:36:23.655 [http-nio-8080-exec-10] DEBUG - Start edit publisher
+2022-06-15 22:36:23.660 [http-nio-8080-exec-10] DEBUG - editing publisher happened successfully
+2022-06-15 22:36:23.664 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-15 22:36:23.666 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-15 22:36:31.197 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-15 22:36:31.199 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-15 22:36:31.199 [http-nio-8080-exec-5] DEBUG - Start edit publisher
+2022-06-15 22:36:31.205 [http-nio-8080-exec-5] DEBUG - editing publisher happened successfully
+2022-06-15 22:36:31.208 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-15 22:36:31.210 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-15 22:36:37.896 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-15 22:36:37.898 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-15 22:36:37.899 [http-nio-8080-exec-4] DEBUG - Start edit publisher
+2022-06-15 22:36:37.905 [http-nio-8080-exec-4] DEBUG - editing publisher happened successfully
+2022-06-15 22:36:37.910 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-15 22:36:37.911 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-15 22:36:42.404 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-15 22:36:42.408 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-15 22:36:45.561 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-15 22:36:55.715 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-15 22:36:55.721 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-15 22:37:02.539 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-15 22:37:10.428 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-15 22:37:10.431 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-15 22:37:21.445 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-15 22:37:21.447 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-15 22:37:53.279 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-15 22:38:04.059 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 14:08:43.793 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:08:44.674 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:08:47.993 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:08:53.201 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:08:53.206 [http-nio-8080-exec-1] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:08:57.987 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:08:57.990 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:03.940 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:09:03.945 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:11.460 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 14:09:11.464 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:11.468 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:22.778 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:09:29.412 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 14:09:34.611 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:09:34.615 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:09:37.864 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 14:09:37.866 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 14:09:39.758 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-16 14:09:39.764 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-16 14:09:39.764 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 14:09:39.766 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 14:09:42.940 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 14:09:51.011 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:09:51.015 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:54.501 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 14:09:54.505 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:56.180 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 14:09:56.183 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:59.784 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 14:09:59.787 [http-nio-8080-exec-4] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:09:59.788 [http-nio-8080-exec-4] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:24.865 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:14:25.602 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:14:27.924 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:14:31.840 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 14:14:31.844 [http-nio-8080-exec-4] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:35.946 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:14:35.949 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:35.951 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:37.890 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 14:14:37.893 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:37.895 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:49.880 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 14:14:49.885 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:14:49.888 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:15.965 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:15:15.967 [http-nio-8080-exec-1] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:15.971 [http-nio-8080-exec-1] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:19.900 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 14:15:19.904 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:19.906 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:27.302 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:15:27.307 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:15:27.309 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:22.205 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:17:22.839 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:17:25.094 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:17:30.230 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 14:17:30.234 [http-nio-8080-exec-4] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:33.023 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:17:33.027 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:35.401 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 14:17:35.404 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:35.406 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:41.633 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 14:17:41.637 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:41.639 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:43.312 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 14:17:43.316 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:43.318 [http-nio-8080-exec-8] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:17:45.812 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 14:18:42.183 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:18:42.186 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-16 14:18:44.907 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 14:18:48.535 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:19:20.587 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 14:19:22.228 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:19:22.230 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:19:43.041 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:19:43.048 [http-nio-8080-exec-1] DEBUG - Got all users
+2022-06-16 14:19:47.189 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 14:19:47.193 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 14:24:40.940 [http-nio-8080-exec-6] DEBUG - Start Publisher creating
+2022-06-16 14:24:40.945 [http-nio-8080-exec-6] DEBUG - Publisher creating successfully
+2022-06-16 14:24:40.949 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 14:24:40.951 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 14:24:45.170 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:24:45.173 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:34:41.923 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:34:42.526 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:34:44.780 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:34:46.902 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:34:46.907 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:34:48.444 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:34:48.447 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:35:06.635 [http-nio-8080-exec-7] DEBUG - Start Publisher creating
+2022-06-16 14:35:06.670 [http-nio-8080-exec-7] DEBUG - Publisher creating successfully
+2022-06-16 14:35:06.674 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:35:06.676 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:35:08.790 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:35:08.794 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:38:50.142 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:38:50.670 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:38:52.891 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:38:59.640 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:38:59.643 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:39:06.540 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:39:06.545 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:39:13.362 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:39:13.366 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:39:14.606 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:39:14.610 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:39:28.789 [http-nio-8080-exec-10] DEBUG - Start Publisher creating
+2022-06-16 14:39:28.837 [http-nio-8080-exec-10] DEBUG - Publisher creating successfully
+2022-06-16 14:39:28.841 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 14:39:28.843 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 14:39:30.204 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:39:30.208 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:40:06.735 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:40:07.421 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:40:09.719 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:40:13.428 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:40:13.434 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:40:46.360 [http-nio-8080-exec-7] DEBUG - Start Publisher creating
+2022-06-16 14:40:46.394 [http-nio-8080-exec-7] DEBUG - Publisher creating successfully
+2022-06-16 14:40:46.398 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:40:46.401 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:40:53.906 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:40:53.911 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:42:16.616 [http-nio-8080-exec-2] DEBUG - Start Publisher creating
+2022-06-16 14:42:16.621 [http-nio-8080-exec-2] DEBUG - Publisher creating successfully
+2022-06-16 14:42:16.626 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 14:42:16.628 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 14:42:18.142 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:42:18.147 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:43:17.389 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-16 14:43:17.434 [http-nio-8080-exec-8] DEBUG - Problem with creating Publisher: Duplicate entry 'Cell' for key 'publishers.publisher_name'
+2022-06-16 14:43:17.434 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-16 14:43:17.438 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:43:17.439 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:43:20.030 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:43:20.034 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:48:50.607 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:48:51.562 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:48:54.263 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:49:30.212 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 14:49:30.216 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 14:49:46.160 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-16 14:49:46.188 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-16 14:49:46.193 [http-nio-8080-exec-7] DEBUG - Start adding new version of publisher
+2022-06-16 14:49:46.200 [http-nio-8080-exec-7] DEBUG - updating version successfully
+2022-06-16 14:49:46.204 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:49:46.206 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:49:52.596 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:49:52.601 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 14:49:54.394 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:49:54.398 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:50:16.992 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:50:16.995 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:50:27.484 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:50:31.260 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 14:54:26.336 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:54:26.904 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:54:29.137 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:54:33.512 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:54:33.517 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:54:59.198 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-16 14:54:59.226 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-16 14:54:59.230 [http-nio-8080-exec-7] DEBUG - Start adding new version of publisher
+2022-06-16 14:54:59.236 [http-nio-8080-exec-7] DEBUG - updating version successfully
+2022-06-16 14:54:59.239 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:54:59.242 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 14:55:03.376 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:55:03.383 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:55:05.058 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:55:05.063 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:55:08.602 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 14:55:08.605 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 14:55:09.871 [http-nio-8080-exec-5] DEBUG - Start Publisher deleting
+2022-06-16 14:55:09.878 [http-nio-8080-exec-5] DEBUG - Publisher deleting successfully
+2022-06-16 14:55:09.878 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:55:09.880 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:55:10.958 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-16 14:55:10.991 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-16 14:55:10.991 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:55:10.993 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 14:55:12.001 [http-nio-8080-exec-1] DEBUG - Start Publisher deleting
+2022-06-16 14:55:12.005 [http-nio-8080-exec-1] DEBUG - Publisher deleting successfully
+2022-06-16 14:55:12.005 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:55:12.007 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 14:55:13.124 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:55:13.129 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:55:18.887 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 14:55:21.367 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 14:58:21.638 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 14:58:22.280 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 14:58:24.569 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 14:58:29.900 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:58:29.903 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 14:58:43.171 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-16 14:58:43.200 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-16 14:58:43.205 [http-nio-8080-exec-5] DEBUG - Start adding new version of publisher
+2022-06-16 14:58:43.211 [http-nio-8080-exec-5] DEBUG - updating version successfully
+2022-06-16 14:58:43.214 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:58:43.217 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 14:58:45.011 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 15:04:12.578 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:04:13.124 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:04:16.098 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:05:01.480 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 15:05:01.486 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 15:05:11.462 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-16 15:05:11.490 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-16 15:05:11.497 [http-nio-8080-exec-7] DEBUG - Start adding new version of publisher
+2022-06-16 15:05:11.502 [http-nio-8080-exec-7] DEBUG - updating version successfully
+2022-06-16 15:05:11.505 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:05:11.508 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:09:24.219 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:09:25.061 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:09:27.605 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:09:31.136 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:09:31.141 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:09:44.991 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-16 15:09:45.019 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-16 15:12:12.906 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:12:13.845 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:12:16.320 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:12:30.439 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:12:30.443 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:12:40.964 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-16 15:12:40.993 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-16 15:14:37.424 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:14:38.290 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:14:40.733 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:14:44.695 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:14:44.700 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:15:03.639 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-16 15:15:03.666 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-16 15:16:14.461 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:16:15.374 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:16:17.790 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:16:21.334 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:16:21.338 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:16:31.410 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-16 15:16:31.437 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-16 15:16:31.442 [http-nio-8080-exec-5] DEBUG - Start adding new version of publisher
+2022-06-16 15:16:31.447 [http-nio-8080-exec-5] DEBUG - updating version successfully
+2022-06-16 15:16:31.450 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 15:16:31.453 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 15:17:08.273 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 15:17:08.276 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 15:17:31.588 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-16 15:17:31.589 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-16 15:17:31.592 [http-nio-8080-exec-2] DEBUG - Start adding new version of publisher
+2022-06-16 15:17:31.598 [http-nio-8080-exec-2] DEBUG - updating version successfully
+2022-06-16 15:17:31.601 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 15:17:31.603 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 15:17:33.335 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 15:19:07.672 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:19:08.259 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:19:11.097 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:19:29.204 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:19:29.207 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 15:19:39.861 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-16 15:19:39.890 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-16 15:19:39.893 [http-nio-8080-exec-6] DEBUG - Start adding new version of publisher
+2022-06-16 15:19:39.900 [http-nio-8080-exec-6] DEBUG - updating version successfully
+2022-06-16 15:19:39.904 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:19:39.906 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:20:16.270 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:20:17.112 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 15:20:19.626 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 15:21:42.304 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-16 15:21:43.128 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 15:21:45.897 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 15:21:53.286 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 15:21:53.294 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 15:22:02.781 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-16 15:22:02.809 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-16 15:22:02.815 [http-nio-8080-exec-6] DEBUG - Start adding new version of publisher
+2022-06-16 15:22:02.822 [http-nio-8080-exec-6] DEBUG - updating version successfully
+2022-06-16 15:22:02.828 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:22:02.831 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 15:53:25.506 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-16 15:53:25.508 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-16 15:53:25.509 [http-nio-8080-exec-10] DEBUG - Start edit publisher
+2022-06-16 15:53:25.515 [http-nio-8080-exec-10] DEBUG - editing publisher happened successfully
+2022-06-16 15:53:25.520 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 15:53:25.523 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 22:02:04.358 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 22:02:11.013 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:02:33.673 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 22:08:14.037 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 22:09:31.026 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 22:09:35.577 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 22:09:38.108 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 22:09:42.555 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:09:42.559 [http-nio-8080-exec-10] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:09:45.908 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 22:09:45.910 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:09:48.700 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 22:09:48.703 [http-nio-8080-exec-3] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:09:51.269 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 22:09:51.272 [http-nio-8080-exec-4] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:09:53.345 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 22:09:53.346 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:09:57.924 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 22:10:00.443 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:10:35.612 [http-nio-8080-exec-3] DEBUG - start searching
+2022-06-16 22:11:20.468 [http-nio-8080-exec-1] DEBUG - start searching
+2022-06-16 22:11:28.246 [http-nio-8080-exec-7] DEBUG - start searching
+2022-06-16 22:11:33.127 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 22:11:59.041 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-16 22:13:02.111 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-16 22:13:52.491 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 22:13:54.874 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:13:54.875 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:14:01.703 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 22:14:01.724 [http-nio-8080-exec-4] DEBUG - Got all users
+2022-06-16 22:14:05.497 [http-nio-8080-exec-1] DEBUG - Start user deleting
+2022-06-16 22:14:05.503 [http-nio-8080-exec-1] DEBUG - User deleting successfully
+2022-06-16 22:14:05.504 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 22:14:05.506 [http-nio-8080-exec-1] DEBUG - Got all users
+2022-06-16 22:14:10.791 [http-nio-8080-exec-7] DEBUG - Start user activating
+2022-06-16 22:14:10.802 [http-nio-8080-exec-7] DEBUG - User activating successfully
+2022-06-16 22:14:10.803 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:14:10.805 [http-nio-8080-exec-7] DEBUG - Got all users
+2022-06-16 22:14:13.191 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:14:13.194 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:14:16.463 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-16 22:14:16.477 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:16.477 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 22:14:16.479 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-16 22:14:18.201 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-16 22:14:18.207 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:18.207 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 22:14:18.210 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 22:14:22.013 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-16 22:14:22.019 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:22.019 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 22:14:22.021 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 22:14:23.769 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-16 22:14:23.775 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:23.776 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 22:14:23.777 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-16 22:14:25.323 [http-nio-8080-exec-5] DEBUG - Start Publisher deleting
+2022-06-16 22:14:25.327 [http-nio-8080-exec-5] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:25.328 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 22:14:25.330 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-16 22:14:27.132 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:14:27.134 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:14:28.337 [http-nio-8080-exec-4] DEBUG - Start Publisher deleting
+2022-06-16 22:14:28.344 [http-nio-8080-exec-4] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:28.344 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 22:14:28.345 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 22:14:29.605 [http-nio-8080-exec-1] DEBUG - Start Publisher deleting
+2022-06-16 22:14:29.611 [http-nio-8080-exec-1] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:29.611 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 22:14:29.612 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 22:14:30.878 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-16 22:14:30.882 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:30.882 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:14:30.884 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:14:32.124 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-16 22:14:32.128 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-16 22:14:32.128 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:14:32.129 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:14:35.343 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 22:14:45.852 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-16 22:14:57.797 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 22:14:57.799 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:14:58.843 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:14:58.844 [http-nio-8080-exec-10] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:15:00.285 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 22:15:00.287 [http-nio-8080-exec-5] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:15:44.459 [http-nio-8080-exec-4] DEBUG - Start Publisher creating
+2022-06-16 22:15:44.467 [http-nio-8080-exec-4] DEBUG - Publisher creating successfully
+2022-06-16 22:15:44.498 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 22:15:44.500 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-16 22:15:46.655 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:15:46.659 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:15:52.001 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 22:15:52.004 [http-nio-8080-exec-6] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:15:58.475 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 22:15:58.478 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:15:59.966 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:15:59.968 [http-nio-8080-exec-10] DEBUG - Start getting all Publisher by topic
+2022-06-16 22:16:10.964 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:16:10.965 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:16:29.239 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-16 22:16:29.241 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-16 22:16:29.241 [http-nio-8080-exec-1] DEBUG - Start edit publisher
+2022-06-16 22:16:29.246 [http-nio-8080-exec-1] DEBUG - editing publisher happened successfully
+2022-06-16 22:16:29.252 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:16:29.253 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-16 22:16:30.900 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:16:30.902 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-16 22:16:39.141 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 22:16:39.143 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-16 22:16:40.238 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 22:16:40.240 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-16 22:17:23.390 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-16 22:17:23.392 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-16 22:17:23.398 [http-nio-8080-exec-5] DEBUG - Start adding new version of publisher
+2022-06-16 22:17:23.403 [http-nio-8080-exec-5] DEBUG - updating version successfully
+2022-06-16 22:17:23.409 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:17:23.411 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-16 22:17:28.220 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 22:17:28.223 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-16 22:17:33.792 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 22:17:59.470 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 22:18:13.709 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 22:18:20.372 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 22:18:22.182 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 22:18:26.383 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 22:18:38.562 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 23:44:13.053 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 23:44:18.552 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-16 23:44:20.517 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 23:44:20.520 [http-nio-8080-exec-2] DEBUG - Start getting all Publisher by topic
+2022-06-16 23:44:21.535 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-16 23:44:24.960 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-16 23:44:26.495 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-16 23:44:28.366 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-16 23:44:29.841 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-16 23:44:29.842 [http-nio-8080-exec-1] DEBUG - Start getting all Publisher by topic
+2022-06-16 23:44:32.252 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-16 23:44:32.254 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-16 23:44:32.255 [http-nio-8080-exec-7] DEBUG - Start getting all Publisher by topic
+2022-06-16 23:44:35.200 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-16 23:44:38.069 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-16 23:44:39.627 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-16 23:44:41.458 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-16 23:44:42.849 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 12:44:56.785 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 12:44:57.981 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 12:45:04.012 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 12:45:09.695 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 12:45:09.701 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 12:45:24.594 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-17 12:45:24.623 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-17 12:45:24.628 [http-nio-8080-exec-9] DEBUG - Start adding new version of publisher
+2022-06-17 12:45:24.635 [http-nio-8080-exec-9] DEBUG - updating version successfully
+2022-06-17 12:45:24.639 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:45:24.642 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:45:55.948 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-17 12:45:55.950 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-17 12:45:55.954 [http-nio-8080-exec-1] DEBUG - Start adding new version of publisher
+2022-06-17 12:45:55.960 [http-nio-8080-exec-1] DEBUG - updating version successfully
+2022-06-17 12:45:55.964 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 12:45:55.967 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 12:46:08.448 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 12:49:06.974 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 12:49:07.510 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 12:49:09.655 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 12:49:21.005 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:49:21.009 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:49:42.887 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 12:49:42.913 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 12:49:42.925 [http-nio-8080-exec-8] DEBUG - Start adding new version of publisher
+2022-06-17 12:49:42.931 [http-nio-8080-exec-8] DEBUG - updating version successfully
+2022-06-17 12:49:42.934 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:49:42.936 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:50:19.669 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-17 12:50:19.670 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-17 12:50:19.681 [http-nio-8080-exec-3] DEBUG - Start adding new version of publisher
+2022-06-17 12:50:19.688 [http-nio-8080-exec-3] DEBUG - updating version successfully
+2022-06-17 12:50:19.692 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:50:19.694 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:50:40.234 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 12:50:40.237 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 12:50:57.762 [http-nio-8080-exec-2] DEBUG - Start Publisher creating
+2022-06-17 12:50:57.768 [http-nio-8080-exec-2] DEBUG - Publisher creating successfully
+2022-06-17 12:50:57.772 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:50:57.774 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:50:59.205 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:50:59.209 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 12:51:29.626 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-17 12:51:29.632 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-17 12:51:29.636 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:51:29.638 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:51:30.783 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:51:30.786 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:52:02.702 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:52:02.705 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:52:04.855 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:52:04.859 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:52:18.809 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-17 12:52:18.810 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-17 12:52:18.819 [http-nio-8080-exec-4] DEBUG - Start adding new version of publisher
+2022-06-17 12:52:18.825 [http-nio-8080-exec-4] DEBUG - updating version successfully
+2022-06-17 12:52:18.828 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:52:18.830 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:52:20.180 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:52:20.182 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 12:56:05.093 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 12:56:05.702 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 12:56:07.875 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 12:56:34.254 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 12:56:37.309 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 12:56:37.313 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 12:57:01.489 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-17 12:57:01.515 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-17 12:57:01.526 [http-nio-8080-exec-2] DEBUG - Start edit publisher
+2022-06-17 12:57:01.532 [http-nio-8080-exec-2] DEBUG - editing publisher happened successfully
+2022-06-17 12:57:01.535 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:57:01.537 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 12:57:16.688 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-17 12:57:16.689 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-17 12:57:16.699 [http-nio-8080-exec-4] DEBUG - Start adding new version of publisher
+2022-06-17 12:57:16.705 [http-nio-8080-exec-4] DEBUG - updating version successfully
+2022-06-17 12:57:16.710 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:57:16.712 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 12:57:32.400 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 12:58:11.827 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 12:58:12.548 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-17 12:58:12.723 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-17 12:58:12.866 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.025 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.167 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.304 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.438 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.579 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 12:58:13.690 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 12:58:43.813 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-17 12:59:05.836 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 12:59:05.989 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.126 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.253 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.392 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.522 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.653 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.783 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-17 12:59:06.917 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-17 12:59:07.045 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 12:59:07.157 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 12:59:07.315 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 12:59:07.441 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 12:59:07.583 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:00:54.298 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 13:00:54.896 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:00:57.265 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:01:09.363 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-17 13:01:53.486 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 13:01:53.489 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 13:02:08.559 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-17 13:02:08.606 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-17 13:02:08.620 [http-nio-8080-exec-1] DEBUG - Start adding new version of publisher
+2022-06-17 13:02:08.625 [http-nio-8080-exec-1] DEBUG - updating version successfully
+2022-06-17 13:02:08.629 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:02:08.631 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:02:14.701 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-17 13:03:02.975 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 13:04:30.026 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 13:05:39.285 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 13:05:40.261 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:05:40.421 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 13:05:40.566 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 13:05:40.698 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 13:06:04.172 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 13:06:04.175 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 13:06:55.450 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-17 13:06:55.451 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-17 13:06:55.462 [http-nio-8080-exec-3] DEBUG - Start adding new version of publisher
+2022-06-17 13:06:55.468 [http-nio-8080-exec-3] DEBUG - updating version successfully
+2022-06-17 13:06:55.471 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:06:55.473 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:07:02.707 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 13:07:07.210 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 13:07:37.088 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:07:39.624 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 13:07:39.626 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 13:07:46.675 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:07:55.487 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 13:07:55.488 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 13:08:59.197 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 13:09:23.280 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 13:09:24.685 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:09:27.544 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:09:51.745 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 13:10:50.240 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-17 13:10:50.268 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-17 13:10:50.279 [http-nio-8080-exec-1] DEBUG - Start adding new version of publisher
+2022-06-17 13:10:50.285 [http-nio-8080-exec-1] DEBUG - updating version successfully
+2022-06-17 13:10:50.291 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:10:50.294 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:11:19.356 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:11:19.359 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:11:35.668 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:11:56.613 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 13:11:56.615 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 13:15:02.016 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 13:15:02.879 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:15:05.403 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:15:10.024 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-17 13:15:16.308 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:15:16.311 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:15:19.190 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 13:17:45.409 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 13:17:46.050 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 13:17:48.375 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:19:48.211 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:19:48.214 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:20:00.516 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 13:20:00.542 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 13:20:00.550 [http-nio-8080-exec-8] DEBUG - Start adding new version of publisher
+2022-06-17 13:20:00.556 [http-nio-8080-exec-8] DEBUG - updating version successfully
+2022-06-17 13:20:00.559 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:20:00.561 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:20:18.581 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-17 13:20:18.583 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-17 13:20:18.593 [http-nio-8080-exec-10] DEBUG - Start adding new version of publisher
+2022-06-17 13:20:18.599 [http-nio-8080-exec-10] DEBUG - updating version successfully
+2022-06-17 13:20:18.603 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:20:18.605 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:26:00.655 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:26:00.657 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:26:44.602 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:26:44.604 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:27:21.913 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 13:28:08.296 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:28:08.298 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-17 13:29:23.990 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-17 13:29:23.992 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-17 13:29:24.002 [http-nio-8080-exec-3] DEBUG - Start edit publisher
+2022-06-17 13:29:24.008 [http-nio-8080-exec-3] DEBUG - editing publisher happened successfully
+2022-06-17 13:29:24.011 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:29:24.013 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:33:01.434 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-17 13:33:01.436 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-17 13:33:01.446 [http-nio-8080-exec-5] DEBUG - Start adding new version of publisher
+2022-06-17 13:33:01.480 [http-nio-8080-exec-5] DEBUG - updating version successfully
+2022-06-17 13:33:01.483 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:33:01.485 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:33:37.294 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:33:37.296 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:33:39.385 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 13:34:26.294 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 13:34:26.296 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 13:34:26.305 [http-nio-8080-exec-8] DEBUG - Start adding new version of publisher
+2022-06-17 13:34:26.311 [http-nio-8080-exec-8] DEBUG - updating version successfully
+2022-06-17 13:34:26.314 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:34:26.316 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 13:35:51.226 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 13:37:12.583 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:37:12.585 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:37:16.172 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 13:38:47.520 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 13:38:47.522 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 13:38:59.444 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:38:59.447 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 13:39:18.399 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 13:39:18.400 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 13:39:18.412 [http-nio-8080-exec-8] DEBUG - Start edit publisher
+2022-06-17 13:39:18.418 [http-nio-8080-exec-8] DEBUG - editing publisher happened successfully
+2022-06-17 13:39:18.422 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 13:39:18.423 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 13:39:38.050 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-17 13:39:38.051 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-17 13:39:38.062 [http-nio-8080-exec-10] DEBUG - Start edit publisher
+2022-06-17 13:39:38.068 [http-nio-8080-exec-10] DEBUG - editing publisher happened successfully
+2022-06-17 13:39:38.072 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 13:39:38.073 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 13:39:56.346 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-17 13:39:56.348 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-17 13:39:56.357 [http-nio-8080-exec-1] DEBUG - Start edit publisher
+2022-06-17 13:39:56.363 [http-nio-8080-exec-1] DEBUG - editing publisher happened successfully
+2022-06-17 13:39:56.366 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:39:56.367 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-17 13:40:19.319 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-17 13:40:19.320 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-17 13:40:19.350 [http-nio-8080-exec-4] DEBUG - Start edit publisher
+2022-06-17 13:40:19.354 [http-nio-8080-exec-4] DEBUG - editing publisher happened successfully
+2022-06-17 13:40:19.357 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:40:19.358 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 13:40:23.517 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 13:40:23.519 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 14:23:40.728 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 14:23:55.869 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-17 14:24:41.241 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-17 14:24:41.248 [http-nio-8080-exec-6] DEBUG - Start user creating
+2022-06-17 14:24:41.252 [http-nio-8080-exec-6] DEBUG - User created
+2022-06-17 14:37:57.540 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 14:37:58.045 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 14:38:00.300 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 14:38:03.274 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 14:38:03.278 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 14:38:37.257 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 14:38:37.285 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 14:39:08.728 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 14:39:08.731 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 22:21:58.084 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:21:58.567 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:22:02.560 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-17 22:22:07.269 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 22:22:07.274 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 22:24:28.647 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-17 22:24:28.677 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-17 22:32:13.678 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:32:14.492 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:32:18.126 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:32:42.352 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 22:32:42.356 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 22:33:33.275 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 22:33:33.302 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 22:36:10.663 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:36:11.611 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:36:14.310 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:36:17.379 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:36:17.384 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:36:48.263 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 22:36:48.290 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 22:38:58.434 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:38:59.055 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:39:01.242 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:39:57.070 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:39:57.825 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:40:00.004 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:40:04.305 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:40:04.310 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:41:54.554 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:41:55.270 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:41:57.416 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:42:00.999 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:42:01.004 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:43:08.783 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 22:43:08.811 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 22:45:50.528 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:45:51.215 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:45:53.396 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:46:46.445 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 22:46:46.473 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 22:48:00.914 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:48:01.553 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:48:03.765 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:48:09.746 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:48:09.751 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:48:27.202 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 22:48:27.231 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 22:50:46.060 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:50:46.771 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:50:49.215 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:50:52.687 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:50:52.691 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:51:21.130 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 22:51:21.160 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 22:51:31.739 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 22:51:31.740 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 22:53:04.210 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:53:04.958 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:53:07.124 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:53:09.523 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:53:09.526 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:53:30.285 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 22:53:30.312 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 22:53:35.512 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 22:53:35.514 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 22:53:46.166 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 22:53:46.168 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 22:54:17.390 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-17 22:54:17.391 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-17 22:55:21.170 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:55:21.841 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:55:24.025 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:55:35.974 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:55:35.979 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:55:45.194 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 22:55:45.221 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 22:55:45.222 [http-nio-8080-exec-6] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Time', version='0', topic=NEWS, price=12.3, description='about times', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-17 22:55:45.222 [http-nio-8080-exec-6] DEBUG - Start Publisher creating
+2022-06-17 22:55:45.245 [http-nio-8080-exec-6] DEBUG - Problem with creating Publisher: Duplicate entry 'Time' for key 'publishers.publisher_name'
+2022-06-17 22:55:45.245 [http-nio-8080-exec-6] DEBUG - Publisher creating successfully
+2022-06-17 22:55:45.249 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 22:55:50.291 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 22:55:50.297 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 22:55:52.358 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 22:55:52.361 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 22:55:53.631 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 22:55:53.635 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-17 22:55:55.816 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 22:55:55.819 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-17 22:59:30.461 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 22:59:31.152 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 22:59:33.316 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 22:59:37.201 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:59:37.205 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 22:59:47.405 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 22:59:47.431 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 22:59:53.446 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 22:59:53.447 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 22:59:53.447 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Times', version='0', topic=NEWS, price=211.3, description='about times', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-17 22:59:53.447 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-17 22:59:53.454 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-17 22:59:53.458 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-17 22:59:56.299 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-17 23:00:51.780 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 23:00:51.783 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 23:01:10.056 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-17 23:01:10.057 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-17 23:01:10.071 [http-nio-8080-exec-3] DEBUG - Start edit publisher
+2022-06-17 23:01:10.077 [http-nio-8080-exec-3] DEBUG - editing publisher happened successfully
+2022-06-17 23:01:10.082 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:01:10.084 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:01:11.404 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:01:11.407 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:01:38.362 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 23:01:38.366 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-17 23:01:44.482 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-17 23:01:52.097 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 23:08:01.259 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:08:02.035 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:08:04.311 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:08:06.299 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:08:06.303 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:08:25.453 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 23:08:25.482 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 23:08:33.888 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:08:33.890 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:08:33.890 [http-nio-8080-exec-7] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Timess', version='0', topic=NEWS, price=12.3, description='about times', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-17 23:08:33.890 [http-nio-8080-exec-7] DEBUG - Start Publisher creating
+2022-06-17 23:08:33.895 [http-nio-8080-exec-7] DEBUG - Publisher creating successfully
+2022-06-17 23:08:33.899 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-17 23:08:35.709 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 23:08:35.714 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-17 23:09:55.655 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:12:13.476 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 23:14:56.417 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:14:57.148 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:14:59.517 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:18:25.387 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:18:26.099 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:18:28.340 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:21:13.138 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:21:14.085 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:21:16.500 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:21:33.659 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-17 23:21:55.771 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-17 23:21:55.774 [http-nio-8080-exec-10] DEBUG - Start user creating
+2022-06-17 23:21:55.781 [http-nio-8080-exec-10] DEBUG - User created
+2022-06-17 23:21:55.802 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 23:22:17.204 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:22:17.209 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:22:19.689 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:22:19.695 [http-nio-8080-exec-5] DEBUG - Got all users
+2022-06-17 23:22:31.729 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-17 23:24:08.003 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-17 23:26:57.510 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:26:57.515 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:38:08.101 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-17 23:38:10.745 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 23:38:10.748 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-17 23:50:40.241 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:50:40.905 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:50:43.140 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:50:46.594 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:50:46.599 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:51:00.321 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:51:00.349 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:51:00.349 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:51:00.351 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:51:00.351 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:51:00.352 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:55:53.767 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:55:54.409 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:55:56.666 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:55:59.538 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:55:59.542 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-17 23:56:06.395 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:56:06.421 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:56:06.422 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-17 23:56:06.424 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-17 23:57:37.627 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:57:38.292 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:57:40.492 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:57:44.778 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:57:44.782 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:57:57.751 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 23:57:57.780 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 23:57:57.780 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 23:57:57.781 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 23:58:54.324 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-17 23:58:54.977 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-17 23:58:57.254 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-17 23:59:00.565 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:59:00.569 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-17 23:59:08.196 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 23:59:08.223 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 23:59:08.224 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-17 23:59:08.225 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-17 23:59:18.608 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 23:59:18.609 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 23:59:18.610 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-17 23:59:18.611 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-17 23:59:18.611 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='Time', name='time.jpg', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-17 23:59:18.611 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-17 23:59:18.612 [http-nio-8080-exec-8] DEBUG - Problem with creating Publisher: null
+2022-06-17 23:59:18.612 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-17 23:59:18.616 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-17 23:59:18.619 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:02:18.307 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:02:18.959 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:02:21.155 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:02:25.977 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-18 00:02:27.959 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:02:27.963 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:02:36.232 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:02:36.261 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:02:36.262 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:02:36.263 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:02:36.263 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='Time', name='time.jpg', version='1', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:02:36.263 [http-nio-8080-exec-8] DEBUG - Start Publisher creating
+2022-06-18 00:02:36.264 [http-nio-8080-exec-8] DEBUG - Problem with creating Publisher: null
+2022-06-18 00:02:36.264 [http-nio-8080-exec-8] DEBUG - Publisher creating successfully
+2022-06-18 00:02:36.267 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:02:36.270 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:03:33.176 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:03:33.816 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:03:36.077 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:03:39.667 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:03:39.674 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:03:46.347 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:03:46.374 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:03:46.374 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:03:46.375 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:03:52.083 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:03:52.084 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:03:52.085 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:03:52.086 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:03:55.896 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 00:03:55.897 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 00:03:55.897 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 00:03:55.898 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 00:03:55.899 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='Time', name='time.jpg', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:03:55.899 [http-nio-8080-exec-9] DEBUG - Start Publisher creating
+2022-06-18 00:03:55.900 [http-nio-8080-exec-9] DEBUG - Problem with creating Publisher: null
+2022-06-18 00:03:55.900 [http-nio-8080-exec-9] DEBUG - Publisher creating successfully
+2022-06-18 00:03:55.904 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:03:55.907 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:04:43.182 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:04:43.885 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:04:46.157 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:04:48.860 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:04:48.864 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:04:55.814 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:04:55.841 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:04:55.842 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:04:55.844 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:04:59.450 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:04:59.452 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:04:59.452 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:04:59.453 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:04:59.453 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='Time', name='time.jpg', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:04:59.453 [http-nio-8080-exec-8] DEBUG - Start adding new version of publisher
+2022-06-18 00:04:59.454 [http-nio-8080-exec-8] DEBUG - updating version successfully
+2022-06-18 00:04:59.460 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:04:59.463 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:05:04.716 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:05:04.719 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:12:07.464 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:12:08.143 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:12:10.339 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:12:14.646 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:12:14.650 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:12:24.851 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:12:24.879 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:12:24.880 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:12:24.880 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:12:24.881 [http-nio-8080-exec-7] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:24.881 [http-nio-8080-exec-7] DEBUG - Start adding new version of publisher
+2022-06-18 00:12:24.886 [http-nio-8080-exec-7] DEBUG - updating version successfullyPublisher{id=0, image='time.jpg', name='Time', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:24.891 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 00:12:24.893 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 00:12:31.658 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 00:12:31.660 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 00:12:31.660 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 00:12:31.661 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 00:12:31.661 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='The_economist.jpg', name='The economist', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:31.661 [http-nio-8080-exec-9] DEBUG - Start adding new version of publisher
+2022-06-18 00:12:31.666 [http-nio-8080-exec-9] DEBUG - updating version successfullyPublisher{id=0, image='The_economist.jpg', name='The economist', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:31.670 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:12:31.672 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 00:12:41.182 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 00:12:41.183 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 00:12:41.184 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 00:12:41.184 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 00:12:41.185 [http-nio-8080-exec-4] INFO  - publisher inside service -> Publisher{id=0, image='the_new_york.jpg', name='The New York times', version='11', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:41.185 [http-nio-8080-exec-4] DEBUG - Start adding new version of publisher
+2022-06-18 00:12:41.190 [http-nio-8080-exec-4] DEBUG - updating version successfullyPublisher{id=0, image='the_new_york.jpg', name='The New York times', version='11', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:12:41.193 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:12:41.195 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:12:51.163 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:12:51.165 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:12:51.165 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:12:51.166 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:12:56.912 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 00:12:56.913 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 00:12:56.914 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 00:12:56.916 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 00:13:01.885 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 00:13:01.886 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 00:13:01.887 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 00:13:01.887 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 00:13:01.888 [http-nio-8080-exec-2] INFO  - publisher inside service -> Publisher{id=0, image='nationalGeographic.jpg', name='National Geographic', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:13:01.888 [http-nio-8080-exec-2] DEBUG - Start adding new version of publisher
+2022-06-18 00:13:01.893 [http-nio-8080-exec-2] DEBUG - updating version successfullyPublisher{id=0, image='nationalGeographic.jpg', name='National Geographic', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:13:01.896 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:13:01.898 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:13:09.727 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:13:09.730 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:16:11.100 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:16:11.727 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:16:13.910 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:16:32.424 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:16:32.428 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:17:01.795 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:17:01.824 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:17:01.824 [http-nio-8080-exec-7] INFO  - publisher inside service -> Publisher{id=0, image='cell2.jpg', name='Cell', version='0', topic=SCIENCE, price=122.33, description='about science', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:17:01.824 [http-nio-8080-exec-7] DEBUG - Start Publisher creating
+2022-06-18 00:17:01.831 [http-nio-8080-exec-7] DEBUG - Publisher creating successfully
+2022-06-18 00:17:01.836 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 00:17:01.838 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 00:17:03.426 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 00:17:03.431 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 00:18:21.106 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-18 00:18:21.107 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-18 00:18:21.107 [http-nio-8080-exec-1] DEBUG - Start edit publisher
+2022-06-18 00:18:21.114 [http-nio-8080-exec-1] DEBUG - editing publisher happened successfully
+2022-06-18 00:18:21.117 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 00:18:21.119 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 00:18:39.549 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 00:18:39.551 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 00:18:39.560 [http-nio-8080-exec-3] DEBUG - Start edit publisher
+2022-06-18 00:18:39.566 [http-nio-8080-exec-3] DEBUG - editing publisher happened successfully
+2022-06-18 00:18:39.571 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:18:39.574 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:33:30.338 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:33:31.026 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:33:33.320 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:33:39.271 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:33:39.278 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:34:39.117 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:34:39.761 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:34:42.072 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:34:46.418 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:34:46.423 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:35:52.403 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:35:53.000 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:35:55.213 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:35:57.347 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:35:57.351 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:36:17.720 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:36:17.747 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:36:42.946 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 00:36:42.947 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 00:36:42.948 [http-nio-8080-exec-10] INFO  - publisher inside service -> Publisher{id=0, image='The_economist2.jpg', name='The economist', version='0', topic=ECONOMY, price=3.0, description='uyvdsuyyvdsfuyvdsfuyvdsfuyvsdfuyvdsfuyvdsfuyvsdfuyvdsfuyvsduysdfvsdffssgsuygsdfuydsfuysdfuydsfuyvsdfuyvdsfuyvdsuyyvdsfuyvdsfuyvdsfuyvsdfuyvdsfuyvdsfuyvsdfuyvdsfuyvsduysdfvsdffssgsuygsdfuydsfuysdfuydsfuyvsdfuyvdsfuyvdsuyyvdsfuyvdsfuyvdsfuyvsdfuyvdsfuyvdsfuyvsdfuyvdsfuyvsduysdfvsdffssgsuygsdfuydsfuysdfuydsfuyvsdfuyvdsfuyvdsuyyvdsfuyvdsfuyvdsfuyvsdfuyvdsfuyvdsfuyvsdfuyvdsfuyvsduysdfvsdffssgsuygsdfuydsfuysdfuydsfuyvsdfuyvdsfuyvdsuyyvdsfuyvdsfuyvdsfuyvsdfuyvdsfuyvdsfuyvsdfuyvdsfuyvsduysdfv', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:36:42.948 [http-nio-8080-exec-10] DEBUG - Start edit publisher
+2022-06-18 00:36:42.953 [http-nio-8080-exec-10] DEBUG - editing publisher happened successfully
+2022-06-18 00:36:42.956 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 00:36:42.959 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 00:37:04.328 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:37:04.331 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:37:08.910 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 00:37:15.687 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:37:15.691 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 00:37:17.984 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 00:37:34.210 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 00:37:35.623 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-18 00:37:37.090 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-18 00:37:37.680 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:37:37.939 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 00:37:38.262 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-18 00:37:38.521 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 00:37:38.850 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 00:38:51.904 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:38:51.906 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:40:03.545 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:40:04.119 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:40:06.326 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:40:09.722 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:40:09.726 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:42:27.612 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:42:27.640 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:42:27.647 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 00:42:27.648 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 00:42:34.907 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:42:34.908 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:42:34.913 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:42:34.915 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:42:34.915 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='time2.webp', name='The economist', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:42:34.915 [http-nio-8080-exec-8] DEBUG - Start adding new version of publisher
+2022-06-18 00:42:34.921 [http-nio-8080-exec-8] DEBUG - updating version successfullyPublisher{id=0, image='time2.webp', name='The economist', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:42:34.925 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:42:34.929 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:43:04.673 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 00:43:04.674 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 00:43:04.675 [http-nio-8080-exec-3] INFO  - publisher inside service -> Publisher{id=0, image='ekspress.jpg', name='Εκροπερ', version='0', topic=NEWS, price=12.12, description='news', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:43:04.675 [http-nio-8080-exec-3] DEBUG - Start Publisher creating
+2022-06-18 00:43:04.680 [http-nio-8080-exec-3] DEBUG - Publisher creating successfully
+2022-06-18 00:43:04.684 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:43:04.687 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 00:43:05.926 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:43:05.930 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:43:18.843 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 00:43:18.844 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 00:43:18.844 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Εκροπερ2', version='0', topic=NEWS, price=11.11, description='', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:43:18.845 [http-nio-8080-exec-9] DEBUG - Start Publisher creating
+2022-06-18 00:43:18.849 [http-nio-8080-exec-9] DEBUG - Publisher creating successfully
+2022-06-18 00:43:18.853 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:43:18.855 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:43:20.251 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 00:43:20.254 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 00:43:54.358 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:43:54.360 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:43:54.369 [http-nio-8080-exec-6] INFO  - publisher inside service -> Publisher{id=0, image='cat.jpg', name='The economist', version='0', topic=FASHION, price=54.22, description='new description', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:43:54.369 [http-nio-8080-exec-6] DEBUG - Start edit publisher
+2022-06-18 00:43:54.375 [http-nio-8080-exec-6] DEBUG - editing publisher happened successfully
+2022-06-18 00:43:54.378 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:43:54.380 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 00:44:11.656 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 00:44:11.657 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 00:44:11.667 [http-nio-8080-exec-8] INFO  - publisher inside service -> Publisher{id=0, image='cat.jpg', name='Time', version='0', topic=NEWS, price=78.99, description='Time is an American news magazine and news website published and based in New York City. ', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 00:44:11.667 [http-nio-8080-exec-8] DEBUG - Start edit publisher
+2022-06-18 00:44:11.672 [http-nio-8080-exec-8] DEBUG - editing publisher happened successfully
+2022-06-18 00:44:11.675 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:44:11.677 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 00:45:31.047 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:45:31.744 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:45:34.029 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:45:39.504 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 00:45:41.459 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-18 00:45:49.771 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 00:45:51.393 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 00:45:51.396 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 00:46:07.589 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 00:46:07.615 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 00:46:21.373 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 00:46:21.375 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 00:46:21.375 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 00:46:21.376 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 00:46:41.136 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:46:41.140 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:46:50.983 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:46:50.985 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 00:47:42.307 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 00:47:42.851 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 00:47:45.176 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 00:47:49.727 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:47:49.731 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 00:47:57.890 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 00:47:57.914 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:30:42.204 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 12:30:42.980 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 12:30:46.823 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 12:30:49.349 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 12:30:49.353 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 12:31:05.847 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 12:31:05.877 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 12:31:33.250 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:31:33.251 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:31:40.286 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 12:31:40.287 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 12:31:40.288 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Timeses', version='0', topic=MUSIC, price=12.3, description='about times', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:31:40.288 [http-nio-8080-exec-9] DEBUG - Start Publisher creating
+2022-06-18 12:31:40.294 [http-nio-8080-exec-9] DEBUG - Publisher creating successfully
+2022-06-18 12:31:40.299 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:31:40.302 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:31:41.765 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 12:31:41.768 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 12:33:09.136 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:33:09.139 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:33:56.174 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 12:33:56.697 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 12:33:59.072 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 12:34:08.493 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:34:08.499 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:34:18.045 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:34:18.073 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:34:18.073 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:34:18.075 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:34:47.227 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 12:34:47.228 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 12:35:07.927 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 12:35:07.929 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 12:36:09.997 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 12:36:10.501 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 12:36:12.890 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 12:36:18.668 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:36:18.679 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:36:26.306 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:36:26.333 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:36:26.334 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:36:26.335 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:36:30.128 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 12:36:30.129 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 12:36:30.129 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 12:36:30.130 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 12:36:32.994 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 12:36:32.996 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 12:36:32.996 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 12:36:32.997 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 12:36:32.997 [http-nio-8080-exec-10] INFO  - publisher inside service -> Publisher{id=0, image='cat.jpg', name='The economist', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:36:32.998 [http-nio-8080-exec-10] DEBUG - Start adding new version of publisher
+2022-06-18 12:36:33.002 [http-nio-8080-exec-10] DEBUG - updating version successfullyPublisher{id=0, image='cat.jpg', name='The economist', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:36:33.006 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:36:33.009 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:36:46.264 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 12:36:46.267 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 12:36:50.830 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 12:36:50.831 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 12:36:50.831 [http-nio-8080-exec-4] INFO  - publisher inside service -> Publisher{id=0, image='defaultPicture.png', name='Time2', version='0', topic=NEWS, price=12.3, description='', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:36:50.831 [http-nio-8080-exec-4] DEBUG - Start Publisher creating
+2022-06-18 12:36:50.837 [http-nio-8080-exec-4] DEBUG - Publisher creating successfully
+2022-06-18 12:36:50.840 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:36:50.843 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 12:36:52.099 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 12:36:52.105 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 12:36:55.135 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:36:55.138 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:37:08.964 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 12:37:08.967 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 12:37:21.991 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 12:37:21.992 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 12:37:21.993 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='cat.jpg', name='The economist', version='0', topic=FASHION, price=54.22, description='description', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:37:21.993 [http-nio-8080-exec-9] DEBUG - Start edit publisher
+2022-06-18 12:37:21.998 [http-nio-8080-exec-9] DEBUG - editing publisher happened successfully
+2022-06-18 12:37:22.001 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:37:22.003 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:38:10.617 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 12:38:10.618 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 12:38:10.632 [http-nio-8080-exec-2] INFO  - publisher inside service -> Publisher{id=0, image='The_economist.jpg', name='The economist', version='0', topic=FASHION, price=54.22, description='description', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:38:10.633 [http-nio-8080-exec-2] DEBUG - Start edit publisher
+2022-06-18 12:38:10.638 [http-nio-8080-exec-2] DEBUG - editing publisher happened successfully
+2022-06-18 12:38:10.643 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:38:10.645 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:38:20.533 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:38:20.535 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:38:20.535 [http-nio-8080-exec-6] INFO  - publisher inside service -> Publisher{id=0, image='The_economist.jpg', name='The economist', version='0', topic=ECONOMY, price=54.22, description='description', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:38:20.536 [http-nio-8080-exec-6] DEBUG - Start edit publisher
+2022-06-18 12:38:20.541 [http-nio-8080-exec-6] DEBUG - editing publisher happened successfully
+2022-06-18 12:38:20.543 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:38:20.545 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:38:39.493 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 12:38:39.495 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 12:38:39.504 [http-nio-8080-exec-10] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='0', topic=NEWS, price=78.99, description='Time is an American news magazine and news website published and based in New York City. ', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:38:39.505 [http-nio-8080-exec-10] DEBUG - Start edit publisher
+2022-06-18 12:38:39.509 [http-nio-8080-exec-10] DEBUG - editing publisher happened successfully
+2022-06-18 12:38:39.512 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:38:39.513 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:38:53.289 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-18 12:38:53.291 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-18 12:38:53.302 [http-nio-8080-exec-5] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='0', topic=NEWS, price=78.99, description='Time is an American news magazine and news website published and based in New York City. ', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:38:53.302 [http-nio-8080-exec-5] DEBUG - Start edit publisher
+2022-06-18 12:38:53.307 [http-nio-8080-exec-5] DEBUG - editing publisher happened successfully
+2022-06-18 12:38:53.312 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:38:53.314 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 12:39:21.413 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-18 12:39:21.414 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-18 12:39:21.423 [http-nio-8080-exec-1] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='0', topic=NEWS, price=78.99, description='Time is an American news magazine and news website published and based in New York City. ', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:39:21.423 [http-nio-8080-exec-1] DEBUG - Start edit publisher
+2022-06-18 12:39:21.429 [http-nio-8080-exec-1] DEBUG - editing publisher happened successfully
+2022-06-18 12:39:21.432 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 12:39:21.433 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 12:39:41.206 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:39:41.208 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:39:41.217 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 12:39:41.219 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 12:39:41.220 [http-nio-8080-exec-6] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='4', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:39:41.220 [http-nio-8080-exec-6] DEBUG - Start adding new version of publisher
+2022-06-18 12:39:41.226 [http-nio-8080-exec-6] DEBUG - updating version successfullyPublisher{id=0, image='time.jpg', name='Time', version='4', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:39:41.229 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:39:41.230 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:40:32.041 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 12:40:32.043 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 12:40:32.052 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 12:40:32.053 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 12:40:32.053 [http-nio-8080-exec-3] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='5', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:40:32.054 [http-nio-8080-exec-3] DEBUG - Start adding new version of publisher
+2022-06-18 12:40:32.059 [http-nio-8080-exec-3] DEBUG - updating version successfullyPublisher{id=0, image='time.jpg', name='Time', version='5', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:40:32.062 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:40:32.063 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:41:01.447 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 12:41:01.449 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 12:41:01.460 [http-nio-8080-exec-7] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='0', topic=NEWS, price=78.99, description='Time is an American news magazine and news website published and based in New York City. ', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 12:41:01.460 [http-nio-8080-exec-7] DEBUG - Start edit publisher
+2022-06-18 12:41:01.465 [http-nio-8080-exec-7] DEBUG - editing publisher happened successfully
+2022-06-18 12:41:01.468 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 12:41:01.469 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 12:41:05.366 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:41:05.368 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:41:07.162 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:41:07.166 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 12:41:34.231 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:41:34.235 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 12:41:35.275 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:41:35.277 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:41:37.064 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 12:41:37.067 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 12:41:40.499 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 12:42:52.680 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:42:52.683 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 12:42:59.423 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:42:59.427 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 12:43:01.103 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-18 12:43:01.109 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-18 12:43:01.109 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 12:43:01.110 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 13:06:43.189 [http-nio-8080-exec-5] DEBUG - Start Publisher deleting
+2022-06-18 13:06:43.192 [http-nio-8080-exec-5] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:43.193 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 13:06:43.195 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 13:06:43.880 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-18 13:06:43.883 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:43.883 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:06:43.884 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:06:44.063 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.064 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.064 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 13:06:44.065 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 13:06:44.210 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.212 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.212 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 13:06:44.213 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 13:06:44.372 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.373 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.373 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 13:06:44.374 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 13:06:44.530 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.532 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.532 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 13:06:44.533 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 13:06:44.709 [http-nio-8080-exec-1] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.711 [http-nio-8080-exec-1] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.711 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 13:06:44.712 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 13:06:44.881 [http-nio-8080-exec-3] DEBUG - Start Publisher deleting
+2022-06-18 13:06:44.882 [http-nio-8080-exec-3] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:44.882 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 13:06:44.883 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 13:06:45.045 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-18 13:06:45.047 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:45.047 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 13:06:45.048 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 13:06:45.220 [http-nio-8080-exec-4] DEBUG - Start Publisher deleting
+2022-06-18 13:06:45.221 [http-nio-8080-exec-4] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:45.222 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:06:45.223 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:06:45.362 [http-nio-8080-exec-5] DEBUG - Start Publisher deleting
+2022-06-18 13:06:45.364 [http-nio-8080-exec-5] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:45.364 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 13:06:45.365 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 13:06:45.505 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-18 13:06:45.506 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:45.506 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:06:45.507 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:06:45.868 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-18 13:06:45.869 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:45.869 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 13:06:45.870 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 13:06:46.009 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 13:06:46.010 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 13:06:46.010 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 13:06:46.011 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 13:26:22.137 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:26:22.693 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:26:24.930 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:26:27.303 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:26:27.308 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:27:11.000 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:27:11.701 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:27:13.873 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:27:18.934 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:27:18.938 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:27:24.490 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:27:24.494 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:28:21.724 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 13:28:21.726 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 13:32:28.195 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:32:28.866 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:32:31.385 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:32:33.720 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:32:33.724 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:37:23.997 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 13:37:24.003 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 13:48:45.736 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:48:46.377 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:48:48.686 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:48:52.319 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:48:52.322 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:53:27.029 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:53:27.744 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:53:30.028 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:53:31.985 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:53:31.989 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:56:17.913 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:56:18.513 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:56:20.761 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:56:24.095 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:56:24.099 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 13:56:42.442 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 13:56:42.445 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 13:59:46.920 [RMI TCP Connection(5)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 13:59:47.430 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 13:59:50.032 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 13:59:52.665 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 13:59:52.670 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:00:59.269 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:00:59.882 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:01:02.112 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:01:04.278 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:01:04.282 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:02:23.955 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:02:24.577 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:02:26.900 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:02:29.199 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:02:29.203 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:24:43.446 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:24:44.072 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:24:46.185 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:24:51.003 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:24:51.007 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:25:04.115 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:25:04.118 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:25:34.911 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:25:35.584 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:25:37.768 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:25:48.640 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:25:48.645 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:26:40.446 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:26:41.097 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:26:43.213 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:27:15.133 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 14:27:15.138 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 14:29:24.415 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:29:25.176 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:29:27.494 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:29:31.792 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:29:31.797 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:38:45.881 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:38:46.310 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:38:48.481 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:38:50.271 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:38:50.275 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:40:25.086 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:40:25.743 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:40:27.848 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:40:29.721 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:40:29.725 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:40:31.727 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:40:31.729 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:40:34.132 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 14:40:34.135 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 14:40:35.348 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:40:35.350 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:40:36.663 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 14:40:36.665 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 14:41:08.866 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:41:09.545 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:41:12.179 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:41:18.406 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:41:18.410 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:41:21.073 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:41:21.076 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:43:02.202 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:43:02.922 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:43:05.191 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:43:07.633 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 14:43:07.658 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 14:43:07.659 [http-nio-8080-exec-4] DEBUG - Start Publisher deleting
+2022-06-18 14:43:07.660 [http-nio-8080-exec-4] DEBUG - Publisher deleting successfully
+2022-06-18 14:43:07.660 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:43:07.664 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:43:20.178 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 14:43:20.181 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 14:43:20.181 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-18 14:43:20.188 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-18 14:43:20.188 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:43:20.190 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:43:26.333 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 14:43:26.335 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 14:43:26.335 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-18 14:43:26.340 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-18 14:43:26.340 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 14:43:26.342 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 14:43:30.784 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-18 14:43:30.785 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-18 14:43:30.785 [http-nio-8080-exec-1] DEBUG - Start Publisher deleting
+2022-06-18 14:43:30.787 [http-nio-8080-exec-1] DEBUG - Publisher deleting successfully
+2022-06-18 14:43:30.787 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 14:43:30.789 [http-nio-8080-exec-1] DEBUG - Start getting all users
+2022-06-18 14:43:33.876 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 14:43:33.878 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 14:43:33.878 [http-nio-8080-exec-3] DEBUG - Start Publisher deleting
+2022-06-18 14:43:33.879 [http-nio-8080-exec-3] DEBUG - Publisher deleting successfully
+2022-06-18 14:43:33.880 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 14:43:33.882 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 14:48:59.582 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:49:00.272 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:49:02.370 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:49:04.520 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-18 14:49:04.545 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-18 14:49:04.545 [http-nio-8080-exec-5] DEBUG - Start Publisher deleting
+2022-06-18 14:49:04.546 [http-nio-8080-exec-5] DEBUG - Publisher deleting successfully
+2022-06-18 14:49:04.546 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 14:49:04.549 [http-nio-8080-exec-5] DEBUG - Start getting all users
+2022-06-18 14:49:11.276 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 14:49:11.279 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 14:49:11.279 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-18 14:49:11.280 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-18 14:49:11.281 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:49:11.284 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:49:17.730 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 14:49:17.735 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 14:49:17.736 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 14:49:17.741 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 14:49:17.741 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 14:49:17.743 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 14:49:23.435 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 14:49:23.437 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 14:49:23.438 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 14:49:23.439 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 14:49:23.440 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:49:23.443 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:52:49.932 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 14:52:50.672 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:52:52.930 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 14:52:56.503 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 14:52:56.530 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 14:52:56.530 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-18 14:52:56.532 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-18 14:52:56.532 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:52:56.535 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:53:14.329 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 14:53:14.331 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 14:53:14.332 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-18 14:53:14.336 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-18 14:53:14.336 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 14:53:14.338 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 14:53:17.074 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 14:53:17.077 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 14:53:17.077 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 14:53:17.078 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 14:53:17.078 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:53:17.081 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:53:24.241 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-18 14:53:24.243 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-18 14:53:24.243 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-18 14:53:24.248 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-18 14:53:24.248 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 14:53:24.250 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-18 14:53:27.475 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 14:53:27.476 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 14:53:27.477 [http-nio-8080-exec-4] DEBUG - Start Publisher deleting
+2022-06-18 14:53:27.477 [http-nio-8080-exec-4] DEBUG - Publisher deleting successfully
+2022-06-18 14:53:27.478 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:53:27.481 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 14:53:57.534 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 14:53:57.535 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 14:53:57.535 [http-nio-8080-exec-6] DEBUG - Start Publisher deleting
+2022-06-18 14:53:57.536 [http-nio-8080-exec-6] DEBUG - Publisher deleting successfully
+2022-06-18 14:53:57.536 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:53:57.538 [http-nio-8080-exec-6] DEBUG - Start getting all users
+2022-06-18 14:54:00.924 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 14:54:00.926 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 14:54:00.926 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-18 14:54:00.927 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-18 14:54:00.928 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:54:00.931 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 14:54:22.539 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 14:54:22.541 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 14:54:22.552 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 14:54:22.553 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 14:54:22.553 [http-nio-8080-exec-9] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 14:54:22.553 [http-nio-8080-exec-9] DEBUG - Start adding new version of publisher
+2022-06-18 14:54:22.558 [http-nio-8080-exec-9] DEBUG - updating version successfullyPublisher{id=0, image='time.jpg', name='Time', version='2', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 14:54:22.561 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 14:54:22.562 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 14:54:22.562 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 14:54:22.563 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 14:54:22.563 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:54:22.565 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 14:54:36.054 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 14:54:40.460 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:01:14.365 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 16:01:18.531 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 16:01:18.534 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 16:01:18.535 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 16:01:18.535 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 16:01:18.535 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 16:01:18.537 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 16:01:23.849 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-18 16:01:40.888 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 16:01:40.889 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 16:01:40.898 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-18 16:01:40.899 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-18 16:01:40.899 [http-nio-8080-exec-6] INFO  - publisher inside service -> Publisher{id=0, image='time.jpg', name='Time', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 16:01:40.900 [http-nio-8080-exec-6] DEBUG - Start adding new version of publisher
+2022-06-18 16:01:40.905 [http-nio-8080-exec-6] DEBUG - updating version successfullyPublisher{id=0, image='time.jpg', name='Time', version='3', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 16:01:40.910 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 16:01:40.911 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 16:01:40.912 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 16:01:40.912 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 16:01:40.912 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:01:40.918 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:01:47.282 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-18 16:01:48.455 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:01:49.123 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:01:49.283 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 16:01:49.428 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-18 16:01:49.583 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 16:01:49.883 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 16:01:50.045 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-18 16:01:50.458 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-18 16:01:52.111 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-18 16:01:52.507 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-18 16:01:52.678 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:01:52.831 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.009 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.176 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.346 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.537 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.737 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-18 16:01:53.969 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-18 16:01:54.618 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-18 16:01:54.778 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-18 16:01:54.937 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:01:55.085 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:01:55.221 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-18 16:01:55.475 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-18 16:01:55.750 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-18 16:02:04.774 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 16:02:04.776 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 16:02:04.776 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 16:02:04.777 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 16:02:04.777 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:02:04.779 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:02:09.882 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-18 16:04:33.467 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-18 16:04:33.469 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-18 16:04:33.470 [http-nio-8080-exec-8] DEBUG - Start Publisher deleting
+2022-06-18 16:04:33.471 [http-nio-8080-exec-8] DEBUG - Publisher deleting successfully
+2022-06-18 16:04:33.472 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:04:33.473 [http-nio-8080-exec-8] DEBUG - Start getting all users
+2022-06-18 16:05:38.276 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 16:05:38.277 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 16:05:38.289 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 16:05:38.290 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 16:05:38.290 [http-nio-8080-exec-3] INFO  - publisher inside service -> Publisher{id=0, image='science.jpg', name='Science', version='4', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 16:05:38.290 [http-nio-8080-exec-3] DEBUG - Start adding new version of publisher
+2022-06-18 16:05:38.301 [http-nio-8080-exec-3] DEBUG - updating version successfullyPublisher{id=0, image='science.jpg', name='Science', version='4', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-18 16:05:38.304 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-18 16:05:38.305 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-18 16:05:38.305 [http-nio-8080-exec-3] DEBUG - Start Publisher deleting
+2022-06-18 16:05:38.305 [http-nio-8080-exec-3] DEBUG - Publisher deleting successfully
+2022-06-18 16:05:38.305 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 16:05:38.306 [http-nio-8080-exec-3] DEBUG - Start getting all users
+2022-06-18 16:05:40.180 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-18 16:05:40.181 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-18 16:05:40.182 [http-nio-8080-exec-4] DEBUG - Start Publisher deleting
+2022-06-18 16:05:40.183 [http-nio-8080-exec-4] DEBUG - Publisher deleting successfully
+2022-06-18 16:05:40.183 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 16:05:40.184 [http-nio-8080-exec-4] DEBUG - Start getting all users
+2022-06-18 16:05:42.026 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-18 16:05:42.030 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-18 16:05:42.030 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-18 16:05:42.031 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-18 16:05:42.031 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 16:05:42.033 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-18 16:05:44.812 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-18 16:05:44.814 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-18 16:05:44.814 [http-nio-8080-exec-7] DEBUG - Start Publisher deleting
+2022-06-18 16:05:44.815 [http-nio-8080-exec-7] DEBUG - Publisher deleting successfully
+2022-06-18 16:05:44.816 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 16:05:44.818 [http-nio-8080-exec-7] DEBUG - Start getting all users
+2022-06-18 16:15:31.958 [http-nio-8080-exec-8] DEBUG - Start getting active publishers

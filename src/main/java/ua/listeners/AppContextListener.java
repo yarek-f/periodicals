@@ -20,9 +20,5 @@ public class AppContextListener implements ServletContextListener {
 
         DataSource.inntConfig(d, url, u, p);
 
-        //create database connection from init parameters and set it to context
-        //DBConnectionManager dbManager = new DBConnectionManager(url, u, p);
-       // ctx.setAttribute("DBManager", dbManager);
-       // System.out.println("Database connection initialized for Application.");
     }
 }

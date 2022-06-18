@@ -17,13 +17,20 @@ import java.util.List;
 public class UsersServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        UserMySqlDao dao = new UserMySqlDao();
+        String id = request.getParameter("id");
+        String isActive = request.getParameter("isActive");
+        if (id != null && isActive.equals("true")){
+            dao.delete(Integer.valueOf(id));
+        }if (id != null && isActive.equals("false")){
+            dao.activate(Integer.valueOf(id));
+        }
         int page = 1;
         int recordsPerPage = 5;
         if(request.getParameter("page") != null){
             page = Integer.parseInt(request.getParameter("page"));
         }
-        UserMySqlDao dao = new UserMySqlDao();
+
 
         List<UserGetDto> list = dao.getAll((page-1)*recordsPerPage,
                 recordsPerPage);

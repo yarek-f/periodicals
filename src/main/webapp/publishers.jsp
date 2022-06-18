@@ -1,6 +1,10 @@
+<%@ page import="ua.dto.PublisherDto" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
+<%
+    PublisherDto publisherDto = ((PublisherDto) session.getAttribute("publisherCreateDto"));
+%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -281,60 +286,36 @@
         .modal form label {
             font-weight: normal;
         }
+        .layer {
+            overflow: auto; 
+            width: 140px;
+            height: 75px;
+            padding: 5px;
+            border: solid 1px black;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>Manage <b>Publishers</b></h2>
-                </div>
-                <div class="col-sm-6">
-                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
-                        <span>Add New Publisher</span></a>
-                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
-                        <span>Delete</span></a>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/periodicals">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><h5>Publisher list</h5></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/users"><h5>User list</h5></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <table class="table table-striped table-hover">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Topic</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Is active</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="p" items="${publisherList}">
-                <tr>
-                    <td>${p.id}</td>
-                    <td>${p.name}</td>
-                    <td>${p.topic}</td>
-                    <td>${p.create}</td>
-                    <td>${p.updated}</td>
-                    <td>${p.isActive}</td>
-                    <td>
-                        <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                    </td>
-                </tr>
-            </c:forEach>
+</nav>
 
-        </tbody>
-    </table>
-
-
-    </div>
-
+<div class="d-flex justify-content-center">
     <nav aria-label="...">
         <ul class="pagination">
             <c:if test="${currentPage != 1}">
@@ -359,36 +340,120 @@
             </c:if>
         </ul>
     </nav>
+</div>
 
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Manage <b>Publishers</b></h2>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/add-publisher.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                        <span>Add New Publisher</span></a>
+                    <a href="/add-new-version.jsp" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                        <span>Add new version</span></a>
+                </div>
+            </div>
+    </div>
+    <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>Topic</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>Is active</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="p" items="${publisherList}">
+                <tr>
+                    <td>${p.id}</td>
+                    <td><img src="images/${p.image}" width="50" height="75"></td>
+                    <td>${p.name}</td>
+                    <td>${p.version}</td>
+                    <td>${p.topic}</td>
+                    <td>${p.price}</td>
+                    <td><div class="layer"><p>${p.description}</p></div></td>
+                    <td>${p.create}</td>
+                    <td>${p.updated}</td>
+                    <td>${p.isActive}</td>
+                    <td>
+                        <a href="edit-publisher.jsp" class="edit">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                            </a>
+                        <a href="/delete?name=${p.name}&page=${currentPage}" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+            </c:forEach>
+
+        </tbody>
+    </table>
+
+    </div>
 
 </div>
 
 
-<!-- Edit Modal HTML -->
+<!-- Add Modal HTML -->
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="post" action="/create-publisher" enctype="multipart/form-data">
+                <c:if test="${sessionScope.get('publisherErrorMessages') !=null}">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>
+<%--                            <fmt:message key="label.wrongUserInputData" />--%>
+                                wrongUserInputData
+                        </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </c:if>
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Employee</h4>
+                    <h4 class="modal-title">Add Publisher</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" required>
+                        <b style="color: red">*</b><label>Name</label>
+                        <input type="text" name="inputPublisherName" class="form-control" required
+                               value="<%=publisherDto!=null?publisherDto.getName():""%>"/>
+                        <c:if test="${sessionScope.get('publisherErrorMessages') != null && sessionScope.get('publisherErrorMessages').contains('publisherName')}">
+                            <span class="text-danger">
+<%--                                <fmt:message key="label.wrongFullNume" />--%>
+                                Publisher name must be less than 40 symbols
+                            </span>
+                        </c:if>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" required>
+                        <b style="color: red">*</b>
+                        <select name="inputTopic">
+                            <option value="">Chose topic</option>
+                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
+                                <option value="${p}">${p}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Address</label>
-                        <textarea class="form-control" required></textarea>
+                        <b style="color: red">*</b><label>Price</label>
+                        <input type="number" name="inputPrice" step=".01" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" required>
+                        <label>Description</label>
+                        <textarea class="form-control" name="inputDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -403,55 +468,82 @@
 <div id="editEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="post" action="/edit-publisher" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Employee</h4>
+                    <h4 class="modal-title">Edit publisher</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" required>
+                        <b style="color: red">*</b><label>Publisher name</label>
+                        <select id="publisherName" name="publisherName">
+                            <option value="">Chose publisher name</option>
+                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
+                                <option value="${p.name}">${p.name}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" required>
+                        <label>Topic</label>
+                        <select name="inputTopic">
+                            <option value="">Chose topic</option>
+                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
+                                <option value="${p}">${p}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Address</label>
-                        <textarea class="form-control" required></textarea>
+                        <label>Price</label>
+                        <input type="number" name="inputPrice" step=".01" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" required>
+                        <label>Description</label>
+                        <textarea class="form-control" name="inputDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control" value="">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-info" value="Save">
+                    <input type="submit" class="btn btn-warning" value="Update">
                 </div>
             </form>
         </div>
     </div>
 </div>
-<!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
+<!-- Add new version Modal HTML -->
+<div id="addNewVersionModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="post" action="/new-version" enctype="multipart/form-data">
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Employee</h4>
+                    <h4 class="modal-title">Add new issue of journal</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you want to delete these Records?</p>
-                    <p class="text-warning">
-                        <small>This action cannot be undone.</small>
-                    </p>
+                    <div class="form-group">
+                        <b style="color: red">*</b><label>Name</label>
+                        <select id="inputPublisherName" name="inputPublisherName">
+                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
+                                <option value="${p.name}">${p.name}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <b style="color: red">*</b><label>Version</label>
+                        <input type="number" name="inputPublisherVersion" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Picture</label>
+                        <input type="file" name="file" class="form-control">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-danger" value="Delete">
+                    <input type="submit" class="btn btn-primary" value="Add">
                 </div>
             </form>
         </div>
