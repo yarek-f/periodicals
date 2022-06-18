@@ -390,7 +390,7 @@
                         <a href="edit-publisher.jsp" class="edit">
                             <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                             </a>
-                        <a href="?page=${currentPage}&id=${p.id}" class="delete" data-toggle="modal">
+                        <a href="/delete?name=${p.name}&page=${currentPage}" class="delete" data-toggle="modal">
                             <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                     </td>
                 </tr>

@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <b style="color: red">*</b><label>Publisher name</label>
                     <select id="publisherName" name="publisherName">
-                        <option value="">Chose publisher name</option>
+                        <option value="<%=publisherDto!=null?publisherDto.getName():""%>"><%=publisherDto!=null?publisherDto.getName():"Chose publisher name"%></option>
                         <c:forEach var="p" items="${sessionScope.get('publishers')}">
                             <option value="${p.name}">${p.name}</option>
                         </c:forEach>
@@ -34,7 +34,7 @@
                 <div class="form-group">
                     <label>Topic</label>
                     <select name="inputTopic">
-                        <option value="">Chose topic</option>
+                        <option value="<%=publisherDto!=null?publisherDto.getTopic():""%>"><%=publisherDto!=null?publisherDto.getTopic():"Chose topic"%></option>
                         <c:forEach var="p" items="${sessionScope.get('allTopics')}">
                             <option value="${p}">${p}</option>
                         </c:forEach>

@@ -18,7 +18,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String CREATE_QUERY = "insert into publishers (image, publisher_name, topic, price, publisher_description) values (?, ?, ?, ?, ?)";
     private static final String GET_ALL_QUERY = "SELECT * from publishers";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from publishers limit ?, ?";
-    private static final String DELETE_QUERY = "update publishers set is_active = false where id = ?";
+    private static final String DELETE_QUERY = "DELETE FROM publishers WHERE id = ?";
     private static final String GET_ALL_BY_TOPIC = "select * from publishers where topic = ? and is_active = true";
     private static final String ADD_NEW_VERSION = "update publishers set image = ?, version = ? where publisher_name = ?";
     private static final String EDIT_PUBLISHER = "update publishers set image = ?, topic = ?,price = ?, publisher_description = ?, updated = now() where publisher_name = ?";

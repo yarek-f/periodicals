@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <b style="color: red">*</b><label>Name</label>
                     <select id="inputPublisherName" name="inputPublisherName">
-                        <option value="">Chose publisher</option>
+                        <option value="<%=publisherDto!=null?publisherDto.getName():""%>"><%=publisherDto!=null?publisherDto.getName():"Chose publisher"%></option>
                         <c:forEach var="p" items="${sessionScope.get('publishers')}">
                             <option value="${p.name}">${p.name}</option>
                         </c:forEach>

@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,12 +21,11 @@ public class PublishersServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession(true);
         PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-        String id = request.getParameter("id");
-        if (id != null && Integer.valueOf(id) >= 0){
-            publisherMySqlDao.delete(Integer.valueOf(id));
-        }
-        System.out.println("p for edit ==> " + request.getAttribute("editId"));
+
+        String deletePublisher = request.getParameter("deletePublisher");
+        publisherMySqlDao.delete(publisherMySqlDao.get(deletePublisher).getId());
 
         int page = 1;
         int recordsPerPage = 5;

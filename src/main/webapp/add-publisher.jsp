@@ -44,7 +44,7 @@
                 <div class="form-group pt-2 pb-2">
                     <b style="color: red">*</b>
                     <select name="inputTopic" required>
-                        <option value="">Chose topic</option>
+                        <option value="<%=publisherDto!=null?publisherDto.getTopic():""%>"><%=publisherDto!=null?publisherDto.getTopic():"Chose topic"%></option>
                         <c:forEach var="p" items="${sessionScope.get('allTopics')}">
                             <option value="${p}">${p}</option>
                         </c:forEach>
