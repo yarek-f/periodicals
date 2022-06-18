@@ -4,6 +4,7 @@ import ua.dao.CustomerMySqlDao;
 import ua.dao.DataSource;
 import ua.dao.UserMySqlDao;
 import ua.domain.Customer;
+import ua.domain.Role;
 import ua.domain.User;
 import ua.dto.CustomerSignUpDto;
 import ua.dto.UserSignUpDto;
@@ -51,14 +52,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean valid(String email, String password){
+    public Role valid(String email, String password){
         User user = get(email);
         if (user != null){
             if(user.getPassword().equals(password)){
-                return true;
+                return user.getRole();
             }
         }
-        return false;
+        return null;
     }
 
     public List<String> validateUser(UserSignUpDto userSignUpDto) {

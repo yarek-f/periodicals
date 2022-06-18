@@ -1,5 +1,6 @@
 package ua.services;
 
+import ua.domain.Role;
 import ua.domain.User;
 import ua.dto.CustomerSignUpDto;
 import ua.dto.UserSignUpDto;
@@ -14,6 +15,6 @@ public interface UserService {
     User get(String email);
     boolean updateRole(int id);
     List<User> getAll();
-    boolean valid(String email, String password);
+    Role valid(String email, String password);
 
 }

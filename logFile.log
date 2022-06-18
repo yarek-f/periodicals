@@ -1766,3 +1766,37 @@
 2022-06-18 16:05:44.816 [http-nio-8080-exec-7] DEBUG - Start getting all users
 2022-06-18 16:05:44.818 [http-nio-8080-exec-7] DEBUG - Start getting all users
 2022-06-18 16:15:31.958 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-18 16:35:21.210 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:35:22.278 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:35:26.373 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:37:03.550 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:37:04.526 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:37:08.790 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:39:11.218 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:39:12.484 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:39:18.176 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:41:06.647 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:41:07.527 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:41:11.849 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:43:47.388 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:43:48.789 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:43:53.819 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:44:40.621 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:44:41.427 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:44:46.681 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:46:32.524 [RMI TCP Connection(2)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:46:33.694 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:46:38.412 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:49:20.318 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:49:21.420 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:49:25.781 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:51:36.190 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-18 16:51:36.932 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-18 16:51:41.209 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-18 16:51:55.584 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-18 16:54:08.212 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-18 16:54:08.213 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-18 16:54:08.214 [http-nio-8080-exec-10] DEBUG - Start Publisher deleting
+2022-06-18 16:54:08.215 [http-nio-8080-exec-10] DEBUG - Publisher deleting successfully
+2022-06-18 16:54:08.216 [http-nio-8080-exec-10] DEBUG - Start getting all users
+2022-06-18 16:54:08.219 [http-nio-8080-exec-10] DEBUG - Start getting all users
