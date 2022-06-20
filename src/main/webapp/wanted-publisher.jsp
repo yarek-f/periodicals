@@ -24,6 +24,11 @@
 
     <title>Main page</title>
     <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
         body {
             background:
                     url(/images/Screenshot.png)
@@ -67,10 +72,35 @@
                 <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search" /></b></button>
                 <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search" />" aria-label="Search">
             </form>
-            <div>
-                <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
-                <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>
-            </div>
+            <c:choose>
+                <c:when test="${sessionScope.get('profile')!=null}">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="text-truncate " style="max-width: 120px;">
+                                        ${sessionScope.get('profile')}</div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Profile</a></li>
+                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
+                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                    </svg>
+                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </c:when>
+                <c:otherwise>
+                    <div>
+                        <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
+                        <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>
+                    </div>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </nav>

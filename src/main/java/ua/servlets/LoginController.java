@@ -24,18 +24,18 @@ public class LoginController extends HttpServlet {
 
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         jwtService = new JWTService();
         userService = new UserServiceImpl();
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.sendRedirect("/logIn.jsp");
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
@@ -48,10 +48,13 @@ public class LoginController extends HttpServlet {
             context.setAttribute(token, token);
             req.getSession().setAttribute("token", token);
 
+            req.getSession().setAttribute("profile", email);
+
             if (role.equals(Role.ADMIN)) {
                 resp.sendRedirect("/publishers");
             } else if (role.equals(Role.USER)) {
                 resp.sendRedirect("/periodicals");
+//                req.getSession().setAttribute("profile", email);
             }
         } else {
             req.getSession().setAttribute("loginError", "Wrong email or password");
@@ -62,7 +65,7 @@ public class LoginController extends HttpServlet {
     }
 
     private Map<String, String> createUserInfoMap(String loginName, String password) {
-        Map<String, String> userInfo = new HashMap<String, String>();
+        Map<String, String> userInfo = new HashMap<>();
         userInfo.put("loginName", loginName);
         userInfo.put("password", password);
         return userInfo;

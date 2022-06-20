@@ -1,6 +1,8 @@
 package ua.servlets;
 
+import ua.dao.CustomerMySqlDao;
 import ua.dao.PublisherMySqlDao;
+import ua.dao.UserMySqlDao;
 import ua.domain.Publisher;
 import ua.domain.Publishers;
 import ua.domain.Topics;
@@ -30,13 +32,25 @@ public class MainPage extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
 
+        UserMySqlDao userMySqlDao = new UserMySqlDao();
+        CustomerMySqlDao customerMySqlDao = new CustomerMySqlDao();
+        session.setAttribute("customerMySqlDao", customerMySqlDao);
+
+//        if (session.getAttribute("profile") != null || session.getAttribute("profile") != ""){
+//            int cus_id = customerMySqlDao.get((String)session.getAttribute("profile")).getId();
+//            if (session.getAttribute("pub_id") != null || session.getAttribute("pub_id") != ""){
+//                boolean res = customerMySqlDao.isSubscribed(cus_id, (int)session.getAttribute("pub_id"));
+//                session.setAttribute("isSubscribed", res);
+//            }
+//        }
+
+
         PublisherServiceImpl publisherService = new PublisherServiceImpl();
 
         List<Publisher> publishersList = publisherService.getAll();
         session.setAttribute("publishers", publishersList);
 
         List<Publisher> resultList = publishersList;
-
 
         List<String> publishersByTopic =  publishersList.stream()
                 .map(e -> e.getTopic().toString())
@@ -64,7 +78,21 @@ public class MainPage extends HttpServlet {
             resultList = sortByName(publishersList);
         }
 
-         if(sort != null && sort.equals("byPrice") && topic != null){
+        String email = request.getParameter("emailForSubscription");
+        System.out.println("email for getting all subscriptions ==> " + email);
+        if(email != null && !email.equals("")){
+            resultList = userMySqlDao.getAllSubscriptions(email);
+        }
+
+        String subscribe = request.getParameter("subscribe");
+        int customerId = customerMySqlDao.get((String) session.getAttribute("profile")).getId();
+        System.out.println("publisher id for subscriptions ==> " + subscribe);
+        System.out.println("customer id for subscriptions ==> " + customerId);
+        if(subscribe != null && !subscribe.equals("")){
+            customerMySqlDao.addSubscription(customerId, Integer.valueOf(subscribe));
+        }
+
+        if(sort != null && sort.equals("byPrice") && topic != null){
             resultList = sortByPrice(publisherService.getByTopic(topic));
         } else if(sort != null && sort.equals("byPrice")){
              resultList = sortByPrice(publishersList);

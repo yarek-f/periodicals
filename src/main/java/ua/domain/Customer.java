@@ -10,6 +10,7 @@ public class Customer implements Subscribers {
     private LocalDate dob;
     private String phoneNumber;
     private String email;
+    private double balance;
     private String password;
     private LocalDateTime created;
     private LocalDateTime update;
@@ -20,6 +21,15 @@ public class Customer implements Subscribers {
     private Subscription subscription;
 
     public Customer() {
+    }
+
+    public Customer(int id, String fullName, LocalDate dob, String phoneNumber, String email, double balance) {
+        this.id = id;
+        this.fullName = fullName;
+        this.dob = dob;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.balance = balance;
     }
 
     public Customer(String fullName, LocalDate dob, String phoneNumber, String email, String password) {

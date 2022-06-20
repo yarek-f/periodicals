@@ -1,5 +1,6 @@
 package ua.dao;
 
+import com.mysql.cj.jdbc.ServerPreparedStatement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.domain.Customer;
@@ -14,15 +15,18 @@ public class CustomerMySqlDao implements Dao<Customer> {
     private static final String CREATE_QUERY = "insert into customers (fullname, dob, phone_number, email, user_password) values (?, ?, ?, ?, ?)";
     private static final String DELETE_QUERY = "delete from customers where email = ?";
     private static final String GET_PHONE_NUMBER_QUERY = "select * from customers where phone_number = ?";
+    private static final String GET_CUSTOMER = "select * from customers where email = ?";
+    private static final String SUBSCRIBE_USER = "insert into publisher_customer (cus_id, pub_id) values(?, ?)";
+    private static final String IS_SUBSCRIBE_USER = "select * from publisher_customer where cus_id = ? and pub_id = ?";
 
     private Connection con;
 
     private static Logger logger = LogManager.getLogger(CustomerMySqlDao.class);
 
-    public CustomerMySqlDao() throws SQLException {
+    public CustomerMySqlDao() {
     }
 
-    public CustomerMySqlDao(Connection con) throws SQLException {
+    public CustomerMySqlDao(Connection con) {
         this.con = con;
     }
     @Override
@@ -48,9 +52,73 @@ public class CustomerMySqlDao implements Dao<Customer> {
         return 0;
     }
 
+    public void addSubscription(int cus_id, int pub_id){
+        logger.debug("Start subscribing user");
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(SUBSCRIBE_USER)) {
+            pstm.setInt(1, cus_id);
+            pstm.setInt(2, pub_id);
+
+            pstm.executeUpdate();
+
+        } catch (SQLException e) {
+            logger.debug("Problem with subscribing user" + e.getMessage());
+        }
+        logger.debug("User subscribed successfully!");
+    }
+
+
+    public boolean isSubscribed(int cus_id, int pub_id){
+        logger.debug("Start checking if user is subscribed");
+        boolean res = true;
+        int a = 0;
+        int b = 0;
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(IS_SUBSCRIBE_USER)) {
+            pstm.setInt(1, cus_id);
+            pstm.setInt(2, pub_id);
+
+            ResultSet rs = pstm.executeQuery();
+            if(rs.next()){
+                 a = rs.getInt("cus_id");
+                 b = rs.getInt("pub_id");
+            }
+
+            if (a < 1 || b < 1) res = false;
+
+        } catch (SQLException e) {
+            logger.debug("Problem with checking if user is subscribed: " + e.getMessage());
+            res = false;
+        }
+        logger.debug("User is checked!");
+        return res;
+    }
+
     @Override
     public Customer get(String email) {
-        return null;
+        logger.debug("Start getting customer by phone number");
+        Customer customer = new Customer();
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement(GET_CUSTOMER)){
+
+            stmt.setString(1, email);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String fullName = rs.getString("fullname");
+                LocalDate dob = rs.getDate("dob").toLocalDate(); //fixme login doesn't work without dob
+                String phoneNumber = rs.getString("phone_number");
+                email = rs.getString("email");
+                double balance = rs.getDouble("balance");
+
+                customer = new Customer(id, fullName, dob, phoneNumber, email, balance);
+            }
+        } catch (SQLException e) {
+            logger.debug("Problem with pulling user data from database: " + e.getMessage());
+        }
+        return customer;
     }
 
 
@@ -75,8 +143,6 @@ public class CustomerMySqlDao implements Dao<Customer> {
             }
         } catch (SQLException e) {
             logger.debug("Problem with pulling user data from database: " + e.getMessage());
-        } catch (Exception ex) {
-            logger.debug("Problem with getting user: " + ex.getMessage());
         }
         return customer;
     }

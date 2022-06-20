@@ -2,6 +2,7 @@ package ua.dao;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.domain.Publisher;
 import ua.domain.Role;
 import ua.domain.User;
 import ua.dto.UserGetDto;
@@ -23,6 +24,7 @@ public class UserMySqlDao implements Dao<User> {
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
     private static final String DEACTIVATE_QUERY = "update users set is_active = false where id = ?";
     private static final String ACTIVATE_QUERY = "update users set is_active = true where id = ?";
+    private static final String GET_ALL_SUBSCRIPTIONS = "SELECT p.publisher_name FROM customers c INNER JOIN publisher_customer pc ON c.id = pc.cus_id INNER JOIN publishers p ON p.id = pc.pub_id where c.email = ?";
 
     private int noOfRecords;
 
@@ -140,6 +142,32 @@ public class UserMySqlDao implements Dao<User> {
         }
         logger.debug("User activating successfully");
         return false;
+    }
+
+    public List<Publisher> getAllSubscriptions(String email) { //todo
+        logger.debug("Start getting all subscriptions");
+        List<Publisher> subscriptions = new ArrayList<>();
+
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement(GET_ALL_SUBSCRIPTIONS)){
+            stmt.setString(1, email);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                String publisherName = rs.getString("publisher_name");
+
+                PublisherMySqlDao publisher = new PublisherMySqlDao();
+
+                subscriptions.add(publisher.get(publisherName));
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            logger.debug("Problem with getting subscriptions: " + ex.getMessage());
+        }
+
+        logger.debug("Got all subscriptions");
+        return subscriptions;
     }
 
 //    @Override
