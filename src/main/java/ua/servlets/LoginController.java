@@ -64,9 +64,9 @@ public class LoginController extends HttpServlet {
 
     }
 
-    private Map<String, String> createUserInfoMap(String loginName, String password) {
+    private Map<String, String> createUserInfoMap(String email, String password) {
         Map<String, String> userInfo = new HashMap<>();
-        userInfo.put("loginName", loginName);
+        userInfo.put("email", email);
         userInfo.put("password", password);
         return userInfo;
     }

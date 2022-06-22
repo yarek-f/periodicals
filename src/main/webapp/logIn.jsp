@@ -79,20 +79,19 @@
 </nav>
 
 <div class="mask d-flex align-items-center h-100">
-    <c:if test="${sessionScope.get('loginError') !=null}">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>
-                    ${sessionScope.get('loginError')}
-            </strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </c:if>
     <div class="container ">
         <div class="row d-flex justify-content-center align-items-center pb-5 mb-5">
             <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
-
+                        <c:if test="${sessionScope.get('loginError') !=null}">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>
+                                        ${sessionScope.get('loginError')}
+                                </strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </c:if>
                         <h2 class="text-uppercase text-center mb-5"><fmt:message key="label.logIn"/></h2>
 
                         <form method="post" action="/login">

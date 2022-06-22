@@ -1,6 +1,5 @@
 package ua.dao;
 
-import com.mysql.cj.jdbc.ServerPreparedStatement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.domain.Customer;
@@ -8,7 +7,6 @@ import ua.excaptions.UserException;
 
 import java.sql.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class CustomerMySqlDao implements Dao<Customer> {
@@ -18,6 +16,8 @@ public class CustomerMySqlDao implements Dao<Customer> {
     private static final String GET_CUSTOMER = "select * from customers where email = ?";
     private static final String SUBSCRIBE_USER = "insert into publisher_customer (cus_id, pub_id) values(?, ?)";
     private static final String IS_SUBSCRIBE_USER = "select * from publisher_customer where cus_id = ? and pub_id = ?";
+    private static final String UNSUBSCRIBE_USER = "delete from publisher_customer where cus_id = ? and pub_id = ?";
+    private static final String UPDATE_BALANCE = "update customers set balance = ? where email = ?";
 
     private Connection con;
 
@@ -52,6 +52,44 @@ public class CustomerMySqlDao implements Dao<Customer> {
         return 0;
     }
 
+    public void withdrawFromBalance(Customer customer){
+        logger.debug("Start withdraw money from balance");
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(UPDATE_BALANCE)) {
+
+            double newBalance = get(customer.getEmail()).getBalance() - customer.getBalance();
+
+            pstm.setDouble(1, newBalance);
+            pstm.setString(2, customer.getEmail());
+
+            int status = pstm.executeUpdate();
+            if(status!=1) throw new UserException("Update more than one record!!!");
+        } catch (SQLException e) {
+            logger.debug("Problem with withdraw user money from balance: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void replenishBalance(Customer customer) {
+        logger.debug("Start replenish the balance");
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(UPDATE_BALANCE)) {
+
+//            DecimalFormat df = new DecimalFormat("0.00");
+            double oldBalance = get(customer.getEmail()).getBalance();
+//            double currentBalance = Double.valueOf(df.format(customer.getBalance() + oldBalance));
+
+            pstm.setDouble(1, customer.getBalance()+oldBalance);
+            pstm.setString(2, customer.getEmail());
+
+            int status = pstm.executeUpdate();
+            if(status!=1) throw new UserException("Update more than one record!!!");
+        } catch (SQLException e) {
+            logger.debug("Problem with replenish user balance: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     public void addSubscription(int cus_id, int pub_id){
         logger.debug("Start subscribing user");
         try(Connection con = DataSource.getConnection();
@@ -66,6 +104,23 @@ public class CustomerMySqlDao implements Dao<Customer> {
         }
         logger.debug("User subscribed successfully!");
     }
+
+    public void deleteSubscritpion(int cus_id, int pub_id){
+        logger.debug("Starting unsubscribe user");
+        try(Connection con = DataSource.getConnection();
+            PreparedStatement pstm = con.prepareStatement(UNSUBSCRIBE_USER)) {
+            pstm.setInt(1, cus_id);
+            pstm.setInt(2, pub_id);
+
+            pstm.executeUpdate();
+
+        } catch (SQLException e) {
+            logger.debug("Problem with unsubscribe user" + e.getMessage());
+        }
+        logger.debug("User unsubscribed successfully!");
+    }
+
+
 
 
     public boolean isSubscribed(int cus_id, int pub_id){
@@ -187,4 +242,6 @@ public class CustomerMySqlDao implements Dao<Customer> {
     public void clearTable() {
 
     }
+
+
 }

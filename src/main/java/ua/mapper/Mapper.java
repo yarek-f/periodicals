@@ -49,4 +49,7 @@ public class Mapper {
     }
 
 
+    public static Customer convertToCustomerBalance(UserSignUpDto userDTO) {
+        return new Customer(userDTO.getEmail(), Double.valueOf(userDTO.getBalance()));
+    }
 }

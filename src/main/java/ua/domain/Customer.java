@@ -23,6 +23,11 @@ public class Customer implements Subscribers {
     public Customer() {
     }
 
+    public Customer(String email, double balance) {
+        this.email = email;
+        this.balance = balance;
+    }
+
     public Customer(int id, String fullName, LocalDate dob, String phoneNumber, String email, double balance) {
         this.id = id;
         this.fullName = fullName;
@@ -82,6 +87,14 @@ public class Customer implements Subscribers {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public String getEmail() {

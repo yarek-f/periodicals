@@ -5,11 +5,17 @@ public class UserSignUpDto {
     private String dob;
     private String phoneNumber;
     private String email;
+    private String balance;
     private String password;
     private String confirmPassword;
     private String checkBox;
 
     public UserSignUpDto() {
+    }
+
+    public UserSignUpDto(String email, String balance) {
+        this.email = email;
+        this.balance = balance;
     }
 
     public UserSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword, String checkBox) {
@@ -76,5 +82,13 @@ public class UserSignUpDto {
 
     public void setCheckBox(String checkBox) {
         this.checkBox = checkBox;
+    }
+
+    public String getBalance() {
+        return balance;
+    }
+
+    public void setBalance(String balance) {
+        this.balance = balance;
     }
 }

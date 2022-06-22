@@ -1,14 +1,10 @@
 package ua.servlets;
 
-import ua.dao.CustomerMySqlDao;
 import ua.dao.PublisherMySqlDao;
-import ua.dao.UserMySqlDao;
 import ua.domain.Publisher;
-import ua.domain.Publishers;
-import ua.domain.Topics;
 import ua.dto.PublisherDto;
-import ua.mapper.Mapper;
-import ua.services.PublisherServiceImpl;
+import ua.dto.UserSignUpDto;
+import ua.services.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,88 +14,67 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
-
-        UserMySqlDao userMySqlDao = new UserMySqlDao();
-        CustomerMySqlDao customerMySqlDao = new CustomerMySqlDao();
-        session.setAttribute("customerMySqlDao", customerMySqlDao);
-
-//        if (session.getAttribute("profile") != null || session.getAttribute("profile") != ""){
-//            int cus_id = customerMySqlDao.get((String)session.getAttribute("profile")).getId();
-//            if (session.getAttribute("pub_id") != null || session.getAttribute("pub_id") != ""){
-//                boolean res = customerMySqlDao.isSubscribed(cus_id, (int)session.getAttribute("pub_id"));
-//                session.setAttribute("isSubscribed", res);
-//            }
-//        }
-
-
         PublisherServiceImpl publisherService = new PublisherServiceImpl();
+        UserService userService = new UserServiceImpl();
+        JWTService jwtService = new JWTService();
 
-        List<Publisher> publishersList = publisherService.getAll();
-        session.setAttribute("publishers", publishersList);
 
-        List<Publisher> resultList = publishersList;
+        List<Publisher> resultList = publisherService.getAll();
+        session.setAttribute("publishers", resultList);
 
-        List<String> publishersByTopic =  publishersList.stream()
-                .map(e -> e.getTopic().toString())
-                .distinct()
-                .collect(Collectors.toList());
+        List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
 
-        List<String> allTopics = Stream.of(Topics.values())
-                .map(Topics::name)
-                .collect(Collectors.toList());
-
+        List<String> allTopics = userService.getAllTopics(); //todo move this to publishersServlet
 
         String topic = request.getParameter("topic");
         request.setAttribute("topic", topic);
 
-        if (topic != null){
-            resultList = publisherService.getByTopic(topic);
-        }
-
         String sort = request.getParameter("sort");
-        request.setAttribute("sort", sort);
+        request.setAttribute("sort", sort); //fixme: replace session scope to request in jsp page
+        resultList = userService.sortBy(sort, topic, resultList);
 
-         if(sort != null && sort.equals("byName") && topic != null){
-            resultList = sortByName(publisherService.getByTopic(topic));
-        } else if(sort != null && sort.equals("byName")){
-            resultList = sortByName(publishersList);
-        }
+        //todo ==> trying to change button color when customer is subscribed to publisher:
+//        String publisherIdForButton = (String) session.getAttribute("pId");
+//        System.out.println("publisherIdForButton => " + publisherIdForButton);
+//        int customerIdForButton = userService.getCustomer((String)session.getAttribute("email")).getId();
+//        if (publisherIdForButton != null){
+//           boolean res = userService.isSubscribed(customerIdForButton, Integer.valueOf(publisherIdForButton));
+//            System.out.println("is subscribed? ==> " + res);
+//           session.setAttribute("res", res);
+//           session.removeAttribute("pId");
+//        }
 
-        String email = request.getParameter("emailForSubscription");
-        System.out.println("email for getting all subscriptions ==> " + email);
-        if(email != null && !email.equals("")){
-            resultList = userMySqlDao.getAllSubscriptions(email);
-        }
 
-        String subscribe = request.getParameter("subscribe");
-        int customerId = customerMySqlDao.get((String) session.getAttribute("profile")).getId();
-        System.out.println("publisher id for subscriptions ==> " + subscribe);
+        //start subscription process
+        String publisherId = request.getParameter("subscribe");
+        int customerId = userService.getCustomer((String) session.getAttribute("profile")).getId();
+
+        String token = (String)request.getSession().getAttribute("token");
+        String price = request.getParameter("price");
+        System.out.println("publisher id for subscriptions ==> " + publisherId);
         System.out.println("customer id for subscriptions ==> " + customerId);
-        if(subscribe != null && !subscribe.equals("")){
-            customerMySqlDao.addSubscription(customerId, Integer.valueOf(subscribe));
-        }
 
-        if(sort != null && sort.equals("byPrice") && topic != null){
-            resultList = sortByPrice(publisherService.getByTopic(topic));
-        } else if(sort != null && sort.equals("byPrice")){
-             resultList = sortByPrice(publishersList);
+        if(publisherId != null && token != null && price != null){
+            String email = jwtService.verifyToken(token).getClaims().get("email");
+            UserSignUpDto userSignUpDto = new UserSignUpDto(email, price);
+            userService.addSubscription(customerId, Integer.valueOf(publisherId));
+            userService.withdrawFromBalance(userSignUpDto);
         }
+        //end subscription process
 
+        session.removeAttribute("publishersByTopic");
         session.setAttribute("publishersByTopic", publishersByTopic);
-        session.setAttribute("allTopics", allTopics);
+        session.setAttribute("allTopics", allTopics);//todo move this to publishersServlet
+        double balance = userService.getCustomer((String)session.getAttribute("profile")).getBalance();
+        session.setAttribute("balance", String.format("%.2f", balance));
+//        session.setAttribute("cusId", customerId);
 
         //start pagination
         int page = 1;
@@ -108,8 +83,7 @@ public class MainPage extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         }
 
-        List<PublisherDto> list = getPagination((page-1)*recordsPerPage,
-                recordsPerPage, resultList);
+        List<PublisherDto> list = userService.getPagination((page-1)*recordsPerPage, recordsPerPage, resultList);
 
         int noOfRecords = resultList.size();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
@@ -140,25 +114,5 @@ public class MainPage extends HttpServlet {
             RequestDispatcher view = req.getRequestDispatcher("wanted-publisher.jsp");
             view.forward(req, resp);
         }
-    }
-
-    private List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList){
-        return currentList.stream()
-                .skip(skip)
-                .limit(limit)
-                .map(e -> Mapper.convertToPublisherDto(e))
-                .collect(Collectors.toList());
-    }
-
-    private List<Publisher> sortByName(List<Publisher> publishersList){
-        return publishersList.stream()
-                .sorted(Comparator.comparing(Publisher::getName))
-                .collect(Collectors.toList());
-    }
-
-    private List<Publisher> sortByPrice(List<Publisher> publishersList){
-        return publishersList.stream()
-                .sorted(Comparator.comparing(Publisher::getPrice))
-                .collect(Collectors.toList());
     }
 }

@@ -5,10 +5,15 @@ public class CustomerSignUpDto {
     private String dob;
     private String phoneNumber;
     private String email;
+    private String balance;
     private String password;
     private String confirmPassword;
 
     public CustomerSignUpDto(){}
+
+    public CustomerSignUpDto(String balance) {
+        this.balance = balance;
+    }
 
     public CustomerSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword) {
         this.fullName = fullName;
@@ -49,6 +54,14 @@ public class CustomerSignUpDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getBalance() {
+        return balance;
+    }
+
+    public void setBalance(String balance) {
+        this.balance = balance;
     }
 
     public String getPassword() {
