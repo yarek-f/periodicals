@@ -16,6 +16,7 @@ public class Publisher implements Publishers{
     private LocalDateTime create;
     private LocalDateTime updated;
     private boolean isActive;
+    private boolean isSubscribed;
 
     private List<Subscribers> subscribers = new ArrayList<>(); //??
     private boolean inPublic; //fixme (???) change name
@@ -107,6 +108,14 @@ public class Publisher implements Publishers{
         this.id = id;
     }
 
+    public boolean isSubscribed() {
+        return isSubscribed;
+    }
+
+    public void setSubscribed(boolean subscribed) {
+        isSubscribed = subscribed;
+    }
+
     public String getName() {
         return name;
     }
@@ -193,13 +202,14 @@ public class Publisher implements Publishers{
                 "id=" + id +
                 ", image='" + image + '\'' +
                 ", name='" + name + '\'' +
-                ", version='" + version + '\'' +
+                ", version=" + version +
                 ", topic=" + topic +
                 ", price=" + price +
                 ", description='" + description + '\'' +
                 ", create=" + create +
                 ", updated=" + updated +
                 ", isActive=" + isActive +
+                ", isSubscribed=" + isSubscribed +
                 ", subscribers=" + subscribers +
                 ", inPublic=" + inPublic +
                 '}';

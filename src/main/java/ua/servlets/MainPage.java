@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
@@ -27,6 +29,7 @@ public class MainPage extends HttpServlet {
 
 
         List<Publisher> resultList = publisherService.getAll();
+
         session.setAttribute("publishers", resultList);
 
         List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
@@ -56,6 +59,8 @@ public class MainPage extends HttpServlet {
         String publisherId = request.getParameter("subscribe");
         int customerId = userService.getCustomer((String) session.getAttribute("profile")).getId();
 
+//        isSubscribed(resultList, customerId); fixme
+
         String token = (String)request.getSession().getAttribute("token");
         String price = request.getParameter("price");
         System.out.println("publisher id for subscriptions ==> " + publisherId);
@@ -64,8 +69,13 @@ public class MainPage extends HttpServlet {
         if(publisherId != null && token != null && price != null){
             String email = jwtService.verifyToken(token).getClaims().get("email");
             UserSignUpDto userSignUpDto = new UserSignUpDto(email, price);
-            userService.addSubscription(customerId, Integer.valueOf(publisherId));
-            userService.withdrawFromBalance(userSignUpDto);
+            List<String> res = userService.withdrawFromBalance(userSignUpDto);
+            if (res.isEmpty()){
+                userService.addSubscription(customerId, Integer.valueOf(publisherId));
+            }  else{
+                session.setAttribute("withdrawBalance", res);
+            }
+
         }
         //end subscription process
 
@@ -95,6 +105,19 @@ public class MainPage extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);
     }
+
+//    private void isSubscribed(List<Publisher> list, int customerId){ fixme doesn't work
+//        if (customerId > 0){
+//            UserService userService = new UserServiceImpl();
+//            list.stream()
+//                    .filter(e -> userService.isSubscribed(customerId, e.getId()))
+//                    .map(e -> {
+//                        e.setSubscribed(true);
+//                        return e;
+//                    })
+//                    .collect(Collectors.toList());
+//        }
+//    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

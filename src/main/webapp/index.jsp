@@ -167,15 +167,17 @@
                     </div>
                 </c:otherwise>
             </c:choose>
-<%--            <div>--%>
-<%--                <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>--%>
-<%--                <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>--%>
-<%--            </div>--%>
         </div>
     </div>
 </nav>
 
     <div class="container col-8" style="justify-content: center">
+        <c:if test="${sessionScope.get('withdrawBalance') != null}">
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                You haven't enough money. Please top up your balance!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </c:if>
         <c:forEach items="${publisherList}" var="p">
         <div class="row m-4"  style="background-color: white; border-radius: 5px;">
             <div class="col" style="position: relative">
@@ -189,11 +191,40 @@
 <%--                    <%session.setAttribute("isSubscribed", customerDao.isSubscribed(customerDao.get((String)session.getAttribute("profile")).getId(), (int)session.getAttribute("pub_id")));%>--%>
 <%--                    <c:choose>--%>
 <%--                        <c:when test="${sessionScope.get('res')==false}">--%>
-                            <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
+                            <c:choose>
+                                <c:when test="${sessionScope.get('profile')!=null}">
+<%--                                    <c:if test="${p.isSubscribed == false}">--%>
+<%--                            todo        <c:if test="${requestScope.get('topic') != null}">--%>
+<%--                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">--%>
+<%--                                    </c:if>--%>
+<%--                                        &lt;%&ndash;                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}&topic=${requestScope.get('topic')}">&ndash;%&gt;--%>
+<%--                                    <c:if test="${requestScope.get('topic') == null}">--%>
+<%--                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">--%>
+<%--                                    </c:if>--%>
+
+<%--                              todo          <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />--%>
+<%--                                            <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>--%>
+<%--                                        </button>--%>
+<%--                                    </a>--%>
+<%--                                    </c:if>--%>
+                                    <c:if test="${p.isSubscribed == true}">
+                                        <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+                                            <button type="button" class="btn btn-danger">
+                                                Unsubscribe
+                                            </button>
+                                        </a>
+                                    </c:if>
+
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="/login">
+                                        <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                            <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
+                                        </button>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+
 <%--                        </c:when>--%>
 <%--                        <c:otherwise>--%>
 <%--                            <a href="?subscribe=${p.id}">--%>

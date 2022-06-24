@@ -41,15 +41,15 @@ public class ReplenishBalanceServlet extends HttpServlet {
 
         session.setAttribute("balanceErrorMessages", customerResponse);
 
-        resp.sendRedirect(req.getContextPath() + "/periodicals");
+//        resp.sendRedirect(req.getContextPath() + "/periodicals");
 
-//        if (!customerResponse.isEmpty()) {
-//            resp.sendRedirect(req.getContextPath() + "/balance.jsp");
-//        }
-//        else {
-//            resp.sendRedirect(req.getContextPath() + "/periodicals");
-//            session.removeAttribute("balanceErrorMessages");
-//            session.removeAttribute("customerDto");
-//        }
+        if (!customerResponse.isEmpty()) {
+            resp.sendRedirect(req.getContextPath() + "/balance.jsp");
+        }
+        else {
+            resp.sendRedirect(req.getContextPath() + "/periodicals");
+            session.removeAttribute("balanceErrorMessages");
+            session.removeAttribute("customerDto");
+        }
     }
 }

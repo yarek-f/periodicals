@@ -136,7 +136,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                             <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Profile</a></li>
     <%--                                <li class="ps-2"><a href="?emailForSubscription=${sessionScope.get('profile')}" class="link-light" style="text-decoration: none;">Subscriptions</a></li>--%>
-                            <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
+                            <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
                             <li class="ps-2"><a href="/login" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
@@ -159,7 +159,7 @@
                 <h3 style="text-align: center">${p.name}</h3><br><br>
                 <p style="text-align: center">${p.description}</p>
                 <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                    <a href="?publisherIdForUnsubscription=${p.id}">
+                    <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
                         <button type="button" class="btn btn-danger">
 <%--                            <fmt:message key="label.subscribe" />--%>
                             Unsubscribe

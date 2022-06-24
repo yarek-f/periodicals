@@ -5849,3 +5849,1891 @@
 2022-06-23 00:19:57.192 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
 2022-06-23 00:19:57.204 [http-nio-8080-exec-13] DEBUG - Start getting active publishers
 2022-06-23 00:19:57.205 [http-nio-8080-exec-12] DEBUG - Start getting active publishers
+2022-06-24 12:37:56.202 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 12:37:56.806 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:37:56.881 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:37:56.887 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:37:56.916 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:00.559 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:38:00.563 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:38:00.566 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:00.567 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:19.056 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:38:19.059 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:38:19.061 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:19.067 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:26.381 [http-nio-8080-exec-2] DEBUG - Start replenish the balance
+2022-06-24 12:38:26.382 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:26.392 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:38:26.394 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:38:26.396 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:26.397 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:29.153 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:38:29.157 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:38:29.160 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:29.164 [http-nio-8080-exec-6] DEBUG - Start subscribing user
+2022-06-24 12:38:29.185 [http-nio-8080-exec-6] DEBUG - Problem with subscribing userDuplicate entry '6-1' for key 'publisher_customer.PRIMARY'
+2022-06-24 12:38:29.185 [http-nio-8080-exec-6] DEBUG - User subscribed successfully!
+2022-06-24 12:38:29.185 [http-nio-8080-exec-6] DEBUG - Start withdraw money from balance
+2022-06-24 12:38:29.185 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:29.193 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:31.277 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:38:31.280 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:38:31.282 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:31.286 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 12:38:31.287 [http-nio-8080-exec-5] DEBUG - Problem with subscribing userDuplicate entry '6-2' for key 'publisher_customer.PRIMARY'
+2022-06-24 12:38:31.288 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 12:38:31.288 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 12:38:31.288 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:31.295 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:32.798 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:38:32.800 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:38:32.803 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:32.806 [http-nio-8080-exec-4] DEBUG - Start subscribing user
+2022-06-24 12:38:32.812 [http-nio-8080-exec-4] DEBUG - User subscribed successfully!
+2022-06-24 12:38:32.813 [http-nio-8080-exec-4] DEBUG - Start withdraw money from balance
+2022-06-24 12:38:32.813 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:32.819 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:51.575 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 12:38:51.577 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.580 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.581 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.582 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.583 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.584 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.584 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.586 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.586 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.587 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.587 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.589 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.589 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:38:51.590 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:38:51.590 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 12:38:51.590 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 12:38:58.635 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:38:58.637 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:38:58.640 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:38:58.641 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:14.169 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 12:40:14.895 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:40:14.960 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:40:14.963 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:14.992 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:17.208 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:40:17.213 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:40:17.219 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:17.222 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:25.141 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:40:25.144 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:40:25.146 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:40:25.152 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:40.080 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 12:41:40.840 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:41:40.918 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:41:40.921 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:40.947 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:43.317 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:41:43.321 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:41:43.328 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:43.330 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:53.197 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:41:53.200 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:41:53.202 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:41:53.209 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:07.798 [http-nio-8080-exec-10] DEBUG - Start replenish the balance
+2022-06-24 12:42:07.799 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:07.814 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:42:07.817 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:42:07.819 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:07.821 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:22.573 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:22.575 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.578 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.578 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.580 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.581 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.582 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.582 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.583 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.583 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.584 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.584 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.585 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.585 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:42:22.587 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:42:22.587 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 12:42:22.587 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 12:42:25.302 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:25.304 [http-nio-8080-exec-3] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:25.308 [http-nio-8080-exec-3] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:25.308 [http-nio-8080-exec-3] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:25.309 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.311 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.311 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.312 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.312 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.313 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.313 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.314 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.315 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.316 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.316 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.317 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.317 [http-nio-8080-exec-3] DEBUG - Got all subscriptions
+2022-06-24 12:42:25.317 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:42:25.976 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:25.978 [http-nio-8080-exec-5] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:25.982 [http-nio-8080-exec-5] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:25.982 [http-nio-8080-exec-5] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:25.983 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.985 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.986 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.987 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.987 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.987 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.988 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.989 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.990 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:42:25.991 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:42:25.991 [http-nio-8080-exec-5] DEBUG - Got all subscriptions
+2022-06-24 12:42:25.991 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:42:26.524 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:26.525 [http-nio-8080-exec-7] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:26.529 [http-nio-8080-exec-7] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:26.529 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:26.530 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:42:26.532 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:42:26.533 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:42:26.533 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:42:26.533 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:42:26.534 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:42:26.534 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:42:26.535 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:42:26.535 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 12:42:26.535 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 12:42:27.066 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:27.068 [http-nio-8080-exec-8] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:27.072 [http-nio-8080-exec-8] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:27.072 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:27.073 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 12:42:27.075 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 12:42:27.076 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 12:42:27.077 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 12:42:27.077 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 12:42:27.078 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 12:42:27.078 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 12:42:27.078 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 12:42:27.607 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:27.608 [http-nio-8080-exec-9] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:27.612 [http-nio-8080-exec-9] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:27.612 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:27.613 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 12:42:27.614 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 12:42:27.614 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 12:42:27.615 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 12:42:27.615 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 12:42:27.615 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 12:42:28.085 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:28.087 [http-nio-8080-exec-10] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:28.090 [http-nio-8080-exec-10] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:28.091 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:28.092 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 12:42:28.093 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 12:42:28.093 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 12:42:28.094 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 12:42:28.606 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:28.607 [http-nio-8080-exec-1] DEBUG - Starting unsubscribe user
+2022-06-24 12:42:28.611 [http-nio-8080-exec-1] DEBUG - User unsubscribed successfully!
+2022-06-24 12:42:28.611 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 12:42:28.612 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 12:42:28.612 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:42:49.968 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:42:49.971 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 12:42:49.975 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:49.978 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:51.176 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:42:51.180 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:42:51.181 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:51.186 [http-nio-8080-exec-4] DEBUG - Start subscribing user
+2022-06-24 12:42:51.191 [http-nio-8080-exec-4] DEBUG - User subscribed successfully!
+2022-06-24 12:42:51.191 [http-nio-8080-exec-4] DEBUG - Start withdraw money from balance
+2022-06-24 12:42:51.191 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:51.197 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:52.481 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:42:52.484 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:42:52.486 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:52.488 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 12:42:52.492 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 12:42:52.493 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 12:42:52.493 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:42:52.501 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:01.827 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:43:01.830 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:43:01.831 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:01.833 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:08.618 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 12:43:08.621 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 12:43:08.623 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:08.624 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:10.356 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:43:10.359 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 12:43:10.361 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:10.364 [http-nio-8080-exec-1] DEBUG - Start subscribing user
+2022-06-24 12:43:10.369 [http-nio-8080-exec-1] DEBUG - User subscribed successfully!
+2022-06-24 12:43:10.369 [http-nio-8080-exec-1] DEBUG - Start withdraw money from balance
+2022-06-24 12:43:10.369 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:10.374 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:22.247 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 12:43:22.250 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:43:22.252 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:43:22.253 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:43:22.254 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:43:22.254 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 12:43:22.255 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 12:43:22.255 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 12:43:22.255 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 12:43:26.027 [http-nio-8080-exec-4] DEBUG - Start getting all subscriptions
+2022-06-24 12:43:26.029 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 12:43:26.031 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 12:43:26.031 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 12:43:26.031 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 12:43:26.032 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 12:43:26.033 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 12:43:26.033 [http-nio-8080-exec-4] DEBUG - Got all subscriptions
+2022-06-24 12:43:26.033 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 12:43:27.502 [http-nio-8080-exec-5] DEBUG - Start getting all subscriptions
+2022-06-24 12:43:27.504 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:43:27.505 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:43:27.506 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:43:27.506 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:43:27.506 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 12:43:27.507 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 12:43:27.508 [http-nio-8080-exec-5] DEBUG - Got all subscriptions
+2022-06-24 12:43:27.508 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 12:43:28.900 [http-nio-8080-exec-6] DEBUG - Start getting all subscriptions
+2022-06-24 12:43:28.902 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 12:43:28.904 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 12:43:28.904 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 12:43:28.905 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 12:43:28.906 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 12:43:28.907 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 12:43:28.907 [http-nio-8080-exec-6] DEBUG - Got all subscriptions
+2022-06-24 12:43:28.907 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 12:43:38.413 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 12:43:38.416 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:43:38.419 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:43:38.419 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:43:38.420 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:43:38.420 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 12:43:38.422 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 12:43:38.422 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 12:43:38.422 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 12:43:51.007 [http-nio-8080-exec-9] DEBUG - Start replenish the balance
+2022-06-24 12:43:51.008 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:51.018 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 12:43:51.019 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 12:43:51.020 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 12:43:51.021 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 15:46:27.236 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 15:46:28.124 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:46:28.192 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:46:28.195 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:46:28.221 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:46:30.465 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:46:30.469 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:46:30.472 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:46:30.479 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:47:51.138 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 15:47:51.963 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:47:52.029 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:47:52.032 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:47:52.061 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:47:54.254 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:47:54.258 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:47:54.261 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:47:54.269 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:48:48.408 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 15:48:49.281 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:48:49.356 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:48:49.359 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:48:49.387 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:48:51.531 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:48:51.535 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:48:51.540 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:48:51.543 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:06.298 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 15:52:07.197 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:52:07.259 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 15:52:07.262 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:07.291 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:09.430 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:52:09.435 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 15:52:09.442 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:09.445 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:25.805 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 15:52:25.810 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 15:52:25.813 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:25.815 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:41.426 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 15:52:41.430 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 15:52:41.433 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 15:52:41.434 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:12.995 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 16:08:13.904 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:08:13.978 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:08:13.982 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:14.009 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:16.098 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:08:16.102 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:08:16.105 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:16.106 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:25.810 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:08:25.814 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:08:25.816 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:25.823 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:30.172 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 16:08:30.174 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:08:30.176 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:08:30.176 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:08:30.177 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:08:30.177 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:08:30.178 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:08:30.178 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 16:08:30.179 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 16:08:31.689 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:31.692 [http-nio-8080-exec-8] DEBUG - Starting unsubscribe user
+2022-06-24 16:08:31.698 [http-nio-8080-exec-8] DEBUG - User unsubscribed successfully!
+2022-06-24 16:08:31.698 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 16:08:31.699 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:08:31.701 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:08:31.701 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:08:31.702 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:08:31.702 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 16:08:31.702 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 16:08:32.222 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:32.224 [http-nio-8080-exec-9] DEBUG - Starting unsubscribe user
+2022-06-24 16:08:32.228 [http-nio-8080-exec-9] DEBUG - User unsubscribed successfully!
+2022-06-24 16:08:32.228 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 16:08:32.230 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 16:08:32.231 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 16:08:32.232 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 16:08:32.232 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 16:08:32.782 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:32.784 [http-nio-8080-exec-10] DEBUG - Starting unsubscribe user
+2022-06-24 16:08:32.788 [http-nio-8080-exec-10] DEBUG - User unsubscribed successfully!
+2022-06-24 16:08:32.789 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 16:08:32.790 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 16:08:32.791 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:08:34.286 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:08:34.291 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:08:34.295 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:34.297 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:35.301 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:08:35.303 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:08:35.305 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:35.311 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:35.313 [http-nio-8080-exec-2] DEBUG - Start withdraw money from balance
+2022-06-24 16:08:35.313 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:35.318 [http-nio-8080-exec-2] DEBUG - Start subscribing user
+2022-06-24 16:08:35.322 [http-nio-8080-exec-2] DEBUG - User subscribed successfully!
+2022-06-24 16:08:35.323 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:36.818 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:08:36.821 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:08:36.823 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:36.826 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:36.827 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 16:08:36.828 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:36.833 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 16:08:36.837 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 16:08:36.837 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:40.812 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:08:40.816 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:08:40.817 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:40.819 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:46.390 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 16:08:46.394 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 16:08:46.396 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:46.397 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:48.639 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:08:48.643 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:08:48.645 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:48.649 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 16:08:48.651 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:08.275 [http-nio-8080-exec-9] DEBUG - Start replenish the balance
+2022-06-24 16:10:08.276 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:08.287 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:10:08.289 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:10:08.291 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:08.292 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:13.418 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 16:10:13.421 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:10:13.424 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:10:13.424 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:10:13.426 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:10:13.426 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 16:10:13.427 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:10:16.046 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:10:16.050 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:10:16.052 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:16.053 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:21.268 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:10:21.273 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:10:21.277 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:21.278 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:23.854 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:10:23.857 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:10:23.859 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:23.860 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:25.378 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 16:10:25.381 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 16:10:25.383 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:25.386 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:25.387 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 16:10:25.388 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:10:25.394 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 16:10:25.398 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 16:10:25.398 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:02.622 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 16:23:03.595 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:23:03.668 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:23:03.672 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:03.698 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:05.938 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:23:05.943 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:23:05.946 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:05.948 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:17.903 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 16:23:17.906 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 16:23:17.908 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:17.912 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:23.301 [http-nio-8080-exec-9] DEBUG - Start replenish the balance
+2022-06-24 16:23:23.302 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:23.351 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:23:23.353 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:23:23.355 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:23.356 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:25.609 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 16:23:25.611 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:23:25.613 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:23:25.613 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:23:25.615 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:23:25.615 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:23:25.616 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:23:25.616 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 16:23:25.617 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:23:29.562 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:23:29.565 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:23:29.568 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:29.570 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:31.017 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:23:31.021 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 16:23:31.023 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:31.027 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:31.029 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 16:23:31.029 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:31.096 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 16:23:31.117 [http-nio-8080-exec-3] DEBUG - Problem with subscribing userDuplicate entry '4-1' for key 'publisher_customer.PRIMARY'
+2022-06-24 16:23:31.117 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 16:23:31.118 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:47.301 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:23:47.304 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:23:47.306 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:47.310 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:23:47.312 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:24:23.230 [http-nio-8080-exec-6] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:23.232 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:24:23.235 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:24:23.235 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:24:23.236 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:24:23.236 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:24:23.238 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:24:23.238 [http-nio-8080-exec-6] DEBUG - Got all subscriptions
+2022-06-24 16:24:23.238 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:24:27.506 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:27.508 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:24:27.510 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:24:27.510 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:24:27.511 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:24:27.511 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:24:27.512 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:24:27.513 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 16:24:27.513 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 16:24:39.936 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:39.937 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:24:39.942 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:24:39.942 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:24:39.945 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:24:39.945 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:24:39.946 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:24:39.946 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 16:24:39.946 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 16:24:41.805 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:41.808 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 16:24:41.811 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 16:24:41.811 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 16:24:41.812 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 16:24:41.812 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 16:24:41.814 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 16:24:41.814 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 16:24:41.815 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 16:24:47.324 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:24:47.326 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 16:24:47.328 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:24:47.330 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 16:24:50.712 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:50.715 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:24:50.717 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:24:50.717 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:24:50.718 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:24:50.719 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 16:24:50.719 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 16:24:50.720 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 16:24:50.720 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:24:53.903 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 16:24:53.905 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 16:24:53.907 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 16:24:53.907 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 16:24:53.908 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 16:24:53.908 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 16:24:53.910 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 16:24:53.910 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 16:24:53.910 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 16:26:23.061 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:26:23.063 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 16:26:23.066 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:26:23.067 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 16:26:25.332 [http-nio-8080-exec-5] DEBUG - Start getting all subscriptions
+2022-06-24 16:26:25.335 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 16:26:25.337 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 16:26:25.338 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 16:26:25.339 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 16:26:25.339 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 16:26:25.340 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 16:26:25.340 [http-nio-8080-exec-5] DEBUG - Got all subscriptions
+2022-06-24 16:26:25.340 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 16:26:28.032 [http-nio-8080-exec-6] DEBUG - Start getting all subscriptions
+2022-06-24 16:26:28.035 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:26:28.036 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:26:28.036 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:26:28.038 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:26:28.038 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 16:26:28.039 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 16:26:28.039 [http-nio-8080-exec-6] DEBUG - Got all subscriptions
+2022-06-24 16:26:28.039 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 16:26:29.219 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 16:26:29.222 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:26:29.224 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:26:29.224 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:26:29.225 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:26:29.225 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 16:26:29.227 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 16:26:29.227 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 16:26:29.227 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 16:26:30.385 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 16:26:30.387 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:26:30.389 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:26:30.390 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:26:30.391 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:26:30.391 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 16:26:30.392 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 16:26:30.392 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 16:26:30.392 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 16:27:01.999 [http-nio-8080-exec-10] DEBUG - start searching
+2022-06-24 16:27:10.373 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:27:10.378 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 16:27:10.380 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 16:27:10.383 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:25.334 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:25.340 [http-nio-8080-exec-3] DEBUG - Start user creating
+2022-06-24 18:11:25.351 [http-nio-8080-exec-3] DEBUG - User created
+2022-06-24 18:11:25.376 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:11:25.378 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:11:25.380 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:25.381 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:39.211 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:11:39.212 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:11:39.213 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:39.214 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:11:58.534 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 18:11:58.535 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 18:11:58.536 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:12:00.186 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:12:00.189 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:12:00.190 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:00.191 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:04.845 [http-nio-8080-exec-1] DEBUG - start searching
+2022-06-24 18:12:12.592 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 18:12:12.595 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 18:12:12.596 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:12.598 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:17.693 [http-nio-8080-exec-5] DEBUG - Start replenish the balance
+2022-06-24 18:12:17.694 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:17.702 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 18:12:17.704 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 18:12:17.706 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:17.708 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:22.143 [http-nio-8080-exec-8] DEBUG - Start replenish the balance
+2022-06-24 18:12:22.144 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:22.154 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:12:22.156 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:12:22.157 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:22.158 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:36.891 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 18:12:36.893 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 18:12:36.896 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:36.897 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:38.696 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:12:38.698 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:12:38.699 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:38.703 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:38.705 [http-nio-8080-exec-2] DEBUG - Start withdraw money from balance
+2022-06-24 18:12:38.705 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:38.714 [http-nio-8080-exec-2] DEBUG - Start subscribing user
+2022-06-24 18:12:38.720 [http-nio-8080-exec-2] DEBUG - User subscribed successfully!
+2022-06-24 18:12:38.720 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:41.054 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 18:12:41.057 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 18:12:41.059 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:41.062 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:41.065 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 18:12:41.065 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:41.072 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 18:12:41.078 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 18:12:41.078 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:49.332 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 18:12:49.337 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 18:12:49.339 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:49.341 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:49.343 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 18:12:58.013 [http-nio-8080-exec-5] DEBUG - Start getting all subscriptions
+2022-06-24 18:12:58.018 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:12:58.020 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:12:58.020 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:12:58.021 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:12:58.021 [http-nio-8080-exec-5] DEBUG - Got all subscriptions
+2022-06-24 18:12:58.021 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:13:09.450 [http-nio-8080-exec-6] DEBUG - Start getting all subscriptions
+2022-06-24 18:13:09.452 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 18:13:09.454 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 18:13:09.454 [http-nio-8080-exec-6] DEBUG - Start getting Publisher
+2022-06-24 18:13:09.455 [http-nio-8080-exec-6] DEBUG - Publisher getting successfully
+2022-06-24 18:13:09.455 [http-nio-8080-exec-6] DEBUG - Got all subscriptions
+2022-06-24 18:13:09.455 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 18:13:10.888 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 18:13:10.890 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 18:13:10.892 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 18:13:10.892 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 18:13:10.893 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 18:13:10.893 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 18:13:10.893 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:13:19.515 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:13:19.520 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:13:19.522 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:13:19.524 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:13:21.276 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 18:13:21.278 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 18:13:21.280 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 18:13:21.280 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 18:13:21.281 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 18:13:21.281 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 18:13:21.281 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:13:22.330 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:13:22.331 [http-nio-8080-exec-10] DEBUG - Starting unsubscribe user
+2022-06-24 18:13:22.337 [http-nio-8080-exec-10] DEBUG - User unsubscribed successfully!
+2022-06-24 18:13:22.338 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 18:13:22.339 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:13:22.341 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:13:22.341 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 18:13:22.341 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:13:23.036 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 18:13:23.038 [http-nio-8080-exec-1] DEBUG - Starting unsubscribe user
+2022-06-24 18:13:23.044 [http-nio-8080-exec-1] DEBUG - User unsubscribed successfully!
+2022-06-24 18:13:23.044 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 18:13:23.046 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 18:13:23.046 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 18:13:27.033 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:13:27.035 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:13:27.037 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:13:27.038 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:19.695 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:14:19.696 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:14:19.698 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:19.701 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:21.010 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 18:14:21.012 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 18:14:21.012 [http-nio-8080-exec-9] DEBUG - Start Publisher deleting
+2022-06-24 18:14:21.013 [http-nio-8080-exec-9] DEBUG - Publisher deleting successfully
+2022-06-24 18:14:21.013 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-24 18:14:21.016 [http-nio-8080-exec-9] DEBUG - Start getting all users
+2022-06-24 18:14:39.290 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:14:39.291 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:14:39.302 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:14:39.303 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:14:39.304 [http-nio-8080-exec-1] INFO  - publisher inside service -> Publisher{id=0, image='time2.webp', name='Time', version='23', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-24 18:14:39.304 [http-nio-8080-exec-1] DEBUG - Start adding new version of publisher
+2022-06-24 18:14:39.310 [http-nio-8080-exec-1] DEBUG - updating version successfullyPublisher{id=0, image='time2.webp', name='Time', version='23', topic=null, price=null, description='null', create=null, updated=null, isActive=false, subscribers=[], inPublic=false}
+2022-06-24 18:14:39.314 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:14:39.315 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:14:39.315 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-24 18:14:39.316 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-24 18:14:39.316 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-24 18:14:39.317 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-24 18:14:51.631 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 18:14:51.635 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 18:14:51.637 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:51.639 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:59.604 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 18:14:59.606 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 18:14:59.608 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 18:14:59.610 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:03.642 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:15:03.644 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:15:03.646 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:03.647 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:06.871 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:15:06.873 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:15:06.874 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:06.875 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:09.700 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:15:09.702 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:15:09.704 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:15:09.705 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:05.104 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:16:05.105 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:16:05.106 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:05.107 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:10.724 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 18:16:10.726 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 18:16:10.727 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 18:16:10.727 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 18:16:10.728 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 18:16:10.728 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 18:16:10.729 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 18:16:10.730 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 18:16:10.730 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:16:18.457 [http-nio-8080-exec-9] DEBUG - Start replenish the balance
+2022-06-24 18:16:18.458 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:18.468 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:16:18.472 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:16:18.473 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:18.474 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:21.361 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:16:21.362 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:16:21.364 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:21.365 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:44.677 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:16:44.679 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 18:16:44.680 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:44.683 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:44.684 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 18:16:44.684 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:44.691 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 18:16:44.695 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 18:16:44.695 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:46.585 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:16:46.587 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 18:16:46.589 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:46.590 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:48.240 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:16:48.243 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 18:16:48.244 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:48.247 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:48.248 [http-nio-8080-exec-8] DEBUG - Start withdraw money from balance
+2022-06-24 18:16:48.248 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:48.255 [http-nio-8080-exec-8] DEBUG - Start subscribing user
+2022-06-24 18:16:48.269 [http-nio-8080-exec-8] DEBUG - User subscribed successfully!
+2022-06-24 18:16:48.269 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:50.589 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:16:50.591 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 18:16:50.592 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:50.594 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:50.600 [http-nio-8080-exec-9] DEBUG - Start withdraw money from balance
+2022-06-24 18:16:50.600 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:50.606 [http-nio-8080-exec-9] DEBUG - Start subscribing user
+2022-06-24 18:16:50.609 [http-nio-8080-exec-9] DEBUG - User subscribed successfully!
+2022-06-24 18:16:50.609 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 18:16:54.628 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 18:16:54.629 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.631 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.631 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.631 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.631 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.632 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.632 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.633 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.633 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.634 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.634 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 18:16:54.634 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 18:16:54.634 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 18:16:54.635 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 18:16:57.894 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 18:16:57.896 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.897 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.897 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.898 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.898 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.899 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.899 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.899 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.899 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.900 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.900 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 18:16:57.901 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 18:16:57.901 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 18:16:57.901 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 18:16:59.284 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 18:16:59.287 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.287 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.287 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.289 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.290 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.290 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 18:16:59.292 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 18:16:59.292 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 18:16:59.292 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 18:17:00.919 [http-nio-8080-exec-3] DEBUG - Start getting all subscriptions
+2022-06-24 18:17:00.921 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.922 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.922 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.923 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.923 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.924 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.924 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.924 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.924 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.925 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.925 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 18:17:00.925 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 18:17:00.925 [http-nio-8080-exec-3] DEBUG - Got all subscriptions
+2022-06-24 18:17:00.926 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 18:17:04.533 [http-nio-8080-exec-4] DEBUG - Start getting all subscriptions
+2022-06-24 18:17:04.535 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.537 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.537 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.537 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.537 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.538 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.538 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.538 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.538 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.539 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.540 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 18:17:04.540 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 18:17:04.540 [http-nio-8080-exec-4] DEBUG - Got all subscriptions
+2022-06-24 18:17:04.540 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 18:17:07.719 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 18:17:07.722 [http-nio-8080-exec-5] DEBUG - Starting unsubscribe user
+2022-06-24 18:17:07.728 [http-nio-8080-exec-5] DEBUG - User unsubscribed successfully!
+2022-06-24 18:17:07.728 [http-nio-8080-exec-5] DEBUG - Start getting all subscriptions
+2022-06-24 18:17:07.729 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:17:07.730 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:17:07.730 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:17:07.731 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:17:07.731 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:17:07.731 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:17:07.732 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:17:07.732 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:17:07.732 [http-nio-8080-exec-5] DEBUG - Start getting Publisher
+2022-06-24 18:17:07.733 [http-nio-8080-exec-5] DEBUG - Publisher getting successfully
+2022-06-24 18:17:07.733 [http-nio-8080-exec-5] DEBUG - Got all subscriptions
+2022-06-24 18:17:07.733 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:46:41.418 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:46:41.421 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:46:41.422 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:41.423 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:44.183 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:46:44.185 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:46:44.186 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:44.187 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:46.319 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:46:46.321 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:46:46.322 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:46.323 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:48.174 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:46:48.177 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:46:48.178 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:48.180 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:50.099 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:46:50.101 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:46:50.102 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:46:50.103 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:30.357 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:47:30.359 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:47:30.360 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:30.360 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:33.899 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:47:33.902 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:47:33.903 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:33.904 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:35.167 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:47:35.170 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:47:35.172 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:35.174 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:35.175 [http-nio-8080-exec-4] DEBUG - Start withdraw money from balance
+2022-06-24 20:47:35.175 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:47:35.182 [http-nio-8080-exec-4] DEBUG - Start subscribing user
+2022-06-24 20:47:35.183 [http-nio-8080-exec-4] DEBUG - Problem with subscribing userDuplicate entry '4-6' for key 'publisher_customer.PRIMARY'
+2022-06-24 20:47:35.183 [http-nio-8080-exec-4] DEBUG - User subscribed successfully!
+2022-06-24 20:47:35.183 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:20.444 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 20:52:21.344 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:52:21.414 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:52:21.424 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:21.444 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:23.651 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:52:23.665 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:52:23.668 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:23.669 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:36.283 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:52:36.286 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:52:36.288 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:36.291 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:49.043 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:49.045 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:52:49.047 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:52:49.047 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:52:49.048 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:52:49.048 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:52:49.049 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:52:49.050 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:52:49.051 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:52:49.051 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:52:49.052 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:52:49.052 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 20:52:49.052 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:52:51.827 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:51.829 [http-nio-8080-exec-8] DEBUG - Starting unsubscribe user
+2022-06-24 20:52:51.834 [http-nio-8080-exec-8] DEBUG - User unsubscribed successfully!
+2022-06-24 20:52:51.834 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:51.835 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:52:51.837 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:52:51.837 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:52:51.838 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:52:51.838 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:52:51.839 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:52:51.839 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:52:51.840 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:52:51.840 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 20:52:51.840 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:52:52.776 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:52.778 [http-nio-8080-exec-9] DEBUG - Starting unsubscribe user
+2022-06-24 20:52:52.783 [http-nio-8080-exec-9] DEBUG - User unsubscribed successfully!
+2022-06-24 20:52:52.783 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:52.784 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:52:52.786 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:52:52.786 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:52:52.787 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:52:52.788 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:52:52.788 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:52:52.789 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 20:52:52.789 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:52:53.470 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:53.472 [http-nio-8080-exec-10] DEBUG - Starting unsubscribe user
+2022-06-24 20:52:53.476 [http-nio-8080-exec-10] DEBUG - User unsubscribed successfully!
+2022-06-24 20:52:53.476 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:53.478 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:52:53.480 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:52:53.480 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:52:53.481 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:52:53.481 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 20:52:53.481 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:52:53.967 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:53.969 [http-nio-8080-exec-1] DEBUG - Starting unsubscribe user
+2022-06-24 20:52:53.973 [http-nio-8080-exec-1] DEBUG - User unsubscribed successfully!
+2022-06-24 20:52:53.973 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:53.974 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:52:53.976 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:52:53.976 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 20:52:53.976 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:52:54.454 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:54.455 [http-nio-8080-exec-2] DEBUG - Starting unsubscribe user
+2022-06-24 20:52:54.459 [http-nio-8080-exec-2] DEBUG - User unsubscribed successfully!
+2022-06-24 20:52:54.459 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 20:52:54.460 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 20:52:54.460 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:52:55.762 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:52:55.767 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:52:55.770 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:55.772 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:59.743 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:52:59.746 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:52:59.752 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:52:59.753 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:01.537 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:53:01.540 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:53:01.541 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:01.547 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:01.549 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 20:53:01.549 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:01.555 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 20:53:01.559 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 20:53:01.559 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:57.499 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 20:53:58.419 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:53:58.489 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:53:58.494 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:53:58.519 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:00.725 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:54:00.729 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:54:00.732 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:00.733 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:09.758 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:54:09.761 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:54:09.763 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:09.770 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:11.870 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 20:54:11.872 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:54:11.874 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:54:11.874 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:54:11.875 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:54:11.875 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:54:11.876 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:54:11.877 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 20:54:11.877 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:54:13.425 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:13.427 [http-nio-8080-exec-8] DEBUG - Starting unsubscribe user
+2022-06-24 20:54:13.432 [http-nio-8080-exec-8] DEBUG - User unsubscribed successfully!
+2022-06-24 20:54:13.432 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 20:54:13.433 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:54:13.436 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:54:13.436 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:54:13.438 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:54:13.438 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 20:54:13.438 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:54:14.140 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:14.142 [http-nio-8080-exec-9] DEBUG - Starting unsubscribe user
+2022-06-24 20:54:14.149 [http-nio-8080-exec-9] DEBUG - User unsubscribed successfully!
+2022-06-24 20:54:14.149 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 20:54:14.150 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:54:14.152 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:54:14.152 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 20:54:14.152 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:54:14.867 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:14.868 [http-nio-8080-exec-10] DEBUG - Starting unsubscribe user
+2022-06-24 20:54:14.872 [http-nio-8080-exec-10] DEBUG - User unsubscribed successfully!
+2022-06-24 20:54:14.872 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 20:54:14.873 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 20:54:14.873 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:54:15.895 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:54:15.898 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:54:15.899 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:15.900 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:20.198 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:54:20.201 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:54:20.204 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:20.206 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:21.726 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:54:21.729 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:54:21.731 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:21.737 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:21.738 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 20:54:21.738 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:21.745 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 20:54:21.749 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 20:54:21.749 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:23.965 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:54:23.968 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:54:23.970 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:23.974 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:23.975 [http-nio-8080-exec-4] DEBUG - Start withdraw money from balance
+2022-06-24 20:54:23.976 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:23.980 [http-nio-8080-exec-4] DEBUG - Start subscribing user
+2022-06-24 20:54:23.983 [http-nio-8080-exec-4] DEBUG - User subscribed successfully!
+2022-06-24 20:54:23.983 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:27.518 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:54:27.521 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:54:27.522 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:27.524 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:28.888 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:54:28.892 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:54:28.894 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:28.897 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:28.899 [http-nio-8080-exec-6] DEBUG - Start withdraw money from balance
+2022-06-24 20:54:28.899 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:28.906 [http-nio-8080-exec-6] DEBUG - Start subscribing user
+2022-06-24 20:54:28.911 [http-nio-8080-exec-6] DEBUG - User subscribed successfully!
+2022-06-24 20:54:28.911 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:31.736 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:54:31.740 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:54:31.743 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:31.744 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:40.931 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:54:40.935 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:54:40.940 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:40.942 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:42.502 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:54:42.506 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:54:42.507 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:42.511 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:42.512 [http-nio-8080-exec-9] DEBUG - Start withdraw money from balance
+2022-06-24 20:54:42.512 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:54:42.518 [http-nio-8080-exec-9] DEBUG - Start subscribing user
+2022-06-24 20:54:42.522 [http-nio-8080-exec-9] DEBUG - User subscribed successfully!
+2022-06-24 20:54:42.522 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:32.182 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 20:56:33.128 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:56:33.194 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:56:33.194 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:33.224 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:35.348 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:56:35.352 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:56:35.355 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:35.356 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:45.760 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:56:45.763 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:56:45.765 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:45.771 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:49.001 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 20:56:49.003 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:56:49.005 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:56:49.005 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 20:56:49.005 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:56:50.228 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:50.230 [http-nio-8080-exec-8] DEBUG - Starting unsubscribe user
+2022-06-24 20:56:50.235 [http-nio-8080-exec-8] DEBUG - User unsubscribed successfully!
+2022-06-24 20:56:50.235 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 20:56:50.236 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 20:56:50.236 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:56:51.206 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:56:51.209 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:56:51.212 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:51.213 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:56.445 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:56:56.449 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:56:56.453 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:56.454 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:57.807 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:56:57.810 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:56:57.812 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:57.817 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:57.818 [http-nio-8080-exec-1] DEBUG - Start withdraw money from balance
+2022-06-24 20:56:57.818 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:57.824 [http-nio-8080-exec-1] DEBUG - Start subscribing user
+2022-06-24 20:56:57.828 [http-nio-8080-exec-1] DEBUG - User subscribed successfully!
+2022-06-24 20:56:57.828 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:59.623 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:56:59.626 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:56:59.629 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:59.633 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:59.635 [http-nio-8080-exec-2] DEBUG - Start withdraw money from balance
+2022-06-24 20:56:59.635 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:56:59.641 [http-nio-8080-exec-2] DEBUG - Start subscribing user
+2022-06-24 20:56:59.646 [http-nio-8080-exec-2] DEBUG - User subscribed successfully!
+2022-06-24 20:56:59.647 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:01.090 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:57:01.092 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:57:01.094 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:01.098 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:01.099 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 20:57:01.100 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:01.106 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 20:57:01.110 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 20:57:01.110 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:03.490 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:57:03.493 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:57:03.495 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:03.496 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:06.426 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:57:06.430 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:57:06.432 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:06.433 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:11.340 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:57:11.343 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:57:11.347 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:11.349 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:14.383 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:57:14.386 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:57:14.389 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:14.392 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:14.393 [http-nio-8080-exec-7] DEBUG - Start withdraw money from balance
+2022-06-24 20:57:14.393 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:14.399 [http-nio-8080-exec-7] DEBUG - Start subscribing user
+2022-06-24 20:57:14.404 [http-nio-8080-exec-7] DEBUG - User subscribed successfully!
+2022-06-24 20:57:14.405 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:32.400 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:57:32.404 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:57:32.406 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:32.407 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:38.078 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:57:38.081 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:57:38.083 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:38.086 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:38.088 [http-nio-8080-exec-9] DEBUG - Start withdraw money from balance
+2022-06-24 20:57:38.088 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:38.095 [http-nio-8080-exec-9] DEBUG - Start subscribing user
+2022-06-24 20:57:38.099 [http-nio-8080-exec-9] DEBUG - User subscribed successfully!
+2022-06-24 20:57:38.099 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:47.431 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:57:47.436 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:57:47.439 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:47.441 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:51.164 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:57:51.169 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:57:51.170 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:51.172 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:53.697 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:57:53.698 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 20:57:53.700 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:53.704 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:53.705 [http-nio-8080-exec-2] DEBUG - Start withdraw money from balance
+2022-06-24 20:57:53.705 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:53.711 [http-nio-8080-exec-2] DEBUG - Start subscribing user
+2022-06-24 20:57:53.715 [http-nio-8080-exec-2] DEBUG - User subscribed successfully!
+2022-06-24 20:57:53.715 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:56.066 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:57:56.069 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:57:56.070 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:57:56.073 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:58:55.349 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 20:58:56.243 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:58:56.334 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:58:56.339 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:58:56.369 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 20:58:58.584 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:58:58.588 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:58:58.591 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:58:58.595 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 20:59:06.513 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:59:06.516 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 20:59:06.518 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:59:06.526 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 20:59:09.269 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:09.271 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.273 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.273 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.274 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.275 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.277 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.277 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.278 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.279 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.280 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.280 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 20:59:09.281 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 20:59:09.282 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 20:59:09.282 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 20:59:13.242 [http-nio-8080-exec-8] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:13.245 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.247 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.247 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.248 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.248 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.249 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.249 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.250 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.250 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.252 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.252 [http-nio-8080-exec-8] DEBUG - Start getting Publisher
+2022-06-24 20:59:13.253 [http-nio-8080-exec-8] DEBUG - Publisher getting successfully
+2022-06-24 20:59:13.253 [http-nio-8080-exec-8] DEBUG - Got all subscriptions
+2022-06-24 20:59:13.253 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 20:59:15.437 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:15.439 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.442 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.442 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.444 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.444 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.446 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.446 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.447 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.447 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.449 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.449 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 20:59:15.450 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 20:59:15.450 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 20:59:15.450 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 20:59:17.040 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:17.041 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.044 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.044 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.046 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.046 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.047 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.047 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.048 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.048 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.049 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.049 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 20:59:17.050 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 20:59:17.050 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 20:59:17.050 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 20:59:19.688 [http-nio-8080-exec-1] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:19.690 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.692 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.692 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.693 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.694 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.695 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.695 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.696 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.696 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.697 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.697 [http-nio-8080-exec-1] DEBUG - Start getting Publisher
+2022-06-24 20:59:19.697 [http-nio-8080-exec-1] DEBUG - Publisher getting successfully
+2022-06-24 20:59:19.698 [http-nio-8080-exec-1] DEBUG - Got all subscriptions
+2022-06-24 20:59:19.698 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 20:59:23.807 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 20:59:23.809 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 20:59:23.809 [http-nio-8080-exec-2] DEBUG - Start Publisher deleting
+2022-06-24 20:59:23.810 [http-nio-8080-exec-2] DEBUG - Publisher deleting successfully
+2022-06-24 20:59:23.810 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-24 20:59:23.812 [http-nio-8080-exec-2] DEBUG - Start getting all users
+2022-06-24 20:59:27.277 [http-nio-8080-exec-3] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:27.278 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.280 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.281 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.282 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.282 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.283 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.283 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.284 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.284 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.285 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.285 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 20:59:27.286 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 20:59:27.286 [http-nio-8080-exec-3] DEBUG - Got all subscriptions
+2022-06-24 20:59:27.286 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 20:59:32.662 [http-nio-8080-exec-4] DEBUG - Start getting all subscriptions
+2022-06-24 20:59:32.664 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.667 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.667 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.669 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.669 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.670 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.671 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.672 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.673 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.674 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.674 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 20:59:32.675 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 20:59:32.675 [http-nio-8080-exec-4] DEBUG - Got all subscriptions
+2022-06-24 20:59:32.675 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 20:59:36.089 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:59:36.092 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 20:59:36.094 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 20:59:36.096 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:06.219 [http-nio-8080-exec-7] DEBUG - Start getting all subscriptions
+2022-06-24 21:00:06.223 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.225 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.225 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.227 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.227 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.228 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.228 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.229 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.229 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.230 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.230 [http-nio-8080-exec-7] DEBUG - Start getting Publisher
+2022-06-24 21:00:06.231 [http-nio-8080-exec-7] DEBUG - Publisher getting successfully
+2022-06-24 21:00:06.231 [http-nio-8080-exec-7] DEBUG - Got all subscriptions
+2022-06-24 21:00:06.231 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:00:09.242 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:00:09.246 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:00:09.247 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:09.250 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:14.032 [http-nio-8080-exec-9] DEBUG - Start getting all subscriptions
+2022-06-24 21:00:14.035 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.037 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.038 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.039 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.039 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.040 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.040 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.041 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.042 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.043 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.043 [http-nio-8080-exec-9] DEBUG - Start getting Publisher
+2022-06-24 21:00:14.044 [http-nio-8080-exec-9] DEBUG - Publisher getting successfully
+2022-06-24 21:00:14.044 [http-nio-8080-exec-9] DEBUG - Got all subscriptions
+2022-06-24 21:00:14.044 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 21:00:18.016 [http-nio-8080-exec-10] DEBUG - Start getting all subscriptions
+2022-06-24 21:00:18.018 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.020 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.020 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.021 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.022 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.023 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.023 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.024 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.024 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.025 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.025 [http-nio-8080-exec-10] DEBUG - Start getting Publisher
+2022-06-24 21:00:18.026 [http-nio-8080-exec-10] DEBUG - Publisher getting successfully
+2022-06-24 21:00:18.026 [http-nio-8080-exec-10] DEBUG - Got all subscriptions
+2022-06-24 21:00:18.026 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 21:00:19.887 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:00:19.890 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:00:19.892 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:19.893 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:21.178 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 21:00:21.181 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 21:00:21.183 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:21.190 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:21.191 [http-nio-8080-exec-2] DEBUG - Start withdraw money from balance
+2022-06-24 21:00:21.191 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:21.198 [http-nio-8080-exec-2] DEBUG - Start subscribing user
+2022-06-24 21:00:21.219 [http-nio-8080-exec-2] DEBUG - Problem with subscribing userDuplicate entry '4-1' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:00:21.219 [http-nio-8080-exec-2] DEBUG - User subscribed successfully!
+2022-06-24 21:00:21.220 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:27.403 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:00:27.409 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:00:27.412 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:27.414 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:30.522 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 21:00:30.525 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 21:00:30.527 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:30.528 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:32.811 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 21:00:32.814 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 21:00:32.816 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:32.821 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:32.822 [http-nio-8080-exec-5] DEBUG - Start withdraw money from balance
+2022-06-24 21:00:32.822 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:32.828 [http-nio-8080-exec-5] DEBUG - Start subscribing user
+2022-06-24 21:00:32.832 [http-nio-8080-exec-5] DEBUG - User subscribed successfully!
+2022-06-24 21:00:32.832 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:37.944 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 21:00:37.947 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 21:00:37.948 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:37.949 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:41.107 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:00:41.110 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:00:41.111 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:41.112 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:47.964 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:00:47.968 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:00:47.969 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:47.972 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:47.973 [http-nio-8080-exec-8] DEBUG - Start withdraw money from balance
+2022-06-24 21:00:47.973 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:00:47.979 [http-nio-8080-exec-8] DEBUG - Start subscribing user
+2022-06-24 21:00:47.989 [http-nio-8080-exec-8] DEBUG - User subscribed successfully!
+2022-06-24 21:00:47.989 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:43:53.477 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 21:43:54.397 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:43:54.467 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:43:54.467 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:43:54.492 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:43:56.787 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:43:56.792 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:43:56.795 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:43:56.797 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:06.322 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:44:06.325 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:44:06.327 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:06.333 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:13.028 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:44:13.032 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:44:13.035 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:13.038 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:17.126 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 21:44:17.130 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 21:44:17.133 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:17.203 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:17.204 [http-nio-8080-exec-9] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:17.204 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:17.213 [http-nio-8080-exec-9] DEBUG - Start subscribing user
+2022-06-24 21:44:17.236 [http-nio-8080-exec-9] DEBUG - Problem with subscribing userDuplicate entry '4-1' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:17.236 [http-nio-8080-exec-9] DEBUG - User subscribed successfully!
+2022-06-24 21:44:17.236 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:21.484 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 21:44:21.487 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 21:44:21.489 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:21.494 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:21.495 [http-nio-8080-exec-10] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:21.495 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:21.502 [http-nio-8080-exec-10] DEBUG - Start subscribing user
+2022-06-24 21:44:21.506 [http-nio-8080-exec-10] DEBUG - User subscribed successfully!
+2022-06-24 21:44:21.506 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:24.134 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:44:24.137 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:44:24.139 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:24.140 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:26.589 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 21:44:26.591 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 21:44:26.596 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:26.597 [http-nio-8080-exec-2] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:29.270 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:44:29.273 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:44:29.276 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:29.282 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:29.283 [http-nio-8080-exec-3] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:29.283 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:29.288 [http-nio-8080-exec-3] DEBUG - Start subscribing user
+2022-06-24 21:44:29.291 [http-nio-8080-exec-3] DEBUG - Problem with subscribing userDuplicate entry '4-8' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:29.291 [http-nio-8080-exec-3] DEBUG - User subscribed successfully!
+2022-06-24 21:44:29.291 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:31.106 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 21:44:31.109 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 21:44:31.111 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:31.114 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:31.115 [http-nio-8080-exec-4] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:31.115 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:31.123 [http-nio-8080-exec-4] DEBUG - Start subscribing user
+2022-06-24 21:44:31.124 [http-nio-8080-exec-4] DEBUG - Problem with subscribing userDuplicate entry '4-10' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:31.124 [http-nio-8080-exec-4] DEBUG - User subscribed successfully!
+2022-06-24 21:44:31.125 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:33.327 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 21:44:33.328 [http-nio-8080-exec-5] DEBUG - Start getting active publishers
+2022-06-24 21:44:33.330 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:33.332 [http-nio-8080-exec-5] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:37.255 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 21:44:37.259 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 21:44:37.261 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:37.264 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:37.265 [http-nio-8080-exec-6] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:37.266 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:37.273 [http-nio-8080-exec-6] DEBUG - Start subscribing user
+2022-06-24 21:44:37.274 [http-nio-8080-exec-6] DEBUG - Problem with subscribing userDuplicate entry '4-4' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:37.275 [http-nio-8080-exec-6] DEBUG - User subscribed successfully!
+2022-06-24 21:44:37.275 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:39.461 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:44:39.465 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 21:44:39.467 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:39.469 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:42.612 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:44:42.615 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 21:44:42.617 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:42.620 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:42.621 [http-nio-8080-exec-8] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:42.621 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:42.628 [http-nio-8080-exec-8] DEBUG - Start subscribing user
+2022-06-24 21:44:42.629 [http-nio-8080-exec-8] DEBUG - Problem with subscribing userDuplicate entry '4-7' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:42.630 [http-nio-8080-exec-8] DEBUG - User subscribed successfully!
+2022-06-24 21:44:42.630 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:45.035 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 21:44:45.037 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 21:44:45.039 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:45.040 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:47.308 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 21:44:47.311 [http-nio-8080-exec-10] DEBUG - Start getting active publishers
+2022-06-24 21:44:47.314 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:47.316 [http-nio-8080-exec-10] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:49.823 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:44:49.826 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 21:44:49.827 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:49.830 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:49.831 [http-nio-8080-exec-1] DEBUG - Start withdraw money from balance
+2022-06-24 21:44:49.832 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:49.933 [http-nio-8080-exec-1] DEBUG - Start subscribing user
+2022-06-24 21:44:49.934 [http-nio-8080-exec-1] DEBUG - Problem with subscribing userDuplicate entry '4-10' for key 'publisher_customer.PRIMARY'
+2022-06-24 21:44:49.934 [http-nio-8080-exec-1] DEBUG - User subscribed successfully!
+2022-06-24 21:44:49.934 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:51.829 [http-nio-8080-exec-2] DEBUG - Start getting all subscriptions
+2022-06-24 21:44:51.831 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.834 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.834 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.835 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.835 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.836 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.836 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.836 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.837 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.837 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.837 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.838 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.838 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.839 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.839 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.840 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.840 [http-nio-8080-exec-2] DEBUG - Start getting Publisher
+2022-06-24 21:44:51.841 [http-nio-8080-exec-2] DEBUG - Publisher getting successfully
+2022-06-24 21:44:51.841 [http-nio-8080-exec-2] DEBUG - Got all subscriptions
+2022-06-24 21:44:51.841 [http-nio-8080-exec-2] DEBUG - Start getting active publishers
+2022-06-24 21:44:55.592 [http-nio-8080-exec-3] DEBUG - Start getting all subscriptions
+2022-06-24 21:44:55.595 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.596 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.596 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.598 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.598 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.599 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.599 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.600 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.600 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.601 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.602 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.602 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.603 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.604 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.604 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.605 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.605 [http-nio-8080-exec-3] DEBUG - Start getting Publisher
+2022-06-24 21:44:55.606 [http-nio-8080-exec-3] DEBUG - Publisher getting successfully
+2022-06-24 21:44:55.607 [http-nio-8080-exec-3] DEBUG - Got all subscriptions
+2022-06-24 21:44:55.607 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 21:44:59.410 [http-nio-8080-exec-4] DEBUG - Start getting customer by phone number
+2022-06-24 21:44:59.413 [http-nio-8080-exec-4] DEBUG - Starting unsubscribe user
+2022-06-24 21:44:59.417 [http-nio-8080-exec-4] DEBUG - User unsubscribed successfully!
+2022-06-24 21:44:59.417 [http-nio-8080-exec-4] DEBUG - Start getting all subscriptions
+2022-06-24 21:44:59.418 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.419 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.419 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.420 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.420 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.422 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.422 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.423 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.423 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.424 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.425 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.425 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.426 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.426 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.427 [http-nio-8080-exec-4] DEBUG - Start getting Publisher
+2022-06-24 21:44:59.427 [http-nio-8080-exec-4] DEBUG - Publisher getting successfully
+2022-06-24 21:44:59.427 [http-nio-8080-exec-4] DEBUG - Got all subscriptions
+2022-06-24 21:44:59.427 [http-nio-8080-exec-4] DEBUG - Start getting active publishers
+2022-06-24 22:50:46.251 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 22:50:47.039 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:50:47.106 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:50:47.111 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:50:47.142 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:50:49.417 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:50:49.422 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:50:49.425 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:50:49.426 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:50:59.077 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 22:50:59.081 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 22:50:59.083 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 22:50:59.091 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.093 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.094 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.094 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.094 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.095 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.096 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.096 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.096 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.097 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.098 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.098 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.098 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.099 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.099 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.100 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.100 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.102 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.102 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.103 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.103 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:50:59.104 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:50:59.104 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 22:51:58.214 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 22:51:58.986 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:51:59.060 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:51:59.071 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:51:59.100 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:01.316 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:52:01.321 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:52:01.323 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:01.326 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:13.990 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 22:52:13.993 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 22:52:13.995 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:14.000 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.002 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.002 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.002 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.002 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.003 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.004 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.004 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.005 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.005 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.005 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.006 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.006 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.007 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.007 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.008 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.008 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.009 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.010 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.011 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.011 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:14.011 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:52:14.012 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:19.741 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 22:52:19.745 [http-nio-8080-exec-7] DEBUG - Start getting active publishers
+2022-06-24 22:52:19.748 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:19.749 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.751 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.751 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.752 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.752 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.752 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.753 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.753 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.753 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.754 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.754 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.755 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.755 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.756 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.756 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.756 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.757 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.757 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.758 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.759 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.759 [http-nio-8080-exec-7] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:19.760 [http-nio-8080-exec-7] DEBUG - User is checked!
+2022-06-24 22:52:19.760 [http-nio-8080-exec-7] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:21.815 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 22:52:21.819 [http-nio-8080-exec-8] DEBUG - Start getting active publishers
+2022-06-24 22:52:21.821 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:21.823 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.827 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.827 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.828 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.828 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.829 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.829 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.830 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.830 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.831 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.831 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.832 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.832 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.833 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.833 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.834 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.834 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.835 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.835 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.835 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.836 [http-nio-8080-exec-8] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:21.836 [http-nio-8080-exec-8] DEBUG - User is checked!
+2022-06-24 22:52:21.837 [http-nio-8080-exec-8] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:23.790 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 22:52:23.794 [http-nio-8080-exec-9] DEBUG - Start getting active publishers
+2022-06-24 22:52:23.796 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 22:52:23.798 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.800 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.800 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.801 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.801 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.802 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.802 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.803 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.803 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.804 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.804 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.804 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.804 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.805 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.805 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.806 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.806 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.807 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.807 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.807 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.807 [http-nio-8080-exec-9] DEBUG - Start checking if user is subscribed
+2022-06-24 22:52:23.808 [http-nio-8080-exec-9] DEBUG - User is checked!
+2022-06-24 22:52:23.808 [http-nio-8080-exec-9] DEBUG - Start getting customer by phone number
+2022-06-24 22:57:50.788 [RMI TCP Connection(3)-127.0.0.1] DEBUG - path = C:\Dev_tools\apache-tomcat-9.0.56\webapps\ROOT\WEB-INF\log4j2.log
+2022-06-24 22:57:51.807 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:57:51.880 [http-nio-8080-exec-1] DEBUG - Start getting active publishers
+2022-06-24 22:57:51.888 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:57:51.916 [http-nio-8080-exec-1] DEBUG - Start getting customer by phone number
+2022-06-24 22:57:54.257 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:57:54.261 [http-nio-8080-exec-3] DEBUG - Start getting active publishers
+2022-06-24 22:57:54.264 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:57:54.265 [http-nio-8080-exec-3] DEBUG - Start getting customer by phone number
+2022-06-24 22:58:03.292 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 22:58:03.295 [http-nio-8080-exec-6] DEBUG - Start getting active publishers
+2022-06-24 22:58:03.297 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 22:58:03.305 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.306 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.307 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.307 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.307 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.308 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.308 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.309 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.309 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.310 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.310 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.311 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.311 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.312 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.312 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.313 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.313 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.314 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.314 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.314 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.314 [http-nio-8080-exec-6] DEBUG - Start checking if user is subscribed
+2022-06-24 22:58:03.315 [http-nio-8080-exec-6] DEBUG - User is checked!
+2022-06-24 22:58:03.315 [http-nio-8080-exec-6] DEBUG - Start getting customer by phone number
+2022-06-24 23:05:08.822 [main] DEBUG - Start getting active publishers
+2022-06-24 23:05:10.096 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.146 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.146 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.189 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.189 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.227 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.227 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.263 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.263 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.311 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.312 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.369 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.369 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:05:10.459 [main] DEBUG - User is checked!
+2022-06-24 23:05:10.459 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:10.866 [main] DEBUG - Start getting active publishers
+2022-06-24 23:06:12.003 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.069 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.070 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.107 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.107 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.138 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.138 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.168 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.168 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.203 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.203 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.245 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.245 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.285 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.285 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.338 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.338 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.370 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.371 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.441 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.442 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:06:12.517 [main] DEBUG - User is checked!
+2022-06-24 23:06:12.517 [main] DEBUG - Start getting active publishers
+2022-06-24 23:09:20.448 [main] DEBUG - Start getting active publishers
+2022-06-24 23:09:21.676 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:21.730 [main] DEBUG - User is checked!
+2022-06-24 23:09:21.730 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:21.770 [main] DEBUG - User is checked!
+2022-06-24 23:09:21.770 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:21.808 [main] DEBUG - User is checked!
+2022-06-24 23:09:21.808 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:21.840 [main] DEBUG - User is checked!
+2022-06-24 23:09:21.840 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:21.907 [main] DEBUG - User is checked!
+2022-06-24 23:09:21.907 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.013 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.013 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.126 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.126 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.358 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.359 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.452 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.452 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.582 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.582 [main] DEBUG - Start checking if user is subscribed
+2022-06-24 23:09:22.647 [main] DEBUG - User is checked!
+2022-06-24 23:09:22.647 [main] DEBUG - Start getting active publishers

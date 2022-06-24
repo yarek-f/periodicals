@@ -164,9 +164,10 @@
             <label for="exampleInputEmail1" class="form-label"><b>Balance</b></label>
             <input type="number" step=".01" name="balance" class="form-control" width="100px" id="exampleInputEmail1" aria-describedby="emailHelp" style="align-content: center">
 
-<%--            <c:if test="${sessionScope.get('balanceErrorMessages') != null}">--%>
+            <c:if test="${sessionScope.get('balanceErrorMessages') != null}">
 <%--            <span class="text-danger">Balance can't be negative</span>--%>
-<%--            </c:if>--%>
+            <div class="text-danger">Balance can't be negative</div>
+            </c:if>
 
             <%--            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>--%>
 

@@ -55,8 +55,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<String> withdrawFromBalance(UserSignUpDto customerDto) {
-        customerMySqlDao.withdrawFromBalance(Mapper.convertToCustomerBalance(customerDto));
-        return null;
+        List<String> checkResult = new ArrayList<>();
+        double curentBalance = customerMySqlDao.get(customerDto.getEmail()).getBalance();
+        if (curentBalance < Double.valueOf(customerDto.getBalance())){
+            checkResult.add("isNotEnoughMoney");
+        } else {
+            customerMySqlDao.withdrawFromBalance(Mapper.convertToCustomerBalance(customerDto));
+        }
+        return checkResult;
     }
 
     private List<String> validateBalance(UserSignUpDto customerDto) {
