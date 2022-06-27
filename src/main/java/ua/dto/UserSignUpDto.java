@@ -1,6 +1,7 @@
 package ua.dto;
 
 public class UserSignUpDto {
+    private String id;
     private String fullName;
     private String dob;
     private String phoneNumber;
@@ -18,6 +19,15 @@ public class UserSignUpDto {
         this.balance = balance;
     }
 
+    public UserSignUpDto(String id, String fullName, String dob, String phoneNumber, String email, String balance) {
+        this.id = id;
+        this.fullName = fullName;
+        this.dob = dob;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.balance = balance;
+    }
+
     public UserSignUpDto(String fullName, String dob, String phoneNumber, String email, String password, String confirmPassword, String checkBox) {
         this.fullName = fullName;
         this.dob = dob;
@@ -27,6 +37,7 @@ public class UserSignUpDto {
         this.confirmPassword = confirmPassword;
         this.checkBox = checkBox;
     }
+
 
     public String getFullName() {
         return fullName;

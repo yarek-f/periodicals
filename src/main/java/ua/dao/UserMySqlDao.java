@@ -16,15 +16,16 @@ import java.util.List;
 
 public class UserMySqlDao implements Dao<User> {
     private static final String CREATE_QUERY = "insert into users(email, user_password) values (?,?)";
-    private static final String GET_QUERY = "select * from users where email = ?";
-    private static final String DELETE_QUERY = "delete from users where email = ?";
-    private static final String GET_ALL_QUERY = "SELECT * from users";
+    private static final String GET_QUERY = "select * from users where email = ? and is_active = true";
+//    private static final String DELETE_QUERY = "delete from users where email = ?";
+    private static final String GET_ALL_QUERY = "SELECT * from users where is_active = true";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
     private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, is_active = ? where id = ?";
     private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
     private static final String DEACTIVATE_QUERY = "update users set is_active = false where id = ?";
     private static final String ACTIVATE_QUERY = "update users set is_active = true where id = ?";
     private static final String GET_ALL_SUBSCRIPTIONS = "SELECT p.publisher_name FROM customers c INNER JOIN publisher_customer pc ON c.id = pc.cus_id INNER JOIN publishers p ON p.id = pc.pub_id where c.email = ?";
+    private static final String EDIT_QUERY = "update users set email = ?, user_password = ? where email = ?";
 
     private int noOfRecords;
 
@@ -58,10 +59,28 @@ public class UserMySqlDao implements Dao<User> {
         return get(item.getEmail()).getId();
     }
 
+    public void edit(User user, String currentEmail) {
+        logger.debug("Start user creating");
+        try (PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
+
+            stmt.setString(1, user.getEmail());
+            stmt.setString(2, user.getPassword());
+            stmt.setString(3, currentEmail);
+
+            int status = stmt.executeUpdate();
+            if(status!=1) throw new UserException("Created more than one record!!!");
+
+        } catch (Exception ex) {
+            logger.debug("Problem with creating user: " + ex.getMessage());
+        }
+
+        logger.debug("User created");
+    }
+
     @Override
     public User get(String email) { //todo
 //        logger.debug("Start getting user");
-        User requiredUser = new User();
+        User requiredUser = null;
         try (Connection con = DataSource.getConnection();
             PreparedStatement stmt = con.prepareStatement(GET_QUERY)){
 
@@ -288,4 +307,6 @@ public class UserMySqlDao implements Dao<User> {
 //            logger.debug("Problem with getting users: " + ex.getMessage());
         }
     }
+
+
 }

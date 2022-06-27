@@ -29,9 +29,8 @@ public class AddNewVersionOfPublisherServlet extends HttpServlet {
         HttpSession session = req.getSession(true);
         resp.setContentType("text/html");
 
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
         String publisherName = req.getParameter("inputPublisherName");
-        Publisher curentPublisher = publisherMySqlDao.get(publisherName);
+        Publisher currentPublisher = publisherService.get(publisherName);
         System.out.println(publisherName);
         String publisherVersion = req.getParameter("inputPublisherVersion");
         System.out.println(publisherVersion);
@@ -53,7 +52,7 @@ public class AddNewVersionOfPublisherServlet extends HttpServlet {
             Files.copy(Paths.get(projectAddress), Paths.get(servletAddress), StandardCopyOption.REPLACE_EXISTING);
 
         } else {
-            fileName = curentPublisher.getImage();
+            fileName = currentPublisher.getImage();
         }
 
 
@@ -61,6 +60,7 @@ public class AddNewVersionOfPublisherServlet extends HttpServlet {
         session.setAttribute("publisherAddNewVersionDto", createPublisherDto);
 
         List<String> publisherResponse = publisherService.addNewVersion(createPublisherDto);
+        //addNewVersion(createPublisherDto, List<CustomerDto> list)
 
         session.setAttribute("publisherErrorMessages", publisherResponse);
 

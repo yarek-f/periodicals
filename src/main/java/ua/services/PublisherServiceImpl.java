@@ -2,7 +2,9 @@ package ua.services;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.dao.CustomerMySqlDao;
 import ua.dao.PublisherMySqlDao;
+import ua.domain.Customer;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.mapper.Mapper;
@@ -12,6 +14,7 @@ import java.util.List;
 
 public class PublisherServiceImpl implements PublisherService {
     PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+    CustomerMySqlDao customerMySqlDao = new CustomerMySqlDao();
 
     private static Logger logger = LogManager.getLogger(PublisherServiceImpl.class);
     @Override
@@ -31,12 +34,26 @@ public class PublisherServiceImpl implements PublisherService {
     @Override
     public List<String> addNewVersion(PublisherDto publisherDto) {
         List<String> validation = validateAddNewVersion(publisherDto);
+        UserService userService = new UserServiceImpl();
 
         if (validation.isEmpty()) {
             Publisher publisher = Mapper.convertToAddNewVersionPublisher(publisherDto);
+            int publisherId = publisherMySqlDao.get(publisherDto.getName()).getId();
+            double price = publisherMySqlDao.get(publisherDto.getName()).getPrice();
+
+            List<Customer> customerList = publisherMySqlDao.getSubscribers(publisherDto.getName());
+            for (Customer customer : customerList){
+                if (customer.getBalance() > price){
+//                    userService.withdrawFromBalance(Mapper.convertToUserDto(customer));
+                    customerMySqlDao.withdrawFromBalance(customer.getEmail(), price);
+                } else{
+                    userService.unsubscribe(customer.getId(), publisherId);
+                }
+            }
 
             logger.info("publisher inside service -> " + publisher.toString());
             publisherMySqlDao.addNewVersion(publisher);
+
         }
 
         return validation;
@@ -115,8 +132,8 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
-    public Publisher get(String email) {
-        return null;
+    public Publisher get(String name) {
+        return publisherMySqlDao.get(name);
     }
 
     @Override

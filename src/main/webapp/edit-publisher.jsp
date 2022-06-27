@@ -19,17 +19,11 @@
     <div class="modal-content">
         <form method="post" action="/edit-publisher" enctype="multipart/form-data">
             <div class="modal-header">
-                <h4 class="modal-title">Edit publisher</h4>
+                <h4 class="modal-title">Choose a field(s) for editing</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <b style="color: red">*</b><label>Publisher name</label>
-                    <select id="publisherName" name="publisherName">
-                        <option value="<%=publisherDto!=null?publisherDto.getName():""%>"><%=publisherDto!=null?publisherDto.getName():"Chose publisher name"%></option>
-                        <c:forEach var="p" items="${sessionScope.get('publishers')}">
-                            <option value="${p.name}">${p.name}</option>
-                        </c:forEach>
-                    </select>
+                    <label>Edit data of <b>"${sessionScope.get("publisherName")}"</b></label>
                 </div>
                 <div class="form-group">
                     <label>Topic</label>
@@ -61,7 +55,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="/publishers?page=${sessionScope.get('page')}" style="text-decoration: none; color: white">Close</a></button>
                 <input type="submit" class="btn btn-warning" value="Update">
             </div>
         </form>

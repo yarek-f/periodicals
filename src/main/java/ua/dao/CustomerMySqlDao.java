@@ -18,6 +18,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
     private static final String IS_SUBSCRIBE_USER = "select * from publisher_customer where cus_id = ? and pub_id = ?";
     private static final String UNSUBSCRIBE_USER = "delete from publisher_customer where cus_id = ? and pub_id = ?";
     private static final String UPDATE_BALANCE = "update customers set balance = ? where email = ?";
+    private static final String EDIT_QUERY = "update customers set fullname = ?, dob = ?, phone_number = ?, email = ?, user_password = ? where email = ?";
 
     private Connection con;
 
@@ -52,15 +53,38 @@ public class CustomerMySqlDao implements Dao<Customer> {
         return 0;
     }
 
-    public void withdrawFromBalance(Customer customer){
+    public void edit(Customer customer, String currentEmail) {
+        logger.debug("Start customer editing");
+        try (PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
+
+            stmt.setString(1, customer.getFullName());
+            if (customer.getDob() != null){
+                stmt.setDate(2, Date.valueOf(customer.getDob()));
+            }else{
+                stmt.setDate(2, null);
+            }
+            stmt.setString(3, customer.getPhoneNumber());
+            stmt.setString(4, customer.getEmail());
+            stmt.setString(5, customer.getPassword());
+            stmt.setString(6, currentEmail);
+
+            int status = stmt.executeUpdate();
+            if(status!=1) throw new UserException("Created more than one record!!!");
+
+        } catch (Exception ex) {
+            logger.debug("Problem with editing customer: " + ex.getMessage());
+        }
+    }
+
+    public void withdrawFromBalance(String email, double price){
         logger.debug("Start withdraw money from balance");
         try(Connection con = DataSource.getConnection();
             PreparedStatement pstm = con.prepareStatement(UPDATE_BALANCE)) {
 
-            double newBalance = get(customer.getEmail()).getBalance() - customer.getBalance();
+            double newBalance = get(email).getBalance() - price;
 
             pstm.setDouble(1, newBalance);
-            pstm.setString(2, customer.getEmail());
+            pstm.setString(2, email);
 
             int status = pstm.executeUpdate();
             if(status!=1) throw new UserException("Update more than one record!!!");
@@ -163,12 +187,17 @@ public class CustomerMySqlDao implements Dao<Customer> {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String fullName = rs.getString("fullname");
-                LocalDate dob = rs.getDate("dob").toLocalDate(); //fixme login doesn't work without dob
+                Date dob = rs.getDate("dob");//fixme login doesn't work without dob
+                LocalDate dateOfBirth = null;
+                if (dob != null) {
+                    dateOfBirth = rs.getDate("dob").toLocalDate();
+                }
+
                 String phoneNumber = rs.getString("phone_number");
                 email = rs.getString("email");
                 double balance = rs.getDouble("balance");
 
-                customer = new Customer(id, fullName, dob, phoneNumber, email, balance);
+                customer = new Customer(id, fullName, dateOfBirth, phoneNumber, email, balance);
             }
         } catch (SQLException e) {
             logger.debug("Problem with pulling user data from database: " + e.getMessage());
@@ -242,6 +271,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
     public void clearTable() {
 
     }
+
 
 
 }

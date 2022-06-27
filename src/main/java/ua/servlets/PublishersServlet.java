@@ -4,6 +4,8 @@ import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.mapper.Mapper;
+import ua.services.UserService;
+import ua.services.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,9 +25,12 @@ public class PublishersServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+        UserService userService = new UserServiceImpl();
 
         String deletePublisher = request.getParameter("deletePublisher");
         publisherMySqlDao.delete(publisherMySqlDao.get(deletePublisher).getId());
+        List<String> allTopics = userService.getAllTopics();
+        session.setAttribute("allTopics", allTopics);
 
         int page = 1;
         int recordsPerPage = 5;

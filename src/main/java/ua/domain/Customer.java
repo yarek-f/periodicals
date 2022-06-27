@@ -17,8 +17,8 @@ public class Customer implements Subscribers {
     private boolean isActive;
 
     private List<Publishers> publishersList;
-    private Wallet wallet;
-    private Subscription subscription;
+//    private Wallet wallet;
+//    private Subscription subscription;
 
     public Customer() {
     }
@@ -137,21 +137,6 @@ public class Customer implements Subscribers {
         this.publishersList = publishersList;
     }
 
-    public Wallet getWallet() {
-        return wallet;
-    }
-
-    public void setWallet(Wallet wallet) {
-        this.wallet = wallet;
-    }
-
-    public Subscription getSubscription() {
-        return subscription;
-    }
-
-    public void setSubscription(Subscription subscription) {
-        this.subscription = subscription;
-    }
 
     public boolean isActive() {
         return isActive;
@@ -173,8 +158,6 @@ public class Customer implements Subscribers {
                 ", created=" + created +
                 ", update=" + update +
                 ", publishersList=" + publishersList +
-                ", wallet=" + wallet +
-                ", subscription=" + subscription +
                 ", isActive=" + isActive +
                 '}';
     }

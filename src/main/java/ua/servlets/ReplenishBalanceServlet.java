@@ -3,6 +3,7 @@ package ua.servlets;
 import ua.dto.CustomerSignUpDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
+import ua.excaptions.UserVarificationException;
 import ua.services.*;
 
 import javax.servlet.ServletException;
@@ -31,7 +32,12 @@ public class ReplenishBalanceServlet extends HttpServlet {
         System.out.println(balance);
 
         String token = (String)req.getSession().getAttribute("token");
-        String email = jwtService.verifyToken(token).getClaims().get("email");
+        String email = null;
+        try {
+            email = jwtService.verifyToken(token).getClaims().get("email");
+        } catch (UserVarificationException e) {
+            e.printStackTrace();
+        }
         System.out.println("email ==> " + email);
 
         UserSignUpDto customerDto = new UserSignUpDto(email, balance);
@@ -49,6 +55,7 @@ public class ReplenishBalanceServlet extends HttpServlet {
         else {
             resp.sendRedirect(req.getContextPath() + "/periodicals");
             session.removeAttribute("balanceErrorMessages");
+            session.removeAttribute("withdrawBalance");
             session.removeAttribute("customerDto");
         }
     }

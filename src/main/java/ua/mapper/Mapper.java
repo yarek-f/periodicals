@@ -17,7 +17,7 @@ public class Mapper {
     }
 
     public static Customer convertToCustomer(UserSignUpDto userSignUpDto) {
-        if (!userSignUpDto.getDob().equals("")&&userSignUpDto.getDob() != null){
+        if (!userSignUpDto.getDob().equals("") && userSignUpDto.getDob() != null){
             return new Customer(userSignUpDto.getFullName(), LocalDate.parse(userSignUpDto.getDob()),
                     userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
         }else{
@@ -25,6 +25,14 @@ public class Mapper {
                     userSignUpDto.getPhoneNumber(), userSignUpDto.getEmail(), userSignUpDto.getPassword());
         }
 
+    }
+    public static UserSignUpDto convertToUserDto(Customer customer){
+        if (customer.getDob() == null){
+            return new UserSignUpDto(String.valueOf(customer.getId()), customer.getFullName(), null,
+                    customer.getPhoneNumber(), customer.getEmail(), String.valueOf(customer.getBalance()));
+        }
+        return new UserSignUpDto(String.valueOf(customer.getId()), customer.getFullName(), customer.getDob().toString(),
+                                customer.getPhoneNumber(), customer.getEmail(), String.valueOf(customer.getBalance()));
     }
 
     public static PublisherDto convertToPublisherDto(Publisher publisher){

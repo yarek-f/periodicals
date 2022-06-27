@@ -30,7 +30,7 @@ public class DataSource {
     }
 
     public static Connection getConnection() throws SQLException {
-        inntConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/periodicals", "root", "root");
+//        inntConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/periodicals", "root", "root");
         return ds.getConnection();
     }
 }

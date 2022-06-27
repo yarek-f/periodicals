@@ -1,9 +1,5 @@
-<%@ page import="ua.domain.Publisher" %>
-<%@ page import="java.util.List" %>
-<%@ page import="ua.services.PublisherServiceImpl" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="ua.dto.UserSignUpDto" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "a" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -16,6 +12,9 @@
 <fmt:setBundle basename="messages"/>
 <jsp:useBean id="searchPublisher" class="ua.dao.PublisherMySqlDao"/>
 <html lang="${sessionScope.lang}">
+<%
+    UserSignUpDto userDto = (UserSignUpDto) session.getAttribute("customerDto");
+%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +27,14 @@
             margin: 0;
             height: 100%;
             overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        .gradient-custom-4 {
+            background: #84fab0;
+
+            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+            background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
         }
         body {
             background:
@@ -104,37 +111,37 @@
         </div>
     </div>
 </nav>
-    <div class="container col-8" style="justify-content: center">
-        <c:forEach items="${sessionScope.get('searchingPublisher')}" var="p">
-            <div class="row m-4"  style="background-color: white; border-radius: 5px;">
-                <div class="col" style="position: relative">
-                    <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-                    <h3 style="text-align: center">${p.name}</h3><br><br>
-                    <p style="text-align: center">${p.description}</p>
-                    <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                        <c:choose>
-                        <c:when test="${sessionScope.get('profile')!=null}">
-                            <a href="?subscribe=${p.id}&price=${p.price}">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
 
-                        </c:when>
-                        <c:otherwise>
-                            <a href="/login">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
-                        </c:otherwise>
-                        </c:choose>
+<div class="mask d-flex align-items-center h-100" style="margin-top: -50px">
+    <div class="container ">
+        <div class="row d-flex justify-content-center align-items-center pb-5 mb-5">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+
+                        <h2 class="text-uppercase text-center mb-3" style="margin-top: -15px">My profile</h2>
+                        <div class="form-outline">
+                            <label class="form-label fw-bold">Full name:</label> <span><%=userDto.getFullName()%></span>
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label fw-bold">Date of birth:</label> <span><%=userDto.getDob()!=null?userDto.getDob():""%></span>
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label fw-bold">Email:</label> <span><%=userDto.getEmail()%></span>
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label fw-bold">Phone number:</label> <span><%=userDto.getPhoneNumber()%></span>
+                        </div>
+
+                        <div class="d-flex justify-content-center p-3" style="margin-bottom: -40px">
+                            <a href="edit-profile.jsp"><button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Edit</button></a>
+                        </div>
                     </div>
-
                 </div>
             </div>
-        </c:forEach>
+        </div>
     </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

@@ -2,6 +2,7 @@ package ua.dao;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.domain.Customer;
 import ua.domain.Publisher;
 import ua.domain.Topics;
 import ua.dto.PublisherDto;
@@ -9,6 +10,7 @@ import ua.excaptions.UserException;
 import ua.mapper.Mapper;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String GET_PUBLISHER_BY_NAME = "select * from publishers where publisher_name = ? and is_active = true";
     private static final String SEARCH_BY_NAME = "SELECT * FROM publishers WHERE publisher_name LIKE ? and is_active = true";
     private static final String GET_ACTIVE_PUBLISHERS = "SELECT * from publishers where is_active = true";
+    private static final String GET_SUBSCRIBERS = "select c.id, c.fullname, c.dob, c.phone_number, c.email, c.balance from publishers p inner join publisher_customer pc ON p.id = pc.pub_id INNER JOIN customers c ON c.id = pc.cus_id where p.publisher_name = ?";
 
 
     private int noOfRecords;
@@ -293,12 +296,42 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         return publisherList;
     }
 
-    public List<Publisher> getByName(String searchPatern){
+    public List<Customer> getSubscribers(String publisherName){
+        logger.debug("Start getting subscribers");
+        List<Customer> customerList = new ArrayList<>();
+        Customer customer = new Customer();
+
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement(GET_SUBSCRIBERS)){
+            stmt.setString(1, publisherName);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                int id = rs.getInt("id");
+                String fullName = rs.getString("fullname");
+                LocalDate dob = rs.getDate("dob").toLocalDate(); //fixme login doesn't work without dob
+                String phoneNumber = rs.getString("phone_number");
+                String email = rs.getString("email");
+                double balance = rs.getDouble("balance");
+
+                customer = new Customer(id, fullName, dob, phoneNumber, email, balance);
+                customerList.add(customer);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            logger.error("Problem with getting subscribers: " + ex.getMessage());
+        }
+        return customerList;
+    }
+
+    public List<Publisher> getByName(String searchPattern){
         logger.debug("start searching");
         List<Publisher> publisherList = new ArrayList<>();
         try(Connection con = DataSource.getConnection();
             PreparedStatement pstm = con.prepareStatement(SEARCH_BY_NAME)) {
-            pstm.setString(1, "%" + searchPatern + "%");
+            pstm.setString(1, "%" + searchPattern + "%");
 
             ResultSet rs = pstm.executeQuery();
 

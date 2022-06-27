@@ -31,5 +31,7 @@ public interface UserService {
     List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList);
     List<String> replenishBalance(UserSignUpDto customerDto);
     boolean isSubscribed(int customerId, int publisherId);
-    List<String> withdrawFromBalance(UserSignUpDto customerDto);
+    List<String> withdrawFromBalance(String email, double price);
+
+    List<String> edit(UserSignUpDto userDto, String customerEmail);
 }

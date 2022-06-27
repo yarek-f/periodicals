@@ -54,15 +54,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<String> withdrawFromBalance(UserSignUpDto customerDto) {
+    public List<String> withdrawFromBalance(String email, double price) {
         List<String> checkResult = new ArrayList<>();
-        double curentBalance = customerMySqlDao.get(customerDto.getEmail()).getBalance();
-        if (curentBalance < Double.valueOf(customerDto.getBalance())){
+        double currentBalance = customerMySqlDao.get(email).getBalance();
+        if (currentBalance < price){
             checkResult.add("isNotEnoughMoney");
         } else {
-            customerMySqlDao.withdrawFromBalance(Mapper.convertToCustomerBalance(customerDto));
+            customerMySqlDao.withdrawFromBalance(email, price);
         }
         return checkResult;
+    }
+
+    @Override
+    public void unsubscribe(int customerId, int publisherId) {
+        customerMySqlDao.deleteSubscritpion(customerId, publisherId);
     }
 
     private List<String> validateBalance(UserSignUpDto customerDto) {
@@ -91,17 +96,45 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Role valid(String email, String password) {
-        User user = get(email);
-        if (user != null) {
-            if (user.getPassword().equals(password)) {
-                return user.getRole();
-            }
+    public List<String> edit(UserSignUpDto userDto, String customerEmail) {
+        List<String> validation = validateEditingUser(userDto);
+        if (validation.isEmpty()) {
+            User user = Mapper.convertToUser(userDto);
+            Customer customer = Mapper.convertToCustomer(userDto);
+
+            System.out.println("USER AND CUSTOMER INSIDE SERVICE -> " + user.toString());
+            userMySqlDao.edit(user, customerEmail);
+            customerMySqlDao.edit(customer, customerEmail);
         }
-        return null;
+
+        return validation;
     }
 
-    public List<String> validateUser(UserSignUpDto userSignUpDto) {
+    private List<String> validateEditingUser(UserSignUpDto userDto) {
+        List<String> checkResult = new ArrayList<>();
+
+        if (!validName(userDto.getFullName())) {
+            checkResult.add("fullName");
+        }
+        if (!validDob(userDto.getDob())) {
+            checkResult.add("dob");
+        }
+        if (!validPhoneNumber(userDto.getPhoneNumber())) {
+            checkResult.add("phoneNumber");
+        }
+        if (!validEmail(userDto.getEmail())) {
+            checkResult.add("email");
+        }
+        if (!validPassword(userDto.getPassword())) {
+            checkResult.add("password");
+        }
+        if (!validConfirmPassword(userDto.getPassword(), userDto.getConfirmPassword())) {
+            checkResult.add("confirmPassword");
+        }
+        return checkResult;
+    }
+
+    private List<String> validateUser(UserSignUpDto userSignUpDto) {
         List<String> checkResult = new ArrayList<>();
 
         if (!validPhoneNumber(userSignUpDto.getPhoneNumber())) {
@@ -135,6 +168,18 @@ public class UserServiceImpl implements UserService {
     }
 
 
+
+    @Override
+    public Role valid(String email, String password) {
+        User user = get(email);
+        if (user != null) {
+            if (user.getPassword().equals(password)) {
+                return user.getRole();
+            }
+        }
+        return null;
+    }
+
     @Override
     public boolean delete(UserSignUpDto userDto) {
         return false;
@@ -166,6 +211,7 @@ public class UserServiceImpl implements UserService {
     }
 
     private boolean validEmailIfExist(String email) {
+        if (userMySqlDao.get(email) == null) return false;
         return userMySqlDao.get(email).getEmail() != null;
     }
 
@@ -231,10 +277,7 @@ public class UserServiceImpl implements UserService {
         customerMySqlDao.addSubscription(customerId, publisherId);
     }
 
-    @Override
-    public void unsubscribe(int customerId, int publisherId) {
-        customerMySqlDao.deleteSubscritpion(customerId, publisherId);
-    }
+
 
     @Override
     public Customer getCustomer(String profile) {
@@ -248,7 +291,7 @@ public class UserServiceImpl implements UserService {
 
     public List<Publisher> sortBy(String sortingType, String topic, List<Publisher> resultList) {
         PublisherService publisherService = new PublisherServiceImpl();
-        List<Publisher> publishersList = publisherService.getAll();
+//        List<Publisher> publishersList = publisherService.getAll();
 
         if (topic != null) {
 //            resultList = publisherService.getByTopic(topic);
@@ -261,14 +304,14 @@ public class UserServiceImpl implements UserService {
             resultList = sortByName(resultList.stream().filter(e -> e.getTopic().toString().equals(topic))
                     .collect(Collectors.toList()));
         } else if (sortingType != null && sortingType.equals("byName")) {
-            resultList = sortByName(publishersList);
+            resultList = sortByName(resultList);
         }
 
         if (sortingType != null && sortingType.equals("byPrice") && topic != null) {
             resultList = sortByPrice(resultList.stream().filter(e -> e.getTopic().toString().equals(topic))
                     .collect(Collectors.toList()));
         } else if (sortingType != null && sortingType.equals("byPrice")) {
-            resultList = sortByPrice(publishersList);
+            resultList = sortByPrice(resultList);
         }
         return resultList;
     }

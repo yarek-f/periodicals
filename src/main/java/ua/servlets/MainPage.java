@@ -4,8 +4,10 @@ import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
+import ua.excaptions.UserVarificationException;
 import ua.services.*;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,27 +22,33 @@ import java.util.stream.Stream;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
+    private static Logger logger = LogManager.getLogger(MainPage.class);
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         PublisherServiceImpl publisherService = new PublisherServiceImpl();
         UserService userService = new UserServiceImpl();
         JWTService jwtService = new JWTService();
+        String customerEmail = (String) session.getAttribute("profile");
+
 
 
         List<Publisher> resultList = publisherService.getAll();
+        if (session.getAttribute("profile") != null){
+            resultList = isSubscribed(resultList, customerEmail);
+        }
 
         session.setAttribute("publishers", resultList);
 
         List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
 
-        List<String> allTopics = userService.getAllTopics(); //todo move this to publishersServlet
+
 
         String topic = request.getParameter("topic");
         request.setAttribute("topic", topic);
 
         String sort = request.getParameter("sort");
-        request.setAttribute("sort", sort); //fixme: replace session scope to request in jsp page
+        request.setAttribute("sort", sort);
         resultList = userService.sortBy(sort, topic, resultList);
 
         //todo ==> trying to change button color when customer is subscribed to publisher:
@@ -58,6 +66,7 @@ public class MainPage extends HttpServlet {
         //start subscription process
         String publisherId = request.getParameter("subscribe");
         int customerId = userService.getCustomer((String) session.getAttribute("profile")).getId();
+//        int customerId = userService.getCustomer(customerEmail).getId();
 
 //        isSubscribed(resultList, customerId); fixme
 
@@ -66,22 +75,27 @@ public class MainPage extends HttpServlet {
         System.out.println("publisher id for subscriptions ==> " + publisherId);
         System.out.println("customer id for subscriptions ==> " + customerId);
 
-        if(publisherId != null && token != null && price != null){
-            String email = jwtService.verifyToken(token).getClaims().get("email");
-            UserSignUpDto userSignUpDto = new UserSignUpDto(email, price);
-            List<String> res = userService.withdrawFromBalance(userSignUpDto);
-            if (res.isEmpty()){
-                userService.addSubscription(customerId, Integer.valueOf(publisherId));
-            }  else{
-                session.setAttribute("withdrawBalance", res);
-            }
+        try {
+            if(publisherId != null && token != null && price != null){
+                String email = jwtService.verifyToken(token).getClaims().get("email");
 
+                List<String> res = userService.withdrawFromBalance(email, Double.valueOf(price));
+
+                if (res.isEmpty()){
+                    userService.addSubscription(customerId, Integer.valueOf(publisherId));
+                }  else{
+                    session.setAttribute("withdrawBalance", res);
+                }
+
+            }
+        } catch (UserVarificationException e) {
+            logger.error(""+e.getMessage());
         }
         //end subscription process
 
         session.removeAttribute("publishersByTopic");
         session.setAttribute("publishersByTopic", publishersByTopic);
-        session.setAttribute("allTopics", allTopics);//todo move this to publishersServlet
+
         double balance = userService.getCustomer((String)session.getAttribute("profile")).getBalance();
         session.setAttribute("balance", String.format("%.2f", balance));
 //        session.setAttribute("cusId", customerId);
@@ -106,18 +120,16 @@ public class MainPage extends HttpServlet {
         view.forward(request, response);
     }
 
-//    private void isSubscribed(List<Publisher> list, int customerId){ fixme doesn't work
-//        if (customerId > 0){
-//            UserService userService = new UserServiceImpl();
-//            list.stream()
-//                    .filter(e -> userService.isSubscribed(customerId, e.getId()))
-//                    .map(e -> {
-//                        e.setSubscribed(true);
-//                        return e;
-//                    })
-//                    .collect(Collectors.toList());
-//        }
-//    }
+    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
+        UserService userService = new UserServiceImpl();
+        int customerId = userService.getCustomer(email).getId();
+        for (Publisher p : list) {
+            if (userService.isSubscribed(customerId, p.getId())) {
+                p.setSubscribed(1);
+            }
+        }
+        return list;
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

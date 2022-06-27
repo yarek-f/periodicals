@@ -23,6 +23,18 @@ import java.util.List;
 public class EditPublisherServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String name = req.getParameter("publisherName");
+        String page = req.getParameter("page");
+        System.out.println("publisher name for edit: "+name);
+
+        req.getSession().setAttribute("publisherName", name);
+        req.getSession().setAttribute("page", page);
+
+        resp.sendRedirect("/edit-publisher.jsp");
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         PublisherService publisherService = new PublisherServiceImpl();
         HttpSession session = req.getSession(true);
@@ -30,8 +42,13 @@ public class EditPublisherServlet extends HttpServlet {
 
         PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
 
+//        String name = req.getParameter("publisherName");
+//        System.out.println("publisher name for edit: "+name);
+//
+//        session.setAttribute("publisherName", name);
 
-        String publisherName = req.getParameter("publisherName");
+
+        String publisherName = (String) session.getAttribute("publisherName");
         if (publisherName == null || publisherName.equals("")){
             resp.sendRedirect("/publishers");
         } else{
@@ -85,7 +102,7 @@ public class EditPublisherServlet extends HttpServlet {
                 resp.sendRedirect(req.getContextPath() + "/edit-publisher.jsp");
             }
             else {
-                resp.sendRedirect(req.getContextPath() + "/publishers");
+                resp.sendRedirect(req.getContextPath() + "/publishers?page="+req.getSession().getAttribute("page"));
                 session.removeAttribute("publisherErrorMessages");
                 session.removeAttribute("publisherEditDto");
             }

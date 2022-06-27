@@ -4,6 +4,7 @@ import ua.dao.UserMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.dto.UserGetDto;
+import ua.excaptions.UserVarificationException;
 import ua.services.JWTService;
 import ua.services.PublisherServiceImpl;
 import ua.services.UserService;
@@ -29,7 +30,12 @@ public class MySubscriptions extends HttpServlet {
 
         String token = (String)request.getSession().getAttribute("token");
 
-        String email = jwtService.verifyToken(token).getClaims().get("email");
+        String email = null;
+        try {
+            email = jwtService.verifyToken(token).getClaims().get("email");
+        } catch (UserVarificationException e) {
+            e.printStackTrace();
+        }
         System.out.println("email ==> " + email);
         session.setAttribute("email", email);
 

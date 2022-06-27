@@ -387,7 +387,7 @@
                     <td>${p.updated}</td>
                     <td>${p.isActive}</td>
                     <td>
-                        <a href="edit-publisher.jsp" class="edit">
+                        <a href="/edit-publisher?publisherName=${p.name}&page=${currentPage}" class="edit">
                             <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                             </a>
                         <a href="/delete?name=${p.name}&page=${currentPage}" class="delete" data-toggle="modal">

@@ -69,8 +69,8 @@
 
             </ul>
             <form class="d-flex mt-3" method="post" action="/periodicals">
-                <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search" /></b></button>
-                <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search" />" aria-label="Search">
+                <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search"/></b></button>
+                <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search"/>" aria-label="Search">
             </form>
             <c:choose>
                 <c:when test="${sessionScope.get('profile')!=null}">
@@ -105,35 +105,7 @@
     </div>
 </nav>
     <div class="container col-8" style="justify-content: center">
-        <c:forEach items="${sessionScope.get('searchingPublisher')}" var="p">
-            <div class="row m-4"  style="background-color: white; border-radius: 5px;">
-                <div class="col" style="position: relative">
-                    <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-                    <h3 style="text-align: center">${p.name}</h3><br><br>
-                    <p style="text-align: center">${p.description}</p>
-                    <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                        <c:choose>
-                        <c:when test="${sessionScope.get('profile')!=null}">
-                            <a href="?subscribe=${p.id}&price=${p.price}">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
-
-                        </c:when>
-                        <c:otherwise>
-                            <a href="/login">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
-                        </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                </div>
-            </div>
-        </c:forEach>
+        <h1>You haven't permition</h1>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
