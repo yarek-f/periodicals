@@ -4,17 +4,16 @@ import ua.domain.Customer;
 import ua.domain.Publisher;
 import ua.domain.Role;
 import ua.domain.User;
-import ua.dto.CustomerSignUpDto;
+import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
 
 import java.util.List;
-import java.util.Map;
 
 public interface UserService {
     List<String> signUp(UserSignUpDto userDto);
     boolean delete(UserSignUpDto userDto);
-    boolean delete(CustomerSignUpDto customerDto);
+    boolean delete(CustomerDto customerDto);
     User get(String email);
     boolean updateRole(int id);
     List<User> getAll();
@@ -31,7 +30,11 @@ public interface UserService {
     List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList);
     List<String> replenishBalance(UserSignUpDto customerDto);
     boolean isSubscribed(int customerId, int publisherId);
-    List<String> withdrawFromBalance(String email, double price);
+    List<String> withdrawFromBalance(String email, int publisherId, double price);
 
     List<String> edit(UserSignUpDto userDto, String customerEmail);
+
+    void deactivateUser(int id);
+
+    void activate(int id);
 }

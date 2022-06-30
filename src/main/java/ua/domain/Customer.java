@@ -37,6 +37,21 @@ public class Customer implements Subscribers {
         this.balance = balance;
     }
 
+    public Customer(int id, String fullName, LocalDate dob, String phoneNumber, String email, double balance,
+                    boolean isActive, LocalDateTime created, LocalDateTime updated) {
+        this.id = id;
+        this.fullName = fullName;
+        this.dob = dob;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.balance = balance;
+        this.isActive = isActive;
+        this.created = created;
+        this.update = updated;
+    }
+
+
+
     public Customer(String fullName, LocalDate dob, String phoneNumber, String email, String password) {
         this.fullName = fullName;
         this.dob = dob;

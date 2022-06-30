@@ -4,6 +4,7 @@ import ua.domain.Customer;
 import ua.domain.Publisher;
 import ua.domain.Topics;
 import ua.domain.User;
+import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserGetDto;
 import ua.dto.UserSignUpDto;
@@ -14,6 +15,12 @@ public class Mapper {
 
     public static User convertToUser(UserSignUpDto userSignUpDto) {
         return new User(userSignUpDto.getEmail(), userSignUpDto.getPassword());
+    }
+
+    public static CustomerDto convertToCustomerDto(Customer customer){
+        return new CustomerDto(String.valueOf(customer.getId()), customer.getFullName(), customer.getDob().toString(),
+                    customer.getPhoneNumber(), customer.getEmail(), String.format("%.2f", customer.getBalance()), String.valueOf(customer.isActive()),
+                    customer.getCreated().toString(), customer.getUpdate().toString());
     }
 
     public static Customer convertToCustomer(UserSignUpDto userSignUpDto) {

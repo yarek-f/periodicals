@@ -149,7 +149,7 @@
                                 <li class="ps-2"><a href="/my-profile" class="link-light" style="text-decoration: none;">Profile</a></li>
 <%--                                <li class="ps-2"><a href="?emailForSubscription=${sessionScope.get('profile')}" class="link-light" style="text-decoration: none;">Subscriptions</a></li>--%>
                                 <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
-                                <li class="ps-2"><a href="/login" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
+                                <li class="ps-2"><a href="/login?log=out" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
                                         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
@@ -172,12 +172,21 @@
 </nav>
 
     <div class="container col-8" style="justify-content: center">
-        <c:if test="${sessionScope.get('withdrawBalance') != null}">
+        <c:if test="${sessionScope.get('subscriptionErrorMessage') != null
+        && sessionScope.get('subscriptionErrorMessage').contains('isNotEnoughMoney')}">
             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
                 You haven't enough money. Please top up your balance!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            ${sessionScope.remove("withdrawBalance") }
+            ${sessionScope.remove("subscriptionErrorMessage") }
+        </c:if>
+        <c:if test="${sessionScope.get('subscriptionErrorMessage') != null
+        && sessionScope.get('subscriptionErrorMessage').contains('isAlreadySubscribed')}">
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                You are already subscribed to this publisher
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            ${sessionScope.remove("subscriptionErrorMessage") }
         </c:if>
         <c:forEach items="${publisherList}" var="p">
         <div class="row m-4"  style="background-color: white; border-radius: 5px;">

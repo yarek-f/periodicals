@@ -1,6 +1,6 @@
 <%@ page import="ua.dto.UserSignUpDto" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="ua.dto.CustomerSignUpDto" %>
+<%@ page import="ua.dto.CustomerDto" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>

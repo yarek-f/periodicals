@@ -378,7 +378,7 @@
                 <tr>
                     <td>${p.id}</td>
                     <td><img src="images/${p.image}" width="50" height="75"></td>
-                    <td>${p.name}</td>
+                    <td><a href="/subscribed-users?publisherName=${p.name}">${p.name}</a></td>
                     <td>${p.version}</td>
                     <td>${p.topic}</td>
                     <td>${p.price}</td>

@@ -27,7 +27,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     private static final String GET_PUBLISHER_BY_NAME = "select * from publishers where publisher_name = ? and is_active = true";
     private static final String SEARCH_BY_NAME = "SELECT * FROM publishers WHERE publisher_name LIKE ? and is_active = true";
     private static final String GET_ACTIVE_PUBLISHERS = "SELECT * from publishers where is_active = true";
-    private static final String GET_SUBSCRIBERS = "select c.id, c.fullname, c.dob, c.phone_number, c.email, c.balance from publishers p inner join publisher_customer pc ON p.id = pc.pub_id INNER JOIN customers c ON c.id = pc.cus_id where p.publisher_name = ?";
+    private static final String GET_SUBSCRIBERS = "select c.id, c.fullname, c.dob, c.phone_number, c.email, c.balance, c.is_active, c.created, c.updated from publishers p inner join publisher_customer pc ON p.id = pc.pub_id INNER JOIN customers c ON c.id = pc.cus_id where p.publisher_name = ? and c.is_active = true";
 
 
     private int noOfRecords;
@@ -311,12 +311,15 @@ public class PublisherMySqlDao implements Dao<Publisher> {
 
                 int id = rs.getInt("id");
                 String fullName = rs.getString("fullname");
-                LocalDate dob = rs.getDate("dob").toLocalDate(); //fixme login doesn't work without dob
+                LocalDate dob = rs.getDate("dob").toLocalDate();
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 double balance = rs.getDouble("balance");
+                boolean isActive = rs.getBoolean("is_active");
+                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
-                customer = new Customer(id, fullName, dob, phoneNumber, email, balance);
+                customer = new Customer(id, fullName, dob, phoneNumber, email, balance, isActive, created, updated);
                 customerList.add(customer);
             }
         } catch (SQLException ex) {
@@ -324,6 +327,16 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             logger.error("Problem with getting subscribers: " + ex.getMessage());
         }
         return customerList;
+    }
+
+    @Override
+    public void edit(Publisher item, String currentEmail) {
+
+    }
+
+    @Override
+    public void deactivate(int id) {
+
     }
 
     public List<Publisher> getByName(String searchPattern){

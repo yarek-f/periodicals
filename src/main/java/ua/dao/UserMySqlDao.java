@@ -15,37 +15,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserMySqlDao implements Dao<User> {
-    private static final String CREATE_QUERY = "insert into users(email, user_password) values (?,?)";
+    private static final String CREATE_QUERY = "insert into users(role, email, user_password) values (?, ?,?)";
     private static final String GET_QUERY = "select * from users where email = ? and is_active = true";
 //    private static final String DELETE_QUERY = "delete from users where email = ?";
     private static final String GET_ALL_QUERY = "SELECT * from users where is_active = true";
     private static final String TRANCATE_QUERY = "TRUNCATE users";
     private static final String UPDATE_QUERY = "update users set role = ?, email = ?, user_password = ?, is_active = ? where id = ?";
-    private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users limit ?, ?";
+    private static final String SQL_CALC_FOUND_ROWS = "select SQL_CALC_FOUND_ROWS * from users  where role = 'USER' limit ?, ?";
     private static final String DEACTIVATE_QUERY = "update users set is_active = false where id = ?";
     private static final String ACTIVATE_QUERY = "update users set is_active = true where id = ?";
     private static final String GET_ALL_SUBSCRIPTIONS = "SELECT p.publisher_name FROM customers c INNER JOIN publisher_customer pc ON c.id = pc.cus_id INNER JOIN publishers p ON p.id = pc.pub_id where c.email = ?";
     private static final String EDIT_QUERY = "update users set email = ?, user_password = ? where email = ?";
+    private static final String DELETE_QUERY = "delete from users where id = ?";
 
     private int noOfRecords;
 
     private static Logger logger = LogManager.getLogger(UserMySqlDao.class);
-    private Connection con;
 
     public UserMySqlDao() {
-    }
 
-    public UserMySqlDao(Connection con){
-        this.con = con;
     }
 
     @Override
     public int signUp(User item) {
         logger.debug("Start user creating");
-        try (PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
 
-            stmt.setString(1, item.getEmail());
-            stmt.setString(2, item.getPassword());
+            if (item.getRole() == null || item.getRole().toString().equals("")){
+                stmt.setString(1, Role.USER.toString());
+            } else {
+                stmt.setString(1, item.getRole().toString());
+            }
+            stmt.setString(2, item.getEmail());
+            stmt.setString(3, item.getPassword());
 
             int status = stmt.executeUpdate();
             if(status!=1) throw new UserException("Created more than one record!!!");
@@ -59,9 +62,13 @@ public class UserMySqlDao implements Dao<User> {
         return get(item.getEmail()).getId();
     }
 
+
+
+    @Override
     public void edit(User user, String currentEmail) {
         logger.debug("Start user creating");
-        try (PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
 
             stmt.setString(1, user.getEmail());
             stmt.setString(2, user.getPassword());
@@ -137,7 +144,7 @@ public class UserMySqlDao implements Dao<User> {
     public boolean delete(int id) { //fixme
         logger.debug("Start user deleting");
         try (Connection con = DataSource.getConnection();
-             PreparedStatement stmt = con.prepareStatement( DEACTIVATE_QUERY )) {
+             PreparedStatement stmt = con.prepareStatement( DELETE_QUERY )) {
 
             stmt.setInt(1, id);
             stmt.executeUpdate();
@@ -146,6 +153,19 @@ public class UserMySqlDao implements Dao<User> {
         }
         logger.debug("User deleting successfully");
         return false;
+    }
+
+    @Override
+    public void deactivate(int id) { //fixme
+        logger.debug("Start user deactivating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( DEACTIVATE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with deactivating user: " + ex.getMessage());
+        }
     }
 
 

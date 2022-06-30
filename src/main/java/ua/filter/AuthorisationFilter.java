@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns ={"/my-subscriptions", "/my-profile", "/balance.jsp", "/edit-profile.jsp"})
+@WebFilter(urlPatterns = {"/my-subscriptions", "/my-profile", "/balance.jsp", "/edit-profile.jsp"})
 public class AuthorisationFilter implements Filter {
     private static Logger logger = LogManager.getLogger(AuthorisationFilter.class);
 //    private static final int STATUS_CODE_UNAUTHORIZED = 401;
@@ -25,7 +25,7 @@ public class AuthorisationFilter implements Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         HttpSession session = httpRequest.getSession();
         JWTService jwtService = new JWTService();
-        UserService userService = new UserServiceImpl();
+//        UserService userService = new UserServiceImpl();
 
         try {
 
@@ -33,7 +33,7 @@ public class AuthorisationFilter implements Filter {
 
             if (jwt != null && !jwt.isEmpty()) {
                 Payload payload = jwtService.verifyToken(jwt);
-                String email = payload.getClaims().get("email");
+//                String email = payload.getClaims().get("email");
 
                 filterChain.doFilter(servletRequest, servletResponse);
 

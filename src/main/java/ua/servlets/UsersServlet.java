@@ -2,6 +2,8 @@ package ua.servlets;
 
 import ua.dao.UserMySqlDao;
 import ua.dto.UserGetDto;
+import ua.services.UserService;
+import ua.services.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,13 +19,15 @@ import java.util.List;
 public class UsersServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        UserService userService = new UserServiceImpl();
         UserMySqlDao dao = new UserMySqlDao();
+
         String id = request.getParameter("id");
         String isActive = request.getParameter("isActive");
         if (id != null && isActive.equals("true")){
-            dao.delete(Integer.valueOf(id));
+            userService.deactivateUser(Integer.valueOf(id));
         }if (id != null && isActive.equals("false")){
-            dao.activate(Integer.valueOf(id));
+            userService.activate(Integer.valueOf(id));
         }
         int page = 1;
         int recordsPerPage = 5;

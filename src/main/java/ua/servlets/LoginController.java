@@ -31,6 +31,13 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String lofOut = req.getParameter("log");
+        if (lofOut != null) {
+//            req.getSession().setAttribute("token", null);
+//            req.getSession().setAttribute("profile", null);
+            req.getSession().removeAttribute("token");
+            req.getSession().removeAttribute("profile");
+        }
         resp.sendRedirect("/logIn.jsp");
     }
 

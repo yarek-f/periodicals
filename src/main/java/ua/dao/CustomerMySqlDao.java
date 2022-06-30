@@ -19,20 +19,23 @@ public class CustomerMySqlDao implements Dao<Customer> {
     private static final String UNSUBSCRIBE_USER = "delete from publisher_customer where cus_id = ? and pub_id = ?";
     private static final String UPDATE_BALANCE = "update customers set balance = ? where email = ?";
     private static final String EDIT_QUERY = "update customers set fullname = ?, dob = ?, phone_number = ?, email = ?, user_password = ? where email = ?";
+    private static final String DEACTIVATE_QUERY = "update customers set is_active = false where id = ?";
+    private static final String ACTIVATE_QUERY = "update customers set is_active = true where id = ?";
 
-    private Connection con;
+//    private Connection con;
 
     private static Logger logger = LogManager.getLogger(CustomerMySqlDao.class);
 
     public CustomerMySqlDao() {
     }
 
-    public CustomerMySqlDao(Connection con) {
-        this.con = con;
-    }
+//    public CustomerMySqlDao(Connection con) {
+//        this.con = con;
+//    }
     @Override
     public int signUp(Customer item) {
-        try (PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( CREATE_QUERY )) {
 
             stmt.setString(1, item.getFullName());
             if (item.getDob() != null){
@@ -53,9 +56,11 @@ public class CustomerMySqlDao implements Dao<Customer> {
         return 0;
     }
 
+    @Override
     public void edit(Customer customer, String currentEmail) {
         logger.debug("Start customer editing");
-        try (PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( EDIT_QUERY )) {
 
             stmt.setString(1, customer.getFullName());
             if (customer.getDob() != null){
@@ -92,6 +97,31 @@ public class CustomerMySqlDao implements Dao<Customer> {
             logger.debug("Problem with withdraw user money from balance: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void deactivate(int id) {
+        logger.debug("Start customer deactivating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( DEACTIVATE_QUERY )) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with deactivating customer: " + ex.getMessage());
+        }
+    }
+
+    public void activate(int id) {
+        logger.debug("Start user activating");
+        try (Connection con = DataSource.getConnection();
+             PreparedStatement stmt = con.prepareStatement( ACTIVATE_QUERY )) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.debug("Problem with activating user: " + ex.getMessage());
+        }
+        logger.debug("User activating successfully");
     }
 
     public void replenishBalance(Customer customer) {

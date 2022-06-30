@@ -1,16 +1,13 @@
 package ua.services;
 
 import ua.dao.CustomerMySqlDao;
-import ua.dao.DataSource;
 import ua.dao.UserMySqlDao;
 import ua.domain.*;
-import ua.dto.CustomerSignUpDto;
+import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
 import ua.mapper.Mapper;
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -22,23 +19,35 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class UserServiceImpl implements UserService {
-    private UserMySqlDao userMySqlDao;
-    private CustomerMySqlDao customerMySqlDao;
-    private Connection connection;
-
-    {
-        try {
-            connection = DataSource.getConnection();
-            userMySqlDao = new UserMySqlDao(connection);
-            customerMySqlDao = new CustomerMySqlDao(connection);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+    private UserMySqlDao userMySqlDao = new UserMySqlDao();
+    private CustomerMySqlDao customerMySqlDao = new CustomerMySqlDao();
+//    private Connection connection;
+//
+//    {
+//        try {
+//            connection = DataSource.getConnection();
+//            userMySqlDao = new UserMySqlDao(connection);
+//            customerMySqlDao = new CustomerMySqlDao(connection);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Override
     public boolean isSubscribed(int customerId, int publisherId){
         return customerMySqlDao.isSubscribed(customerId, publisherId);
+    }
+
+    @Override
+    public void deactivateUser(int id) {
+        userMySqlDao.deactivate(id);
+        customerMySqlDao.deactivate(id);
+    }
+
+    @Override
+    public void activate(int id) {
+        userMySqlDao.activate(id);
+        customerMySqlDao.activate(id);
     }
 
     @Override
@@ -54,11 +63,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<String> withdrawFromBalance(String email, double price) {
+    public List<String> withdrawFromBalance(String email, int publisherId, double price) {
         List<String> checkResult = new ArrayList<>();
         double currentBalance = customerMySqlDao.get(email).getBalance();
+        int customerId = customerMySqlDao.get(email).getId();
         if (currentBalance < price){
             checkResult.add("isNotEnoughMoney");
+        } else if(isSubscribed(customerId, publisherId)) {
+            checkResult.add("isAlreadySubscribed");
         } else {
             customerMySqlDao.withdrawFromBalance(email, price);
         }
@@ -187,7 +199,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean delete(CustomerSignUpDto customerDto) { //fixme
+    public boolean delete(CustomerDto customerDto) { //fixme
         return false;
 //        return customerMySqlDao.delete(Integer.valueOf(customerDto.getId()));
     }

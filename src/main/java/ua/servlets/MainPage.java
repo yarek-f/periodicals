@@ -42,8 +42,6 @@ public class MainPage extends HttpServlet {
 
         List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
 
-
-
         String topic = request.getParameter("topic");
         request.setAttribute("topic", topic);
 
@@ -77,14 +75,15 @@ public class MainPage extends HttpServlet {
 
         try {
             if(publisherId != null && token != null && price != null){
+                int pubId = Integer.valueOf(publisherId);
                 String email = jwtService.verifyToken(token).getClaims().get("email");
 
-                List<String> res = userService.withdrawFromBalance(email, Double.valueOf(price));
+                List<String> res = userService.withdrawFromBalance(email, pubId, Double.valueOf(price));
 
                 if (res.isEmpty()){
                     userService.addSubscription(customerId, Integer.valueOf(publisherId));
                 }  else{
-                    session.setAttribute("withdrawBalance", res);
+                    session.setAttribute("subscriptionErrorMessage", res);
                 }
 
             }

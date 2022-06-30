@@ -6,11 +6,13 @@ import ua.dao.CustomerMySqlDao;
 import ua.dao.PublisherMySqlDao;
 import ua.domain.Customer;
 import ua.domain.Publisher;
+import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.mapper.Mapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PublisherServiceImpl implements PublisherService {
     PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
@@ -29,6 +31,11 @@ public class PublisherServiceImpl implements PublisherService {
         }
 
         return validation;
+    }
+
+    @Override
+    public List<CustomerDto> getAllSubscribers(String publisherName) {
+        return publisherMySqlDao.getSubscribers(publisherName).stream().map(Mapper::convertToCustomerDto).collect(Collectors.toList());
     }
 
     @Override

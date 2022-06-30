@@ -1,7 +1,5 @@
 package ua.servlets;
 
-import ua.dto.CustomerSignUpDto;
-import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
 import ua.excaptions.UserVarificationException;
 import ua.services.*;
@@ -11,10 +9,6 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 @MultipartConfig
