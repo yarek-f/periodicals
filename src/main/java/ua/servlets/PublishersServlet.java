@@ -1,9 +1,10 @@
 package ua.servlets;
 
-import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.mapper.Mapper;
+import ua.services.PublisherService;
+import ua.services.PublisherServiceImpl;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
 
@@ -24,11 +25,12 @@ public class PublishersServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+        PublisherService publisherService = new PublisherServiceImpl();
         UserService userService = new UserServiceImpl();
 
         String deletePublisher = request.getParameter("deletePublisher");
-        publisherMySqlDao.delete(publisherMySqlDao.get(deletePublisher).getId());
+
+        publisherService.delete(publisherService.get(deletePublisher).getId());
         List<String> allTopics = userService.getAllTopics();
         session.setAttribute("allTopics", allTopics);
 
@@ -42,7 +44,7 @@ public class PublishersServlet extends HttpServlet {
         List<PublisherDto> list = getPagination((page-1)*recordsPerPage,
                 recordsPerPage);
 
-        int noOfRecords = publisherMySqlDao.getAll().size();
+        int noOfRecords = publisherService.getAll().size();
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
         request.setAttribute("publisherList", list);
         request.setAttribute("noOfPages", noOfPages);
@@ -54,8 +56,8 @@ public class PublishersServlet extends HttpServlet {
     }
 
     private List<PublisherDto> getPagination(int skip, int limit){
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-        List<Publisher> publishers = publisherMySqlDao.getAll();
+        PublisherService publisherService = new PublisherServiceImpl();
+        List<Publisher> publishers = publisherService.getAll();
 
         List<PublisherDto> resultList = publishers.stream()
                 .skip(skip)

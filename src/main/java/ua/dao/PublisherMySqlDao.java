@@ -50,7 +50,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         }catch (Exception ex) {
-            logger.debug("Problem with creating Publisher: " + ex.getMessage());
+            logger.error("Problem with creating Publisher: " + ex.getMessage());
             //todo exception
         }
         logger.debug("Publisher creating successfully");
@@ -83,7 +83,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             }
 
         } catch (SQLException ex){
-            logger.debug("Problem with getting Publisher: " + ex.getMessage());
+            logger.error("Problem with getting Publisher: " + ex.getMessage());
         }
         logger.debug("Publisher getting successfully");
 
@@ -100,11 +100,12 @@ public class PublisherMySqlDao implements Dao<Publisher> {
         logger.debug("Start Publisher deleting");
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement( DELETE_QUERY )) {
-
+//            getSubscribers()
             stmt.setInt(1, id);
+
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with deleting Publisher: " + ex.getMessage());
+            logger.error("Problem with deleting Publisher: " + ex.getMessage());
         }
         logger.debug("Publisher deleting successfully");
         return false;
@@ -121,7 +122,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             stmt.setString(3, publisher.getName());
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with adding new version of publisher: " + ex.getMessage());
+            logger.error("Problem with adding new version of publisher: " + ex.getMessage());
         }
         logger.debug("updating version successfully" + publisher.toString());
         return false;
@@ -139,7 +140,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             stmt.setString(5, publisher.getName());
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with editing publisher: " + ex.getMessage());
+            logger.error("Problem with editing publisher: " + ex.getMessage());
         }
         logger.debug("editing publisher happened successfully");
     }
@@ -220,7 +221,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            logger.debug("Problem with getting users: " + ex.getMessage());
+            logger.error("Problem with getting users: " + ex.getMessage());
         }
         return publisherList;
     }
@@ -258,7 +259,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            logger.debug("Problem with getting users: " + ex.getMessage());
+            logger.error("Problem with getting users: " + ex.getMessage());
         }
         return publisherList;
     }
@@ -291,7 +292,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            logger.debug("Problem with getting active publishers: " + ex.getMessage());
+            logger.error("Problem with getting active publishers: " + ex.getMessage());
         }
         return publisherList;
     }

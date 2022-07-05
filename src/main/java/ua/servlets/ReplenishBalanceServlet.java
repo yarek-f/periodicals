@@ -41,8 +41,6 @@ public class ReplenishBalanceServlet extends HttpServlet {
 
         session.setAttribute("balanceErrorMessages", customerResponse);
 
-//        resp.sendRedirect(req.getContextPath() + "/periodicals");
-
         if (!customerResponse.isEmpty()) {
             resp.sendRedirect(req.getContextPath() + "/balance.jsp");
         }

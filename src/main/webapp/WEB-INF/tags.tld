@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0"
+        xmlns="http://java.sun.com/xml/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>customTags</short-name>
+    <uri>http://epam.com</uri>
+
+
+    <tag>
+        <name>unsubscribeTag</name>
+        <tag-class>ua.customTags.UnsubscribeButtonTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>customerEmail</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>publisherId</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>subscribeTag</name>
+        <tag-class>ua.customTags.SubscribeButtonTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>customerEmail</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>publisherId</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

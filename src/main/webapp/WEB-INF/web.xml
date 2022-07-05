@@ -20,5 +20,13 @@
         <param-name>DBDRIVER</param-name>
         <param-value>com.mysql.cj.jdbc.Driver</param-value>
     </context-param>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>customTags</taglib-uri>
+            <taglib-location>/WEB-INF/tags.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
 </web-app>
 

@@ -18,6 +18,7 @@
 <%@ page session="true" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
+<%@ taglib uri="customTags" prefix="ct" %>
 
 <html lang="${sessionScope.lang}">
 <%
@@ -188,6 +189,16 @@
             </div>
             ${sessionScope.remove("subscriptionErrorMessage") }
         </c:if>
+<%--        <ct:testTag/>--%>
+
+<%--    <c:if test="${sessionScope.get('profile')!=null}">--%>
+
+<%--        <ct:buttonTag customerEmail="${sessionScope.get('profile')}" publisherId="2">--%>
+<%--&lt;%&ndash;        <ct:buttonTag customerEmail="bob@gmail.com" publisherId="2">&ndash;%&gt;--%>
+<%--            <p>Subscribed</p>--%>
+<%--        </ct:buttonTag>--%>
+<%--    </c:if>--%>
+
         <c:forEach items="${publisherList}" var="p">
         <div class="row m-4"  style="background-color: white; border-radius: 5px;">
             <div class="col" style="position: relative">
@@ -204,27 +215,28 @@
                             <c:choose>
                                 <c:when test="${sessionScope.get('profile')!=null}">
 <%--        `                           <c:if test="${p.isSubscribed eq 0}">--%>
+                                    <ct:subscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
 
-                                    <c:if test="${requestScope.get('topic') != null}">
-                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
-                                    </c:if>
-                                        <%--                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}&topic=${requestScope.get('topic')}">--%>
-                                    <c:if test="${requestScope.get('topic') == null}">
-                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
-                                    </c:if>
+                                        <c:if test="${requestScope.get('topic') != null}">
+                                        <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
+                                        </c:if>
+                                            <%-- <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}&topic=${requestScope.get('topic')}">--%>
+                                        <c:if test="${requestScope.get('topic') == null}">
+                                        <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
+                                        </c:if>
 
-                                        <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                            <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                        </button>
-                                    </a>
-<%--                                    </c:if>--%>
-<%--                                        <c:if test="${p.isSubscribed eq 1}">--%>
-<%--                                        <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">--%>
-<%--                                            <button type="button" class="btn btn-danger">--%>
-<%--                                                Unsubscribe--%>
-<%--                                            </button>--%>
-<%--                                        </a>--%>
-<%--                                        </c:if>--%>
+                                            <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                                <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
+                                            </button>
+                                        </a>
+                                    </ct:subscribeTag>
+                                    <ct:unsubscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
+                                            <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+                                            <button type="button" class="btn btn-danger">
+                                                Unsubscribe
+                                            </button>
+                                        </a>
+                                    </ct:unsubscribeTag>
                                 </c:when>
                                 <c:otherwise>
                                     <a href="/login">

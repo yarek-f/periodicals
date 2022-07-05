@@ -1,8 +1,6 @@
 package ua.servlets;
 
-import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
-import ua.domain.Topics;
 import ua.dto.PublisherDto;
 import ua.services.PublisherService;
 import ua.services.PublisherServiceImpl;
@@ -14,7 +12,6 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
@@ -60,7 +57,6 @@ public class AddNewVersionOfPublisherServlet extends HttpServlet {
         session.setAttribute("publisherAddNewVersionDto", createPublisherDto);
 
         List<String> publisherResponse = publisherService.addNewVersion(createPublisherDto);
-        //addNewVersion(createPublisherDto, List<CustomerDto> list)
 
         session.setAttribute("publisherErrorMessages", publisherResponse);
 
@@ -72,15 +68,5 @@ public class AddNewVersionOfPublisherServlet extends HttpServlet {
             session.removeAttribute("publisherErrorMessages");
             session.removeAttribute("publisherAddNewVersionDto");
         }
-
-
-//        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);
-//            session.setAttribute("createDTO", publisherDto);
-//
-//            List<String> userResponse = publisherService.create(publisherDto);
-//
-//            session.setAttribute("errorMessages", userResponse);
-//
-//        resp.sendRedirect("/rrs");
     }
 }

@@ -39,6 +39,16 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
+    public List<Publisher> getByName(String wantedPublisher) {
+        return publisherMySqlDao.getByName(wantedPublisher);
+    }
+
+    @Override
+    public void delete(int id) {
+        publisherMySqlDao.delete(id);
+    }
+
+    @Override
     public List<String> addNewVersion(PublisherDto publisherDto) {
         List<String> validation = validateAddNewVersion(publisherDto);
         UserService userService = new UserServiceImpl();

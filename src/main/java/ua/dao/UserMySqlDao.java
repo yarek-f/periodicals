@@ -54,7 +54,7 @@ public class UserMySqlDao implements Dao<User> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         } catch (Exception ex) {
-            logger.debug("Problem with creating user: " + ex.getMessage());
+            logger.error("Problem with creating user: " + ex.getMessage());
         }
 
         logger.debug("User created");
@@ -78,7 +78,7 @@ public class UserMySqlDao implements Dao<User> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         } catch (Exception ex) {
-            logger.debug("Problem with creating user: " + ex.getMessage());
+            logger.error("Problem with creating user: " + ex.getMessage());
         }
 
         logger.debug("User created");
@@ -108,16 +108,16 @@ public class UserMySqlDao implements Dao<User> {
                 requiredUser = new User(id, role, email, password, isActive, created, updated);
             }
         } catch (SQLException e) {
-            logger.debug("Problem with pulling user data from database: " + e.getMessage());
+            logger.error("Problem with pulling user data from database: " + e.getMessage());
         } catch (Exception ex) {
-            logger.debug("Problem with getting user: " + ex.getMessage());
+            logger.error("Problem with getting user: " + ex.getMessage());
         }
         return requiredUser;
     }
 
     @Override
     public int update(User items, int id) { //todo ????
-        logger.debug("Start user creating");
+        logger.debug("Start user updating");
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement( UPDATE_QUERY )) {
 
@@ -131,11 +131,9 @@ public class UserMySqlDao implements Dao<User> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         } catch (Exception ex) {
-//            logger.debug("Problem with creating user: " + ex.getMessage());
+            logger.error("Problem with updating user: " + ex.getMessage());
             System.out.println(ex.getMessage());
         }
-
-        logger.debug("User created");
 
         return get(items.getEmail()).getId();
     }
@@ -149,7 +147,7 @@ public class UserMySqlDao implements Dao<User> {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with deleting user: " + ex.getMessage());
+            logger.error("Problem with deleting user: " + ex.getMessage());
         }
         logger.debug("User deleting successfully");
         return false;
@@ -164,7 +162,7 @@ public class UserMySqlDao implements Dao<User> {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with deactivating user: " + ex.getMessage());
+            logger.error("Problem with deactivating user: " + ex.getMessage());
         }
     }
 
@@ -177,7 +175,7 @@ public class UserMySqlDao implements Dao<User> {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with activating user: " + ex.getMessage());
+            logger.error("Problem with activating user: " + ex.getMessage());
         }
         logger.debug("User activating successfully");
         return false;
@@ -202,7 +200,7 @@ public class UserMySqlDao implements Dao<User> {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            logger.debug("Problem with getting subscriptions: " + ex.getMessage());
+            logger.error("Problem with getting subscriptions: " + ex.getMessage());
         }
 
         logger.debug("Got all subscriptions");
@@ -258,7 +256,7 @@ public class UserMySqlDao implements Dao<User> {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            logger.debug("Problem with getting users: " + ex.getMessage());
+            logger.error("Problem with getting users: " + ex.getMessage());
         }
 
         logger.debug("Got all users");

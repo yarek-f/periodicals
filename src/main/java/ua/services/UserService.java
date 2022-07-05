@@ -27,6 +27,7 @@ public interface UserService {
     List<Publisher> sortByPrice(List<Publisher> publishersList);
     List<String> getTopicsByPublishers(List<Publisher> publishersList);
     List<String> getAllTopics();
+    List<Publisher> isSubscribed(List<Publisher> list, String email);
     List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList);
     List<String> replenishBalance(UserSignUpDto customerDto);
     boolean isSubscribed(int customerId, int publisherId);

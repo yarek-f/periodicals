@@ -51,7 +51,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         } catch (Exception ex) {
-            logger.debug("Problem with creating user: " + ex.getMessage());
+            logger.error("Problem with creating user: " + ex.getMessage());
         }
         return 0;
     }
@@ -77,7 +77,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             if(status!=1) throw new UserException("Created more than one record!!!");
 
         } catch (Exception ex) {
-            logger.debug("Problem with editing customer: " + ex.getMessage());
+            logger.error("Problem with editing customer: " + ex.getMessage());
         }
     }
 
@@ -94,7 +94,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             int status = pstm.executeUpdate();
             if(status!=1) throw new UserException("Update more than one record!!!");
         } catch (SQLException e) {
-            logger.debug("Problem with withdraw user money from balance: " + e.getMessage());
+            logger.error("Problem with withdraw user money from balance: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -107,7 +107,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with deactivating customer: " + ex.getMessage());
+            logger.error("Problem with deactivating customer: " + ex.getMessage());
         }
     }
 
@@ -119,7 +119,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }catch (Exception ex) {
-            logger.debug("Problem with activating user: " + ex.getMessage());
+            logger.error("Problem with activating user: " + ex.getMessage());
         }
         logger.debug("User activating successfully");
     }
@@ -139,7 +139,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             int status = pstm.executeUpdate();
             if(status!=1) throw new UserException("Update more than one record!!!");
         } catch (SQLException e) {
-            logger.debug("Problem with replenish user balance: " + e.getMessage());
+            logger.error("Problem with replenish user balance: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -154,7 +154,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             pstm.executeUpdate();
 
         } catch (SQLException e) {
-            logger.debug("Problem with subscribing user" + e.getMessage());
+            logger.error("Problem with subscribing user" + e.getMessage());
         }
         logger.debug("User subscribed successfully!");
     }
@@ -169,7 +169,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             pstm.executeUpdate();
 
         } catch (SQLException e) {
-            logger.debug("Problem with unsubscribe user" + e.getMessage());
+            logger.error("Problem with unsubscribe user" + e.getMessage());
         }
         logger.debug("User unsubscribed successfully!");
     }
@@ -196,7 +196,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
             if (a < 1 || b < 1) res = false;
 
         } catch (SQLException e) {
-            logger.debug("Problem with checking if user is subscribed: " + e.getMessage());
+            logger.error("Problem with checking if user is subscribed: " + e.getMessage());
             res = false;
         }
         logger.debug("User is checked!");
@@ -230,7 +230,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
                 customer = new Customer(id, fullName, dateOfBirth, phoneNumber, email, balance);
             }
         } catch (SQLException e) {
-            logger.debug("Problem with pulling user data from database: " + e.getMessage());
+            logger.error("Problem with pulling user data from database: " + e.getMessage());
         }
         return customer;
     }
@@ -256,7 +256,7 @@ public class CustomerMySqlDao implements Dao<Customer> {
                 customer = new Customer(fullName, dob, phoneNumber, email, password);
             }
         } catch (SQLException e) {
-            logger.debug("Problem with pulling user data from database: " + e.getMessage());
+            logger.error("Problem with pulling user data from database: " + e.getMessage());
         }
         return customer;
     }

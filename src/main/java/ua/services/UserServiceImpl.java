@@ -361,16 +361,24 @@ public class UserServiceImpl implements UserService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<Publisher> isSubscribed(List<Publisher> list, String email) {
+        UserService userService = new UserServiceImpl();
+        int customerId = userService.getCustomer(email).getId();
+        for (Publisher p : list) {
+            if (userService.isSubscribed(customerId, p.getId())) {
+                p.setSubscribed(1);
+            }
+        }
+        return list;
+    }
+
     public List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList) {
-//        if (currentList != null){
         return currentList.stream()
                 .skip(skip)
                 .limit(limit)
                 .map(e -> Mapper.convertToPublisherDto(e))
                 .collect(Collectors.toList());
-//        } else {
-//            return null;
-//        }
     }
 
 

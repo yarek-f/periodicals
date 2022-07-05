@@ -1,12 +1,8 @@
 package ua.servlets;
 
-import ua.dao.UserMySqlDao;
 import ua.dto.CustomerDto;
-import ua.dto.UserGetDto;
 import ua.services.PublisherService;
 import ua.services.PublisherServiceImpl;
-import ua.services.UserService;
-import ua.services.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

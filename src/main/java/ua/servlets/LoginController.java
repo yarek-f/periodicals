@@ -5,9 +5,7 @@ import ua.services.JWTService;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,8 +31,6 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String lofOut = req.getParameter("log");
         if (lofOut != null) {
-//            req.getSession().setAttribute("token", null);
-//            req.getSession().setAttribute("profile", null);
             req.getSession().removeAttribute("token");
             req.getSession().removeAttribute("profile");
         }
@@ -61,7 +57,6 @@ public class LoginController extends HttpServlet {
                 resp.sendRedirect("/publishers");
             } else if (role.equals(Role.USER)) {
                 resp.sendRedirect("/periodicals");
-//                req.getSession().setAttribute("profile", email);
             }
         } else {
             req.getSession().setAttribute("loginError", "Wrong email or password");

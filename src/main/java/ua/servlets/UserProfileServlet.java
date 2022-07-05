@@ -78,8 +78,5 @@ public class UserProfileServlet extends HttpServlet {
             req.getSession().removeAttribute("errorEditingMessages");
             req.getSession().setAttribute("profile", email);
         }
-
-
-
     }
 }

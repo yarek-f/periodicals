@@ -1,12 +1,9 @@
 package ua.servlets;
 
-import ua.dao.UserMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
-import ua.dto.UserGetDto;
 import ua.excaptions.UserVarificationException;
 import ua.services.JWTService;
-import ua.services.PublisherServiceImpl;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
 
@@ -25,7 +22,6 @@ public class MySubscriptions extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         JWTService jwtService = new JWTService();
-//        PublisherServiceImpl publisherService = new PublisherServiceImpl();
         UserService userService = new UserServiceImpl();
 
         String token = (String)request.getSession().getAttribute("token");

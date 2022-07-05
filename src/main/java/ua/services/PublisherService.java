@@ -14,4 +14,8 @@ public interface PublisherService {
     List<String> addNewVersion(PublisherDto publisherDto);
     List<String> editPublisher(PublisherDto publisherDto);
     List<CustomerDto> getAllSubscribers(String publisherName);
+
+    List<Publisher> getByName(String wantedPublisher);
+
+    void delete(int id);
 }

@@ -4,7 +4,6 @@ import ua.dto.UserSignUpDto;
 import ua.services.UserService;
 import ua.services.UserServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

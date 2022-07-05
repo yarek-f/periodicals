@@ -1,8 +1,6 @@
 package ua.servlets;
 
-import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
-import ua.domain.Topics;
 import ua.dto.PublisherDto;
 import ua.services.PublisherService;
 import ua.services.PublisherServiceImpl;
@@ -40,20 +38,13 @@ public class EditPublisherServlet extends HttpServlet {
         HttpSession session = req.getSession(true);
         resp.setContentType("text/html");
 
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-
-//        String name = req.getParameter("publisherName");
-//        System.out.println("publisher name for edit: "+name);
-//
-//        session.setAttribute("publisherName", name);
-
 
         String publisherName = (String) session.getAttribute("publisherName");
         if (publisherName == null || publisherName.equals("")){
             resp.sendRedirect("/publishers");
         } else{
             System.out.println(publisherName);
-            Publisher curentPublisher = publisherMySqlDao.get(publisherName);
+            Publisher curentPublisher = publisherService.get(publisherName);
 
             String topic = req.getParameter("inputTopic");
             System.out.println(topic);
@@ -106,21 +97,6 @@ public class EditPublisherServlet extends HttpServlet {
                 session.removeAttribute("publisherErrorMessages");
                 session.removeAttribute("publisherEditDto");
             }
-
-//            Publisher publisher = new Publisher(fileName, publisherName, Topics.valueOf(topic), Double.valueOf(price), description);
-//
-//            publisherMySqlDao.editPublisher(publisher);
-//
-//            resp.sendRedirect("/publishers");
         }
-
-//        PublisherDto publisherDto = new PublisherDto(pictures, publisherName, topic, price, description);
-//            session.setAttribute("createDTO", publisherDto);
-//
-//            List<String> userResponse = publisherService.create(publisherDto);
-//
-//            session.setAttribute("errorMessages", userResponse);
-//
-//        resp.sendRedirect("/rrs");
     }
 }

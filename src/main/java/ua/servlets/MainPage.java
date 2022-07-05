@@ -3,22 +3,16 @@ package ua.servlets;
 import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
-import ua.dto.UserSignUpDto;
 import ua.excaptions.UserVarificationException;
 import ua.services.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
+
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.*;
 
 @WebServlet(name = "periodicals", urlPatterns = {"/periodicals"})
 public class MainPage extends HttpServlet {
@@ -31,13 +25,10 @@ public class MainPage extends HttpServlet {
         JWTService jwtService = new JWTService();
         String customerEmail = (String) session.getAttribute("profile");
 
-
-
         List<Publisher> resultList = publisherService.getAll();
-        if (session.getAttribute("profile") != null){
-            resultList = isSubscribed(resultList, customerEmail);
+        if (customerEmail != null){
+            resultList = userService.isSubscribed(resultList, customerEmail);
         }
-
         session.setAttribute("publishers", resultList);
 
         List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
@@ -49,24 +40,15 @@ public class MainPage extends HttpServlet {
         request.setAttribute("sort", sort);
         resultList = userService.sortBy(sort, topic, resultList);
 
-        //todo ==> trying to change button color when customer is subscribed to publisher:
-//        String publisherIdForButton = (String) session.getAttribute("pId");
-//        System.out.println("publisherIdForButton => " + publisherIdForButton);
-//        int customerIdForButton = userService.getCustomer((String)session.getAttribute("email")).getId();
-//        if (publisherIdForButton != null){
-//           boolean res = userService.isSubscribed(customerIdForButton, Integer.valueOf(publisherIdForButton));
-//            System.out.println("is subscribed? ==> " + res);
-//           session.setAttribute("res", res);
-//           session.removeAttribute("pId");
-//        }
-
+        String publisherUnsubscribeId = request.getParameter("publisherIdForUnsubscription");
+        System.out.println(publisherUnsubscribeId);
+        if (publisherUnsubscribeId != null){
+            userService.unsubscribe(userService.getCustomer(customerEmail).getId(), Integer.valueOf(publisherUnsubscribeId));
+        }
 
         //start subscription process
         String publisherId = request.getParameter("subscribe");
-        int customerId = userService.getCustomer((String) session.getAttribute("profile")).getId();
-//        int customerId = userService.getCustomer(customerEmail).getId();
-
-//        isSubscribed(resultList, customerId); fixme
+        int customerId = userService.getCustomer(customerEmail).getId();
 
         String token = (String)request.getSession().getAttribute("token");
         String price = request.getParameter("price");
@@ -85,19 +67,13 @@ public class MainPage extends HttpServlet {
                 }  else{
                     session.setAttribute("subscriptionErrorMessage", res);
                 }
-
             }
         } catch (UserVarificationException e) {
             logger.error(""+e.getMessage());
         }
         //end subscription process
 
-        session.removeAttribute("publishersByTopic");
-        session.setAttribute("publishersByTopic", publishersByTopic);
 
-        double balance = userService.getCustomer((String)session.getAttribute("profile")).getBalance();
-        session.setAttribute("balance", String.format("%.2f", balance));
-//        session.setAttribute("cusId", customerId);
 
         //start pagination
         int page = 1;
@@ -115,32 +91,44 @@ public class MainPage extends HttpServlet {
         request.setAttribute("currentPage", page);
         //end pagination
 
+//        session.removeAttribute("publishersByTopic");
+        session.setAttribute("publishersByTopic", publishersByTopic);
+
+        double balance = userService.getCustomer(customerEmail).getBalance();
+        session.setAttribute("balance", String.format("%.2f", balance));
+
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);
     }
 
-    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
-        UserService userService = new UserServiceImpl();
-        int customerId = userService.getCustomer(email).getId();
-        for (Publisher p : list) {
-            if (userService.isSubscribed(customerId, p.getId())) {
-                p.setSubscribed(1);
-            }
-        }
-        return list;
-    }
+
+//    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
+//        UserService userService = new UserServiceImpl();
+//        int customerId = userService.getCustomer(email).getId();
+//        for (Publisher p : list) {
+//            if (userService.isSubscribed(customerId, p.getId())) {
+//                p.setSubscribed(1);
+//            }
+//        }
+//        return list;
+//    }
+
+//    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
+//        return null;
+//    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        HttpSession session = req.getSession(true);
+        HttpSession session = req.getSession();
+        PublisherService publisherService = new PublisherServiceImpl();
 
-        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
+//        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
 
         String wantedPublisher = req.getParameter("search");
         System.out.println(wantedPublisher);
 
-        List<Publisher> publisherList = publisherMySqlDao.getByName(wantedPublisher);
+        List<Publisher> publisherList = publisherService.getByName(wantedPublisher);
         if (publisherList == null || publisherList.isEmpty()){
             resp.sendRedirect("cant-found.jsp");
         } else{
