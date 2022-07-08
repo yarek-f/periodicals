@@ -79,7 +79,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void unsubscribe(int customerId, int publisherId) {
-        customerMySqlDao.deleteSubscritpion(customerId, publisherId);
+        customerMySqlDao.deleteSubscription(customerId, publisherId);
     }
 
     private List<String> validateBalance(UserSignUpDto customerDto) {
@@ -255,7 +255,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<Publisher> getAllSubscriptions(String email) {
-        return userMySqlDao.getAllSubscriptions(email);
+        return customerMySqlDao.getAllSubscriptions(email);
     }
 
     private boolean validPassword(String password) {

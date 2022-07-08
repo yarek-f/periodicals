@@ -40,7 +40,7 @@ public class PublisherServiceImpl implements PublisherService {
 
     @Override
     public List<Publisher> getByName(String wantedPublisher) {
-        return publisherMySqlDao.getByName(wantedPublisher);
+        return publisherMySqlDao.searchByName(wantedPublisher);
     }
 
     @Override
@@ -155,7 +155,7 @@ public class PublisherServiceImpl implements PublisherService {
 
     @Override
     public List<Publisher> getAll() {
-        return publisherMySqlDao.getActivePublishers();
+        return publisherMySqlDao.getAll();
     }
 
     @Override
