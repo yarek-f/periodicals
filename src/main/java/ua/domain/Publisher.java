@@ -1,11 +1,8 @@
 package ua.domain;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Publisher implements Publishers{
+public class Publisher{
     private int id;
     private String image;
     private String name;
@@ -16,10 +13,6 @@ public class Publisher implements Publishers{
     private LocalDateTime create;
     private LocalDateTime updated;
     private boolean isActive;
-    private int isSubscribed;
-
-    private List<Subscribers> subscribers = new ArrayList<>(); //??
-    private boolean inPublic; //fixme (???) change name
 
     public Publisher() {
     }
@@ -41,15 +34,6 @@ public class Publisher implements Publishers{
         this.topic = topic;
         this.price = price;
         this.description = description;
-    }
-
-    public boolean isInPublic() {
-        return inPublic;
-    }
-
-    public void setInPublic(boolean inPublic) {
-        this.inPublic = inPublic;
-        notifySubscriber();
     }
 
     public Publisher(int id, String image, String name, int version, Topics topic, Double price, String description) {
@@ -86,34 +70,12 @@ public class Publisher implements Publishers{
         this.isActive = isActive;
     }
 
-    public void addSubscriber(Subscribers s) {
-        subscribers.add(s);
-    }
-
-    public void removeSubscriber(Subscribers s) {
-        subscribers.remove(s);
-    }
-
-    public void notifySubscriber() {
-        for (Subscribers subscribers : this.subscribers) {
-            subscribers.update();
-        }
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int isSubscribed() {
-        return isSubscribed;
-    }
-
-    public void setSubscribed(int subscribed) {
-        isSubscribed = subscribed;
     }
 
     public String getName() {
@@ -188,14 +150,6 @@ public class Publisher implements Publishers{
         isActive = active;
     }
 
-    public List<Subscribers> getSubscribers() {
-        return subscribers;
-    }
-
-    public void setSubscribers(List<Subscribers> subscribers) {
-        this.subscribers = subscribers;
-    }
-
     @Override
     public String toString() {
         return "Publisher{" +
@@ -209,9 +163,6 @@ public class Publisher implements Publishers{
                 ", create=" + create +
                 ", updated=" + updated +
                 ", isActive=" + isActive +
-                ", isSubscribed=" + isSubscribed +
-                ", subscribers=" + subscribers +
-                ", inPublic=" + inPublic +
                 '}';
     }
 }

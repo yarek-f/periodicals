@@ -53,9 +53,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
-                </li>
+<%--                <li class="nav-item">--%>
+<%--                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>--%>
+<%--                </li>--%>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
@@ -154,19 +154,24 @@
     <div class="container col-8" style="justify-content: center">
         <c:forEach items="${publisherList}" var="p">
         <div class="row m-4"  style="background-color: white; border-radius: 5px;">
-            <div class="col" style="position: relative">
-                <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-                <h3 style="text-align: center">${p.name}</h3><br><br>
-                <p style="text-align: center">${p.description}</p>
-                <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                    <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
-                        <button type="button" class="btn btn-danger">
-<%--                            <fmt:message key="label.subscribe" />--%>
-                            Unsubscribe
-                        </button>
-                    </a>
+            <div class="col d-flex" style="position: relative">
+                <div style="float:left" class="col-3">
+                    <img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275">
                 </div>
-
+                <div style="align-content: center" class="col-9 position-relative">
+                    <h3 style="text-align: center">${p.name}</h3><br><br>
+                    <p style="text-align: center; margin-top: -50px" class="fs-5"><i>Price per month: <b>${p.price}</b></i></p>
+                    <p style="text-align: center">${p.description}</p>
+                    <div class="col text-center">
+                    <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                        <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+                            <button type="button" class="btn btn-danger">
+                                <Unsubscribe></Unsubscribe>
+                            </button>
+                        </a>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
         </c:forEach>

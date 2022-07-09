@@ -3,7 +3,6 @@ package ua.services;
 import ua.dao.CustomerMySqlDao;
 import ua.dao.UserMySqlDao;
 import ua.domain.*;
-import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
 import ua.mapper.Mapper;
@@ -21,75 +20,8 @@ import java.util.stream.Stream;
 public class UserServiceImpl implements UserService {
     private UserMySqlDao userMySqlDao = new UserMySqlDao();
     private CustomerMySqlDao customerMySqlDao = new CustomerMySqlDao();
-//    private Connection connection;
-//
-//    {
-//        try {
-//            connection = DataSource.getConnection();
-//            userMySqlDao = new UserMySqlDao(connection);
-//            customerMySqlDao = new CustomerMySqlDao(connection);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
-    @Override
-    public boolean isSubscribed(int customerId, int publisherId){
-        return customerMySqlDao.isSubscribed(customerId, publisherId);
-    }
 
-    @Override
-    public void deactivateUser(int id) {
-        userMySqlDao.deactivate(id);
-        customerMySqlDao.deactivate(id);
-    }
-
-    @Override
-    public void activate(int id) {
-        userMySqlDao.activate(id);
-        customerMySqlDao.activate(id);
-    }
-
-    @Override
-    public List<String> replenishBalance(UserSignUpDto userDTO) {
-        List<String> validation = validateBalance(userDTO);
-        if (validation.isEmpty()) {
-            System.out.println("BALANCE INSIDE SERVICE -> " + userDTO.getBalance());
-            Customer customer = Mapper.convertToCustomerBalance(userDTO);
-            customerMySqlDao.replenishBalance(customer);
-        }
-
-        return validation;
-    }
-
-    @Override
-    public List<String> withdrawFromBalance(String email, int publisherId, double price) {
-        List<String> checkResult = new ArrayList<>();
-        double currentBalance = customerMySqlDao.get(email).getBalance();
-        int customerId = customerMySqlDao.get(email).getId();
-        if (currentBalance < price){
-            checkResult.add("isNotEnoughMoney");
-        } else if(isSubscribed(customerId, publisherId)) {
-            checkResult.add("isAlreadySubscribed");
-        } else {
-            customerMySqlDao.withdrawFromBalance(email, price);
-        }
-        return checkResult;
-    }
-
-    @Override
-    public void unsubscribe(int customerId, int publisherId) {
-        customerMySqlDao.deleteSubscription(customerId, publisherId);
-    }
-
-    private List<String> validateBalance(UserSignUpDto customerDto) {
-        List<String> checkResult = new ArrayList<>();
-        double balance = Double.valueOf(customerDto.getBalance());
-        if (balance < 0) {
-            checkResult.add("balance");
-        }
-        return checkResult;
-    }
 
     @Override
     public List<String> signUp(UserSignUpDto userSignUpDto) {
@@ -105,6 +37,14 @@ public class UserServiceImpl implements UserService {
         }
 
         return validation;
+    }
+
+    @Override
+    public void delete(UserSignUpDto userDto) {
+        int userId = userMySqlDao.get(userDto.getEmail()).getId();
+        int customerId = customerMySqlDao.get(userDto.getEmail()).getId();
+        userMySqlDao.delete(userId);
+        customerMySqlDao.delete(customerId);
     }
 
     @Override
@@ -192,16 +132,13 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
-    public boolean delete(UserSignUpDto userDto) {
-        return false;
-//        return userMySqlDao.delete(userDto.getEmail());
-    }
-
-    @Override
-    public boolean delete(CustomerDto customerDto) { //fixme
-        return false;
-//        return customerMySqlDao.delete(Integer.valueOf(customerDto.getId()));
+    private List<String> validateBalance(UserSignUpDto customerDto) {
+        List<String> checkResult = new ArrayList<>();
+        double balance = Double.valueOf(customerDto.getBalance());
+        if (balance < 0) {
+            checkResult.add("balance");
+        }
+        return checkResult;
     }
 
     private boolean validCheckBox(String checkBox) {
@@ -253,11 +190,6 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    @Override
-    public List<Publisher> getAllSubscriptions(String email) {
-        return customerMySqlDao.getAllSubscriptions(email);
-    }
-
     private boolean validPassword(String password) {
         Pattern pattern = Pattern.compile("(^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=\"])(?=\\S+$).{8,}$)|(^(?=.*[0-9])(?=.*[а-я])(?=.*[А-Я])(?=.*[@#$%^&+=\"])(?=\\S+$).{8,}$)"); //todo
         Matcher matcher = pattern.matcher(password);
@@ -272,6 +204,61 @@ public class UserServiceImpl implements UserService {
 
     private boolean validConfirmPassword(String password, String confirmPassword) {
         return password.equals(confirmPassword);
+    }
+
+    @Override
+    public boolean isSubscribed(int customerId, int publisherId){
+        return customerMySqlDao.isSubscribed(customerId, publisherId);
+    }
+
+    @Override
+    public void deactivateUser(String email) {
+        int userId =  userMySqlDao.get(email).getId();
+        int customerId =  customerMySqlDao.get(email).getId();
+        userMySqlDao.deactivate(userId);
+        customerMySqlDao.deactivate(customerId);
+    }
+
+    @Override
+    public void activate(String email) {
+        int userId =  userMySqlDao.getUserIgnoringFieldIsActive(email).getId();
+        int customerId =  customerMySqlDao.get(email).getId();
+        userMySqlDao.activate(userId);
+        customerMySqlDao.activate(customerId);
+    }
+
+    @Override
+    public List<String> replenishBalance(UserSignUpDto userDTO) {
+        List<String> validation = validateBalance(userDTO);
+        if (validation.isEmpty()) {
+            System.out.println("BALANCE INSIDE SERVICE -> " + userDTO.getBalance());
+            Customer customer = Mapper.convertToCustomerBalance(userDTO);
+            customerMySqlDao.replenishBalance(customer);
+        }
+
+        return validation;
+    }
+
+    @Override
+    public List<String> withdrawFromBalance(String email, int publisherId, double price) {
+        List<String> checkResult = new ArrayList<>();
+        double currentBalance = customerMySqlDao.get(email).getBalance();
+        if (currentBalance < price){
+            checkResult.add("isNotEnoughMoney");
+        } else {
+            customerMySqlDao.withdrawFromBalance(email, price);
+        }
+        return checkResult;
+    }
+
+    @Override
+    public void unsubscribe(int customerId, int publisherId) {
+        customerMySqlDao.deleteSubscription(customerId, publisherId);
+    }
+
+    @Override
+    public List<Publisher> getAllSubscriptions(String email) {
+        return customerMySqlDao.getAllSubscriptions(email);
     }
 
     @Override
@@ -297,16 +284,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean updateRole(int id) {
-        return false;
-    }
-
-    public List<Publisher> sortBy(String sortingType, String topic, List<Publisher> resultList) {
-        PublisherService publisherService = new PublisherServiceImpl();
-//        List<Publisher> publishersList = publisherService.getAll();
-
+    public List<Publisher> sortBy(String sortingType, String topic, List<Publisher> resultList) {//todo test
         if (topic != null) {
-//            resultList = publisherService.getByTopic(topic);
             resultList = resultList.stream()
                     .filter(e -> e.getTopic().toString().equals(topic))
                     .collect(Collectors.toList());
@@ -328,7 +307,7 @@ public class UserServiceImpl implements UserService {
         return resultList;
     }
 
-    public List<Publisher> sortByName(List<Publisher> publishersList) {
+    private List<Publisher> sortByName(List<Publisher> publishersList) {
         if (publishersList != null) {
             return publishersList.stream()
                     .sorted(Comparator.comparing(Publisher::getName))
@@ -336,7 +315,7 @@ public class UserServiceImpl implements UserService {
         } else return null;
     }
 
-    public List<Publisher> sortByPrice(List<Publisher> publishersList) {
+    private List<Publisher> sortByPrice(List<Publisher> publishersList) {
         if (publishersList != null) {
             return publishersList.stream()
                     .sorted(Comparator.comparing(Publisher::getPrice))
@@ -344,7 +323,8 @@ public class UserServiceImpl implements UserService {
         } else return null;
     }
 
-    public List<String> getTopicsByPublishers(List<Publisher> publishersList) {
+    @Override
+    public List<String> getTopicsByPublishers(List<Publisher> publishersList) {//todo test
         if (publishersList != null) {
             return publishersList.stream()
                     .map(e -> e.getTopic().toString())
@@ -355,25 +335,15 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public List<String> getAllTopics() {
+    @Override
+    public List<String> getAllTopics() {//todo test
         return Stream.of(Topics.values())
                 .map(Topics::name)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<Publisher> isSubscribed(List<Publisher> list, String email) {
-        UserService userService = new UserServiceImpl();
-        int customerId = userService.getCustomer(email).getId();
-        for (Publisher p : list) {
-            if (userService.isSubscribed(customerId, p.getId())) {
-                p.setSubscribed(1);
-            }
-        }
-        return list;
-    }
-
-    public List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList) {
+    public List<PublisherDto> getPagination(int skip, int limit, List<Publisher> currentList) {//todo test
         return currentList.stream()
                 .skip(skip)
                 .limit(limit)

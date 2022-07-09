@@ -39,8 +39,8 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
-    public List<Publisher> getByName(String wantedPublisher) {
-        return publisherMySqlDao.searchByName(wantedPublisher);
+    public List<PublisherDto> searchByName(String wantedPublisher) {
+        return publisherMySqlDao.searchByName(wantedPublisher).stream().map(Mapper::convertToPublisherDto).collect(Collectors.toList());
     }
 
     @Override
@@ -49,7 +49,7 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
-    public List<String> addNewVersion(PublisherDto publisherDto) {
+    public List<String> addNewVersion(PublisherDto publisherDto) { //todo test
         List<String> validation = validateAddNewVersion(publisherDto);
         UserService userService = new UserServiceImpl();
 
@@ -61,16 +61,13 @@ public class PublisherServiceImpl implements PublisherService {
             List<Customer> customerList = publisherMySqlDao.getSubscribers(publisherDto.getName());
             for (Customer customer : customerList){
                 if (customer.getBalance() > price){
-//                    userService.withdrawFromBalance(Mapper.convertToUserDto(customer));
                     customerMySqlDao.withdrawFromBalance(customer.getEmail(), price);
                 } else{
                     userService.unsubscribe(customer.getId(), publisherId);
                 }
             }
-
             logger.info("publisher inside service -> " + publisher.toString());
             publisherMySqlDao.addNewVersion(publisher);
-
         }
 
         return validation;
@@ -82,7 +79,6 @@ public class PublisherServiceImpl implements PublisherService {
 
         if (validation.isEmpty()) {
             Publisher publisher = Mapper.convertToPublisher(publisherDto);
-
             logger.info("publisher inside service -> " + publisher.toString());
             publisherMySqlDao.editPublisher(publisher);
         }
@@ -92,7 +88,7 @@ public class PublisherServiceImpl implements PublisherService {
 
     private List<String> validateEditPublisher(PublisherDto publisherDto) {
         List<String> checkResult = new ArrayList<>();
-        if (!validDescriptionLength(publisherDto.getDescription())){
+        if (validDescriptionLength(publisherDto.getDescription())){
             checkResult.add("publisherDescription");
         }
         return checkResult;
@@ -101,7 +97,7 @@ public class PublisherServiceImpl implements PublisherService {
     private List<String> validateAddPublisher(PublisherDto publisherDto) {
         List<String> checkResult = new ArrayList<>();
 
-        if (!validNameLength(publisherDto.getName())){
+        if (validNameLength(publisherDto.getName())){
             checkResult.add("publisherName");
         }
         if (!validNameIfExist(publisherDto.getName())){
@@ -113,7 +109,7 @@ public class PublisherServiceImpl implements PublisherService {
         if (validNotNull(publisherDto.getPrice())){
             checkResult.add("publisherPriceIsNull");
         }
-        if (!validDescriptionLength(publisherDto.getDescription())){
+        if (validDescriptionLength(publisherDto.getDescription())){
             checkResult.add("publisherDescription");
         }
         return checkResult;
@@ -133,8 +129,7 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     private boolean validNameLength (String publisherName){
-        if (publisherName.length() > 40) return false;
-        return true;
+        return publisherName.length() > 40;
     }
     private boolean validNameIfExist (String publisherName){
         return publisherMySqlDao.get(publisherName).getName() == null;
@@ -144,8 +139,7 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     private boolean validDescriptionLength (String description){
-        if (description.length() > 500) return false;
-        return true;
+        return description.length() > 500;
     }
 
     @Override

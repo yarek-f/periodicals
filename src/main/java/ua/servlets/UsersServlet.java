@@ -20,12 +20,12 @@ public class UsersServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
         UserMySqlDao dao = new UserMySqlDao();
 
-        String id = request.getParameter("id");
+        String email = request.getParameter("email");
         String isActive = request.getParameter("isActive");
-        if (id != null && isActive.equals("true")){
-            userService.deactivateUser(Integer.valueOf(id));
-        }if (id != null && isActive.equals("false")){
-            userService.activate(Integer.valueOf(id));
+        if (email != null && isActive.equals("true")){
+            userService.deactivateUser(email);
+        }if (email != null && isActive.equals("false")){
+            userService.activate(email);
         }
         int page = 1;
         int recordsPerPage = 5;

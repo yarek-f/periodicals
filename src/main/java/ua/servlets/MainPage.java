@@ -1,6 +1,5 @@
 package ua.servlets;
 
-import ua.dao.PublisherMySqlDao;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.excaptions.UserVarificationException;
@@ -26,9 +25,6 @@ public class MainPage extends HttpServlet {
         String customerEmail = (String) session.getAttribute("profile");
 
         List<Publisher> resultList = publisherService.getAll();
-        if (customerEmail != null){
-            resultList = userService.isSubscribed(resultList, customerEmail);
-        }
         session.setAttribute("publishers", resultList);
 
         List<String> publishersByTopic =  userService.getTopicsByPublishers(resultList);
@@ -78,7 +74,7 @@ public class MainPage extends HttpServlet {
         //start pagination
         int page = 1;
         int recordsPerPage = 5;
-        if(request.getParameter("page") != null){
+        if(request.getParameter("page") != null && !request.getParameter("page").equals("")){
             page = Integer.parseInt(request.getParameter("page"));
         }
 
@@ -101,34 +97,16 @@ public class MainPage extends HttpServlet {
         view.forward(request, response);
     }
 
-
-//    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
-//        UserService userService = new UserServiceImpl();
-//        int customerId = userService.getCustomer(email).getId();
-//        for (Publisher p : list) {
-//            if (userService.isSubscribed(customerId, p.getId())) {
-//                p.setSubscribed(1);
-//            }
-//        }
-//        return list;
-//    }
-
-//    private List<Publisher> isSubscribed(List<Publisher> list, String email) {
-//        return null;
-//    }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         HttpSession session = req.getSession();
         PublisherService publisherService = new PublisherServiceImpl();
 
-//        PublisherMySqlDao publisherMySqlDao = new PublisherMySqlDao();
-
         String wantedPublisher = req.getParameter("search");
         System.out.println(wantedPublisher);
 
-        List<Publisher> publisherList = publisherService.getByName(wantedPublisher);
+        List<PublisherDto> publisherList = publisherService.searchByName(wantedPublisher);
         if (publisherList == null || publisherList.isEmpty()){
             resp.sendRedirect("cant-found.jsp");
         } else{

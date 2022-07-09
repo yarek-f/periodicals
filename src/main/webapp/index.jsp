@@ -1,9 +1,9 @@
-<%@ page import="ua.domain.Publisher" %>
-<%@ page import="java.util.List" %>
-<%@ page import="ua.services.PublisherServiceImpl" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="ua.dao.UserMySqlDao" %>
-<%@ page import="ua.dao.CustomerMySqlDao" %>
+<%--<%@ page import="ua.domain.Publisher" %>--%>
+<%--<%@ page import="java.util.List" %>--%>
+<%--<%@ page import="ua.services.PublisherServiceImpl" %>--%>
+<%--<%@ page import="java.util.ArrayList" %>--%>
+<%--<%@ page import="ua.dao.UserMySqlDao" %>--%>
+<%--<%@ page import="ua.dao.CustomerMySqlDao" %>--%>
 <%@ page import="ua.services.UserService" %>
 <%@ page import="ua.services.UserServiceImpl" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
@@ -59,9 +59,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
-                </li>
+<%--                <li class="nav-item">--%>
+<%--                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>--%>
+<%--                </li>--%>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
@@ -181,105 +181,75 @@
             </div>
             ${sessionScope.remove("subscriptionErrorMessage") }
         </c:if>
-        <c:if test="${sessionScope.get('subscriptionErrorMessage') != null
-        && sessionScope.get('subscriptionErrorMessage').contains('isAlreadySubscribed')}">
-            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-                You are already subscribed to this publisher
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            ${sessionScope.remove("subscriptionErrorMessage") }
-        </c:if>
-<%--        <ct:testTag/>--%>
-
-<%--    <c:if test="${sessionScope.get('profile')!=null}">--%>
-
-<%--        <ct:buttonTag customerEmail="${sessionScope.get('profile')}" publisherId="2">--%>
-<%--&lt;%&ndash;        <ct:buttonTag customerEmail="bob@gmail.com" publisherId="2">&ndash;%&gt;--%>
-<%--            <p>Subscribed</p>--%>
-<%--        </ct:buttonTag>--%>
-<%--    </c:if>--%>
 
         <c:forEach items="${publisherList}" var="p">
         <div class="row m-4"  style="background-color: white; border-radius: 5px;">
-            <div class="col" style="position: relative">
-                <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-                <h3 style="text-align: center">${p.name}</h3><br><br>
-                <p style="text-align: center">${p.description}</p>
-                <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-<%--                        ${sessionScope.put("pId", p.id)}--%>
-<%--                            <c:set var="pId" value="${p.id}" scope="session"/>--%>
-<%--                        ${sessionScope.put("pub_id", p.id)}--%>
-<%--                    <%session.setAttribute("isSubscribed", customerDao.isSubscribed(customerDao.get((String)session.getAttribute("profile")).getId(), (int)session.getAttribute("pub_id")));%>--%>
-<%--                    <c:choose>--%>
-<%--                        <c:when test="${sessionScope.get('res')==false}">--%>
-                            <c:choose>
-                                <c:when test="${sessionScope.get('profile')!=null}">
-<%--        `                           <c:if test="${p.isSubscribed eq 0}">--%>
-                                    <ct:subscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
-
-                                        <c:if test="${requestScope.get('topic') != null}">
-                                        <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
-                                        </c:if>
-                                            <%-- <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}&topic=${requestScope.get('topic')}">--%>
-                                        <c:if test="${requestScope.get('topic') == null}">
-                                        <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
-                                        </c:if>
-
-                                            <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                                <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                            </button>
-                                        </a>
-                                    </ct:subscribeTag>
-                                    <ct:unsubscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
-                                            <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+            <div class="col d-flex" style="position: relative">
+                <div style="float:left" class="col-3">
+                    <img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275">
+                </div>
+                <div style="align-content: center" class="col-9 position-relative">
+                    <h3 style="text-align: center">${p.name}</h3><br><br>
+                    <p style="text-align: center; margin-top: -50px" class="fs-5"><i>Price per month: <b>${p.price}</b></i></p>
+                    <p style="text-align: center">${p.description}</p>
+                    <div  class="col text-center">
+                        <c:choose>
+                            <c:when test="${sessionScope.get('profile')!=null}">
+                                <ct:subscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
+                                    <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                    <c:if test="${requestScope.get('topic') != null}">
+                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
+                                    </c:if>
+                                    <c:if test="${requestScope.get('topic') == null}">
+                                    <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
+                                    </c:if>
+                                        <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                        </button>
+                                    </a>
+                                    </div>
+                                </ct:subscribeTag>
+                                <ct:unsubscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
+                                    <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                        <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
                                             <button type="button" class="btn btn-danger">
                                                 Unsubscribe
                                             </button>
                                         </a>
-                                    </ct:unsubscribeTag>
-                                </c:when>
-                                <c:otherwise>
-                                    <a href="/login">
-                                        <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                            <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                        </button>
-                                    </a>
-                                </c:otherwise>
-                            </c:choose>
-
-<%--                        </c:when>--%>
-<%--                        <c:otherwise>--%>
-<%--                            <a href="?subscribe=${p.id}">--%>
-<%--                                <button type="button" class="btn btn-danger">Unsubscribe--%>
-<%--                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>--%>
-<%--                                </button>--%>
-<%--                            </a>--%>
-<%--                        </c:otherwise>--%>
-<%--                    </c:choose>--%>
-
+                                    </div>
+                                </ct:unsubscribeTag>
+                            </c:when>
+                            <c:otherwise>
+                            <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                <a href="/login">
+                                    <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                    </button>
+                                </a>
+                            </div>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
                 </div>
-
             </div>
         </div>
         </c:forEach>
         <nav aria-label="...">
             <ul class="pagination">
-                <c:if test="${currentPage != 1}">
-                    <li class="page-item">
-                        <a:if test="${sort == null && topic == null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
-                        </a:if>
-                        <a:if test="${c != null && topic == null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
-                        </a:if>
-                        <a:if test="${topic != null && sort == null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}"><fmt:message key="label.previous" /></a>
-                        </a:if>
-                        <a:if test="${topic != null && sort != null}">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}&sort=${sort}"><fmt:message key="label.previous" /></a>
-                        </a:if>
-                    </li>
-                </c:if>
+<%--                <c:if test="${currentPage != 1}">--%>
+<%--                    <li class="page-item">--%>
+<%--                        <a:if test="${sort == null && topic == null}">--%>
+<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
+<%--                        </a:if>--%>
+<%--                        <a:if test="${c != null && topic == null}">--%>
+<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
+<%--                        </a:if>--%>
+<%--                        <a:if test="${topic != null && sort == null}">--%>
+<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
+<%--                        </a:if>--%>
+<%--                        <a:if test="${topic != null && sort != null}">--%>
+<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}&sort=${sort}"><fmt:message key="label.previous"/></a>--%>
+<%--                        </a:if>--%>
+<%--                    </li>--%>
+<%--                </c:if>--%>
 
                 <c:forEach begin="1" end="${noOfPages}" var="i">
                     <c:choose>
@@ -303,20 +273,20 @@
                     </c:choose>
                 </c:forEach>
 
-                <c:if test="${currentPage lt noOfPages}">
-                    <a:if test="${sort == null && topic == null}">
-                        <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}"><fmt:message key="label.next" /></a></li>
-                    </a:if>
-                    <a:if test="${sort != null && topic == null}">
-                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
-                    </a:if>
-                    <a:if test="${topic != null && sort == null}">
-                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
-                    </a:if>
-                    <a:if test="${topic != null && sort != null}">
-                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next" /><</a>
-                    </a:if>
-                </c:if>
+<%--                <c:if test="${currentPage lt noOfPages}">--%>
+<%--                    <a:if test="${sort == null && topic == null}">--%>
+<%--                        <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}"><fmt:message key="label.next"/></a></li>--%>
+<%--                    </a:if>--%>
+<%--                    <a:if test="${sort != null && topic == null}">--%>
+<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
+<%--                    </a:if>--%>
+<%--                    <a:if test="${topic != null && sort == null}">--%>
+<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
+<%--                    </a:if>--%>
+<%--                    <a:if test="${topic != null && sort != null}">--%>
+<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
+<%--                    </a:if>--%>
+<%--                </c:if>--%>
             </ul>
         </nav>
     </div>

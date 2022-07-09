@@ -110,7 +110,7 @@ public class UserMySqlDao implements Dao<User> {
         return requiredUser;
     }
 
-    public User getUserIgnoringFieldIsactibe(String email) { //only for testing
+    public User getUserIgnoringFieldIsActive(String email) { //only for testing
         logger.debug("Start getting user");
         User requiredUser = null;
         try (Connection con = DataSource.getConnection();

@@ -5,18 +5,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-/**
- * JWT 负载
- * @author zhuoqianmingyue
- */
+
 public class Payload {
 
-    private String issuer;//发布者
-    private String subject;//主题
-    private List<String> audience;//签名的观众 也可以理解谁接受签名的
-    private LocalDateTime issuedAt;//发布时间
-    private LocalDateTime expiresAt;//过期时间
-    private Date notBefore;//开始使用时间
+    private String issuer;
+    private String subject;
+    private List<String> audience;
+    private LocalDateTime issuedAt;
+    private LocalDateTime expiresAt;
+    private Date notBefore;
     private Map<String,String> claims;
 
     public String getIssuer() {

@@ -1,7 +1,3 @@
-<%@ page import="ua.domain.Publisher" %>
-<%@ page import="java.util.List" %>
-<%@ page import="ua.services.PublisherServiceImpl" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "a" uri = "http://java.sun.com/jsp/jstl/core" %>
 
@@ -11,10 +7,12 @@
 <%@ page isELIgnored="false" %>
 
 
-<%@ page session="true" %>
+<%--<%@ page session="true" %>--%>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 <jsp:useBean id="searchPublisher" class="ua.dao.PublisherMySqlDao"/>
+
+<%@ taglib uri="customTags" prefix="ct" %>
 <html lang="${sessionScope.lang}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -51,12 +49,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/users"><fmt:message key="lable.userList"/></a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
@@ -66,7 +58,13 @@
                             <li><a href="?lang=uk" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
-
+                <c:if test="${sessionScope.get('profile')!=null}">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;">Balance:</b>
+                                ${sessionScope.get("balance")}
+                        </a>
+                    </li>
+                </c:if>
             </ul>
             <form class="d-flex mt-3" method="post" action="/periodicals">
                 <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search" /></b></button>
@@ -107,30 +105,51 @@
     <div class="container col-8" style="justify-content: center">
         <c:forEach items="${sessionScope.get('searchingPublisher')}" var="p">
             <div class="row m-4"  style="background-color: white; border-radius: 5px;">
-                <div class="col" style="position: relative">
-                    <div  style="float:left"><img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275"></div>
-                    <h3 style="text-align: center">${p.name}</h3><br><br>
-                    <p style="text-align: center">${p.description}</p>
-                    <div style="text-align: center; position: absolute; bottom: 15px; left: 555px">
-                        <c:choose>
-                        <c:when test="${sessionScope.get('profile')!=null}">
-                            <a href="?subscribe=${p.id}&price=${p.price}">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
-
-                        </c:when>
-                        <c:otherwise>
-                            <a href="/login">
-                                <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
-                                    <p style="margin: -3px; text-align: center">${p.price} <fmt:message key="label.uah" /></p>
-                                </button>
-                            </a>
-                        </c:otherwise>
-                        </c:choose>
+                <div class="col d-flex" style="position: relative">
+                    <div style="float:left" class="col-3">
+                        <img src="images/${p.image}" class="p-4" alt="" style="border-radius: 26px;" width="200px" height="275">
                     </div>
-
+                    <div style="align-content: center" class="col-9 position-relative">
+                        <h3 style="text-align: center">${p.name}</h3><br><br>
+                        <p style="text-align: center; margin-top: -50px" class="fs-5"><i>Price per month: <b>${p.price}</b></i></p>
+                        <p style="text-align: center">${p.description}</p>
+                        <div  class="col text-center">
+                            <c:choose>
+                                <c:when test="${sessionScope.get('profile')!=null}">
+                                    <ct:subscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
+                                        <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                            <c:if test="${requestScope.get('topic') != null}">
+                                            <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
+                                                </c:if>
+                                                <c:if test="${requestScope.get('topic') == null}">
+                                                <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
+                                                    </c:if>
+                                                    <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                                    </button>
+                                                </a>
+                                        </div>
+                                    </ct:subscribeTag>
+                                    <ct:unsubscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
+                                        <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                            <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+                                                <button type="button" class="btn btn-danger">
+                                                    Unsubscribe
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </ct:unsubscribeTag>
+                                </c:when>
+                                <c:otherwise>
+                                    <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
+                                        <a href="/login">
+                                            <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                </c:otherwise>
+                            </c:choose>
+                        </div>
+                    </div>
                 </div>
             </div>
         </c:forEach>

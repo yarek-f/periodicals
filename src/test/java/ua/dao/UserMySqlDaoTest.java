@@ -113,28 +113,28 @@ class UserMySqlDaoTest {
     @Test
     void DEACTIVATE_USER_POSITIVE_TEST() {
         userDao.deactivate(id);
-        Assertions.assertFalse(userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertFalse(userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
     }
 
     @Test
     void DEACTIVATE_USER_NEGATIVE_TEST() {
         userDao.deactivate(id);
-        Assertions.assertNotEquals(true, userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertNotEquals(true, userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
     }
 
     @Test
     void ACTIVATE_USER_POSITIVE_TEST() {
         userDao.deactivate(id);
-        Assertions.assertFalse(userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertFalse(userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
         userDao.activate(id);
-        Assertions.assertTrue(userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertTrue(userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
     }
 
     @Test
     void ACTIVATE_USER_NEGATIVE_TEST() {
         userDao.deactivate(id);
-        Assertions.assertFalse(userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertFalse(userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
         userDao.activate(id);
-        Assertions.assertNotEquals(false, userDao.getUserIgnoringFieldIsactibe("zelya@ukr.net").isActive());
+        Assertions.assertNotEquals(false, userDao.getUserIgnoringFieldIsActive("zelya@ukr.net").isActive());
     }
 }

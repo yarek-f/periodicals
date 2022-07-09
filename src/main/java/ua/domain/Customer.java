@@ -2,9 +2,8 @@ package ua.domain;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
-public class Customer implements Subscribers {
+public class Customer {
     private int id;
     private String fullName;
     private LocalDate dob;
@@ -15,10 +14,6 @@ public class Customer implements Subscribers {
     private LocalDateTime created;
     private LocalDateTime update;
     private boolean isActive;
-
-    private List<Publishers> publishersList;
-//    private Wallet wallet;
-//    private Subscription subscription;
 
     public Customer() {
     }
@@ -50,8 +45,6 @@ public class Customer implements Subscribers {
         this.update = updated;
     }
 
-
-
     public Customer(String fullName, LocalDate dob, String phoneNumber, String email, String password) {
         this.fullName = fullName;
         this.dob = dob;
@@ -76,10 +69,6 @@ public class Customer implements Subscribers {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
-    }
-
-    public void update() {
-
     }
 
     public int getId() {
@@ -154,15 +143,6 @@ public class Customer implements Subscribers {
         this.update = update;
     }
 
-    public List<Publishers> getPublishersList() {
-        return publishersList;
-    }
-
-    public void setPublishersList(List<Publishers> publishersList) {
-        this.publishersList = publishersList;
-    }
-
-
     public boolean isActive() {
         return isActive;
     }
@@ -182,7 +162,6 @@ public class Customer implements Subscribers {
                 ", password='" + password + '\'' +
                 ", created=" + created +
                 ", update=" + update +
-                ", publishersList=" + publishersList +
                 ", isActive=" + isActive +
                 '}';
     }
