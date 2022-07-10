@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="/publishers?page=${sessionScope.get('page')}" style="text-decoration: none; color: white">Close</a></button>
                 <input type="submit" class="btn btn-success" value="Add">
             </div>
         </form>

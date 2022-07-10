@@ -1,9 +1,3 @@
-<%--<%@ page import="ua.domain.Publisher" %>--%>
-<%--<%@ page import="java.util.List" %>--%>
-<%--<%@ page import="ua.services.PublisherServiceImpl" %>--%>
-<%--<%@ page import="java.util.ArrayList" %>--%>
-<%--<%@ page import="ua.dao.UserMySqlDao" %>--%>
-<%--<%@ page import="ua.dao.CustomerMySqlDao" %>--%>
 <%@ page import="ua.services.UserService" %>
 <%@ page import="ua.services.UserServiceImpl" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
@@ -59,9 +53,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<%--                <li class="nav-item">--%>
-<%--                    <a class="nav-link active" href="/publishers"><fmt:message key="lable.publishers"/></a>--%>
-<%--                </li>--%>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <fmt:message key="label.languages" />
@@ -127,8 +118,7 @@
                 </li>
                 <c:if test="${sessionScope.get('profile')!=null}">
                     <li class="nav-item">
-                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;">Balance:</b>
-<%--                            <%userService.getCustomer((String)session.getAttribute("profile")).getBalance();%>--%>
+                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;"><fmt:message key="label.balance"/> </b>
                             ${sessionScope.get("balance")}
                         </a>
                     </li>
@@ -147,10 +137,9 @@
                                     ${sessionScope.get('profile')}</div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li class="ps-2"><a href="/my-profile" class="link-light" style="text-decoration: none;">Profile</a></li>
-<%--                                <li class="ps-2"><a href="?emailForSubscription=${sessionScope.get('profile')}" class="link-light" style="text-decoration: none;">Subscriptions</a></li>--%>
-                                <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
-                                <li class="ps-2"><a href="/login?log=out" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
+                                <li class="ps-2"><a href="/my-profile" class="link-light" style="text-decoration: none;"><fmt:message key="label.profile" /></a></li>
+                                <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;"><fmt:message key="label.subscriptions" /></a></li>
+                                <li class="ps-2"><a href="/login?log=out" class="link-light" style="text-decoration: none;"><span class="pe-2"><fmt:message key="label.logOut" /></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
                                         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
@@ -176,7 +165,7 @@
         <c:if test="${sessionScope.get('subscriptionErrorMessage') != null
         && sessionScope.get('subscriptionErrorMessage').contains('isNotEnoughMoney')}">
             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-                You haven't enough money. Please top up your balance!
+                <fmt:message key="label.isNotEnoughMoney"/>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             ${sessionScope.remove("subscriptionErrorMessage") }
@@ -190,7 +179,7 @@
                 </div>
                 <div style="align-content: center" class="col-9 position-relative">
                     <h3 style="text-align: center">${p.name}</h3><br><br>
-                    <p style="text-align: center; margin-top: -50px" class="fs-5"><i>Price per month: <b>${p.price}</b></i></p>
+                    <p style="text-align: center; margin-top: -50px" class="fs-5"><i><fmt:message key="label.pricePerMonth"/> <b>${p.price} <fmt:message key="label.uah"/></b></i></p>
                     <p style="text-align: center">${p.description}</p>
                     <div  class="col text-center">
                         <c:choose>
@@ -203,16 +192,22 @@
                                     <c:if test="${requestScope.get('topic') == null}">
                                     <a href="?subscribe=${p.id}&price=${p.price}&page=${currentPage}&sort=${requestScope.get('sort')}">
                                     </c:if>
-                                        <button type="button" class="btn btn-success"><fmt:message key="label.subscribe" />
+                                        <button type="button" class="btn btn-success">
+                                            <fmt:message key="label.subscribe" />
                                         </button>
                                     </a>
                                     </div>
                                 </ct:subscribeTag>
                                 <ct:unsubscribeTag customerEmail="${sessionScope.get('profile')}" publisherId="${p.id}">
                                     <div class="position-absolute translate-middle-x bottom-0 start-50 pb-3">
-                                        <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}">
+                                        <c:if test="${requestScope.get('topic') != null}">
+                                            <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}&topic=${requestScope.get('topic')}&sort=${requestScope.get('sort')}">
+                                        </c:if>
+                                        <c:if test="${requestScope.get('topic') == null}">
+                                            <a href="?publisherIdForUnsubscription=${p.id}&page=${currentPage}&sort=${requestScope.get('sort')}">
+                                        </c:if>
                                             <button type="button" class="btn btn-danger">
-                                                Unsubscribe
+                                                <fmt:message key="label.unsubscribe" />
                                             </button>
                                         </a>
                                     </div>
@@ -234,23 +229,6 @@
         </c:forEach>
         <nav aria-label="...">
             <ul class="pagination">
-<%--                <c:if test="${currentPage != 1}">--%>
-<%--                    <li class="page-item">--%>
-<%--                        <a:if test="${sort == null && topic == null}">--%>
-<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
-<%--                        </a:if>--%>
-<%--                        <a:if test="${c != null && topic == null}">--%>
-<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
-<%--                        </a:if>--%>
-<%--                        <a:if test="${topic != null && sort == null}">--%>
-<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}"><fmt:message key="label.previous"/></a>--%>
-<%--                        </a:if>--%>
-<%--                        <a:if test="${topic != null && sort != null}">--%>
-<%--                            <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage - 1}&sort=${sort}"><fmt:message key="label.previous"/></a>--%>
-<%--                        </a:if>--%>
-<%--                    </li>--%>
-<%--                </c:if>--%>
-
                 <c:forEach begin="1" end="${noOfPages}" var="i">
                     <c:choose>
                         <c:when test="${currentPage eq i}">
@@ -272,30 +250,9 @@
                         </c:otherwise>
                     </c:choose>
                 </c:forEach>
-
-<%--                <c:if test="${currentPage lt noOfPages}">--%>
-<%--                    <a:if test="${sort == null && topic == null}">--%>
-<%--                        <li class="page-item"><a class="page-link" href="?page=${currentPage+ 1}"><fmt:message key="label.next"/></a></li>--%>
-<%--                    </a:if>--%>
-<%--                    <a:if test="${sort != null && topic == null}">--%>
-<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
-<%--                    </a:if>--%>
-<%--                    <a:if test="${topic != null && sort == null}">--%>
-<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
-<%--                    </a:if>--%>
-<%--                    <a:if test="${topic != null && sort != null}">--%>
-<%--                        <a class="page-link" tabindex="-1" aria-disabled="true" href="?topic=${topic}&sort=${sort}&page=${currentPage + 1}"><fmt:message key="label.next"/></a>--%>
-<%--                    </a:if>--%>
-<%--                </c:if>--%>
             </ul>
         </nav>
     </div>
-
-
-</div>
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>

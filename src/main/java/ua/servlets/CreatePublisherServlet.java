@@ -1,5 +1,7 @@
 package ua.servlets;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ua.dto.PublisherDto;
 import ua.services.PublisherService;
 import ua.services.PublisherServiceImpl;
@@ -8,23 +10,31 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 @MultipartConfig
 @WebServlet(name = "create", urlPatterns = {"/create-publisher"})
 public class CreatePublisherServlet extends HttpServlet {
+    private static Logger logger = LogManager.getLogger(CreatePublisherServlet.class);
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String page = req.getParameter("page");
+        req.getSession().setAttribute("page", page);
+
+        resp.sendRedirect("/add-publisher.jsp");
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         PublisherService publisherService = new PublisherServiceImpl();
         HttpSession session = req.getSession(true);
         resp.setContentType("text/html");
-
 
         String publisherName = req.getParameter("inputPublisherName");
         System.out.println(publisherName);
@@ -39,19 +49,7 @@ public class CreatePublisherServlet extends HttpServlet {
         String fileName = Paths.get(
                 filePart.getSubmittedFileName()).getFileName().toString();
         if (!fileName.equals("")){
-
-            System.out.println("file name ==> " + fileName);
-
-            String servletAddress = getServletContext().getRealPath("images/").concat(fileName);
-            System.out.println("servlet address ==> " + servletAddress);
-
-            String projectAddress = "C:\\ITprojects\\Periodicals_web\\src\\main\\webapp\\images\\" + fileName;
-            System.out.println("project address ==> " + projectAddress);
-
-            InputStream fileContent = filePart.getInputStream();
-
-            Files.copy(fileContent, Paths.get(projectAddress), StandardCopyOption.REPLACE_EXISTING);
-            Files.copy(Paths.get(projectAddress), Paths.get(servletAddress), StandardCopyOption.REPLACE_EXISTING);
+            fileName = manageImage(fileName, filePart);
         } else {
             fileName = "defaultPicture.png";
         }
@@ -71,5 +69,29 @@ public class CreatePublisherServlet extends HttpServlet {
             session.removeAttribute("publisherErrorMessages");
             session.removeAttribute("publisherCreateDto");
         }
+    }
+
+    private String manageImage(String fileName, Part filePart){
+        try {
+            System.out.println("file name ==> " + fileName);
+            File currentPicture = new File("C:\\\\ITprojects\\\\Periodicals_web\\\\src\\\\main\\\\webapp\\\\images\\" + fileName);
+            if (currentPicture.exists()){
+                int random = (int) (1000+Math.random() * 9000);
+                fileName = random + "_" + fileName;
+            }
+            String servletAddress = getServletContext().getRealPath("images/").concat(fileName);
+            System.out.println("servlet address ==> " + servletAddress);
+
+            String projectAddress = "C:\\ITprojects\\Periodicals_web\\src\\main\\webapp\\images\\" + fileName;
+            System.out.println("project address ==> " + projectAddress);
+
+            InputStream fileContent = filePart.getInputStream();
+
+            Files.copy(fileContent, Paths.get(projectAddress));
+            Files.copy(Paths.get(projectAddress), Paths.get(servletAddress));
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        }
+        return fileName;
     }
 }

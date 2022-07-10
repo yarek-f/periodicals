@@ -350,9 +350,9 @@
                     <h2>Manage <b>Publishers</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="/add-publisher.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                    <a href="/create-publisher?page=${currentPage}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add New Publisher</span></a>
-                    <a href="/add-new-version.jsp" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+                    <a href="/new-version?page=${currentPage}" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                         <span>Add new version</span></a>
                 </div>
             </div>

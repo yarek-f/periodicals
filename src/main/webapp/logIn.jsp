@@ -87,10 +87,11 @@
                         <c:if test="${sessionScope.get('loginError') !=null}">
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 <strong>
-                                        ${sessionScope.get('loginError')}
+                                    <fmt:message key="label.wrongLogInData"/>
                                 </strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
+                            ${sessionScope.remove("loginError")}
                         </c:if>
                         <h2 class="text-uppercase text-center mb-5"><fmt:message key="label.logIn"/></h2>
 

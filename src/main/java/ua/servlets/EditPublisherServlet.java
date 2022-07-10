@@ -1,5 +1,7 @@
 package ua.servlets;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ua.domain.Publisher;
 import ua.dto.PublisherDto;
 import ua.services.PublisherService;
@@ -9,16 +11,18 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 @MultipartConfig
 @WebServlet(name = "edit", urlPatterns = {"/edit-publisher"})
 public class EditPublisherServlet extends HttpServlet {
+
+    private static Logger logger = LogManager.getLogger(EditPublisherServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -68,16 +72,7 @@ public class EditPublisherServlet extends HttpServlet {
             fileName = Paths.get(
                     filePart.getSubmittedFileName()).getFileName().toString();
             if (!fileName.equals("")){
-
-                System.out.println("file name ==> " + fileName);
-
-                String servletAddress = getServletContext().getRealPath("images/").concat(fileName);
-                String projectAddress = "C:\\ITprojects\\Periodicals_web\\src\\main\\webapp\\images\\" + fileName;
-                System.out.println("address ==> " + projectAddress);
-
-                InputStream fileContent = filePart.getInputStream();
-                Files.copy(fileContent, Paths.get(projectAddress), StandardCopyOption.REPLACE_EXISTING);
-                Files.copy(Paths.get(projectAddress), Paths.get(servletAddress), StandardCopyOption.REPLACE_EXISTING);
+                fileName = manageImage(fileName, filePart, publisherName);
             } else {
                 fileName = curentPublisher.getImage();
             }
@@ -98,5 +93,31 @@ public class EditPublisherServlet extends HttpServlet {
                 session.removeAttribute("publisherEditDto");
             }
         }
+    }
+    private String manageImage(String fileName, Part filePart, String publisherName){
+//        String picture = fileName;
+        try {
+            PublisherService publisherService = new PublisherServiceImpl();
+            System.out.println("file publisherName ==> " + fileName);
+            File currentPicture = new File("C:\\\\ITprojects\\\\Periodicals_web\\\\src\\\\main\\\\webapp\\\\images\\" + fileName);
+            if (currentPicture.exists()){
+                int random = (int) (1000+Math.random() * 9000);
+                fileName = random + "_" + fileName;
+            }
+            File previousPicture = new File("C:\\\\ITprojects\\\\Periodicals_web\\\\src\\\\main\\\\webapp\\\\images\\" + publisherService.get(publisherName).getImage());
+            File previousPicture2 = new File(getServletContext().getRealPath("images/").concat(publisherService.get(publisherName).getImage()));
+            previousPicture.delete();
+            previousPicture2.delete();
+            String servletAddress = getServletContext().getRealPath("images/").concat(fileName);
+            String projectAddress = "C:\\ITprojects\\Periodicals_web\\src\\main\\webapp\\images\\" + fileName;
+            System.out.println("address ==> " + projectAddress);
+
+            InputStream fileContent = filePart.getInputStream();
+            Files.copy(fileContent, Paths.get(projectAddress));
+            Files.copy(Paths.get(projectAddress), Paths.get(servletAddress));
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        }
+        return fileName;
     }
 }

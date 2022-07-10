@@ -60,7 +60,7 @@
                 </li>
                 <c:if test="${sessionScope.get('profile')!=null}">
                     <li class="nav-item">
-                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;">Balance:</b>
+                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;"><fmt:message key="label.balance"/> </b>
                                 ${sessionScope.get("balance")}
                         </a>
                     </li>
@@ -79,9 +79,9 @@
                                         ${sessionScope.get('profile')}</div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Profile</a></li>
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
+                                <li class="ps-2"><a href="/my-profile" class="link-light" style="text-decoration: none;"><fmt:message key="label.profile" /></a></li>
+                                <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;"><fmt:message key="label.subscriptions" /></a></li>
+                                <li class="ps-2"><a href="/login?log=out" class="link-light" style="text-decoration: none;"><span class="pe-2"><fmt:message key="label.logOut" /></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
                                         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
@@ -111,7 +111,7 @@
                     </div>
                     <div style="align-content: center" class="col-9 position-relative">
                         <h3 style="text-align: center">${p.name}</h3><br><br>
-                        <p style="text-align: center; margin-top: -50px" class="fs-5"><i>Price per month: <b>${p.price}</b></i></p>
+                        <p style="text-align: center; margin-top: -50px" class="fs-5"><i><fmt:message key="label.pricePerMonth"/> <b>${p.price} <fmt:message key="label.uah"/></b></i></p>
                         <p style="text-align: center">${p.description}</p>
                         <div  class="col text-center">
                             <c:choose>

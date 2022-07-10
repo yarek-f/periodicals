@@ -1,12 +1,8 @@
-<%@ page import="ua.dto.PublisherDto" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
-<%
-    PublisherDto publisherDto = ((PublisherDto) session.getAttribute("publisherAddNewVersionDto"));
-%>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +13,6 @@
 <body>
 <div class="modal-dialog">
     <div class="modal-content">
-<%--        <form action="/delete" method="post">--%>
         <div class="modal-header">
             <h5 class="modal-title">Confirm deleting</h5>
         </div>
@@ -29,7 +24,6 @@
             <button type="button" class="btn btn-danger">
                 <a href="/publishers?deletePublisher=${sessionScope.get("sessionName")}&page=${sessionScope.get('page')}" style="text-decoration: none; color: white">Delete</a></button>
         </div>
-<%--        </form>--%>
     </div>
 </div>
 </body>

@@ -79,35 +79,25 @@
                 <button class="btn btn-outline-success  me-2" type="submit"><b><fmt:message key="label.search" /></b></button>
                 <input class="form-control me-2" type="search" name="search" placeholder="<fmt:message key="label.search" />" aria-label="Search">
             </form>
-            <c:choose>
-                <c:when test="${sessionScope.get('profile')!=null}">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="text-truncate " style="max-width: 120px;">
-                                        ${sessionScope.get('profile')}</div>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="text-truncate " style="max-width: 120px;">
+                                    ${sessionScope.get('profile')}</div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li class="ps-2"><a href="/my-profile" class="link-light" style="text-decoration: none;"><fmt:message key="label.profile" /></a></li>
+                            <li class="ps-2"><a href="/my-subscriptions" class="link-light" style="text-decoration: none;"><fmt:message key="label.subscriptions" /></a></li>
+                            <li class="ps-2"><a href="/login?log=out" class="link-light" style="text-decoration: none;"><span class="pe-2"><fmt:message key="label.logOut" /></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                </svg>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Profile</a></li>
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;">Subscriptions</a></li>
-                                <li class="ps-2"><a href="#" class="link-light" style="text-decoration: none;"><span class="pe-2">Log out</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                                    </svg>
-                                </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </c:when>
-                <c:otherwise>
-                    <div>
-                        <a href="signUp.jsp" class="btn btn-primary"><fmt:message key="label.signUp" /></a>
-                        <a href="logIn.jsp" class="btn btn-primary"><fmt:message key="label.logIn" /></a>
-                    </div>
-                </c:otherwise>
-            </c:choose>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
         </div>
     </div>
 </nav>
@@ -119,22 +109,22 @@
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
 
-                        <h2 class="text-uppercase text-center mb-3" style="margin-top: -15px">My profile</h2>
+                        <h2 class="text-uppercase text-center mb-3" style="margin-top: -15px"><fmt:message key="label.myProfile"/></h2>
                         <div class="form-outline">
-                            <label class="form-label fw-bold">Full name:</label> <span><%=userDto.getFullName()%></span>
+                            <label class="form-label fw-bold"><fmt:message key="label.dullName"/></label> <span><%=userDto.getFullName()%></span>
                         </div>
                         <div class="form-outline">
-                            <label class="form-label fw-bold">Date of birth:</label> <span><%=userDto.getDob()!=null?userDto.getDob():""%></span>
+                            <label class="form-label fw-bold"><fmt:message key="label.dob"/></label> <span><%=userDto.getDob()!=null?userDto.getDob():""%></span>
                         </div>
                         <div class="form-outline">
-                            <label class="form-label fw-bold">Email:</label> <span><%=userDto.getEmail()%></span>
+                            <label class="form-label fw-bold"><fmt:message key="label.myEmail"/></label> <span><%=userDto.getEmail()%></span>
                         </div>
                         <div class="form-outline">
-                            <label class="form-label fw-bold">Phone number:</label> <span><%=userDto.getPhoneNumber()%></span>
+                            <label class="form-label fw-bold"><fmt:message key="label.myPhoneNumber"/></label> <span><%=userDto.getPhoneNumber()%></span>
                         </div>
 
                         <div class="d-flex justify-content-center p-3" style="margin-bottom: -40px">
-                            <a href="edit-profile.jsp"><button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Edit</button></a>
+                            <a href="edit-profile.jsp"><button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><fmt:message key="label.edit"/></button></a>
                         </div>
                     </div>
                 </div>

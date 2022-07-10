@@ -157,5 +157,4 @@ public class PublisherServiceImpl implements PublisherService {
         return publisherMySqlDao.getByTopic(topic);
     }
 
-
 }

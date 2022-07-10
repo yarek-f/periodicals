@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,8 +30,14 @@ public class PublishersServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
 
         String deletePublisher = request.getParameter("deletePublisher");
-
+        if (session.getAttribute("sessionName") != null  && session.getAttribute("sessionName").toString().equals(deletePublisher)){
+            File previousPicture = new File("C:\\\\ITprojects\\\\Periodicals_web\\\\src\\\\main\\\\webapp\\\\images\\" + publisherService.get(deletePublisher).getImage());
+            File previousPicture2 = new File(getServletContext().getRealPath("images/").concat(publisherService.get(deletePublisher).getImage()));
+            previousPicture.delete();
+            previousPicture2.delete();
+        }
         publisherService.delete(publisherService.get(deletePublisher).getId());
+
         List<String> allTopics = userService.getAllTopics();
         session.setAttribute("allTopics", allTopics);
 
