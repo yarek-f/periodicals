@@ -27,7 +27,7 @@ public interface UserService {
     List<String> replenishBalance(UserSignUpDto customerDto);
     boolean isSubscribed(int customerId, int publisherId);
     List<String> withdrawFromBalance(String email, int publisherId, double price);
-
+    List<CustomerDto> getAllCustomer();
     List<String> edit(UserSignUpDto userDto, String customerEmail);
 
     void deactivateUser(String email);

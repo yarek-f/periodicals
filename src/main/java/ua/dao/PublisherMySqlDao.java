@@ -275,7 +275,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
     public List<Customer> getSubscribers(String publisherName){
         logger.debug("Start getting subscribers");
         List<Customer> customerList = new ArrayList<>();
-        Customer customer = new Customer();
+//        Customer customer = new Customer();
 
         try (Connection con = DataSource.getConnection();
              PreparedStatement stmt = con.prepareStatement(GET_SUBSCRIBERS)){
@@ -286,7 +286,11 @@ public class PublisherMySqlDao implements Dao<Publisher> {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String fullName = rs.getString("fullname");
-                LocalDate dob = rs.getDate("dob").toLocalDate();
+                Date dob = rs.getDate("dob");
+                LocalDate dateOfBirth = null;
+                if (dob != null) {
+                    dateOfBirth = rs.getDate("dob").toLocalDate();
+                }
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 double balance = rs.getDouble("balance");
@@ -294,7 +298,7 @@ public class PublisherMySqlDao implements Dao<Publisher> {
                 LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
                 LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
-                customer = new Customer(id, fullName, dob, phoneNumber, email, balance, isActive, created, updated);
+                Customer customer = new Customer(id, fullName, dateOfBirth, phoneNumber, email, balance, isActive, created, updated);
                 customerList.add(customer);
             }
         } catch (SQLException ex) {

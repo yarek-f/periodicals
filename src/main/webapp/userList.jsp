@@ -1,9 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:useBean id="userService" class="ua.services.UserServiceImpl"/>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page isELIgnored="false" %>
+
+
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="messages"/>
+<jsp:useBean id="searchPublisher" class="ua.dao.PublisherMySqlDao"/>
+<html lang="${sessionScope.lang}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -287,20 +294,47 @@
     </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/periodicals">Navbar</a>
+        <a class="navbar-brand" href="/periodicals">
+            <fmt:message key="label.navbar"/>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="/publishers"><h5>Publisher list</h5></a>
+                    <a class="nav-link active" aria-current="page" href="/publishers"><h5><fmt:message key="label.publisherList"/>
+                    </h5></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><h5>User list</h5></a>
+                    <a class="nav-link " href="#"><h5>
+                        <fmt:message key="label.userList"/>
+                    </h5></a>
                 </li>
+
+                <li class="nav-item">
+                    <div class="dropdown ms-2" style="padding-top:  24px">
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none; color: #76797d">
+                            <fmt:message key="label.languages" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="?lang=en&page=${currentPage}" class="link-light">
+                                    <fmt:message key="label.lang.en" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?lang=uk&page=${currentPage}" class="link-light">
+                                    <fmt:message key="label.lang.uk" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -311,7 +345,7 @@
     <ul class="pagination">
         <c:if test="${currentPage != 1}">
             <li class="page-item">
-                <a class="page-link" tabindex="-1" aria-disabled="true" href="users?page=${currentPage - 1}">Previous</a>
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="users?page=${currentPage - 1}"><fmt:message key="label.previous"/></a>
             </li>
         </c:if>
 
@@ -327,7 +361,7 @@
         </c:forEach>
 
         <c:if test="${currentPage lt noOfPages}">
-            <li class="page-item"><a class="page-link" href="users?page=${currentPage+ 1}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="users?page=${currentPage+ 1}"><fmt:message key="label.next" /></a></li>
         </c:if>
     </ul>
 </nav>
@@ -338,7 +372,7 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Users</b></h2>
+                    <h2><fmt:message key="label.manage"/> <b><fmt:message key="label.users"/></b></h2>
                 </div>
             </div>
         </div>
@@ -346,27 +380,31 @@
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Role</th>
-                <th>Email</th>
-                <th>User password</th>
-                <th>Is active</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Action</th>
+                <th><fmt:message key="label.dullName"/></th>
+                <th><fmt:message key="label.dob"/></th>
+                <th><fmt:message key="label.myPhoneNumber"/></th>
+                <th><fmt:message key="label.email2"/></th>
+                <th><fmt:message key="label.balance"/></th>
+                <th><fmt:message key="label.isActive"/></th>
+                <th><fmt:message key="label.created"/></th>
+                <th><fmt:message key="label.updated"/></th>
+                <th><fmt:message key="label.actions"/></th>
             </tr>
             </thead>
             <tbody>
-                <c:forEach var="p" items="${userList}">
+                <c:forEach var="c" items="${userList}">
                     <tr>
-                        <td>${p.id}</td>
-                        <td>${p.role}</td>
-                        <td>${p.email}</td>
-                        <td>${p.password}</td>
-                        <td>${p.isActive}</td>
-                        <td>${p.created}</td>
-                        <td>${p.update}</td>
+                        <td>${c.id}</td>
+                        <td>${c.fullName}</td>
+                        <td>${c.dob}</td>
+                        <td>${c.phoneNumber}</td>
+                        <td>${c.email}</td>
+                        <td>${c.balance}</td>
+                        <td>${c.isActive}</td>
+                        <td>${c.created}</td>
+                        <td>${c.updated}</td>
                         <td>
-                            <a href="?page=${currentPage}&email=${p.email}&isActive=${p.isActive}" class="delete" data-toggle="modal">
+                            <a href="?page=${currentPage}&email=${c.email}&isActive=${c.isActive}" class="delete" data-toggle="modal">
                                 <i class="material-icons" data-toggle="tooltip" title="Deactivate/activate">&#xE872;</i></a>
                         </td>
                     </tr>

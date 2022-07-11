@@ -18,7 +18,6 @@ import java.io.IOException;
 @WebFilter(urlPatterns = {"/publishers", "/users", "/add-new-version.jsp", "/add-publisher.jsp", "/delete", "/edit-publisher.jsp", "/edit-publisher"})
 public class AdminAuthorisationFilter implements Filter {
     private static Logger logger = LogManager.getLogger(AdminAuthorisationFilter.class);
-    private static final int STATUS_CODE_UNAUTHORIZED = 401;
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

@@ -18,9 +18,9 @@ public class Mapper {
     }
 
     public static CustomerDto convertToCustomerDto(Customer customer){
-        return new CustomerDto(String.valueOf(customer.getId()), customer.getFullName(), customer.getDob().toString(),
+        return new CustomerDto(String.valueOf(customer.getId()), customer.getFullName(), customer.getDob()!=null?customer.getDob().toString():null,
                     customer.getPhoneNumber(), customer.getEmail(), String.format("%.2f", customer.getBalance()), String.valueOf(customer.isActive()),
-                    customer.getCreated().toString(), customer.getUpdate().toString());
+                    customer.getCreated().toLocalDate().toString(), customer.getUpdate().toLocalDate().toString());
     }
 
     public static Customer convertToCustomer(UserSignUpDto userSignUpDto) {
@@ -44,7 +44,7 @@ public class Mapper {
 
     public static PublisherDto convertToPublisherDto(Publisher publisher){
         return new PublisherDto(String.valueOf(publisher.getId()), publisher.getImage(), publisher.getName(), String.valueOf(publisher.getVersion()), publisher.getTopic().toString(),
-                String.valueOf(publisher.getPrice()), publisher.getDescription(), publisher.getCreate().toString(), publisher.getUpdated().toString(), String.valueOf(publisher.isActive()));
+                String.valueOf(publisher.getPrice()), publisher.getDescription(), publisher.getCreate().toLocalDate().toString(), publisher.getUpdated().toLocalDate().toString(), String.valueOf(publisher.isActive()));
     }
 
     public static UserGetDto convertToUserDto(User user) {

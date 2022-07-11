@@ -1,5 +1,3 @@
-<%@ page import="ua.services.UserService" %>
-<%@ page import="ua.services.UserServiceImpl" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "a" uri = "http://java.sun.com/jsp/jstl/core" %>
 
@@ -15,9 +13,6 @@
 <%@ taglib uri="customTags" prefix="ct" %>
 
 <html lang="${sessionScope.lang}">
-<%
-    UserService userService = ((UserServiceImpl) session.getAttribute("userService"));
-%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,8 +53,8 @@
                         <fmt:message key="label.languages" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a href="?lang=en&page=${currentPage}" class="link-light"><fmt:message key="label.lang.en" /></a></li>
-                            <li><a href="?lang=uk&page=${currentPage}" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
+                        <li><a href="?lang=en&page=${currentPage}" class="link-light"><fmt:message key="label.lang.en" /></a></li>
+                        <li><a href="?lang=uk&page=${currentPage}" class="link-light"><fmt:message key="label.lang.uk" /></a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" id="sorting">
@@ -118,7 +113,7 @@
                 </li>
                 <c:if test="${sessionScope.get('profile')!=null}">
                     <li class="nav-item">
-                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;"><fmt:message key="label.balance"/> </b>
+                        <a class="nav-link active" href="balance.jsp"><b style="color: orange;"><fmt:message key="label.balance"/>: </b>
                             ${sessionScope.get("balance")}
                         </a>
                     </li>

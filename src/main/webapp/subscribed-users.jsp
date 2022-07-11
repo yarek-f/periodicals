@@ -306,33 +306,6 @@
     </div>
 </nav>
 
-<%--<div class="d-flex justify-content-center">--%>
-<%--<nav aria-label="...">--%>
-<%--    <ul class="pagination">--%>
-<%--        <c:if test="${currentPage != 1}">--%>
-<%--            <li class="page-item">--%>
-<%--                <a class="page-link" tabindex="-1" aria-disabled="true" href="users?page=${currentPage - 1}">Previous</a>--%>
-<%--            </li>--%>
-<%--        </c:if>--%>
-
-<%--        <c:forEach begin="1" end="${noOfPages}" var="i">--%>
-<%--            <c:choose>--%>
-<%--                <c:when test="${currentPage eq i}">--%>
-<%--                    <li class="page-item active"><a class="page-link" href="#">${i}</a></li>--%>
-<%--                </c:when>--%>
-<%--                <c:otherwise>--%>
-<%--                    <li class="page-item"><a class="page-link" href="users?page=${i}">${i}</a></li>--%>
-<%--                </c:otherwise>--%>
-<%--            </c:choose>--%>
-<%--        </c:forEach>--%>
-
-<%--        <c:if test="${currentPage lt noOfPages}">--%>
-<%--            <li class="page-item"><a class="page-link" href="users?page=${currentPage+ 1}">Next</a></li>--%>
-<%--        </c:if>--%>
-<%--    </ul>--%>
-<%--</nav>--%>
-<%--</div>--%>
-
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">

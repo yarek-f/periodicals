@@ -24,7 +24,8 @@ public class CustomerMySqlDao implements Dao<Customer> {
     private static final String EDIT_QUERY = "update customers set fullname = ?, dob = ?, phone_number = ?, email = ?, user_password = ? where email = ?";
     private static final String DEACTIVATE_QUERY = "update customers set is_active = false where id = ?";
     private static final String ACTIVATE_QUERY = "update customers set is_active = true where id = ?";
-    private static final String GET_ALL_QUERY = "select * from customers";
+//    private static final String GET_ALL_QUERY = "select * from users natural join customers where users.role = 'USER'";
+    private static final String GET_ALL_QUERY = "select * from customers natural join users where users.role = 'USER'";
     private static final String GET_ALL_SUBSCRIPTIONS = "SELECT p.publisher_name FROM customers c INNER JOIN publisher_customer pc ON c.id = pc.cus_id INNER JOIN publishers p ON p.id = pc.pub_id where c.email = ?";
 
     private static Logger logger = LogManager.getLogger(CustomerMySqlDao.class);
@@ -335,9 +336,11 @@ public class CustomerMySqlDao implements Dao<Customer> {
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 double balance = rs.getDouble("balance");
+                boolean isActive = rs.getBoolean("is_active");
+                LocalDateTime created = rs.getTimestamp("created").toLocalDateTime();
+                LocalDateTime updated = rs.getTimestamp("updated").toLocalDateTime();
 
-                Customer customer = new Customer(id, fullName, dateOfBirth, phoneNumber, email, balance);
-
+                Customer customer = new Customer(id, fullName, dateOfBirth, phoneNumber, email, balance, isActive, created, updated);
                 customerList.add(customer);
             }
         } catch (SQLException ex) {

@@ -3,6 +3,7 @@ package ua.services;
 import ua.dao.CustomerMySqlDao;
 import ua.dao.UserMySqlDao;
 import ua.domain.*;
+import ua.dto.CustomerDto;
 import ua.dto.PublisherDto;
 import ua.dto.UserSignUpDto;
 import ua.mapper.Mapper;
@@ -213,8 +214,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deactivateUser(String email) {
-        int userId =  userMySqlDao.get(email).getId();
-        int customerId =  customerMySqlDao.get(email).getId();
+        int userId = userMySqlDao.getUserIgnoringFieldIsActive(email).getId();
+        int customerId = customerMySqlDao.get(email).getId();
         userMySqlDao.deactivate(userId);
         customerMySqlDao.deactivate(customerId);
     }
@@ -340,6 +341,11 @@ public class UserServiceImpl implements UserService {
         return Stream.of(Topics.values())
                 .map(Topics::name)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<CustomerDto> getAllCustomer(){
+        return customerMySqlDao.getAll().stream().map(Mapper::convertToCustomerDto).collect(Collectors.toList());
     }
 
     @Override

@@ -69,7 +69,7 @@ public class PublishersServlet extends HttpServlet {
         List<PublisherDto> resultList = publishers.stream()
                 .skip(skip)
                 .limit(limit)
-                .map(e -> Mapper.convertToPublisherDto(e))
+                .map(Mapper::convertToPublisherDto)
                 .collect(Collectors.toList());
 
         return resultList;

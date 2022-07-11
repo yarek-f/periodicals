@@ -1,10 +1,16 @@
-<%@ page import="ua.dto.PublisherDto" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html lang="en">
-<%
-    PublisherDto publisherDto = ((PublisherDto) session.getAttribute("publisherCreateDto"));
-%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page isELIgnored="false" %>
+
+
+<%@ page session="true" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="messages"/>
+<jsp:useBean id="searchPublisher" class="ua.dao.PublisherMySqlDao"/>
+<html lang="${sessionScope.lang}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,10 +54,6 @@
         .table-title h2 {
             margin: 5px 0 0;
             font-size: 24px;
-        }
-
-        .table-title .btn-group {
-            float: right;
         }
 
         .table-title .btn {
@@ -136,12 +138,6 @@
             font-size: 19px;
         }
 
-        table.table .avatar {
-            border-radius: 1px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
         .pagination {
             float: right;
             margin: 0 0 5px;
@@ -179,17 +175,6 @@
         .pagination li i {
             font-size: 16px;
             padding-top: 6px
-        }
-
-        .hint-text {
-            float: left;
-            margin-top: 10px;
-            font-size: 13px;
-        }
-
-        /* Custom checkbox */
-        .custom-checkbox {
-            position: relative;
         }
 
         .custom-checkbox input[type="checkbox"] {
@@ -246,38 +231,6 @@
             background: #ddd;
         }
 
-        /* Modal styles */
-        .modal .modal-dialog {
-            max-width: 400px;
-        }
-
-        .modal .modal-header, .modal .modal-body, .modal .modal-footer {
-            padding: 20px 30px;
-        }
-
-        .modal .modal-content {
-            border-radius: 1px;
-        }
-
-        .modal .modal-footer {
-            background: #ecf0f1;
-            border-radius: 0 0 1px 1px;
-        }
-
-        .modal .modal-title {
-            display: inline-block;
-        }
-
-        .modal .form-control {
-            border-radius: 1px;
-            box-shadow: none;
-            border-color: #dddddd;
-        }
-
-        .modal textarea.form-control {
-            resize: vertical;
-        }
-
         .modal .btn {
             border-radius: 1px;
             min-width: 100px;
@@ -296,20 +249,47 @@
     </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/periodicals">Navbar</a>
+        <a class="navbar-brand" href="/periodicals">
+            <fmt:message key="label.navbar"/>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><h5>Publisher list</h5></a>
+                    <a class="nav-link active" aria-current="page" href="#"><h5><fmt:message key="label.publisherList"/>
+                    </h5></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/users"><h5>User list</h5></a>
+                    <a class="nav-link " href="/users"><h5>
+                        <fmt:message key="label.userList"/>
+                    </h5></a>
                 </li>
+
+                <li class="nav-item">
+                    <div class="dropdown ms-2" style="padding-top:  24px">
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none; color: #76797d">
+                            <fmt:message key="label.languages" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="?lang=en&page=${currentPage}" class="link-light">
+                                    <fmt:message key="label.lang.en" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?lang=uk&page=${currentPage}" class="link-light">
+                                    <fmt:message key="label.lang.uk" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -320,7 +300,7 @@
         <ul class="pagination">
             <c:if test="${currentPage != 1}">
                 <li class="page-item">
-                    <a class="page-link" tabindex="-1" aria-disabled="true" href="publishers?page=${currentPage - 1}">Previous</a>
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="publishers?page=${currentPage - 1}"><fmt:message key="label.previous"/></a>
                 </li>
             </c:if>
 
@@ -336,7 +316,7 @@
             </c:forEach>
 
             <c:if test="${currentPage lt noOfPages}">
-                <li class="page-item"><a class="page-link" href="publishers?page=${currentPage+ 1}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="publishers?page=${currentPage+ 1}"><fmt:message key="label.next"/></a></li>
             </c:if>
         </ul>
     </nav>
@@ -347,30 +327,30 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Publishers</b></h2>
+                    <h2><fmt:message key="label.manage"/> <b><fmt:message key="label.publishers"/></b></h2>
                 </div>
                 <div class="col-sm-6">
                     <a href="/create-publisher?page=${currentPage}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
-                        <span>Add New Publisher</span></a>
+                        <span><fmt:message key="label.addNewPublisher"/></span></a>
                     <a href="/new-version?page=${currentPage}" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE147;</i>
-                        <span>Add new version</span></a>
+                        <span><fmt:message key="label.addNewVersion"/></span></a>
                 </div>
             </div>
-    </div>
+        </div>
     <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Version</th>
-                <th>Topic</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Is active</th>
-                <th>Actions</th>
+                <th><fmt:message key="label.image"/></th>
+                <th><fmt:message key="label.publisherName"/></th>
+                <th><fmt:message key="label.version"/></th>
+                <th><fmt:message key="label.topic"/></th>
+                <th><fmt:message key="label.price"/></th>
+                <th><fmt:message key="label.description"/></th>
+                <th><fmt:message key="label.created"/></th>
+                <th><fmt:message key="label.updated"/></th>
+                <th><fmt:message key="label.isActive"/></th>
+                <th><fmt:message key="label.actions"/></th>
             </tr>
             </thead>
             <tbody>
@@ -401,153 +381,6 @@
 
     </div>
 
-</div>
-
-
-<!-- Add Modal HTML -->
-<div id="addEmployeeModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="post" action="/create-publisher" enctype="multipart/form-data">
-                <c:if test="${sessionScope.get('publisherErrorMessages') !=null}">
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong>
-<%--                            <fmt:message key="label.wrongUserInputData" />--%>
-                                wrongUserInputData
-                        </strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                </c:if>
-                <div class="modal-header">
-                    <h4 class="modal-title">Add Publisher</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <b style="color: red">*</b><label>Name</label>
-                        <input type="text" name="inputPublisherName" class="form-control" required
-                               value="<%=publisherDto!=null?publisherDto.getName():""%>"/>
-                        <c:if test="${sessionScope.get('publisherErrorMessages') != null && sessionScope.get('publisherErrorMessages').contains('publisherName')}">
-                            <span class="text-danger">
-<%--                                <fmt:message key="label.wrongFullNume" />--%>
-                                Publisher name must be less than 40 symbols
-                            </span>
-                        </c:if>
-                    </div>
-                    <div class="form-group">
-                        <b style="color: red">*</b>
-                        <select name="inputTopic">
-                            <option value="">Chose topic</option>
-                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
-                                <option value="${p}">${p}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <b style="color: red">*</b><label>Price</label>
-                        <input type="number" name="inputPrice" step=".01" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea class="form-control" name="inputDescription"></textarea>
-                        </div>
-                        <div class="form-group">
-                        <label>Picture</label>
-                        <input type="file" name="file" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-success" value="Add">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- Edit Modal HTML -->
-<div id="editEmployeeModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="post" action="/edit-publisher" enctype="multipart/form-data">
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit publisher</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <b style="color: red">*</b><label>Publisher name</label>
-                        <select id="publisherName" name="publisherName">
-                            <option value="">Chose publisher name</option>
-                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
-                                <option value="${p.name}">${p.name}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Topic</label>
-                        <select name="inputTopic">
-                            <option value="">Chose topic</option>
-                            <c:forEach var="p" items="${sessionScope.get('allTopics')}">
-                                <option value="${p}">${p}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input type="number" name="inputPrice" step=".01" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea class="form-control" name="inputDescription"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Picture</label>
-                        <input type="file" name="file" class="form-control" value="">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-warning" value="Update">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- Add new version Modal HTML -->
-<div id="addNewVersionModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="post" action="/new-version" enctype="multipart/form-data">
-                <div class="modal-header">
-                    <h4 class="modal-title">Add new issue of journal</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <b style="color: red">*</b><label>Name</label>
-                        <select id="inputPublisherName" name="inputPublisherName">
-                            <c:forEach var="p" items="${sessionScope.get('publishers')}">
-                                <option value="${p.name}">${p.name}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <b style="color: red">*</b><label>Version</label>
-                        <input type="number" name="inputPublisherVersion" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Picture</label>
-                        <input type="file" name="file" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-primary" value="Add">
-                </div>
-            </form>
-        </div>
-    </div>
 </div>
 </body>
 </html>
